@@ -42,22 +42,19 @@ No human review yet.
 
 ## Current Blocker
 
-Two one-time human actions remain:
-
-1. **GitHub Actions `workflow` scope** — required to publish the tracker's
-   scheduled sync workflow:
-   `gh auth refresh -s workflow`
-   (browser/device authorization; no secret is pasted anywhere).
-2. Nothing else is blocked. CI approval is the maintainer's call.
+None on our side. The pull request is complete and all available automated gates
+pass. The only remaining gate is a maintainer approving the CI workflow run
+(`action_required`, GitHub's first-time-contributor protection), followed by the
+normal review/merge process.
 
 ## Durable monitoring
 
 - Public tracker: https://github.com/ShahabAhmed01/opensource-contributions
-- Local fallback: systemd user timer `odysseus-tracker.timer` (every 6 h) runs
-  `scripts/sync_tracker.sh`, which pushes only when the ledger changed.
-- Once the `workflow` scope is granted, the pending
-  `.github/workflows/track-contributions.yml` can be committed and the local
-  timer can be disabled.
+- Cloud sync: `.github/workflows/track-contributions.yml` runs every 6 hours and
+  on manual dispatch. Dry-run verified on 2026-10-02 (run 37061012586, success;
+  "tracker already up to date", no empty commit, no API warnings).
+- The temporary local systemd timer (`odysseus-tracker.timer`) has been disabled;
+  the unit files and `scripts/sync_tracker.sh` remain available as a fallback.
 
 ## Next Action
 

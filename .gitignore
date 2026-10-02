@@ -1,0 +1,5 @@
+# Local-only working directories (not published)
+evidence/
+sessions/
+decisions/
+STATE.md

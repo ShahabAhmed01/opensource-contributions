@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 2,
+  "updatedAt": "2026-10-02T19:50:24Z",
+  "contributions": [
+    {
+      "repo": "odysseus-dev/odysseus",
+      "project": "odysseus",
+      "issueNumber": 2740,
+      "issueTitle": "Resolve SQLAlchemy 2.0 deprecation warnings in core/database.py",
+      "issueUrl": "https://github.com/odysseus-dev/odysseus/issues/2740",
+      "issueState": "OPEN",
+      "prNumber": 6453,
+      "prUrl": "https://github.com/odysseus-dev/odysseus/pull/6453",
+      "prState": "open",
+      "prTitle": "fix(core): import declarative_base and declared_attr from sqlalchemy.orm",
+      "branch": "fix/sqlalchemy-declarative-import-2740",
+      "baseBranch": "dev",
+      "fork": "ShahabAhmed01/odysseus",
+      "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
+      "status": "pr-opened",
+      "openedAt": "2026-10-02T19:27:23Z",
+      "prCreatedAt": "2026-10-02T19:41:55Z",
+      "lastVerified": "2026-10-02T19:50:24Z",
+      "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
+      "commits": [
+        {
+          "sha": "45d372b2481ae4f46b0134572304a9075c70cc0f",
+          "subject": "fix(core): import declarative_base and declared_attr from sqlalchemy.orm"
+        }
+      ],
+      "checks": {
+        "Check PR description": "pass",
+        "Check PR title (Conventional Commits)": "pass",
+        "Flag unmergeable PRs": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Move SQLAlchemy 2.0 declarative imports off the deprecated sqlalchemy.ext.declarative path and drop the stale test stubs",
+      "notes": "Maintainer-invited redo of closed PR #2734. Predecessors #2734 (closed after review) and #3241 (closed as duplicate).",
+      "issueUpdatedAt": "2026-10-02T19:26:34Z"
+    }
+  ]
+}

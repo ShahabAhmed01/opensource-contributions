@@ -42,7 +42,7 @@
       "mergedAt": null,
       "mergeCommit": null,
       "description": "Move SQLAlchemy 2.0 declarative imports off the deprecated sqlalchemy.ext.declarative path and drop the stale test stubs",
-      "notes": "Maintainer-invited redo of closed PR #2734. Predecessors #2734 (closed after review) and #3241 (closed as duplicate).",
+      "notes": "Maintainer-invited redo of closed PR #2734. Predecessors #2734 (closed after review) and #3241 (closed as duplicate). CI workflows are action_required pending first-time-contributor approval.",
       "issueUpdatedAt": "2026-10-02T19:26:34Z"
     }
   ]

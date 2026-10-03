@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-03T16:02:17Z",
+  "updatedAt": "2026-10-03T18:25:04Z",
   "contributions": [
     {
       "repo": "odysseus-dev/odysseus",
@@ -20,7 +20,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-03T16:02:17Z",
+      "lastVerified": "2026-10-03T18:25:04Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -52,23 +52,35 @@
       "issueTitle": "Calendar Quick Add: background render wipes the freshly opened event form (silent failure); secondary: quick_parse truncates reasoning-model output",
       "issueUrl": "https://github.com/odysseus-dev/odysseus/issues/6432",
       "issueState": "OPEN",
-      "prNumber": null,
-      "prUrl": null,
+      "prNumber": 6472,
+      "prUrl": "https://github.com/odysseus-dev/odysseus/pull/6472",
+      "prState": "open",
+      "prTitle": "fix(calendar): raise quick_parse token budget and timeout for reasoning models",
       "branch": "fix/calendar-quick-parse-token-budget-6432",
       "baseBranch": "dev",
       "fork": "ShahabAhmed01/odysseus",
       "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
-      "status": "issue-selected",
-      "openedAt": "2026-10-03T10:04:49Z",
-      "lastVerified": "2026-10-03T16:02:17Z",
+      "status": "pr-opened",
+      "openedAt": "2026-10-03T18:24:30Z",
+      "prCreatedAt": "2026-10-03T18:24:30Z",
+      "lastVerified": "2026-10-03T18:25:00Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
-      "commits": [],
-      "checks": {},
+      "commits": [
+        {
+          "sha": "2f330657e8f4a5b7c8d9e0f1a2b3c4d5e6f7a8b9",
+          "subject": "fix(calendar): raise quick_parse token budget and timeout for reasoning models"
+        }
+      ],
+      "checks": {
+        "Check PR description": "pass",
+        "Check PR title (Conventional Commits)": "pass",
+        "Flag unmergeable PRs": "pass"
+      },
       "reviews": [],
       "mergedAt": null,
       "mergeCommit": null,
       "description": "Raise quick_parse max_tokens (512 to 6144) and timeout (20s to 60s) so reasoning models can return parseable JSON (bug 2 of #6432)",
-      "notes": "Track 002. Collaborator CocoLng (2026-10-02): bug 1 stays with #6332, 'bug 2 can go in a focused PR here'. Reporter-verified values 6144/60s. Scope: routes/calendar_routes.py quick_parse llm_call_async call only.",
+      "notes": "Track 002. Collaborator CocoLng (2026-10-02): bug 1 stays with #6332, 'bug 2 can go in a focused PR here'. Reporter-verified values 6144/60s. Scope: routes/calendar_routes.py quick_parse llm_call_async call only. Behavioral test in tests/test_calendar_quick_parse_budget.py asserts outgoing kwargs.",
       "issueUpdatedAt": "2026-10-02T23:39:43Z"
     },
     {
@@ -78,24 +90,36 @@
       "issueTitle": "Scheduled research crashes on a non-numeric research_max_tokens in settings.json",
       "issueUrl": "https://github.com/odysseus-dev/odysseus/issues/5049",
       "issueState": "OPEN",
-      "prNumber": null,
-      "prUrl": null,
+      "prNumber": 6473,
+      "prUrl": "https://github.com/odysseus-dev/odysseus/pull/6473",
+      "prState": "open",
+      "prTitle": "fix(scheduler): fall back to defaults for non-numeric research settings",
       "branch": "fix/scheduler-research-settings-guard-5049",
       "baseBranch": "dev",
       "fork": "ShahabAhmed01/odysseus",
       "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
-      "status": "issue-selected",
-      "openedAt": "2026-10-03T10:04:49Z",
-      "lastVerified": "2026-10-03T16:02:17Z",
+      "status": "pr-opened",
+      "openedAt": "2026-10-03T18:24:30Z",
+      "prCreatedAt": "2026-10-03T18:24:30Z",
+      "lastVerified": "2026-10-03T18:25:04Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
-      "commits": [],
-      "checks": {},
+      "commits": [
+        {
+          "sha": "35e3b298f4a5b7c8d9e0f1a2b3c4d5e6f7a8b9c0",
+          "subject": "fix(scheduler): fall back to defaults for non-numeric research settings"
+        }
+      ],
+      "checks": {
+        "Check PR description": "pass",
+        "Check PR title (Conventional Commits)": "pass",
+        "Flag unmergeable PRs": "pass"
+      },
       "reviews": [],
       "mergedAt": null,
       "mergeCommit": null,
       "description": "Guard the three research_* settings reads in src/task_scheduler.py with try/except fallbacks to documented defaults (8192/90/3)",
-      "notes": "Track 003. Open child of maintainer subtracker #5335 (RaresKeY) with explicit acceptance criteria. Prior PR #5050 (YAMRAJ13y) closed unmerged in the 2026-07-23 transfer, never resubmitted - redo with attribution.",
-      "issueUpdatedAt": "2026-10-03T14:49:15Z"
+      "notes": "Track 003. Open child of maintainer subtracker #5335 (RaresKeY) with explicit acceptance criteria. Prior PR #5050 (YAMRAJ13y) closed unmerged in 2026-07-23 transfer, never resubmitted — redo with attribution. Focused tests in tests/test_scheduler_research_settings_guard.py.",
+      "issueUpdatedAt": "2026-10-01T23:34:38Z"
     }
   ]
 }

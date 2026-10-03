@@ -1,6 +1,6 @@
 # Contribution Handoff
 
-Updated: 2026-10-03T00:05:00Z
+Updated: 2026-10-03T06:05:00Z (re-verified this session)
 
 ## Current Project
 
@@ -14,13 +14,16 @@ odysseus-dev/odysseus — self-hosted AI workspace (Python/FastAPI, AGPL-3.0)
 
 [#6453 — fix(core): import declarative_base and declared_attr from sqlalchemy.orm](https://github.com/odysseus-dev/odysseus/pull/6453)
 
-- Base branch: `dev` (correct target)
-- State: open, mergeable
-- Automated PR checks: description ✅, title ✅, unmergeable ✅
-- CI workflows (`CI`, CodeQL, secret scan, container scan, dependency review):
-  **`action_required`** — GitHub requires a maintainer to approve workflow runs
-  for a first-time contributor. This is not a failure and must not be bypassed.
+- Base branch: `dev` (correct target), state OPEN, `MERGEABLE`
+- Automated PR checks (re-verified 2026-10-03): description ✅, title ✅,
+  unmergeable ✅
+- CI workflows (CI, CodeQL, secret scan, container scan, dependency review):
+  **`action_required`** — GitHub requires a maintainer to approve workflow
+  runs for a first-time contributor. Expected gate; not a failure; not
+  bypassed.
+- Branch is 0 commits behind `upstream/dev` — no rebase needed.
 - Copilot review: quota notice only, no actionable feedback.
+- No human review yet; no new issue or PR comments since our claim.
 
 ## Current Branch
 
@@ -38,29 +41,30 @@ lines; app run healthy (`/api/health` 200, `/api/version` 200, tables created).
 
 ## Current Review State
 
-No human review yet.
+No human review yet. Copilot review quota notice only.
 
 ## Current Blocker
 
-None on our side. The pull request is complete and all available automated gates
-pass. The only remaining gate is a maintainer approving the CI workflow run
-(`action_required`, GitHub's first-time-contributor protection), followed by the
-normal review/merge process.
+None on our side. The only remaining gates are maintainer approval of the CI
+workflow runs (`action_required`, GitHub's first-time-contributor protection)
+followed by the normal review/merge process.
 
 ## Durable monitoring
 
 - Public tracker: https://github.com/ShahabAhmed01/opensource-contributions
-- Cloud sync: `.github/workflows/track-contributions.yml` runs every 6 hours and
-  on manual dispatch. Dry-run verified on 2026-10-02 (run 37061012586, success;
-  "tracker already up to date", no empty commit, no API warnings).
-- The temporary local systemd timer (`odysseus-tracker.timer`) has been disabled;
-  the unit files and `scripts/sync_tracker.sh` remain available as a fallback.
+- Cloud sync: `.github/workflows/track-contributions.yml` runs every 6 hours
+  and on manual dispatch. Schedule run confirmed 2026-10-03T04:48:25Z
+  (success, "tracker already up to date", no empty commit).
+- Local fallback: `scripts/sync_tracker.sh` (systemd timer disabled by
+  design; script remains available).
 
 ## Next Action
 
 1. Watch PR #6453 for maintainer CI approval, review comments, and merge.
 2. Respond to any substantive review feedback on the same branch.
-3. On merge: verify the merge commit on `dev`, update this ledger, close out
+3. If still silent near the 7-day mark (≈2026-10-09), consider one polite
+   status nudge if project norms permit.
+4. On merge: verify the merge commit on `dev`, update this ledger, close out
    the contribution record, then select the next issue.
 
 ## Resume Instruction

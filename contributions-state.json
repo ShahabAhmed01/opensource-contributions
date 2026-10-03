@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-02T19:50:24Z",
+  "updatedAt": "2026-10-03T10:04:49Z",
   "contributions": [
     {
       "repo": "odysseus-dev/odysseus",
@@ -44,6 +44,58 @@
       "description": "Move SQLAlchemy 2.0 declarative imports off the deprecated sqlalchemy.ext.declarative path and drop the stale test stubs",
       "notes": "Maintainer-invited redo of closed PR #2734. Predecessors #2734 (closed after review) and #3241 (closed as duplicate). CI workflows are action_required pending first-time-contributor approval.",
       "issueUpdatedAt": "2026-10-02T19:26:34Z"
+    },
+    {
+      "repo": "odysseus-dev/odysseus",
+      "project": "odysseus",
+      "issueNumber": 6432,
+      "issueTitle": "Calendar Quick Add: background render wipes the freshly opened event form (silent failure); secondary: quick_parse truncates reasoning-model output",
+      "issueUrl": "https://github.com/odysseus-dev/odysseus/issues/6432",
+      "issueState": "OPEN",
+      "prNumber": null,
+      "prUrl": null,
+      "branch": "fix/calendar-quick-parse-token-budget-6432",
+      "baseBranch": "dev",
+      "fork": "ShahabAhmed01/odysseus",
+      "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
+      "status": "issue-selected",
+      "openedAt": "2026-10-03T10:04:49Z",
+      "lastVerified": "2026-10-03T10:04:49Z",
+      "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
+      "commits": [],
+      "checks": {},
+      "reviews": [],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Raise quick_parse max_tokens (512 to 6144) and timeout (20s to 60s) so reasoning models can return parseable JSON (bug 2 of #6432)",
+      "notes": "Track 002. Collaborator CocoLng (2026-10-02): bug 1 stays with #6332, 'bug 2 can go in a focused PR here'. Reporter-verified values 6144/60s. Scope: routes/calendar_routes.py quick_parse llm_call_async call only.",
+      "issueUpdatedAt": "2026-10-02T23:39:43Z"
+    },
+    {
+      "repo": "odysseus-dev/odysseus",
+      "project": "odysseus",
+      "issueNumber": 5049,
+      "issueTitle": "Scheduled research crashes on a non-numeric research_max_tokens in settings.json",
+      "issueUrl": "https://github.com/odysseus-dev/odysseus/issues/5049",
+      "issueState": "OPEN",
+      "prNumber": null,
+      "prUrl": null,
+      "branch": "fix/scheduler-research-settings-guard-5049",
+      "baseBranch": "dev",
+      "fork": "ShahabAhmed01/odysseus",
+      "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
+      "status": "issue-selected",
+      "openedAt": "2026-10-03T10:04:49Z",
+      "lastVerified": "2026-10-03T10:04:49Z",
+      "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
+      "commits": [],
+      "checks": {},
+      "reviews": [],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Guard the three research_* settings reads in src/task_scheduler.py with try/except fallbacks to documented defaults (8192/90/3)",
+      "notes": "Track 003. Open child of maintainer subtracker #5335 (RaresKeY) with explicit acceptance criteria. Prior PR #5050 (YAMRAJ13y) closed unmerged in the 2026-07-23 transfer, never resubmitted - redo with attribution.",
+      "issueUpdatedAt": "2026-10-01T23:34:38Z"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-03T18:25:04Z",
+  "updatedAt": "2026-10-03T18:31:46Z",
   "contributions": [
     {
       "repo": "odysseus-dev/odysseus",
@@ -20,7 +20,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-03T18:25:04Z",
+      "lastVerified": "2026-10-03T18:31:46Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -63,7 +63,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-03T18:25:00Z",
+      "lastVerified": "2026-10-03T18:31:46Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -76,12 +76,17 @@
         "Check PR title (Conventional Commits)": "pass",
         "Flag unmergeable PRs": "pass"
       },
-      "reviews": [],
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
       "mergedAt": null,
       "mergeCommit": null,
       "description": "Raise quick_parse max_tokens (512 to 6144) and timeout (20s to 60s) so reasoning models can return parseable JSON (bug 2 of #6432)",
       "notes": "Track 002. Collaborator CocoLng (2026-10-02): bug 1 stays with #6332, 'bug 2 can go in a focused PR here'. Reporter-verified values 6144/60s. Scope: routes/calendar_routes.py quick_parse llm_call_async call only. Behavioral test in tests/test_calendar_quick_parse_budget.py asserts outgoing kwargs.",
-      "issueUpdatedAt": "2026-10-02T23:39:43Z"
+      "issueUpdatedAt": "2026-10-03T16:31:36Z"
     },
     {
       "repo": "odysseus-dev/odysseus",
@@ -101,7 +106,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-03T18:25:04Z",
+      "lastVerified": "2026-10-03T18:31:46Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -114,12 +119,17 @@
         "Check PR title (Conventional Commits)": "pass",
         "Flag unmergeable PRs": "pass"
       },
-      "reviews": [],
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
       "mergedAt": null,
       "mergeCommit": null,
       "description": "Guard the three research_* settings reads in src/task_scheduler.py with try/except fallbacks to documented defaults (8192/90/3)",
       "notes": "Track 003. Open child of maintainer subtracker #5335 (RaresKeY) with explicit acceptance criteria. Prior PR #5050 (YAMRAJ13y) closed unmerged in 2026-07-23 transfer, never resubmitted — redo with attribution. Focused tests in tests/test_scheduler_research_settings_guard.py.",
-      "issueUpdatedAt": "2026-10-01T23:34:38Z"
+      "issueUpdatedAt": "2026-10-03T14:49:15Z"
     }
   ]
 }

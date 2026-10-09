@@ -1,11 +1,11 @@
 # Contribution Handoff
 
-Last updated: 2026-10-09T19:05:00Z
+Last updated: 2026-10-09T20:53:00Z
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 8
+Monitoring Contributions: 9
 Merged Contributions: 0
 Closed/Superseded Contributions: 0
 
@@ -157,6 +157,43 @@ issue names. Policy: one open PR at a time here until the first merge.
 Next Action: Monitor PR for maintainer review (reviewers nuriyoo/
 khj809 turn comparable PRs in 1-2 days); respond on the same branch.
 
+### Track 009
+Project: libredb/libredb-studio
+Issue: #1411
+PR: #1628
+Branch: fix/test-connection-bucket-catalog-1411
+Status: MONITORING
+CI: RUNNING (Socket Security + GitGuardian pass at 20:51Z; semgrep
+pending; the repo's own Lint/Typecheck/Build and Unit & Integration
+Tests jobs had not yet reported — no action_required gate observed)
+Review: AWAITING_REVIEW
+Notes: First libredb-studio track. Selection research 2026-10-09: ~26
+repos discovered, ~10 screened, libredb-studio verified in depth
+(447 merged PRs/30d nearly all external; maintainers kaya-abdullah/
+cevheri respond within minutes-hours; claim-by-comment; 100% line
+coverage gate; Bun 1.4.2 installed for the run). Issue #1411
+(maintainer-authored E2E measurements + prescribed fix plan) was
+unassigned with 0 comments and no competing PR; claimed by comment
+19:38Z per policy, re-verified clean immediately before the PR at
+20:4xZ. Couchbase: `connect()` now refuses a 404 on
+`/pools/default/buckets/<bucket>` naming the bucket (only 404 refuses;
+RBAC 403/network keep the pools-proved connect). Trino: after the
+`SELECT 1` probe, the pinned catalog is checked against
+`system.metadata.catalogs` (the provider's own seam, not SHOW CATALOGS
+— introspect.ts documents why; deviation stated in the PR) and a miss
+is carried as a warning naming it via `connectWarnings()`, the channel
+the test-connection route+dialog already deliver since #1401 (no
+client/route change needed). TDD: all new tests shown failing on
+unmodified main first. Local: all gates green; 552/552 across the five
+affected files; full suite green except tests/unit/test-runner-cli.test.ts
+(2 SIGINT tests failing identically on the unmodified base, proven by
+stash/re-run — unrelated; the runner never merges lcov on a red run, so
+coverage:check runs in CI where the 100% gate is a required check).
+Two prose fixes from an independent pre-commit review were applied
+before commit (measured wording from the issue; paragraph reflow).
+Next Action: Monitor PR for maintainer review (kaya-abdullah/cevheri
+respond within minutes-hours); respond on the same branch.
+
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
 Re-ran the full issue-first selection loop to fill the freed slot:
@@ -192,6 +229,11 @@ on the first push; it awaits only a human reviewer.
 - Odysseus remotes: `origin` = fork, `upstream` = odysseus-dev/odysseus
 - Backlot fork: https://github.com/ShahabAhmed01/backlot
 - Backlot remotes: `origin` = fork, `upstream` = brekkylab/backlot
+- LibreDB Studio fork: https://github.com/ShahabAhmed01/libredb-studio
+- LibreDB Studio remotes: `origin` = fork, `upstream` = libredb/libredb-studio
+- LibreDB Studio workspace: `/run/media/xfc11/EOD/opensource/libredb-studio`
+  (shallow clone of `main` @ 4ebc78761380, bun 1.4.2 at ~/.bun/bin,
+  1238 packages installed)
 - Backlot workspace: `~/opensource-work/backlot` (branch
   `contrib/issue-554-non-finite-ts`, uv venv with `.[dev,official-sdk,
   llamaindex]`, bundled corpus imported in `data/`)

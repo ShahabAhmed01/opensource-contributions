@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-09T19:02:11Z",
+  "updatedAt": "2026-10-09T20:55:59Z",
   "contributions": [
     {
       "repo": "odysseus-dev/odysseus",
@@ -20,7 +20,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-09T19:02:11Z",
+      "lastVerified": "2026-10-09T20:55:59Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -63,7 +63,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-09T19:02:11Z",
+      "lastVerified": "2026-10-09T20:55:59Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -106,7 +106,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-09T19:02:11Z",
+      "lastVerified": "2026-10-09T20:55:59Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -149,7 +149,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-09T19:02:11Z",
+      "lastVerified": "2026-10-09T20:55:59Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -192,7 +192,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-09T19:02:11Z",
+      "lastVerified": "2026-10-09T20:55:59Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -235,7 +235,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-09T19:02:11Z",
+      "lastVerified": "2026-10-09T20:55:59Z",
       "baseCommit": null,
       "commits": [
         {
@@ -278,7 +278,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-09T19:02:11Z",
+      "lastVerified": "2026-10-09T20:55:59Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -321,7 +321,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-09T19:02:11Z",
+      "lastVerified": "2026-10-09T20:55:59Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -349,6 +349,50 @@
       "description": "Mark a non-finite oldest/latest reading in _slack_ts as unparseable so conversations.history answers invalid_ts_oldest/invalid_ts_latest instead of a 500 from the window's uncaught int()",
       "notes": "All remote checks green at first look (gate, lint, scan, test 3.11-3.14). Local: 6088 passed/10 skipped on a .[dev,official-sdk,llamaindex] install; 14-case regression test fails without the fix. Verified external-merge cadence before selecting (15/15 merged PRs Oct 7-9 from outside authors, human CHANGES_REQUESTED/APPROVED cycles by nuriyoo/khj809). See projects/backlot.md for the selection evidence.",
       "issueUpdatedAt": "2026-10-09T16:48:24Z"
+    },
+    {
+      "repo": "libredb/libredb-studio",
+      "project": "libredb-studio",
+      "issueNumber": 1411,
+      "issueTitle": "Test Connection: Couchbase reports success for a bucket that does not exist, and Trino for a missing catalog",
+      "issueUrl": "https://github.com/libredb/libredb-studio/issues/1411",
+      "issueState": "OPEN",
+      "prNumber": 1628,
+      "prUrl": "https://github.com/libredb/libredb-studio/pull/1628",
+      "prState": "open",
+      "prTitle": "fix(test-connection): a missing Couchbase bucket refuses, a missing Trino catalog warns (#1411)",
+      "branch": "fix/test-connection-bucket-catalog-1411",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/libredb-studio",
+      "forkUrl": "https://github.com/ShahabAhmed01/libredb-studio",
+      "status": "pr-opened",
+      "openedAt": "2026-10-09T19:38:18Z",
+      "prCreatedAt": "2026-10-09T20:50:15Z",
+      "lastVerified": "2026-10-09T20:55:59Z",
+      "baseCommit": "4ebc787613805d799964226b43641c45ed95f3b4",
+      "commits": [
+        {
+          "sha": "53145e4311324bff3cbda856c95b3b9895699c04",
+          "subject": "fix(db): refuse a missing Couchbase bucket and name a missing Trino catalog at Test Connection (#1411)"
+        }
+      ],
+      "checks": {
+        "GitGuardian Security Checks": "pass",
+        "Socket Security: Project Report": "pass",
+        "Socket Security: Pull Request Alerts": "pass",
+        "semgrep-cloud-platform/scan": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Couchbase connect() now refuses a 404 on /pools/default/buckets/<bucket> naming the bucket; Trino connect() warns, via connectWarnings(), naming a pinned catalog absent from system.metadata.catalogs",
+      "notes": "Claimed by comment (2026-10-09T19:38:18Z) per repo policy before any code; re-verified unassigned/uncommented-by-others/no competing PR at claim time and immediately before the PR. TDD: all new behaviour tests shown failing on unmodified main first. Local: format/lint/typecheck/knip/chart:check/channels:showcase:check/readme:check/security:check/build pass; full suite green except tests/unit/test-runner-cli.test.ts (2 SIGINT tests) which fails identically on the unmodified base (proven by stash/re-run) and is unrelated; the runner never merges lcov on a red run, so coverage:check runs in CI (its 100% gate is a required check). The repo's catalog seam is system.metadata.catalogs (TRINO_CATALOG_LIST_SQL), not SHOW CATALOGS as the issue wording says; introspect.ts documents why, and PR #1628 states the deviation.",
+      "issueUpdatedAt": "2026-10-09T19:38:18Z"
     }
   ]
 }

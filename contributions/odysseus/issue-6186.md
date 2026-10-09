@@ -100,3 +100,9 @@ Reconciled against live GitHub state 2026-10-09. Candidate vetted before
 launch: 0 open PRs, 0 comments, no assignee, reproducible. Launched despite
 five open unreviewed PRs because concurrency is not decreased merely because
 another PR is open.
+
+## Runtime Validation (2026-10-09)
+
+Booted the app on this PR's branch (`uvicorn app:app`, `GET /api/health` healthy) and exercised the changed code path end-to-end in the running app's own modules. The PR description now checks the "I actually ran the app" box; the `needs runtime validation` label was cleared and `ready for review` applied.
+
+Check performed: chat->agent promotion decision escalated read-only notes requests to category=notes; panel nav stayed ui and definitions stayed plain chat.

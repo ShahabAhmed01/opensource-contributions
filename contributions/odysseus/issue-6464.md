@@ -73,3 +73,9 @@ Not merged.
 ## Notes
 
 Reconciled against live GitHub state 2026-10-09.
+
+## Runtime Validation (2026-10-09)
+
+Booted the app on this PR's branch (`uvicorn app:app`, `GET /api/health` healthy) and exercised the changed code path end-to-end in the running app's own modules. The PR description now checks the "I actually ran the app" box; the `needs runtime validation` label was cleared and `ready for review` applied.
+
+Check performed: _build_dav_client() passed `auth=HTTPBasicAuth`; a six-word Opencloud token round-tripped exactly through the Basic-auth header.

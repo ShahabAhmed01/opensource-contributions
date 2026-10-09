@@ -1,6 +1,6 @@
 # Project notes — odysseus-dev/odysseus
 
-Last verified: 2026-10-02
+Last verified: 2026-10-09
 
 ## Facts
 
@@ -36,6 +36,14 @@ Last verified: 2026-10-02
 
 - Native: `python3 -m venv venv && pip install -r requirements.txt`
   then `python -m uvicorn app:app --host 127.0.0.1 --port 7000`
+- Throwaway runs: `ODYSSEUS_DATA_DIR=/tmp/<dir>` isolates every persisted file
+  (auth.json, sqlite dbs, uploads); first run needs `POST /api/auth/setup`
+  `{username, password}` then `/api/auth/login` (cookie `odysseus_session`).
+  Session tokens persist on disk, so a restart keeps the login.
+- Outbound mail to loopback/LAN is blocked by `_mail_private_blocked` unless
+  the run sets `EMAIL_ALLOW_PRIVATE_IPS=true` (admins are trusted, but the
+  env var is what allows it) — otherwise sends die with
+  "private/shared/loopback address blocked".
 - Tests: `python -m pytest -q` (CI installs requirements, `mkdir -p data` first)
 - Syntax: `python -m compileall -q app.py core routes src services scripts tests`
 - JS syntax: `node --check static/app.js static/js/**/*.js`
@@ -81,3 +89,24 @@ Last verified: 2026-10-02
   https://github.com/odysseus-dev/odysseus/pull/6453 (base `dev`).
 - Validation: full suite 5952 passed / 4 skipped; app run healthy; zero
   `MovedIn20Warning` lines.
+
+### #1912 — deleted active compose account (PR #6648 open, 2026-10-09)
+
+- Branch: `fix/compose-send-stale-account-1912`; PR:
+  https://github.com/odysseus-dev/odysseus/pull/6648 (base `dev`).
+- Fix lives entirely in `_resolveComposeSendAccountId` (`static/js/document.js`);
+  tests in `tests/test_compose_send_account_resolution_js.py` reuse
+  `tests/helpers/document_source.function_body` and run the real function source
+  under `node --input-type=module`.
+- Validation: full suite 13762 passed / 70 failed / 67 skipped (the 70 are the
+  environmental set); end-to-end app run with local SMTP (2525) + IMAP (2143)
+  sinks so compose can save a recovery draft and deliver.
+- UI evidence: the PR-description gate needs a screenshot for any `static/`
+  path. There is no upload API, so screenshots live on an orphan fork branch
+  (`evidence/issue-1912`) and are linked through `raw.githubusercontent.com` —
+  accepted by the gate and durable.
+- Headless UI driving: no playwright/chromium here; `selenium` 4.x with
+  Selenium Manager (auto-downloads geckodriver) + system Firefox `-headless`
+  works. Deep links `#document-<id>` open a document directly; a compose doc is
+  `POST /api/document {title:"New Email", content:"To: \nSubject: \n---\n",
+  language:"email"}`.

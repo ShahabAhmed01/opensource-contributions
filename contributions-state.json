@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-09T11:00:00Z",
+  "updatedAt": "2026-10-09T12:45:00Z",
   "contributions": [
     {
       "repo": "odysseus-dev/odysseus",
@@ -128,7 +128,7 @@
       "mergedAt": null,
       "mergeCommit": null,
       "description": "Guard the three research_* settings reads in src/task_scheduler.py with try/except fallbacks to documented defaults (8192/90/3)",
-      "notes": "Track 003. Open child of maintainer subtracker #5335 (RaresKeY) with explicit acceptance criteria. Prior PR #5050 (YAMRAJ13y) closed unmerged in 2026-07-23 transfer, never resubmitted \u2014 redo with attribution. Focused tests in tests/test_scheduler_research_settings_guard.py. Runtime validation performed 2026-10-09 (app booted on branch, changed path exercised); ready-for-review label applied.",
+      "notes": "Track 003. Open child of maintainer subtracker #5335 (RaresKeY) with explicit acceptance criteria. Prior PR #5050 (YAMRAJ13y) closed unmerged in 2026-07-23 transfer, never resubmitted — redo with attribution. Focused tests in tests/test_scheduler_research_settings_guard.py. Runtime validation performed 2026-10-09 (app booted on branch, changed path exercised); ready-for-review label applied.",
       "issueUpdatedAt": "2026-10-03T14:49:15Z"
     },
     {
@@ -259,6 +259,49 @@
       "description": "Route read-only Notes/todo requests to manage_notes by adding three rows to _ROUTING_PATTERNS in src/action_intents.py so Chat mode promotes to agent mode.",
       "notes": "Classifier snapshot diff 20/57 phrases, 0 True->False regressions; \"open my notes\" stays ui; definition questions stay plain chat. 1230 routing tests + full suite 13783 passed (70 failures all environmental, none import this module). Runtime validation performed 2026-10-09 (app booted on branch, changed path exercised); ready-for-review label applied.",
       "issueUpdatedAt": "2026-10-01T22:33:44Z"
+    },
+    {
+      "repo": "odysseus-dev/odysseus",
+      "project": "odysseus",
+      "issueNumber": 1912,
+      "issueTitle": "Bug: _resolveComposeSendAccountId returns stale account ID when active account is deleted",
+      "issueUrl": "https://github.com/odysseus-dev/odysseus/issues/1912",
+      "issueState": "OPEN",
+      "prNumber": 6648,
+      "prUrl": "https://github.com/odysseus-dev/odysseus/pull/6648",
+      "prState": "open",
+      "prTitle": "fix(document): fall back when the active compose account was deleted",
+      "branch": "fix/compose-send-stale-account-1912",
+      "baseBranch": "dev",
+      "fork": "ShahabAhmed01/odysseus",
+      "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
+      "status": "pr-opened",
+      "openedAt": "2026-10-09T12:40:19Z",
+      "prCreatedAt": "2026-10-09T12:40:19Z",
+      "lastVerified": "2026-10-09T12:45:00Z",
+      "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
+      "commits": [
+        {
+          "sha": "6b2581698f4d17d0322b54bd47b521ffa560ccc9",
+          "subject": "fix(document): fall back when the active compose account was deleted"
+        }
+      ],
+      "checks": {
+        "Check PR description": "pass",
+        "Check PR title (Conventional Commits)": "pass",
+        "Flag unmergeable PRs": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Split the inverted guard in _resolveComposeSendAccountId so a deleted active account resolves to null (default SMTP fallback) instead of returning the stale id",
+      "notes": "Track 007. Selected 2026-10-09 from the free worker slots: 0 comments, no assignee, no open PR (only closed predecessors #1942/#1858, both closed in the 2026-07-23 repo-transfer batch). Fix at static/js/document.js:120 plus tests/test_compose_send_account_resolution_js.py (structural guard-order assertion + node harness over four cases; both fail on unfixed source). Full suite 13762 passed / 70 failed (same environmental set as unmodified dev) / 67 skipped. Runtime validation 2026-10-09: app booted on branch with local SMTP+IMAP sinks, active account deleted through DELETE /api/email/accounts/<id>, Send pressed in the document editor — before fix 'Send cancelled: Draft save failed (404)', after fix toast 'Selected email account no longer exists; using your SMTP account.' and Email sent via the default account. Screenshots on fork branch evidence/issue-1912; ready-for-review label applied.",
+      "issueUpdatedAt": "2026-10-02T01:53:50Z"
     }
   ]
 }

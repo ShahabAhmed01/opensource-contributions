@@ -1,11 +1,11 @@
 # Contribution Handoff
 
-Last updated: 2026-10-09T10:07:00Z
+Last updated: 2026-10-09T12:45:00Z
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 6
+Monitoring Contributions: 7
 Merged Contributions: 0
 Closed/Superseded Contributions: 0
 
@@ -69,7 +69,7 @@ Next Action: Monitor PR for maintainer review; respond on same branch.
 Project: odysseus-dev/odysseus
 Issue: #6314
 PR: #6476
-Branch: fix/sanitize-tool-messages-contract-6314
+Branch: fix/agent-premature-stop-6314
 Status: MONITORING
 CI: PASSING (action_required gate)
 Review: AWAITING_REVIEW
@@ -98,9 +98,36 @@ against dev, MERGEABLE. Launched despite 5 open unreviewed PRs per the
 capacity rule; candidate vetted (0 open PRs, 0 comments, no assignee).
 Next Action: Monitor PR for maintainer review; respond on same branch.
 
+### Track 007
+Project: odysseus-dev/odysseus
+Issue: #1912
+PR: #6648
+Branch: fix/compose-send-stale-account-1912
+Status: MONITORING
+CI: PASSING (description, Conventional Commits, unmergeable checks green; first-time-contributor workflows at action_required)
+Review: AWAITING_REVIEW (automated copilot comment only)
+Notes: `_resolveComposeSendAccountId` returned the stale active id precisely
+when the account row was gone — `if (!activeAccount || _accountCanSend(activeAccount))
+return activeAccountId;` at static/js/document.js:120. The guard is split so a
+missing account resolves to null (the server then picks the default SMTP
+account) and compose tells the user `Selected email account no longer exists;
+using your SMTP account.`; the receive-only branch keeps its guard and message.
+New tests/test_compose_send_account_resolution_js.py: structural guard-order
+assertion plus a node harness running the real function source over four cases
+(deleted / sendable / receive-only / no active id) — both tests fail on the
+unfixed source. Full suite 13762 passed, 70 failed (the documented
+environmental set), 67 skipped. Runtime validation 2026-10-09 with local SMTP
++ IMAP sinks: before = `Send cancelled: Draft save failed (404)` (nothing
+sent), after = fallback toast and `Email sent account=<default>` in the app
+log; screenshots on fork branch `evidence/issue-1912`. Candidate vetted at
+selection: 0 comments, no assignee, no open PR — only predecessors #1942 and
+#1858, both closed in the 2026-07-23 repo-transfer batch. Opened 2026-10-09
+12:40Z against dev, MERGEABLE, `ready for review` label applied.
+Next Action: Monitor PR for maintainer review; respond on same branch.
+
 ## Blockers
 
-None. All five open PRs sit behind GitHub's first-time-contributor
+None. All seven open PRs sit behind GitHub's first-time-contributor
 `action_required` CI gate — an expected protection that must not be bypassed.
 No human review comments since 2026-10-03; maintainers merge daily.
 

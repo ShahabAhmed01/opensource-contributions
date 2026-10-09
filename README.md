@@ -7,6 +7,7 @@ A curated record of meaningful open-source contributions, with issue references,
 <!-- BEGIN CONTRIBUTIONS TABLE -->
 | Date | Repository | Issue | PR | Status | Description |
 |---|---|---|---|---|---|
+| 2026-10-09 | odysseus-dev/odysseus | [#1912](https://github.com/odysseus-dev/odysseus/issues/1912) | [#6648](https://github.com/odysseus-dev/odysseus/pull/6648) | In review | Split the inverted guard in _resolveComposeSendAccountId so a deleted active account resolves to null (default SMTP fallback) instead of returning the stale id |
 | 2026-10-09 | odysseus-dev/odysseus | [#6186](https://github.com/odysseus-dev/odysseus/issues/6186) | [#6647](https://github.com/odysseus-dev/odysseus/pull/6647) | In review | Route read-only Notes/todo requests to manage_notes by adding three rows to _ROUTING_PATTERNS in src/action_intents.py so Chat mode promotes to agent mode. |
 | 2026-10-03 | odysseus-dev/odysseus | [#6314](https://github.com/odysseus-dev/odysseus/issues/6314) | [#6476](https://github.com/odysseus-dev/odysseus/pull/6476) | In review | Strip tool_calls from assistant messages whose predecessor is not a user or tool turn so strict providers reject neither the payload |
 | 2026-10-03 | odysseus-dev/odysseus | [#6464](https://github.com/odysseus-dev/odysseus/issues/6464) | [#6475](https://github.com/odysseus-dev/odysseus/pull/6475) | In review | Pass an explicit HTTPBasicAuth to caldav.DAVClient so passwords containing spaces (Opencloud app tokens) are encoded correctly |

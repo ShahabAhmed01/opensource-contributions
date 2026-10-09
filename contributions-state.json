@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-03T18:31:46Z",
+  "updatedAt": "2026-10-09T10:17:25Z",
   "contributions": [
     {
       "repo": "odysseus-dev/odysseus",
@@ -20,7 +20,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-03T18:31:46Z",
+      "lastVerified": "2026-10-09T10:17:25Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -63,7 +63,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-03T18:31:46Z",
+      "lastVerified": "2026-10-09T10:17:25Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -106,7 +106,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-03T18:31:46Z",
+      "lastVerified": "2026-10-09T10:17:25Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -130,6 +130,135 @@
       "description": "Guard the three research_* settings reads in src/task_scheduler.py with try/except fallbacks to documented defaults (8192/90/3)",
       "notes": "Track 003. Open child of maintainer subtracker #5335 (RaresKeY) with explicit acceptance criteria. Prior PR #5050 (YAMRAJ13y) closed unmerged in 2026-07-23 transfer, never resubmitted — redo with attribution. Focused tests in tests/test_scheduler_research_settings_guard.py.",
       "issueUpdatedAt": "2026-10-03T14:49:15Z"
+    },
+    {
+      "repo": "odysseus-dev/odysseus",
+      "project": "odysseus",
+      "issueNumber": 6464,
+      "issueTitle": "Unable to authenticate to Radicale CALDAV behind Opencloud",
+      "issueUrl": "https://github.com/odysseus-dev/odysseus/issues/6464",
+      "issueState": "OPEN",
+      "prNumber": 6475,
+      "prUrl": "https://github.com/odysseus-dev/odysseus/pull/6475",
+      "prState": "open",
+      "prTitle": "fix(caldav): handle passwords with spaces in Basic auth (fixes #6464)",
+      "branch": "fix/caldav-opencloud-token-spaces-6464",
+      "baseBranch": "dev",
+      "fork": "ShahabAhmed01/odysseus",
+      "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
+      "status": "pr-opened",
+      "openedAt": "2026-10-03T18:50:24Z",
+      "prCreatedAt": "2026-10-03T18:50:24Z",
+      "lastVerified": "2026-10-09T10:17:25Z",
+      "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
+      "commits": [
+        {
+          "sha": "ce1fdbcdfdffbb3307df9e6e136df314e0c6c59a",
+          "subject": "fix(caldav): handle passwords with spaces in Basic auth (fixes #6464)"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Pass an explicit HTTPBasicAuth to caldav.DAVClient so passwords containing spaces (Opencloud app tokens) are encoded correctly",
+      "notes": "Track 004. Reported authentication failure against Radicale CalDAV behind Opencloud; scope limited to _build_dav_client plus focused redirect-hardening tests.",
+      "issueUpdatedAt": "2026-10-03T13:28:55Z",
+      "checks": {
+        "Check PR description": "pass",
+        "Check PR title (Conventional Commits)": "pass",
+        "Flag unmergeable PRs": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ]
+    },
+    {
+      "repo": "odysseus-dev/odysseus",
+      "project": "odysseus",
+      "issueNumber": 6314,
+      "issueTitle": "Agent prematurely stops during multi-step tool-call tasks",
+      "issueUrl": "https://github.com/odysseus-dev/odysseus/issues/6314",
+      "issueState": "OPEN",
+      "prNumber": 6476,
+      "prUrl": "https://github.com/odysseus-dev/odysseus/pull/6476",
+      "prState": "open",
+      "prTitle": "fix(agent): sanitize tool message predecessors to prevent provider errors (fixes #6314)",
+      "branch": "fix/agent-premature-stop-6314",
+      "baseBranch": "dev",
+      "fork": "ShahabAhmed01/odysseus",
+      "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
+      "status": "pr-opened",
+      "openedAt": "2026-10-03T19:07:12Z",
+      "prCreatedAt": "2026-10-03T19:07:12Z",
+      "lastVerified": "2026-10-09T10:17:25Z",
+      "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
+      "commits": [
+        {
+          "sha": "a3cce1b0c0998b909747b8978b33343a52544614",
+          "subject": "fix(agent): sanitize tool message predecessors to prevent provider errors (fixes #6314)"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Strip tool_calls from assistant messages whose predecessor is not a user or tool turn so strict providers reject neither the payload",
+      "notes": "Track 005. Overlapping PR #6506 (Katsoragi, opened 2026-10-05) targets the same issue with a broader root-cause fix (context-window mapping + trim ordering + synthetic user turn) and is currently CONFLICTING; scopes recorded so the maintainer can sequence them.",
+      "issueUpdatedAt": "2026-10-05T20:48:57Z",
+      "checks": {
+        "Check PR description": "pass",
+        "Check PR title (Conventional Commits)": "pass",
+        "Flag unmergeable PRs": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ]
+    },
+    {
+      "repo": "odysseus-dev/odysseus",
+      "project": "odysseus",
+      "issueNumber": 6186,
+      "issueTitle": "Chat: route read-only Notes requests to manage_notes",
+      "issueUrl": "https://github.com/odysseus-dev/odysseus/issues/6186",
+      "issueState": "OPEN",
+      "prNumber": 6647,
+      "prUrl": "https://github.com/odysseus-dev/odysseus/pull/6647",
+      "prState": "open",
+      "prTitle": "fix(chat): route read-only Notes requests to manage_notes (fixes #6186)",
+      "branch": "fix/notes-read-intent-6186",
+      "baseBranch": "dev",
+      "fork": "ShahabAhmed01/odysseus",
+      "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
+      "status": "pr-opened",
+      "openedAt": "2026-10-09T10:12:00Z",
+      "prCreatedAt": "2026-10-09T10:13:01Z",
+      "lastVerified": "2026-10-09T10:17:25Z",
+      "baseCommit": null,
+      "commits": [
+        {
+          "sha": "462df8f0730de58b6a54644b6ddeafa32fa76a2b",
+          "subject": "fix(chat): route read-only Notes requests to manage_notes (fixes #6186)"
+        }
+      ],
+      "checks": {
+        "Check PR description": "pass",
+        "Check PR title (Conventional Commits)": "pass",
+        "Flag unmergeable PRs": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Route read-only Notes/todo requests to manage_notes by adding three rows to _ROUTING_PATTERNS in src/action_intents.py so Chat mode promotes to agent mode.",
+      "notes": "Classifier snapshot diff 20/57 phrases, 0 True->False regressions; \"open my notes\" stays ui; definition questions stay plain chat. 1230 routing tests + full suite 13783 passed (70 failures all environmental, none import this module).",
+      "issueUpdatedAt": "2026-10-01T22:33:44Z"
     }
   ]
 }

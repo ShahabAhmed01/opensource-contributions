@@ -1,72 +1,117 @@
 # Contribution Handoff
 
-Updated: 2026-10-03T06:05:00Z (re-verified this session)
+Last updated: 2026-10-09T10:07:00Z
 
-## Current Project
+## Portfolio Summary
 
-odysseus-dev/odysseus — self-hosted AI workspace (Python/FastAPI, AGPL-3.0)
+Active Contributions: 0
+Monitoring Contributions: 6
+Merged Contributions: 0
+Closed/Superseded Contributions: 0
 
-## Current Issue
+## Active Tracks
 
-[#2740 — Resolve SQLAlchemy 2.0 deprecation warnings in core/database.py](https://github.com/odysseus-dev/odysseus/issues/2740)
+### Track 001
+Project: odysseus-dev/odysseus
+Issue: #2740
+PR: #6453
+Branch: fix/sqlalchemy-declarative-import-2740
+Status: MONITORING
+CI: RE-RUNNING (action_required gate)
+Review: AWAITING_REVIEW
+Notes: Rebased 2026-10-09 onto upstream/dev@a8c147b238db (backup tag
+backup/2740-pre-rebase-20261009). Upstream had already deleted five of the
+stub blocks we edited, so the diff shrank from 22 to 17 files (+17/-18).
+Pushed with --force-with-lease; PR is MERGEABLE. Full suite after rebase:
+13759 passed, 71 skipped, 3 deselected (env-dependent browser/namespace
+cases that fail identically on unmodified dev). PR body updated with the
+rebase note and current numbers.
+Next Action: Monitor PR for maintainer review; respond on same branch.
 
-## Current PR
+### Track 002
+Project: odysseus-dev/odysseus
+Issue: #6432
+PR: #6472
+Branch: fix/calendar-quick-parse-token-budget-6432
+Status: MONITORING
+CI: PASSING (action_required gate)
+Review: AWAITING_REVIEW
+Notes: Target code still unfixed upstream (quick_parse still 512/20). 438
+commits behind upstream but GitHub reports MERGEABLE (no conflicts); no
+force-push churn applied.
+Next Action: Monitor PR for maintainer review; respond on same branch.
 
-[#6453 — fix(core): import declarative_base and declared_attr from sqlalchemy.orm](https://github.com/odysseus-dev/odysseus/pull/6453)
+### Track 003
+Project: odysseus-dev/odysseus
+Issue: #5049
+PR: #6473
+Branch: fix/scheduler-research-settings-guard-5049
+Status: MONITORING
+CI: PASSING (action_required gate)
+Review: AWAITING_REVIEW
+Notes: Target code still unfixed upstream (research_* still unguarded int()).
+MERGEABLE; no rebase needed.
+Next Action: Monitor PR for maintainer review; respond on same branch.
 
-- Base branch: `dev` (correct target), state OPEN, `MERGEABLE`
-- Automated PR checks (re-verified 2026-10-03): description ✅, title ✅,
-  unmergeable ✅
-- CI workflows (CI, CodeQL, secret scan, container scan, dependency review):
-  **`action_required`** — GitHub requires a maintainer to approve workflow
-  runs for a first-time contributor. Expected gate; not a failure; not
-  bypassed.
-- Branch is 0 commits behind `upstream/dev` — no rebase needed.
-- Copilot review: quota notice only, no actionable feedback.
-- No human review yet; no new issue or PR comments since our claim.
+### Track 004
+Project: odysseus-dev/odysseus
+Issue: #6464
+PR: #6475
+Branch: fix/caldav-opencloud-token-spaces-6464
+Status: MONITORING
+CI: PASSING (action_required gate)
+Review: AWAITING_REVIEW
+Notes: Target code still unfixed upstream (caldav still username/password
+kwargs). MERGEABLE; no rebase needed.
+Next Action: Monitor PR for maintainer review; respond on same branch.
 
-## Current Branch
+### Track 005
+Project: odysseus-dev/odysseus
+Issue: #6314
+PR: #6476
+Branch: fix/sanitize-tool-messages-contract-6314
+Status: MONITORING
+CI: PASSING (action_required gate)
+Review: AWAITING_REVIEW
+Notes: Target code still unfixed upstream (_sanitize_tool_messages unchanged).
+Competing PR #6506 targets the same issue/function; ours kept open and a
+factual "Related work" note was added to the PR body rather than closing.
+MERGEABLE; no rebase needed.
+Next Action: Monitor PR for maintainer review; respond on same branch.
 
-`fix/sqlalchemy-declarative-import-2740` (fork: `ShahabAhmed01/odysseus`)
+### Track 006
+Project: odysseus-dev/odysseus
+Issue: #6186
+PR: #6647
+Branch: fix/notes-read-intent-6186
+Status: MONITORING
+CI: IN PROGRESS (action_required gate)
+Review: AWAITING_REVIEW
+Notes: Three read-only routing rows added to _ROUTING_PATTERNS in
+src/action_intents.py (+11 lines) plus new tests/test_action_intents_notes.py.
+Classifier snapshot diff: 20/57 phrases changed, 0 True->False regressions;
+"open my notes" stays ui; definition questions stay plain chat. 1230
+routing/intent/turn-contract tests pass; full suite 13783 passed (70 failures
+all environmental — missing Playwright binaries, bubblewrap-hidden venv,
+model downloads — and none import this module). PR #6647 opened 2026-10-09
+against dev, MERGEABLE. Launched despite 5 open unreviewed PRs per the
+capacity rule; candidate vetted (0 open PRs, 0 comments, no assignee).
+Next Action: Monitor PR for maintainer review; respond on same branch.
 
-## Current Commit
+## Blockers
 
-`45d372b2481ae4f46b0134572304a9075c70cc0f` — 22 files, +22/−23
+None. All five open PRs sit behind GitHub's first-time-contributor
+`action_required` CI gate — an expected protection that must not be bypassed.
+No human review comments since 2026-10-03; maintainers merge daily.
 
-## Current CI State
+## Environment
 
-Awaiting maintainer approval to run. Local validation is complete and green:
-full suite `5952 passed, 4 skipped`; `compileall` clean; zero `MovedIn20Warning`
-lines; app run healthy (`/api/health` 200, `/api/version` 200, tables created).
-
-## Current Review State
-
-No human review yet. Copilot review quota notice only.
-
-## Current Blocker
-
-None on our side. The only remaining gates are maintainer approval of the CI
-workflow runs (`action_required`, GitHub's first-time-contributor protection)
-followed by the normal review/merge process.
-
-## Durable monitoring
-
-- Public tracker: https://github.com/ShahabAhmed01/opensource-contributions
-- Cloud sync: `.github/workflows/track-contributions.yml` runs every 6 hours
-  and on manual dispatch. Schedule run confirmed 2026-10-03T04:48:25Z
-  (success, "tracker already up to date", no empty commit).
-- Local fallback: `scripts/sync_tracker.sh` (systemd timer disabled by
-  design; script remains available).
-
-## Next Action
-
-1. Watch PR #6453 for maintainer CI approval, review comments, and merge.
-2. Respond to any substantive review feedback on the same branch.
-3. If still silent near the 7-day mark (≈2026-10-09), consider one polite
-   status nudge if project norms permit.
-4. On merge: verify the merge commit on `dev`, update this ledger, close out
-   the contribution record, then select the next issue.
-
-## Resume Instruction
-
-RESUME CONTRIBUTIONS
+- GitHub account: `ShahabAhmed01` (id 192491541)
+- Fork: https://github.com/ShahabAhmed01/odysseus
+- Remotes: `origin` = fork, `upstream` = odysseus-dev/odysseus
+- Public tracker repo: https://github.com/ShahabAhmed01/opensource-contributions
+- Known env-dependent test failures (identical on unmodified dev): browser
+  tests need Playwright chromium binaries; containment/workspace tests need a
+  bubblewrap-visible interpreter path (venv on an external mount); wave3 local
+  tests need real model downloads; test_tls_overrides_scope fails due to
+  in-tree worktree clones.

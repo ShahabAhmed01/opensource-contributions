@@ -1,11 +1,11 @@
 # Contribution Handoff
 
-Last updated: 2026-10-09T12:45:00Z
+Last updated: 2026-10-09T19:05:00Z
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 7
+Monitoring Contributions: 8
 Merged Contributions: 0
 Closed/Superseded Contributions: 0
 
@@ -125,6 +125,38 @@ selection: 0 comments, no assignee, no open PR — only predecessors #1942 and
 12:40Z against dev, MERGEABLE, `ready for review` label applied.
 Next Action: Monitor PR for maintainer review; respond on same branch.
 
+### Track 008
+Project: brekkylab/backlot
+Issue: #554
+PR: #577
+Branch: contrib/issue-554-non-finite-ts
+Status: MONITORING
+CI: ALL GREEN (gate, lint, scan, test 3.11/3.12/3.13/3.14 — no
+first-time-contributor action_required gate; workflows ran on first push)
+Review: AWAITING_REVIEW (a copilot bot summary only; no human review yet)
+Notes: First non-odysseus track. Selection research 2026-10-09: 25+
+repos discovered, 10 screened, 5 verified in depth; backlot scored ~97/100
+(15/15 merged PRs Oct 7-9 from outside authors, human CHANGES_REQUESTED/
+APPROVED cycles by nuriyoo and khj809, 1-2 day merge turnaround).
+Issue #554 (labels: bug, good first issue, help wanted, fidelity,
+hacktoberfest) was unassigned with 0 comments and no competing PR —
+re-verified before implementation, before commit, and at 18:41Z
+immediately before opening the PR. Fix: one isfinite guard in `_slack_ts`
+(backlot/routers/slack.py) so `oldest=inf`/`nan` and every spelling
+`float()` reads non-finite (Infinity, -inf, NaN, 1e999) answers
+invalid_ts_oldest/invalid_ts_latest instead of the 500 the window's
+uncaught `int()` raised. 14-case regression test (2 params × 7
+spellings) fails without the fix, passes with it. Local: 6088 passed/
+10 skipped on a .[dev,official-sdk,llamaindex] install; SDK suite
+1371 passed; ruff + scripts/prose_check.py clean. PR follows the repo's
+template exactly (Closes #554, source-prefixed title, measured table,
+install-specific verification lines); the finite-but-huge ts
+(`oldest=1e19`, SQLite bind overflow) is documented as out of scope in
+the PR description — it belongs with the lenient-parse change the
+issue names. Policy: one open PR at a time here until the first merge.
+Next Action: Monitor PR for maintainer review (reviewers nuriyoo/
+khj809 turn comparable PRs in 1-2 days); respond on the same branch.
+
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
 Re-ran the full issue-first selection loop to fill the freed slot:
@@ -147,15 +179,22 @@ No fillable slot exists right now; all seven tracks stay MONITORING.
 
 ## Blockers
 
-None. All seven open PRs sit behind GitHub's first-time-contributor
+None. All seven odysseus open PRs sit behind GitHub's first-time-contributor
 `action_required` CI gate — an expected protection that must not be bypassed.
-No human review comments since 2026-10-03; maintainers merge daily.
+No human review comments since 2026-10-03; odysseus maintainers merge daily.
+The backlot PR (#577) has no such gate — all eight checks already ran green
+on the first push; it awaits only a human reviewer.
 
 ## Environment
 
 - GitHub account: `ShahabAhmed01` (id 192491541)
-- Fork: https://github.com/ShahabAhmed01/odysseus
-- Remotes: `origin` = fork, `upstream` = odysseus-dev/odysseus
+- Odysseus fork: https://github.com/ShahabAhmed01/odysseus
+- Odysseus remotes: `origin` = fork, `upstream` = odysseus-dev/odysseus
+- Backlot fork: https://github.com/ShahabAhmed01/backlot
+- Backlot remotes: `origin` = fork, `upstream` = brekkylab/backlot
+- Backlot workspace: `~/opensource-work/backlot` (branch
+  `contrib/issue-554-non-finite-ts`, uv venv with `.[dev,official-sdk,
+  llamaindex]`, bundled corpus imported in `data/`)
 - Public tracker repo: https://github.com/ShahabAhmed01/opensource-contributions
 - Known env-dependent test failures (identical on unmodified dev): browser
   tests need Playwright chromium binaries; containment/workspace tests need a

@@ -7,6 +7,7 @@ A curated record of meaningful open-source contributions, with issue references,
 <!-- BEGIN CONTRIBUTIONS TABLE -->
 | Date | Repository | Issue | PR | Status | Description |
 |---|---|---|---|---|---|
+| 2026-10-09 | brekkylab/backlot | [#554](https://github.com/brekkylab/backlot/issues/554) | [#577](https://github.com/brekkylab/backlot/pull/577) | In review | Mark a non-finite oldest/latest reading in _slack_ts as unparseable so conversations.history answers invalid_ts_oldest/invalid_ts_latest instead of a 500 from the window's uncaught int() |
 | 2026-10-09 | odysseus-dev/odysseus | [#1912](https://github.com/odysseus-dev/odysseus/issues/1912) | [#6648](https://github.com/odysseus-dev/odysseus/pull/6648) | In review | Split the inverted guard in _resolveComposeSendAccountId so a deleted active account resolves to null (default SMTP fallback) instead of returning the stale id |
 | 2026-10-09 | odysseus-dev/odysseus | [#6186](https://github.com/odysseus-dev/odysseus/issues/6186) | [#6647](https://github.com/odysseus-dev/odysseus/pull/6647) | In review | Route read-only Notes/todo requests to manage_notes by adding three rows to _ROUTING_PATTERNS in src/action_intents.py so Chat mode promotes to agent mode. |
 | 2026-10-03 | odysseus-dev/odysseus | [#6314](https://github.com/odysseus-dev/odysseus/issues/6314) | [#6476](https://github.com/odysseus-dev/odysseus/pull/6476) | In review | Strip tool_calls from assistant messages whose predecessor is not a user or tool turn so strict providers reject neither the payload |
@@ -25,3 +26,4 @@ This repository keeps a factual record of contribution work: the issue, the pull
 ## Projects
 
 - **odysseus-dev/odysseus** — self-hosted AI workspace (Python/FastAPI, AGPL-3.0). Notes: [`projects/odysseus.md`](projects/odysseus.md).
+- **brekkylab/backlot** — API-fidelity server for 11 real SaaS APIs (Python/FastAPI, MIT). Notes: [`projects/backlot.md`](projects/backlot.md).

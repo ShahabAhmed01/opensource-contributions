@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-09T12:45:00Z",
+  "updatedAt": "2026-10-09T19:02:11Z",
   "contributions": [
     {
       "repo": "odysseus-dev/odysseus",
@@ -20,7 +20,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-09T11:00:00Z",
+      "lastVerified": "2026-10-09T19:02:11Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -63,7 +63,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-09T11:00:00Z",
+      "lastVerified": "2026-10-09T19:02:11Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -106,7 +106,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-09T11:00:00Z",
+      "lastVerified": "2026-10-09T19:02:11Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -149,7 +149,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-09T11:00:00Z",
+      "lastVerified": "2026-10-09T19:02:11Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -192,7 +192,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-09T11:00:00Z",
+      "lastVerified": "2026-10-09T19:02:11Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -235,7 +235,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-09T11:00:00Z",
+      "lastVerified": "2026-10-09T19:02:11Z",
       "baseCommit": null,
       "commits": [
         {
@@ -278,7 +278,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-09T12:45:00Z",
+      "lastVerified": "2026-10-09T19:02:11Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -302,6 +302,53 @@
       "description": "Split the inverted guard in _resolveComposeSendAccountId so a deleted active account resolves to null (default SMTP fallback) instead of returning the stale id",
       "notes": "Track 007. Selected 2026-10-09 from the free worker slots: 0 comments, no assignee, no open PR (only closed predecessors #1942/#1858, both closed in the 2026-07-23 repo-transfer batch). Fix at static/js/document.js:120 plus tests/test_compose_send_account_resolution_js.py (structural guard-order assertion + node harness over four cases; both fail on unfixed source). Full suite 13762 passed / 70 failed (same environmental set as unmodified dev) / 67 skipped. Runtime validation 2026-10-09: app booted on branch with local SMTP+IMAP sinks, active account deleted through DELETE /api/email/accounts/<id>, Send pressed in the document editor — before fix 'Send cancelled: Draft save failed (404)', after fix toast 'Selected email account no longer exists; using your SMTP account.' and Email sent via the default account. Screenshots on fork branch evidence/issue-1912; ready-for-review label applied.",
       "issueUpdatedAt": "2026-10-02T01:53:50Z"
+    },
+    {
+      "repo": "brekkylab/backlot",
+      "project": "backlot",
+      "issueNumber": 554,
+      "issueTitle": "slack: conversations.history with `oldest=inf` or `oldest=nan` is a 500, where real answers invalid_ts_oldest",
+      "issueUrl": "https://github.com/brekkylab/backlot/issues/554",
+      "issueState": "OPEN",
+      "prNumber": 577,
+      "prUrl": "https://github.com/brekkylab/backlot/pull/577",
+      "prState": "open",
+      "prTitle": "slack: an oldest or latest with no finite value is the named invalid_ts error, as real answers it",
+      "branch": "contrib/issue-554-non-finite-ts",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/backlot",
+      "forkUrl": "https://github.com/ShahabAhmed01/backlot",
+      "status": "pr-opened",
+      "openedAt": "2026-10-09T18:42:00Z",
+      "prCreatedAt": "2026-10-09T18:42:00Z",
+      "lastVerified": "2026-10-09T19:02:11Z",
+      "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
+      "commits": [
+        {
+          "sha": "2013db90851350c2dcc41ad770a56cab92908edd",
+          "subject": "slack: an oldest or latest with no finite value is the named invalid_ts error, as real answers it"
+        }
+      ],
+      "checks": {
+        "test (3.11)": "pass",
+        "gate": "pass",
+        "scan": "pass",
+        "test (3.12)": "pass",
+        "test (3.13)": "pass",
+        "test (3.14)": "pass",
+        "lint": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Mark a non-finite oldest/latest reading in _slack_ts as unparseable so conversations.history answers invalid_ts_oldest/invalid_ts_latest instead of a 500 from the window's uncaught int()",
+      "notes": "All remote checks green at first look (gate, lint, scan, test 3.11-3.14). Local: 6088 passed/10 skipped on a .[dev,official-sdk,llamaindex] install; 14-case regression test fails without the fix. Verified external-merge cadence before selecting (15/15 merged PRs Oct 7-9 from outside authors, human CHANGES_REQUESTED/APPROVED cycles by nuriyoo/khj809). See projects/backlot.md for the selection evidence.",
+      "issueUpdatedAt": "2026-10-09T16:48:24Z"
     }
   ]
 }

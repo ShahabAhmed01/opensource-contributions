@@ -146,11 +146,15 @@ ns_server's own behaviour (plain-text "Object Not Found" →
 
 ## CI
 
-At first look (2026-10-09T20:51Z): Socket Security (Project Report,
-Pull Request Alerts) and GitGuardian pass; semgrep pending; the repo's
-own CI jobs (Lint/Typecheck/Build, Unit & Integration Tests, Secret
-Scan) had not yet reported. No first-time-contributor `action_required`
-block observed on the checks so far.
+Verified 2026-10-09T21:0xZ: the third-party scanners ran on first push
+and all pass — Socket Security (Project Report, Pull Request Alerts),
+GitGuardian, semgrep. The repo's OWN workflows (CI, CodeQL Advanced,
+Security Scan, Platform Integration Check) triggered but completed as
+`action_required` — GitHub's first-time-contributor approval gate,
+exactly like the odysseus fleet; a maintainer must approve the run, and
+the gate must not be bypassed. So the required checks ("Lint, Typecheck
+and Build", "Unit & Integration Tests") have not executed yet and no
+green-CI claim is made.
 
 ## Review
 

@@ -163,9 +163,10 @@ Issue: #1411
 PR: #1628
 Branch: fix/test-connection-bucket-catalog-1411
 Status: MONITORING
-CI: RUNNING (Socket Security + GitGuardian pass at 20:51Z; semgrep
-pending; the repo's own Lint/Typecheck/Build and Unit & Integration
-Tests jobs had not yet reported — no action_required gate observed)
+CI: RUNNING (Socket Security x2, GitGuardian and semgrep all pass;
+the repo's OWN workflows - CI, CodeQL Advanced, Security Scan, Platform
+Integration Check - sit at action_required, the first-time-contributor
+approval gate, exactly like odysseus; must not be bypassed)
 Review: AWAITING_REVIEW
 Notes: First libredb-studio track. Selection research 2026-10-09: ~26
 repos discovered, ~10 screened, libredb-studio verified in depth

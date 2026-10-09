@@ -125,6 +125,26 @@ selection: 0 comments, no assignee, no open PR — only predecessors #1942 and
 12:40Z against dev, MERGEABLE, `ready for review` label applied.
 Next Action: Monitor PR for maintainer review; respond on same branch.
 
+## Post-PR triage 2026-10-09 (after opening #6648)
+
+Re-ran the full issue-first selection loop to fill the freed slot:
+
+- #6606 — reporter reproduced and posted the exact fix, intends to open the PR;
+  no intervention, do not race.
+- #6621, #6632, #6637, #6612 — already covered by open PRs #6629, #6633,
+  #6638, #6614.
+- #1883 — tracking issue for fixes that are already open as PRs.
+- #6187 (docs: document the supported library-provider setup flow) — the only
+  claim-clean candidate; deliberately NOT started. Reasons: bundled scope with
+  an open maintainer question (generic-library wording vs brand names), and it
+  edits `_ROUTING_PATTERNS`-adjacent guidance that touches PR #6647's area
+  (unreviewed, capacity 7 open PRs). Revalidation checklist before ever
+  starting it is in decisions/odysseus-landscape-triage-2026-10-09.md
+  (local-only file; recreate from this summary if absent: 0 comments, no
+  assignee, no open PR, #6647 merged or sequenced, then branch from fresh dev).
+
+No fillable slot exists right now; all seven tracks stay MONITORING.
+
 ## Blockers
 
 None. All seven open PRs sit behind GitHub's first-time-contributor

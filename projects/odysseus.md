@@ -69,7 +69,15 @@ Last verified: 2026-10-09
 
 ## Pitfalls learned
 
-- The test suite is large; CI runs all of it. Run locally before pushing.
+- The test suite is large; CI runs all of it. Run locally before pushing. The
+  suite carries ~70 environmental failures (Playwright binaries, bubblewrap-
+  hidden venvs, model downloads) that are identical on unmodified dev: compare
+  focused tests before/after and state the real baseline; never claim a fully
+  green suite.
+- JS-syntax checks in tests must avoid `!~` (`not (string in container)`):
+  Python reads it as `(!string) ~ container`, so a file can be valid JS and
+  fail pytest's parse step anyway (hit in tests/test_compose_send_account_resolution_js.py
+  during #1912). Write `not (... in ...)` explicitly.
 - Do not blindly reformat; diffs must stay minimal.
 - Many issues are already claimed by open PRs — always search PRs before picking
   an issue. Two closed PRs exist for the current issue (#2740): #2734 and #3241.

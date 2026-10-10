@@ -1,6 +1,6 @@
 # Project notes — brekkylab/backlot
 
-Last verified: 2026-10-09
+Last verified: 2026-10-10
 
 ## Facts
 
@@ -106,7 +106,7 @@ uv sync --all-extras --locked              # what CI installs (all extras)
 
 ## Contribution history
 
-### #554 — non-finite `oldest`/`latest` is a 500 (PR #577 open, 2026-10-09)
+### #554 — non-finite `oldest`/`latest` is a 500 (**MERGED** as PR #577, 2026-10-10)
 
 - Branch: `contrib/issue-554-non-finite-ts`; PR:
   https://github.com/brekkylab/backlot/pull/577 (base `main`), closes
@@ -131,3 +131,10 @@ uv sync --all-extras --locked              # what CI installs (all extras)
   the regression replay and full-suite rerun; reply posted; awaiting
   re-review (a PR author cannot formally re-request; the @mention
   notifies).
+- **MERGED 2026-10-10T13:59:45Z by nuriyoo** — APPROVED 13:59:30Z, merged
+  15 seconds later with no further comment, merge commit `78c06e50d256`;
+  issue #554 closed COMPLETED at 13:59:47Z. 19 hours open, one human
+  review cycle, seven green checks on every push. The first merge in this
+  portfolio — the "human review, not bot merges" selection signal held.
+  Backlot is now inside its own one-open-PR-at-a-time unlock: up to three
+  open PRs here from here on.

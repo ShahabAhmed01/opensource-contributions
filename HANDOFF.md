@@ -1,12 +1,12 @@
 # Contribution Handoff
 
-Last updated: 2026-10-09T20:53:00Z
+Last updated: 2026-10-10T17:01:00Z
 
 ## Portfolio Summary
 
 Active Contributions: 0
 Monitoring Contributions: 9
-Merged Contributions: 0
+Merged Contributions: 1
 Closed/Superseded Contributions: 0
 
 ## Active Tracks
@@ -130,8 +130,9 @@ Project: brekkylab/backlot
 Issue: #554
 PR: #577
 Branch: contrib/issue-554-non-finite-ts
-Status: MONITORING (CHANGES_REQUESTED received and addressed, awaiting
-re-review)
+Status: **MERGED 2026-10-10T13:59:45Z** by nuriyoo — merge commit
+78c06e50d256; issue #554 closed COMPLETED at 13:59:47Z. The portfolio's
+first merged contribution. Track closed.
 CI: ALL GREEN — 7/7 on first push and again on the review-response
 commit ab32213 (gate, lint, scan, test 3.11/3.12/3.13/3.14 — no
 first-time-contributor action_required gate; workflows ran on push)
@@ -177,8 +178,9 @@ finite-but-huge ts (`oldest=1e19`, SQLite bind overflow) is documented
 as out of scope in the PR description — it belongs with the
 lenient-parse change the issue names. Policy: one open PR at a time
 here until the first merge.
-Next Action: Watch for nuriyoo's re-review on PR #577; respond on the
-same branch (ab32213 onward) to any further feedback.
+Next Action: None — **merged**. The one-open-PR-at-a-time limit is now
+lifted for backlot (up to three open PRs there), so a backlot slot is
+available again for the next measured-fidelity issue.
 
 ### Track 009
 Project: libredb/libredb-studio
@@ -232,6 +234,62 @@ Next Action: Monitor PR for maintainer review (kaya-abdullah/cevheri
 respond within minutes-hours) and the first-time-contributor CI gate;
 respond on the same branch.
 
+### Track 010
+Project: repowise-dev/repowise
+Issue: #3285
+PR: #3338
+Branch: fix/flat-ternary-python-3285-v2
+Status: MONITORING
+CI: AT ACTION_REQUIRED — the first-time-contributor approval gate; the `CI`
+run for head b8224ee completed with that conclusion and no check has reported
+yet (`gh pr checks` reads "no checks reported on the branch"). A gate, not a
+failure; must not be bypassed. Every gate it will run was executed locally.
+Review: AWAITING_REVIEW (no comments, no reviews)
+Notes: First repowise track, and the first AGPL-3.0 repo in the portfolio.
+Selection research 2026-10-10: the issue is a maintainer-authored defect with a
+measured before/after table and a prescribed approach ("extend #3278's
+mechanism, one language per commit or per PR"), and its blocking PR #3278 had
+merged that same morning (11:14:20Z, 84f1499), so the work was unblocked and
+the exact file set to touch was public. Honest note on the merge odds: 89 of
+the last 100 merged PRs here are the maintainer's own (RaghavChamadiya runs
+the project's agent loop too), and 11 came from outside authors, one each from
+11 distinct accounts — human review does happen (RaghavChamadiya, swati510)
+but this is a maintainer-driven repo, slower and less certain than backlot.
+Issue #3285 (labels: bug, help wanted) was unassigned with zero comments and
+no competing PR; claimed by comment issuecomment-6098334087 at 14:08:29Z per
+CONTRIBUTING.md ("That comment is what reserves the issue"), and the PR opened
+2h47m later. Python is one of nine grammars named in the issue and the one it
+names first, chosen because it is the hard case: TypeScript's ternary names
+`consequence`/`alternative` and Python's `conditional_expression` names
+neither — both arms are bare `body`/`orelse` children — so #3278's
+`flat_ternary_kinds` could not simply be copied over. Fix: a new
+`ternary_arms_positional` map field (set only on `_PY`) naming the second
+contract difference flat kinds cannot express, plus a `_ternary_else_arm()`
+helper in cyclomatic.py; `walk_if` and every other language map untouched, so
+the diff is 4 files (+76/−8) and no other grammar's behaviour moves. Measured
+with the flag toggled off in-process: the chain `1 if a else 2 if b else 3 if c
+else 4` went max_nesting 3 -> 1, now exactly what the equivalent
+`if/elif/elif/else` scores, and a ternary inside a real `if` still nests (2).
+TDD: all 5 new Python tests fail on the unfixed walker (3/3/2) first; one
+existing test renamed because it pinned the buggy nesting of a real source
+expression. No golden/fixture updates are owed — the issue asks each language
+to update its health-score goldens, but #3278, the accepted precedent, updated
+none of its 6 files, and no Python golden scores a chain (stated in the PR
+rather than silently omitted). Local: focused file 78 passed; touched surface
+(providers + unit/health) 3639 passed on the pushed head; full tests/unit/
+28724 passed/20 skipped/6 xfailed in 1h28m on the pre-rebase base bc89359
+(branch is a pure cherry-pick, changed files byte-identical); ruff, mypy,
+doc-drift and `git diff --check` all clean. Workspace is a shallow clone, so
+`git rebase` across the moved base was unusable (whole-tree add/add) and the
+commit was cherry-picked onto b010215 instead; `main` moved twice more
+(3289287, 342046f), neither touching any file this branch changes, so the PR
+head stays stable and GitHub reports MERGEABLE. Follow-ups deliberately left
+open: the other eight grammars — java/c/cpp/csharp/dart/objectivec are a
+one-line map change each, php is left-associative and needs its own design.
+Next Action: Monitor PR #3338 for the CI approval gate and maintainer review;
+respond on the same branch. If accepted, the remaining eight grammars of
+#3285 are sequenced follow-ups (one per PR, as the issue asks) — php last.
+
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
 Re-ran the full issue-first selection loop to fill the freed slot:
@@ -254,16 +312,13 @@ No fillable slot exists right now; all seven tracks stay MONITORING.
 
 ## Blockers
 
-None. All seven odysseus open PRs sit behind GitHub's first-time-contributor
-`action_required` CI gate — an expected protection that must not be bypassed.
-No human review comments since 2026-10-03; odysseus maintainers merge daily.
-The backlot PR (#577) has no such gate — all seven checks ran green on
-first push and again on the review-response commit; its one open item is
-maintainer re-review after nuriyoo's CHANGES_REQUESTED of 2026-10-10,
-whose five items were applied at ab32213 (awaiting re-review). The
-libredb PR (#1628) briefly went CONFLICTING when main moved; it was
-rebased 2026-10-10 and is MERGEABLE again, scanners green, own workflows
-still at the approval gate.
+None. All seven odysseus open PRs and the repowise PR (#3338) sit behind GitHub's
+first-time-contributor `action_required` CI gate — an expected protection that
+must not be bypassed. No human review comments on odysseus since 2026-10-03;
+odysseus maintainers merge daily. **The backlot PR (#577) is no longer blocked —
+it merged 2026-10-10T13:59:45Z** (see Track 008). The libredb PR (#1628) briefly
+went CONFLICTING when main moved; it was rebased 2026-10-10 and is MERGEABLE
+again, scanners green, own workflows still at the approval gate.
 
 ## Environment
 
@@ -285,6 +340,12 @@ still at the approval gate.
   numbers came from the original Python 3.14 install — both recorded in
   the PR and the per-contribution record; bundled corpus imported in
   `data/`)
+- Repowise fork: https://github.com/ShahabAhmed01/repowise
+- Repowise remotes: `origin` = fork, `upstream` = repowise-dev/repowise
+- Repowise workspace: `~/opensource-work/repowise` (shallow clone `--depth 60`
+  of `main`; branch `fix/flat-ternary-python-3285-v2` @ `b8224ee` cut from
+  `b010215`; uv workspace, Python 3.11.17 — **`git rebase` is unusable in this
+  clone across a moved base, cherry-pick instead**)
 - Public tracker repo: https://github.com/ShahabAhmed01/opensource-contributions
 - Known env-dependent test failures (identical on unmodified dev): browser
   tests need Playwright chromium binaries; containment/workspace tests need a

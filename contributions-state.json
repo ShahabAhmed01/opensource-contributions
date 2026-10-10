@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-10T13:26:01Z",
+  "updatedAt": "2026-10-10T17:10:58Z",
   "contributions": [
     {
       "repo": "odysseus-dev/odysseus",
@@ -20,7 +20,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-10T13:26:01Z",
+      "lastVerified": "2026-10-10T17:10:58Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -63,7 +63,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-10T13:26:01Z",
+      "lastVerified": "2026-10-10T17:10:58Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -106,7 +106,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-10T13:26:01Z",
+      "lastVerified": "2026-10-10T17:10:58Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -149,7 +149,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-10T13:26:01Z",
+      "lastVerified": "2026-10-10T17:10:58Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -192,7 +192,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-10T13:26:01Z",
+      "lastVerified": "2026-10-10T17:10:58Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -235,7 +235,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-10T13:26:01Z",
+      "lastVerified": "2026-10-10T17:10:58Z",
       "baseCommit": null,
       "commits": [
         {
@@ -278,7 +278,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-10T13:26:01Z",
+      "lastVerified": "2026-10-10T17:10:58Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -309,19 +309,19 @@
       "issueNumber": 554,
       "issueTitle": "slack: conversations.history with `oldest=inf` or `oldest=nan` is a 500, where real answers invalid_ts_oldest",
       "issueUrl": "https://github.com/brekkylab/backlot/issues/554",
-      "issueState": "OPEN",
+      "issueState": "CLOSED",
       "prNumber": 577,
       "prUrl": "https://github.com/brekkylab/backlot/pull/577",
-      "prState": "open",
+      "prState": "merged",
       "prTitle": "slack: an oldest or latest with no finite value is the named invalid_ts error, as real answers it",
       "branch": "contrib/issue-554-non-finite-ts",
       "baseBranch": "main",
       "fork": "ShahabAhmed01/backlot",
       "forkUrl": "https://github.com/ShahabAhmed01/backlot",
-      "status": "pr-opened",
+      "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-10T13:26:01Z",
+      "lastVerified": "2026-10-10T17:10:58Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -350,13 +350,17 @@
         {
           "author": "nuriyoo",
           "state": "CHANGES_REQUESTED"
+        },
+        {
+          "author": "nuriyoo",
+          "state": "APPROVED"
         }
       ],
-      "mergedAt": null,
-      "mergeCommit": null,
+      "mergedAt": "2026-10-10T13:59:45Z",
+      "mergeCommit": "78c06e50d256daf03972e38a745df6975ba6b721",
       "description": "Mark a non-finite oldest/latest reading in _slack_ts as unparseable so conversations.history answers invalid_ts_oldest/invalid_ts_latest instead of a 500 from the window's uncaught int()",
       "notes": "All remote checks green at first look (gate, lint, scan, test 3.11-3.14). Local: 6088 passed/10 skipped on a .[dev,official-sdk,llamaindex] install; 14-case regression test fails without the fix. Verified external-merge cadence before selecting (15/15 merged PRs Oct 7-9 from outside authors, human CHANGES_REQUESTED/APPROVED cycles by nuriyoo/khj809). See projects/backlot.md for the selection evidence. Review cycle 2026-10-10: nuriyoo CHANGES_REQUESTED at 06:49Z — required: drop 1e999 from parametrize and docstring list (slack.com/api measured 2026-10-10: real reads it as 1999 and answers a window), merge the two tests into one parametrised 14-row function (exact code supplied), docstrings must not narrate the fixed 500 (exact text supplied); optional: import math/math.isfinite like byo.py and protojson.py, body wording 'a client that retries a 5xx'. All five applied at ab32213 with regression replay (guard reverted: 12 non-finite rows fail, 2 not-a-ts pass; restored: 14 pass) and full suite 6086 passed/10 skipped; ruff check/format and prose_check clean; CI 7/7 green on ab32213; PR body corrected to match. Reply comment issuecomment-6097848273; a formal review re-request is impossible for a PR author (API denies RequestReviewsByLogin), the @mention notifies. Awaiting re-review; PR MERGEABLE.",
-      "issueUpdatedAt": "2026-10-09T16:48:24Z"
+      "issueUpdatedAt": "2026-10-10T13:59:47Z"
     },
     {
       "repo": "libredb/libredb-studio",
@@ -376,7 +380,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-10T13:26:01Z",
+      "lastVerified": "2026-10-10T17:10:58Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -401,6 +405,45 @@
       "description": "Couchbase connect() now refuses a 404 on /pools/default/buckets/<bucket> naming the bucket; Trino connect() warns, via connectWarnings(), naming a pinned catalog absent from system.metadata.catalogs",
       "notes": "Claimed by comment (2026-10-09T19:38:18Z) per repo policy before any code; re-verified unassigned/uncommented-by-others/no competing PR at claim time and immediately before the PR. TDD: all new behaviour tests shown failing on unmodified main first. Local: format/lint/typecheck/knip/chart:check/channels:showcase:check/readme:check/security:check/build pass; full suite green except tests/unit/test-runner-cli.test.ts (2 SIGINT tests) which fails identically on the unmodified base (proven by stash/re-run) and is unrelated; the runner never merges lcov on a red run, so coverage:check runs in CI (its 100% gate is a required check). The repo's catalog seam is system.metadata.catalogs (TRINO_CATALOG_LIST_SQL), not SHOW CATALOGS as the issue wording says; introspect.ts documents why, and PR #1628 states the deviation. Third-party scanners (Socket x2, GitGuardian, semgrep) ran green on first push; the repo's own workflows (CI, CodeQL Advanced, Security Scan, Platform Integration Check) are at action_required — the first-time-contributor approval gate, which must not be bypassed — so the required checks have not executed yet. Rebased 2026-10-10 onto main aad0c73 (+13 commits; the PR had gone CONFLICTING): the single conflict was object-route.ts's pinned-citation docblock, resolved by file ownership — upstream's postgres pins (4046, 4203, from #1626) kept alongside this branch's trino pins (1340, 1534), since upstream never touched trino and this branch never touched postgres — and verified by the docblock's own enforcing test (object-route-edit 19 pass), not by eye. All gates re-run green including the new distribution:check, focused set 741/741 across six files, full suite green except the proven test-runner-cli pair. Force-pushed with lease (53145e4 superseded by 6005817); GitHub recomputed MERGEABLE; all four scanners re-ran green on the new head; the repo's own workflows remain at action_required (first-time-contributor gate, not a failure, not bypassed).",
       "issueUpdatedAt": "2026-10-09T22:43:56Z"
+    },
+    {
+      "repo": "repowise-dev/repowise",
+      "project": "repowise",
+      "issueNumber": 3285,
+      "issueTitle": "Ternary chains count every arm as a nesting level outside TypeScript and JavaScript",
+      "issueUrl": "https://github.com/repowise-dev/repowise/issues/3285",
+      "issueState": "OPEN",
+      "prNumber": 3338,
+      "prUrl": "https://github.com/repowise-dev/repowise/pull/3338",
+      "prState": "open",
+      "prTitle": "fix(health): a Python conditional-expression chain nests like an elif dispatch",
+      "branch": "fix/flat-ternary-python-3285-v2",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/repowise",
+      "forkUrl": "https://github.com/ShahabAhmed01/repowise",
+      "status": "pr-opened",
+      "openedAt": "2026-10-10T16:55:51Z",
+      "prCreatedAt": "2026-10-10T16:55:51Z",
+      "lastVerified": "2026-10-10T17:10:58Z",
+      "baseCommit": "b010215",
+      "commits": [
+        {
+          "sha": "b8224eefeaa2dba7955b54878012e66bb9d50ef7",
+          "subject": "fix(health): a Python conditional-expression chain nests like an elif dispatch"
+        }
+      ],
+      "checks": {},
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Make a Python conditional-expression chain report one if decision instead of one per ifexp, matching the elif dispatch it compiles to and the flat ternary TypeScript already reports",
+      "notes": "First repowise track. Issue is multi-language (nine grammars) and explicitly allows one language per commit or per PR; this fixes Python, the case the issue names first, and the issue stays open for the other eight. Claimed by comment issuecomment-6098334087 (2026-10-10T14:08:29Z) per .github/CONTRIBUTING.md, which reserves the issue. Extends PR #3278's flat_ternary_kinds mechanism (merged 2026-10-10T11:14:20Z) rather than adding a second one, as the issue asks: Python's grammar exposes no consequence/alternative fields, so the map gains an explicit ternary_arms_positional flag and the else-arm resolution moved into a _ternary_else_arm() helper; walk_if and every other map are unchanged. Measured: chain max_nesting 3 -> 1, equal to the equivalent elif dispatch; a ternary inside an if still nests (2). 5 new tests fail on the unfixed walker (3/3/2) before passing; one existing test renamed because it pinned the buggy nesting. No golden/fixture updates owed — #3278, the accepted precedent, updated none, and no Python golden scores a chain. Full tests/unit/ 28724 passed on the pre-rebase base bc89359; touched surface 3639 passed on the pushed head b8224ee; ruff, mypy, doc-drift and git diff --check clean. Shallow clone: git rebase across a moved base is unusable, the commit was cherry-picked instead. CI workflows sit at action_required, the first-time-contributor approval gate — a gate, not a failure.",
+      "issueUpdatedAt": "2026-10-10T14:08:29Z"
     }
   ]
 }

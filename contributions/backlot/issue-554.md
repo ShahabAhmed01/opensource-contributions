@@ -2,8 +2,9 @@
 
 ## Status
 
-Changes requested by the maintainer and addressed — PR open, all checks
-passing on the response commit (`ab32213`), awaiting re-review. Not merged.
+**MERGED** — approved by nuriyoo 2026-10-10T13:59:30Z and merged by him
+13:59:45Z as `78c06e50d256`; issue #554 closed as COMPLETED at 13:59:47Z.
+The portfolio's first merged contribution.
 
 ## Issue
 
@@ -21,7 +22,8 @@ creation (verified before implementation, before commit, and again at
 
 - Base branch: `main` (the repo's only development branch)
 - Opened: 2026-10-09T18:42:00Z
-- State: open, mergeable, not a draft
+- State: **merged** 2026-10-10T13:59:45Z by nuriyoo (was open and mergeable from
+  2026-10-09T18:42Z until then)
 - Fork head: `ShahabAhmed01:contrib/issue-554-non-finite-ts`
 - Closes: #554 (GitHub confirms the link)
 
@@ -159,11 +161,23 @@ a window for it, which is the documented out-of-scope divergence.
   https://github.com/brekkylab/backlot/pull/577#issuecomment-6097848273
 - A formal review re-request is not possible for a PR author
   (`RequestReviewsByLogin` permission denied by the API); the reply's
-  @mention is the notification. Awaiting re-review.
+  @mention is the notification. **nuriyoo approved at
+  2026-10-10T13:59:30Z**, 7h10m after the response, and merged 15 seconds
+  later without further comment.
 
 ## Merge
 
-_Not merged._
+**Merged 2026-10-10T13:59:45Z by nuriyoo** — merge commit
+`78c06e50d256daf03972e38a745df6975ba6b721`, squash or merge not
+distinguished by the API beyond the commit id. Issue #554 closed as
+COMPLETED at 13:59:47Z, two seconds after the merge.
+
+Timeline, end to end: opened 2026-10-09T18:42Z → CHANGES_REQUESTED
+2026-10-10T06:49Z → response `ab32213` ~08:10Z → APPROVED 13:59:30Z →
+merged 13:59:45Z. **19 hours open, one human review cycle, all seven checks
+green on every push.** The first merged contribution in this portfolio, and
+the first proof that the selection rubric's "human review, not bot merges"
+signal predicts an actual merge.
 
 ## Lessons Learned
 

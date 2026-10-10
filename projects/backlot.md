@@ -111,10 +111,23 @@ uv sync --all-extras --locked              # what CI installs (all extras)
 - Branch: `contrib/issue-554-non-finite-ts`; PR:
   https://github.com/brekkylab/backlot/pull/577 (base `main`), closes
   https://github.com/brekkylab/backlot/issues/554.
-- Fix: one `isfinite` guard in `_slack_ts`; the call site's existing
-  `is False` checks answer `invalid_ts_oldest`/`invalid_ts_latest`
-  unchanged. 14-case regression test (2 params × 7 spellings) fails
-  without the fix.
-- Validation: 6088 passed/10 skipped on `.[dev,official-sdk,llamaindex]`;
-  touched-surface extras in full (SDK suite 1371 passed); ruff and
-  prose_check clean; all 8 remote checks green on the PR.
+- Fix: one `math.isfinite` guard in `_slack_ts`; the call site's
+  existing `is False` checks answer `invalid_ts_oldest`/
+  `invalid_ts_latest` unchanged. One parametrised test (2 params × 7
+  spellings = 14 rows: the six non-finite spellings plus `not-a-ts`) —
+  the 12 non-finite rows fail without the fix, all 14 pass with it.
+- Validation: 6088 passed/10 skipped on `.[dev,official-sdk,llamaindex]`
+  (first run, Python 3.14); 6086 passed/10 skipped after the review
+  response (workspace venv, Python 3.11); touched-surface extras in full
+  (SDK suite 1371 passed); ruff and prose_check clean; all 7 remote
+  checks green on the PR and again on the response commit.
+- Review: nuriyoo requested changes 2026-10-10 — drop `1e999` from the
+  rows and docstring list (their slack.com/api measurement: real reads
+  it as 1999 and answers a window, so it belongs beside `1e19` as out of
+  scope), fold the two tests into one parametrised function (exact code
+  supplied), docstrings must not narrate the fixed 500 (exact text
+  supplied); optional `import math`/`math.isfinite` style and "a client
+  that retries a 5xx" body wording. All five applied at `ab32213` with
+  the regression replay and full-suite rerun; reply posted; awaiting
+  re-review (a PR author cannot formally re-request; the @mention
+  notifies).

@@ -2,7 +2,8 @@
 
 ## Status
 
-In review — PR open, security checks green, repo CI running
+In review — PR open, rebased onto current `main` (MERGEABLE again),
+scanners green, repo CI at the first-time-contributor gate
 
 ## Issue
 
@@ -29,17 +30,22 @@ https://github.com/libredb/libredb-studio/issues/1411#issuecomment-6087957686
 - Fork head: `ShahabAhmed01:fix/test-connection-bucket-catalog-1411`
 - Closes: #1411 (`Closes #1411` in the body)
 - Size: 8 files, +182/−10
+- Mergeable: first CONFLICTING on 2026-10-10 when `main` moved +13
+  commits; MERGEABLE again after the rebase below
 
 ## Branch
 
-`fix/test-connection-bucket-catalog-1411` (from `upstream/main` @
-`4ebc78761380`)
+`fix/test-connection-bucket-catalog-1411`, rebased 2026-10-10 onto
+`upstream/main` @ `aad0c73abad2c123d89189d839b614cdf9b00c7e` (original
+base `4ebc78761380`). Force-pushed with lease (`53145e4` → `6005817`).
 
 ## Commits
 
-- `53145e4311324bff3cbda856c95b3b9895699c04` — fix(db): refuse a missing
+- `600581711d04cda4b5a948cff174eec44ffd9436` — fix(db): refuse a missing
   Couchbase bucket and name a missing Trino catalog at Test Connection
-  (#1411) (8 files, +182/−10)
+  (#1411) (8 files, +182/−10; rebased, conflict resolution inside)
+- superseded: `53145e4311324bff3cbda856c95b3b9895699c04` (same subject,
+  pre-rebase)
 
 ## Problem
 
@@ -105,7 +111,8 @@ Exactly the issue's prescription, through seams the repo already had:
   existing statement-sequence tests adapted to the extra connect read
   (baseline capture, harness id shift, exact two-statement assertion)
 - `tests/unit/provider-docs-monitoring-citations.test.ts` — pinned lists
-- `src/lib/api/object-route.ts` — two re-measured trino citations
+- `src/lib/api/object-route.ts` — two re-measured trino citations (and,
+  at rebase, upstream's postgres renumbering kept alongside them)
 
 ## Tests
 
@@ -113,10 +120,13 @@ Exactly the issue's prescription, through seams the repo already had:
   and shown failing on unmodified `main` (couchbase: the 404-refusal
   test; trino: all six — `connectWarnings` did not exist). The fix then
   turned them green.
-- **Focused:** `bun tests/run-tests.ts` over the five affected files —
-  couchbase-provider 151, trino-provider 219, test-connection 23,
-  provider-docs-monitoring-citations 140, object-route-edit 19 —
-  552/552 pass.
+- **Focused:** `bun tests/run-tests.ts` over the affected files —
+  post-rebase (2026-10-10) 741/741 across six files: test-connection 23,
+  couchbase-provider 151, trino-provider 219,
+  provider-docs-monitoring-citations 140, object-route-edit 19,
+  migration-generator 189 (the last two are what enforce the pinned
+  citations; upstream's added tests explain the growth from the first
+  run's 552).
 - **Full suite with coverage:** every file passes except
   `tests/unit/test-runner-cli.test.ts` (2 SIGINT tests), which fails
   **identically on the unmodified base** (proven by stashing the whole
@@ -126,15 +136,29 @@ Exactly the issue's prescription, through seams the repo already had:
   `coverage:check` could not complete locally; the 100% gate runs in
   CI's "Unit & Integration Tests" job. Every new line is exercised by
   the new tests (both `assertBucketExists` branches; all four
-  `probePinnedCatalog` outcomes).
+  `probePinnedCatalog` outcomes). Re-run after the rebase: same result —
+  green except the known pair.
 - **Gates:** `bun run format`, `lint` (0 errors; 323 pre-existing
   warnings, none in changed lines), `typecheck`, `knip`, `chart:check`,
   `channels:showcase:check`, `readme:check`, `security:check`,
-  `build` — all pass.
+  `distribution:check` (gate added upstream during the rebase),
+  `build` — all pass, re-run after the rebase.
 - **Independent review:** a separate read-only review pass approved the
   diff with two prose fixes applied before commit (replaced an
   unmeasured "another bucket's data" claim with the issue's measured
   wording; reflowed the couchbase doc paragraph).
+
+## Rebase (2026-10-10)
+
+`main` advanced 13 commits (`4ebc787` → `aad0c73`) and GitHub reported
+the PR CONFLICTING. One conflict, in `src/lib/api/object-route.ts`'s
+docblock of `path:line` citations (both sides had renumbered): resolved
+by keeping upstream's postgres pins (`4046`, `4203` — from #1626's
+insertions; upstream never touched trino or redis) and this branch's
+trino pins (`1340`, `1534` — upstream never touched trino). Verified by
+the docblock's own enforcing test (`object-route-edit`, 19 pass) rather
+than by eye. All gates, the focused set and the full suite re-run after
+the rebase; force-pushed with lease; GitHub recomputed MERGEABLE.
 
 ## Runtime Validation
 
@@ -146,21 +170,24 @@ ns_server's own behaviour (plain-text "Object Not Found" →
 
 ## CI
 
-Verified 2026-10-09T21:0xZ: the third-party scanners ran on first push
-and all pass — Socket Security (Project Report, Pull Request Alerts),
-GitGuardian, semgrep. The repo's OWN workflows (CI, CodeQL Advanced,
-Security Scan, Platform Integration Check) triggered but completed as
-`action_required` — GitHub's first-time-contributor approval gate,
-exactly like the odysseus fleet; a maintainer must approve the run, and
-the gate must not be bypassed. So the required checks ("Lint, Typecheck
-and Build", "Unit & Integration Tests") have not executed yet and no
-green-CI claim is made.
+- 2026-10-09T21:0xZ: third-party scanners ran on first push and all
+  pass — Socket Security (Project Report, Pull Request Alerts),
+  GitGuardian, semgrep. The repo's OWN workflows (CI, CodeQL Advanced,
+  Security Scan, Platform Integration Check) triggered but completed as
+  `action_required` — GitHub's first-time-contributor approval gate,
+  exactly like the odysseus fleet; a maintainer must approve the run, and
+  the gate must not be bypassed. So the required checks ("Lint, Typecheck
+  and Build", "Unit & Integration Tests") have not executed yet and no
+  green-CI claim is made.
+- 2026-10-10T13:2xZ (after the rebase): all four scanners re-ran on
+  `6005817` and pass; the own-workflows gate state is unchanged
+  (maintainer-side, not bypassed).
 
 ## Review
 
-None yet — awaiting maintainer review. Maintainers `kaya-abdullah` and
-`cevheri` respond to claims within minutes–hours per the selection
-research.
+None yet — no human review, only the Copilot quota-limit non-review.
+Awaiting maintainer review; maintainers `kaya-abdullah` and `cevheri`
+respond to claims within minutes–hours per the selection research.
 
 ## Merge
 
@@ -175,6 +202,11 @@ _Not merged._
 - Provider changes drag line-number citations: `object-route.ts` pins
   trino line anchors and a test enforces them; re-measure every cited
   file after inserting lines above the anchors.
+- A rebase conflict in a pinned-citation docblock is resolved by
+  file-ownership, not by picking a side: the two sides pinned DIFFERENT
+  files (upstream moved postgres, this branch moved trino), so the merge
+  keeps both sets, and the enforcing test — not the eye — checks the
+  result.
 - Docs cite code by NAME (`provider-docs-monitoring-citations.test.ts`):
   a new member cited in prose must be added to the test's pinned list in
   declaration order, same PR.

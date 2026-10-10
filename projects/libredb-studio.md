@@ -124,3 +124,12 @@ bun run build             # next build (+ copy-monaco)
   by stash/re-run); all local gates pass; coverage gate runs in CI.
   Independent read-only review approved with two prose fixes applied
   before commit.
+- Rebase (2026-10-10): `main` moved +13 commits (`4ebc787` → `aad0c73`)
+  and the PR went CONFLICTING; single conflict in `object-route.ts`'s
+  pinned-citation docblock resolved by file ownership (upstream's
+  postgres pins `4046`/`4203` kept alongside this branch's trino pins
+  `1340`/`1534`) and verified by that docblock's enforcing test. All
+  gates re-run green including the new `distribution:check`; focused set
+  741/741 across six files; full suite green except the known pair;
+  force-pushed `6005817`; GitHub reports MERGEABLE; the four scanners
+  re-ran green, own workflows remain at the approval gate.

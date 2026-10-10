@@ -130,10 +130,29 @@ Project: brekkylab/backlot
 Issue: #554
 PR: #577
 Branch: contrib/issue-554-non-finite-ts
-Status: MONITORING
-CI: ALL GREEN (gate, lint, scan, test 3.11/3.12/3.13/3.14 — no
-first-time-contributor action_required gate; workflows ran on first push)
-Review: AWAITING_REVIEW (a copilot bot summary only; no human review yet)
+Status: MONITORING (CHANGES_REQUESTED received and addressed, awaiting
+re-review)
+CI: ALL GREEN — 7/7 on first push and again on the review-response
+commit ab32213 (gate, lint, scan, test 3.11/3.12/3.13/3.14 — no
+first-time-contributor action_required gate; workflows ran on push)
+Review: CHANGES_REQUESTED by nuriyoo 2026-10-10T06:49:20Z (first human
+review; copilot bot summary before it). Three required items — drop
+1e999 from the parametrize and docstring list (their slack.com/api
+measurement 2026-10-10: real reads it as 1999 and answers a window, so
+the PR must not pin an answer real does not give; it goes beside 1e19 in
+"Not in this PR"), merge the two tests into one parametrised 14-row
+function (exact code supplied), docstrings must not narrate the fixed
+500 (exact text supplied) — plus two optional (import math/math.isfinite
+matching byo.py and protojson.py; body wording "a client that retries a
+5xx"). All five applied at ab32213 with regression replay (guard
+reverted: 12 non-finite rows fail, 2 not-a-ts pass; restored: 14 pass),
+full suite 6086 passed/10 skipped, ruff + prose_check clean, PR body
+corrected; reply comment issuecomment-6097848273. A formal re-request is
+impossible for a PR author (API denies RequestReviewsByLogin); the
+@mention notifies. Reviewer also verified our fix themselves (14 cases
+fail reverted; their merged-with-today's-main run: 6196 passed, 1
+skipped) and filed a separate precedence issue, explicitly not for this
+PR. PR MERGEABLE.
 Notes: First non-odysseus track. Selection research 2026-10-09: 25+
 repos discovered, 10 screened, 5 verified in depth; backlot scored ~97/100
 (15/15 merged PRs Oct 7-9 from outside authors, human CHANGES_REQUESTED/
@@ -141,21 +160,25 @@ APPROVED cycles by nuriyoo and khj809, 1-2 day merge turnaround).
 Issue #554 (labels: bug, good first issue, help wanted, fidelity,
 hacktoberfest) was unassigned with 0 comments and no competing PR —
 re-verified before implementation, before commit, and at 18:41Z
-immediately before opening the PR. Fix: one isfinite guard in `_slack_ts`
-(backlot/routers/slack.py) so `oldest=inf`/`nan` and every spelling
-`float()` reads non-finite (Infinity, -inf, NaN, 1e999) answers
-invalid_ts_oldest/invalid_ts_latest instead of the 500 the window's
-uncaught `int()` raised. 14-case regression test (2 params × 7
-spellings) fails without the fix, passes with it. Local: 6088 passed/
-10 skipped on a .[dev,official-sdk,llamaindex] install; SDK suite
-1371 passed; ruff + scripts/prose_check.py clean. PR follows the repo's
-template exactly (Closes #554, source-prefixed title, measured table,
-install-specific verification lines); the finite-but-huge ts
-(`oldest=1e19`, SQLite bind overflow) is documented as out of scope in
-the PR description — it belongs with the lenient-parse change the
-issue names. Policy: one open PR at a time here until the first merge.
-Next Action: Monitor PR for maintainer review (reviewers nuriyoo/
-khj809 turn comparable PRs in 1-2 days); respond on the same branch.
+immediately before opening the PR. Fix: one math.isfinite guard in
+`_slack_ts` (backlot/routers/slack.py) so `oldest=inf`/`nan` and every
+spelling `float()` reads non-finite (inf, -inf, nan, Infinity, -Infinity,
+NaN) answers invalid_ts_oldest/invalid_ts_latest instead of the 500 the
+window's uncaught `int()` raised. One parametrised test (2 params × 7
+spellings = 14 rows; the spellings plus not-a-ts) fails 12 rows without
+the fix, passes all 14 with it; 1e999 deliberately not pinned — real
+answers a window for it (review measurement), recorded as out of scope
+beside 1e19. Local after review response: 6086 passed/10 skipped in this
+workspace venv (Python 3.11; first run was 6088/10 on Python 3.14);
+SDK suite 1371 passed; ruff + scripts/prose_check.py clean. PR follows
+the repo's template exactly (Closes #554, source-prefixed title,
+measured table, install-specific verification lines); the
+finite-but-huge ts (`oldest=1e19`, SQLite bind overflow) is documented
+as out of scope in the PR description — it belongs with the
+lenient-parse change the issue names. Policy: one open PR at a time
+here until the first merge.
+Next Action: Watch for nuriyoo's re-review on PR #577; respond on the
+same branch (ab32213 onward) to any further feedback.
 
 ### Track 009
 Project: libredb/libredb-studio
@@ -163,11 +186,12 @@ Issue: #1411
 PR: #1628
 Branch: fix/test-connection-bucket-catalog-1411
 Status: MONITORING
-CI: RUNNING (Socket Security x2, GitGuardian and semgrep all pass;
-the repo's OWN workflows - CI, CodeQL Advanced, Security Scan, Platform
-Integration Check - sit at action_required, the first-time-contributor
-approval gate, exactly like odysseus; must not be bypassed)
-Review: AWAITING_REVIEW
+CI: SCANNERS GREEN ON REBASED HEAD — Socket Security x2, GitGuardian
+and semgrep all pass on 6005817 (2026-10-10); the repo's OWN workflows -
+CI, CodeQL Advanced, Security Scan, Platform Integration Check - sit at
+action_required, the first-time-contributor approval gate, exactly like
+odysseus; must not be bypassed (gate, not a failure)
+Review: AWAITING_REVIEW (no human review; copilot non-review only)
 Notes: First libredb-studio track. Selection research 2026-10-09: ~26
 repos discovered, ~10 screened, libredb-studio verified in depth
 (447 merged PRs/30d nearly all external; maintainers kaya-abdullah/
@@ -192,8 +216,21 @@ stash/re-run — unrelated; the runner never merges lcov on a red run, so
 coverage:check runs in CI where the 100% gate is a required check).
 Two prose fixes from an independent pre-commit review were applied
 before commit (measured wording from the issue; paragraph reflow).
+Rebase 2026-10-10: main moved +13 commits (4ebc787 -> aad0c73) and the
+PR went CONFLICTING; the single conflict was object-route.ts's
+pinned-citation docblock, resolved by file ownership (upstream's
+postgres pins 4046/4203 kept alongside this branch's trino pins
+1340/1534 — upstream never touched trino, this branch never touched
+postgres) and verified by that docblock's enforcing test, not by eye.
+All gates re-run green including the new upstream distribution:check;
+focused set 741/741 across six files (test-connection 23, couchbase 151,
+trino 219, citations 140, object-route-edit 19, migration-generator
+189); full suite green except the proven test-runner-cli pair;
+force-pushed with lease (53145e4 superseded by 6005817); GitHub
+recomputed MERGEABLE.
 Next Action: Monitor PR for maintainer review (kaya-abdullah/cevheri
-respond within minutes-hours); respond on the same branch.
+respond within minutes-hours) and the first-time-contributor CI gate;
+respond on the same branch.
 
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
@@ -220,8 +257,13 @@ No fillable slot exists right now; all seven tracks stay MONITORING.
 None. All seven odysseus open PRs sit behind GitHub's first-time-contributor
 `action_required` CI gate — an expected protection that must not be bypassed.
 No human review comments since 2026-10-03; odysseus maintainers merge daily.
-The backlot PR (#577) has no such gate — all eight checks already ran green
-on the first push; it awaits only a human reviewer.
+The backlot PR (#577) has no such gate — all seven checks ran green on
+first push and again on the review-response commit; its one open item is
+maintainer re-review after nuriyoo's CHANGES_REQUESTED of 2026-10-10,
+whose five items were applied at ab32213 (awaiting re-review). The
+libredb PR (#1628) briefly went CONFLICTING when main moved; it was
+rebased 2026-10-10 and is MERGEABLE again, scanners green, own workflows
+still at the approval gate.
 
 ## Environment
 
@@ -233,11 +275,16 @@ on the first push; it awaits only a human reviewer.
 - LibreDB Studio fork: https://github.com/ShahabAhmed01/libredb-studio
 - LibreDB Studio remotes: `origin` = fork, `upstream` = libredb/libredb-studio
 - LibreDB Studio workspace: `/run/media/xfc11/EOD/opensource/libredb-studio`
-  (shallow clone of `main` @ 4ebc78761380, bun 1.4.2 at ~/.bun/bin,
+  (clone of `main`, rebased branch onto `aad0c73abad2c123d89189d839b614cdf9b00c7e`,
+  bun 1.4.2 at ~/.bun/bin,
   1238 packages installed)
 - Backlot workspace: `~/opensource-work/backlot` (branch
   `contrib/issue-554-non-finite-ts`, uv venv with `.[dev,official-sdk,
-  llamaindex]`, bundled corpus imported in `data/`)
+  llamaindex]` — resolves to Python 3.11.17 in this workspace, which is
+  what the 2026-10-10 review-response runs used; the PR's first-run
+  numbers came from the original Python 3.14 install — both recorded in
+  the PR and the per-contribution record; bundled corpus imported in
+  `data/`)
 - Public tracker repo: https://github.com/ShahabAhmed01/opensource-contributions
 - Known env-dependent test failures (identical on unmodified dev): browser
   tests need Playwright chromium binaries; containment/workspace tests need a

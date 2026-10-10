@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-10T05:20:47Z",
+  "updatedAt": "2026-10-10T12:14:45Z",
   "contributions": [
     {
       "repo": "odysseus-dev/odysseus",
@@ -20,7 +20,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-10T05:20:47Z",
+      "lastVerified": "2026-10-10T12:14:45Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -63,7 +63,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-10T05:20:47Z",
+      "lastVerified": "2026-10-10T12:14:45Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -106,7 +106,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-10T05:20:47Z",
+      "lastVerified": "2026-10-10T12:14:45Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -149,7 +149,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-10T05:20:47Z",
+      "lastVerified": "2026-10-10T12:14:45Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -192,7 +192,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-10T05:20:47Z",
+      "lastVerified": "2026-10-10T12:14:45Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -235,7 +235,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-10T05:20:47Z",
+      "lastVerified": "2026-10-10T12:14:45Z",
       "baseCommit": null,
       "commits": [
         {
@@ -278,7 +278,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-10T05:20:47Z",
+      "lastVerified": "2026-10-10T12:14:45Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -321,7 +321,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-10T05:20:47Z",
+      "lastVerified": "2026-10-10T12:14:45Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -342,6 +342,10 @@
         {
           "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
+        },
+        {
+          "author": "nuriyoo",
+          "state": "CHANGES_REQUESTED"
         }
       ],
       "mergedAt": null,
@@ -368,7 +372,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-10T05:20:47Z",
+      "lastVerified": "2026-10-10T12:14:45Z",
       "baseCommit": "4ebc787613805d799964226b43641c45ed95f3b4",
       "commits": [
         {

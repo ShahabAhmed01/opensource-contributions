@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-09T20:55:59Z",
+  "updatedAt": "2026-10-10T05:20:47Z",
   "contributions": [
     {
       "repo": "odysseus-dev/odysseus",
@@ -20,7 +20,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-09T20:55:59Z",
+      "lastVerified": "2026-10-10T05:20:47Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -63,7 +63,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-09T20:55:59Z",
+      "lastVerified": "2026-10-10T05:20:47Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -106,7 +106,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-09T20:55:59Z",
+      "lastVerified": "2026-10-10T05:20:47Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -149,7 +149,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-09T20:55:59Z",
+      "lastVerified": "2026-10-10T05:20:47Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -192,7 +192,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-09T20:55:59Z",
+      "lastVerified": "2026-10-10T05:20:47Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -235,7 +235,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-09T20:55:59Z",
+      "lastVerified": "2026-10-10T05:20:47Z",
       "baseCommit": null,
       "commits": [
         {
@@ -278,7 +278,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-09T20:55:59Z",
+      "lastVerified": "2026-10-10T05:20:47Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -321,7 +321,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-09T20:55:59Z",
+      "lastVerified": "2026-10-10T05:20:47Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -368,7 +368,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-09T20:55:59Z",
+      "lastVerified": "2026-10-10T05:20:47Z",
       "baseCommit": "4ebc787613805d799964226b43641c45ed95f3b4",
       "commits": [
         {
@@ -392,7 +392,7 @@
       "mergeCommit": null,
       "description": "Couchbase connect() now refuses a 404 on /pools/default/buckets/<bucket> naming the bucket; Trino connect() warns, via connectWarnings(), naming a pinned catalog absent from system.metadata.catalogs",
       "notes": "Claimed by comment (2026-10-09T19:38:18Z) per repo policy before any code; re-verified unassigned/uncommented-by-others/no competing PR at claim time and immediately before the PR. TDD: all new behaviour tests shown failing on unmodified main first. Local: format/lint/typecheck/knip/chart:check/channels:showcase:check/readme:check/security:check/build pass; full suite green except tests/unit/test-runner-cli.test.ts (2 SIGINT tests) which fails identically on the unmodified base (proven by stash/re-run) and is unrelated; the runner never merges lcov on a red run, so coverage:check runs in CI (its 100% gate is a required check). The repo's catalog seam is system.metadata.catalogs (TRINO_CATALOG_LIST_SQL), not SHOW CATALOGS as the issue wording says; introspect.ts documents why, and PR #1628 states the deviation. Third-party scanners (Socket x2, GitGuardian, semgrep) ran green on first push; the repo's own workflows (CI, CodeQL Advanced, Security Scan, Platform Integration Check) are at action_required — the first-time-contributor approval gate, which must not be bypassed — so the required checks have not executed yet.",
-      "issueUpdatedAt": "2026-10-09T19:38:18Z"
+      "issueUpdatedAt": "2026-10-09T22:43:56Z"
     }
   ]
 }

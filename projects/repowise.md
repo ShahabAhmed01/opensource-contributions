@@ -119,8 +119,12 @@ git diff --check                  # whitespace
   `elif` dispatch it compiles to. `walk_if` and every other map untouched.
 - Validation: 5 new tests fail on the unfixed walker (nesting 3/3/2) before
   passing; focused file 78 passed; touched surface (providers + health) 3639
-  passed on the pushed head; full `tests/unit/` 28724 passed on the pre-rebase
-  base; ruff, mypy, doc-drift and `git diff --check` all clean.
+  passed on the pushed head; **full `tests/unit/` 28906 passed/20 skipped/6
+  xfailed on the pushed head itself** (an earlier run on the pre-rebase base
+  gave 28724 with the same zero failures); ruff, mypy, doc-drift and
+  `git diff --check` all clean. The repo's own repowise-bot flagged three
+  absent companion files — checked and answered with evidence in
+  `issuecomment-6100296024`; none was owed.
 - Opened 2026-10-10T16:55:51Z, MERGEABLE, awaiting the first-time-contributor
   CI approval gate and maintainer review. Full detail in
   `contributions/repowise/issue-3285.md`.

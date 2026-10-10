@@ -276,10 +276,15 @@ expression. No golden/fixture updates are owed — the issue asks each language
 to update its health-score goldens, but #3278, the accepted precedent, updated
 none of its 6 files, and no Python golden scores a chain (stated in the PR
 rather than silently omitted). Local: focused file 78 passed; touched surface
-(providers + unit/health) 3639 passed on the pushed head; full tests/unit/
-28724 passed/20 skipped/6 xfailed in 1h28m on the pre-rebase base bc89359
-(branch is a pure cherry-pick, changed files byte-identical); ruff, mypy,
-doc-drift and `git diff --check` all clean. Workspace is a shallow clone, so
+(providers + unit/health) 3639 passed on the pushed head; **full tests/unit/
+28906 passed/20 skipped/6 xfailed in 57m on the pushed head b8224ee itself**
+(28724 on the pre-rebase base bc89359 with the same zero failures — the
+difference is upstream's added tests); ruff, mypy, doc-drift and
+`git diff --check` all clean. The repo's own repowise-bot flagged three absent
+companion files (test_complexity_walker.py, walker.py, perf/dialects/
+__init__.py) — all three checked and answered with evidence in comment
+issuecomment-6100296024; none is owed, nor any golden. Workspace is a shallow
+clone, so
 `git rebase` across the moved base was unusable (whole-tree add/add) and the
 commit was cherry-picked onto b010215 instead; `main` moved twice more
 (3289287, 342046f), neither touching any file this branch changes, so the PR

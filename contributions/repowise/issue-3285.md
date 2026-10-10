@@ -129,10 +129,11 @@ The file set matches #3278's exactly minus `docs/architecture/code-health.md` an
   78 passed (14 tests in that file, 5 of them Python).
 - **Touched-surface:** `uv run pytest tests/providers/ tests/unit/health/ -q` —
   3639 passed, 2 skipped, 2 xfailed on the pushed head `b8224ee` (1m09s).
-- **Full suite:** `uv run pytest tests/unit/ -q` — 28724 passed, 20 skipped,
-  6 xfailed (1h28m31s) on the pre-rebase base `bc89359`; the branch is a pure
-  cherry-pick onto `b010215`, the delta is upstream-only and the changed files are
-  byte-identical, and a second full run on `b8224ee` was in flight at PR time.
+- **Full suite:** `uv run pytest tests/unit/ -q` — **28906 passed, 20 skipped,
+  6 xfailed (57m01s) on the pushed head `b8224ee` itself.** An earlier full run
+  on the pre-rebase base `bc89359` gave 28724 passed with the same zero
+  failures — 182 fewer tests, the upstream additions since — which is one more
+  signal that the delta `bc89359..b010215` was upstream-only.
 - **Lint / types:** `uv run ruff check .` clean; `uv run mypy` clean on both changed
   source files. `git diff --check` clean.
 - **Docs:** the doc-drift gate passes — the README bullet and the `_PY` map field
@@ -159,7 +160,29 @@ snapshots.
 
 ## Review
 
-_None yet._ No comments, no reviews, no requested changes.
+- `copilot-pull-request-reviewer` left a non-review at 2026-10-10T16:55:58Z:
+  Copilot was unable to review the PR because the requester had reached its
+  quota limit. No findings.
+- **`repowise-bot` (the repo's own dogfooding bot) commented at 16:56:10Z**
+  with "1 thing to check": three files that usually change with this PR's files
+  were absent — `tests/unit/health/test_complexity_walker.py`,
+  `packages/core/.../complexity/walker.py`,
+  `packages/core/.../health/perf/dialects/__init__.py`. It also scored the
+  changed files' health 7.7 → 8.0 and suggested @RaghavChamadiya as reviewer.
+  AI review is paused for the repository, so this was the only automated input.
+- **Checked and answered rather than ignored** (comment
+  `issuecomment-6100296024`): `test_complexity_walker.py` passes 59/59 on this
+  head and contains no `ifexp`/`conditional`/`ternary` reference at all — the
+  Python fixtures under `tests/fixtures/lang_samples/python/` contain no
+  conditional-expression chain, and that file's flat-chain assertions are the
+  Pascal `else if` case, not Python. `walker.py` imports `get_language_map` only
+  to resolve the parser and to bail out on an unsupported language; it never
+  reads the ternary fields, and `walk_if` lives in `cyclomatic.py`, which this
+  PR does change. `perf/dialects/__init__.py` is the perf registry, which
+  co-occurs with `languages.py` only because adding a *perf* language needs
+  `call_kinds` there. Conclusion recorded publicly: no companion-file updates
+  are owed, and no goldens either.
+- No human review yet.
 
 ## Merge
 

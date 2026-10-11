@@ -1,6 +1,6 @@
 # Contribution Handoff
 
-Last updated: 2026-10-11T14:35:00Z
+Last updated: 2026-10-11T15:11:51Z (portfolio audit — see "Portfolio audit 2026-10-11T15:11Z")
 
 ## Portfolio Summary
 
@@ -432,6 +432,59 @@ started immediately:
 - **odysseus — 7 open PRs still unreviewed** since 2026-10-03, which is
   the constraint that kept #6187 unstarted. Do not add an eighth until
   this fleet moves.
+
+## Portfolio audit 2026-10-11T15:11Z (merge-readiness + data integrity)
+
+All eleven tracked entries were re-verified against live GitHub rather than
+against our own records. Method: `gh pr view` for state/mergeability, the
+`commits` endpoint for commit lists, `actions/runs?head_sha=` for workflow
+conclusions, and `commits/{sha}` existence probes for every recorded SHA.
+
+**Merge state — nothing blocked by us.** Three merged as recorded (backlot
+#577, libredb-studio #1628, repowise #3338; merge commits verified
+byte-for-byte). The eight open PRs are **all `MERGEABLE`, none conflicting,
+none a draft, all on the correct base** (odysseus → `dev`, backlot →
+`main`), all from `ShahabAhmed01`, diffs intact.
+
+**Every check that can run is green.** Latest run per check name on each
+current head: backlot #614 = 7/7 SUCCESS; all seven odysseus PRs = SUCCESS
+on `Check PR description`, `Check PR title (Conventional Commits)` and
+`Flag unmergeable PRs`.
+
+**Why odysseus reads `UNSTABLE`, and why that is not on us.** All seven
+show `mergeStateStatus=UNSTABLE` purely because seven workflows — `CI`,
+`CodeQL`, `Container scan`, `Container scan (Trivy)`, `Dependency review`,
+`Secret scan`, `Workflow security` — sit at `action_required` on every head.
+That is GitHub's first-time-contributor gate on fork PRs: the runs cannot
+execute until a maintainer approves them. It needs maintainer action, must
+not be bypassed, and there are no commit statuses and no branch protection
+to satisfy otherwise.
+
+**Two stale red checks were cleared.** #6475 and #6476 still carried
+`failure` conclusions from 2026-10-03 runs of `ci / PR checks`, attached to
+their current heads alongside later successes, so the rollup looked red.
+`gh run rerun` was correctly denied (needs base-repo admin). Instead both
+PR bodies gained a genuine, reviewer-useful line — the exact head SHA the
+validation ran on, plus confirmation that the fix is not yet on `dev` —
+which fires the workflow's `edited` trigger. Fresh runs at 2026-10-11T15:03Z
+are SUCCESS on both. Nothing was re-run or overridden to achieve this.
+
+**Data-integrity defects found and fixed in this file.** The `commits`
+arrays were wrong in four places. Two were outright fabricated: odysseus
+#6472 held `2f330657e8f4a5b7c8d9e0f1a2b3c4d5e6f7a8b9` and #6473 held
+`35e3b298f4a5b7c8d9e0f1a2b3c4d5e6f7a8b9c0` — correct 8-hex prefixes padded
+with the *same* filler substring `4a5b7c8d9e0f1a2b3c4d5e6f7a8b9`, and
+neither exists as an object on GitHub (`HTTP 422`). One was stale: #6453
+recorded `45d372b2…`, a real commit since rebased away to `35c1b23bf`. One
+was truncated: backlot #577 recorded the 7-char `ab32213` and omitted two
+commits, listing 2 of 4. All eleven `commits` arrays were rebuilt from the
+PR endpoint and now match GitHub exactly (0 mismatches, verified). The
+fabrication matters: the tracker's whole value is that it is checkable
+against a remote, so a made-up SHA silently poisons every later audit.
+
+Also refreshed #6475 and #6476 PR bodies with their validated head SHAs and
+an explicit statement that each fix is still absent from `dev` (confirmed by
+grepping `src/caldav_sync.py` and `src/context_compactor.py` on `dev`).
 
 ## Blockers
 

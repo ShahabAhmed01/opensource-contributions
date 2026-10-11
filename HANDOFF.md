@@ -1,13 +1,35 @@
 # Contribution Handoff
 
-Last updated: 2026-10-11T16:55Z (backlot #586 / PR #620 opened)
+Last updated: 2026-10-11T19:05Z (isomorphic-git #2286 / PR #2456 opened)
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 9
+Monitoring Contributions: 10
 Merged Contributions: 3
 Closed/Superseded Contributions: 0
+
+**New this session (2026-10-11T18:58Z): isomorphic-git #2286 / PR #2456** —
+`feat(log): add author filter`, the portfolio's first JavaScript-library
+track. `git.log()` gains an `author` option: a case-insensitive JS RegExp
+over the author's `Name <email>`, applied before `depth` is counted,
+composing with `filepath`, author-only (the issue thread conflates
+author/committer — a dedicated test pins it), invalid regex rejects.
+Four new tests; focused suite 14/14; full jest 1433 passed / 2 failed,
+both the pre-existing `clone noTags` 30s-timeout flake proven identical
+with and without the patch; eslint + tsc clean. Independent review
+approve-with-nits, 7 items applied before commit. Selected after
+screening ~34 repos / deep-verifying ~12 finalists — isomorphic-git
+merges outside contributors fast (10 substantive merges in two weeks),
+has a no-claim CONTRIBUTING, and pure-JS local testability (Node 22
+toolchain required; system Node 26 breaks the `@zenfs/core` fixtures).
+PR opened ready for review; MERGEABLE; `isomorphic-git-PR` check QUEUED
+behind the first-time-fork approval gate; CodeRabbit + Copilot bot
+entries only; awaiting first human review from `jcubic`.
+
+The thirteenth track is the first new project since the 2026-10-09
+research; `projects/isomorphic-git.md` carries the full
+policy/environment notes.
 
 **New this session (2026-10-11T16:45Z): backlot #586 / PR #620** — the
 `invalid_cursor`/`invalid_ts` precedence follow-up nuriyoo filed while
@@ -19,7 +41,7 @@ main, all 11 pass with the fix); full suite 6346 passed/10 skipped; CI
 awaiting `nuriyoo`/`khj809`. Not merged. This is the second open backlot
 PR (policy allows three).
 
-Three of the twelve tracks have merged, all within the last 24 hours:
+Three of the thirteen tracks have merged, all within the last 24 hours:
 backlot #577 (2026-10-10T13:59Z), libredb-studio #1628 (2026-10-11T00:34Z)
 and repowise #3338 (2026-10-11T07:56Z). The seven odysseus PRs are
 unchanged since 2026-10-09 (no new comments, no reviews, no state change).
@@ -441,6 +463,59 @@ limit/count task; #327/#196 old and unrelated). Second open backlot PR
 Next Action: Monitor PR #620 for first human review (nuriyoo/khj809);
 respond on the same branch. Do not ping.
 
+### Track 013
+Project: isomorphic-git/isomorphic-git
+Issue: #2286
+PR: #2456
+Branch: feat/log-author-filter
+Status: PR OPEN — awaiting first review. Opened 2026-10-11T18:58:36Z
+ready for review (never a draft). Not merged. MERGEABLE; mergeStateStatus
+BLOCKED only by the first-time-fork workflow approval gate.
+CI: `isomorphic-git-PR` QUEUED (fork workflows need maintainer approval;
+the repo has no required-check branch protection, so this is informational,
+not a merge gate).
+Review: CodeRabbit comment + Copilot COMMENTED review only; no human
+review yet. Expected reviewer/maintainer: jcubic.
+Notes: First isomorphic-git track and the portfolio's first JS-library
+track. Issue #2286 (filed 2026-02-14, 4 comments) asks for basic author
+filtering on `log` "since it aims to be fully compatible with Git".
+Selected 2026-10-11: OPEN, unassigned, 0 competing PRs (PR search for
+2286 / "author flag" + cross-reference timeline all empty); re-verified
+open / unassigned / 0 cross-references immediately before `gh pr create`.
+No claim protocol in this repo (fork + branch + PR; CONTRIBUTING's only
+first-timer requirement is `npm run add-contributor`, shipped as its own
+commit 3fd4ab1e, same as merged PRs #2385/#2449). Implementation:
+`src/commands/log.js` compiles `authorRegex` once per call and guards the
+single `pushCommit` choke point that all seven commit-emission sites
+route through (so merge/shallow/filepath paths cannot leak); `src/api/log.js`
+documents the param. Semantics: case-insensitive JS RegExp over the
+author's `Name <email>`; applied before `depth` (like
+`git log --author --max-count`); composes with `filepath`; filters on
+author not committer; invalid regex rejects. One deliberate git
+divergence, disclosed in JSDoc + PR body: git's `--author` is
+case-sensitive BRE, this is a JS RegExp with the `i` flag (independent
+reviewer verified git's actual behavior against git 2.56 before the
+claim was reworded). Four new tests (name/email filter + case
+insensitivity + regex metacharacters + no-match `[]` + invalid regex;
+depth counts matching commits; filepath combination; author != committer).
+Verification on the Node 22.22.0 toolchain (system Node 26 breaks the
+repo-wide `@zenfs/core` fixtures): focused test-log.js 14/14; TDD proof
+by stashing src/ (new tests fail); full jest --ci 1433 passed / 2 failed,
+both the pre-existing `clone › clone with noTags` 30s-timeout flake in
+test-clone.js + test-clone-in-submodule.js, reproduced with and without
+the patch (27-28s pass, 30s fail); eslint clean; tsc clean, index.d.ts
+picks up the param. Independent read-only review approve-with-nits; 7
+items applied pre-commit (dropped the false git-parity claim from the
+JSDoc, repo-wide `@param [args.author]` style, `author: null` =
+no-filter, explicit boolean, comment fix, tighter regex assertion, added
+the author-vs-committer test). Appendix A submodule mirror deliberately
+omitted (that file is behind main; #2385/#2413 skipped it) — offer
+stated in the PR body. Diff: 5 files +216/-9.
+Next Action: Monitor PR #2456 for first human review (jcubic); respond
+on the same branch. Do not ping. If CodeRabbit/Copilot raise substantive
+points, address them the way Track 011 did (evidence-first reply, fixes
+pushed as separate commits).
+
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
 Re-ran the full issue-first selection loop to fill the freed slot:
@@ -556,8 +631,11 @@ open with all CI green and a CHANGES_REQUESTED from `nuriyoo` that has been
 fully addressed — head `7abf5b4`, reply posted 14:29Z, awaiting
 re-review** (see Track 011). **backlot #620 (Track 012) is open with all CI
 green (7/7, mergeStateStatus CLEAN) awaiting its first human review** (see
-Track 012). The outstanding item on all nine open PRs is a human decision,
-not work.
+Track 012). **isomorphic-git #2456 (Track 013) is open, MERGEABLE, with
+its `isomorphic-git-PR` check queued behind the first-time-fork approval
+gate — informational here, not a required check — awaiting jcubic's first
+review** (see Track 013). The outstanding item on all ten open PRs is a
+human decision, not work.
 
 Two open courtesies, neither blocking:
 
@@ -594,6 +672,19 @@ Two open courtesies, neither blocking:
   of `main`; branch `fix/flat-ternary-python-3285-v2` @ `b8224ee` cut from
   `b010215`; uv workspace, Python 3.11.17 — **`git rebase` is unusable in this
   clone across a moved base, cherry-pick instead**)
+- isomorphic-git fork: https://github.com/ShahabAhmed01/isomorphic-git
+- isomorphic-git remotes: `origin` = fork, `upstream` = isomorphic-git/isomorphic-git
+- isomorphic-git workspace: `~/opensource-work/isomorphic-git` (clone of
+  `main`; branch `feat/log-author-filter` @ `9cbc0feb` cut from upstream
+  `main` `909b97b1`; npm install with node_modules present; **tests must
+  run on the Node 22.22.0 toolchain at
+  `~/opensource-work/.toolchains/node-v22.22.0-linux-x64/bin` — system
+  Node 26 breaks the `@zenfs/core` fixtures repo-wide**; mock servers
+  git-http-mock-server :8888 / cors-proxy :9999 started with
+  `nps test.setup` and stopped with `nps test.teardown` or by killing the
+  PIDs on those ports; build artifacts `http/`, `index.d.ts`,
+  `__tests__/__fixtures__/index.json` are generated locally and are NOT
+  part of the PR)
 - Public tracker repo: https://github.com/ShahabAhmed01/opensource-contributions
 - Known env-dependent test failures (identical on unmodified dev): browser
   tests need Playwright chromium binaries; containment/workspace tests need a

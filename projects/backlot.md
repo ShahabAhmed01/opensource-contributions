@@ -138,3 +138,21 @@ uv sync --all-extras --locked              # what CI installs (all extras)
   portfolio — the "human review, not bot merges" selection signal held.
   Backlot is now inside its own one-open-PR-at-a-time unlock: up to three
   open PRs here from here on.
+
+### #610 — S3 bucket path with trailing slash returns 404 instead of bucket listing (**IN REVIEW** as PR #614, 2026-10-11)
+
+- Branch: `contrib/issue-610-s3-bucket-slash`; PR:
+  https://github.com/brekkylab/backlot/pull/614 (base `main`), closes
+  https://github.com/brekkylab/backlot/issues/610.
+- Fix: two route decorators added to existing handlers —
+  `@router.head("/{bucket}/")` on `head_bucket` and
+  `@router.get("/{bucket}/", openapi_extra={"parameters": _P_BUCKET_GET})` on `bucket_get`.
+  Mirrors the `list_buckets` pattern of registering both `/s3` and `/s3/`.
+- Validation: 16 GET/HEAD query pairs from the issue measured against real S3
+  (2026-10-11) — all 16 pairs match on the fix branch; 11/16 differed on
+  unmodified main. `pytest tests/test_s3.py` — 211 passed; full suite 6088
+  passed/10 skipped on `.[dev]`; ruff and prose_check clean; all 7 remote
+  checks green on first push (gate, lint, scan, test 3.11–3.14).
+- No first-time-contributor `action_required` gate (previous merged PR #577
+  lifted the one-PR-at-a-time limit). PR is mergeable (`clean` state).
+- Awaiting human review (nuriyoo/khj809 typically respond within hours).

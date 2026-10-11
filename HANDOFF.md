@@ -1,11 +1,11 @@
 # Contribution Handoff
 
-Last updated: 2026-10-11T08:05:41Z
+Last updated: 2026-10-11T08:45:00Z
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 7
+Monitoring Contributions: 8
 Merged Contributions: 3
 Closed/Superseded Contributions: 0
 
@@ -13,7 +13,8 @@ Three of ten tracks have merged, all within the last 24 hours: backlot
 #577 (2026-10-10T13:59Z), libredb-studio #1628 (2026-10-11T00:34Z) and
 repowise #3338 (2026-10-11T07:56Z). The seven remaining open PRs are all
 odysseus, unchanged since 2026-10-09 (no new comments, no reviews, no
-state change).
+state change). New track added: backlot #614 (2026-10-11T08:32Z) — all CI
+green, awaiting first human review.
 
 ## Active Tracks
 
@@ -324,6 +325,32 @@ record — but note the repo is maintainer-driven (89 of the last 100 merged
 PRs are RaghavChamadiya's), so treat it as low-priority compared with a
 backlot slot, where the turnaround is 1-2 days.
 
+### Track 011
+Project: brekkylab/backlot
+Issue: #610
+PR: #614
+Branch: contrib/issue-610-s3-bucket-slash
+Status: MONITORING
+CI: ALL GREEN — gate, lint, scan, test (3.11/3.12/3.13/3.14) pass on
+first push (head 4c2feb1). No first-time-contributor action_required gate
+(previous merged PR #577 lifted the one-open-PR cap; up to three now
+permitted).
+Review: AWAITING_REVIEW (no human review; copilot non-review only).
+Notes: Second backlot track. Issue labeled good first issue, help wanted,
+fidelity, hacktoberfest. Selected 2026-10-11: 0 comments, no assignee, no
+competing PR — claimed by comment at 08:19Z, re-verified clean at PR
+creation 08:32Z. Fix: two route decorators added to existing handlers
+(`@router.head("/{bucket}/")` on `head_bucket`, `@router.get("/{bucket}/",
+openapi_extra={"parameters": _P_BUCKET_GET})` on `bucket_get`), mirroring
+the `list_buckets` pattern of registering both `/s3` and `/s3/`. 16
+GET/HEAD query pairs measured against real S3 (2026-10-11); 11/16
+differed on unmodified main (slash → 404/key-refusal), all 16 match on fix
+branch. Full suite 6088 passed/10 skipped on `.[dev]`; ruff and
+prose_check clean. Backlog: maintainer nuriyoo/khj809 typically respond
+within hours (15/15 recent external merges with human CHANGES_REQUESTED/
+APPROVED cycles).
+Next Action: Monitor PR for maintainer review; respond on same branch.
+
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
 Re-ran the full issue-first selection loop to fill the freed slot:
@@ -353,11 +380,12 @@ Three PRs merged in the preceding 24 hours, which changes what can be
 started immediately:
 
 - **backlot — up to 3 open PRs.** The one-open-PR cap is lifted by the
-  first merge, per the maintainer's own words on #577. Best available
-  target: 1-2 day human turnaround, real CHANGES_REQUESTED/APPROVED
-  cycles. The `invalid_cursor`/`invalid_ts` precedence issue nuriyoo
-  filed is the ready follow-up and is a direct continuation of a change
-  already merged and understood.
+  first merge, per the maintainer's own words on #577. Now at **two open
+  PRs** (#577 merged, #614 open). Best available target: 1-2 day human
+  turnaround, real CHANGES_REQUESTED/APPROVED cycles. The
+  `invalid_cursor`/`invalid_ts` precedence issue nuriyoo filed is the
+  ready follow-up and is a direct continuation of a change already merged
+  and understood.
 - **libredb-studio — no cap observed**, and `cevheri` answers in
   minutes–hours. Claim-by-comment, 100% line-coverage gate, and now one
   merged PR on record. Reply to his unanswered question on #1411 first.
@@ -377,7 +405,8 @@ that must not be bypassed. No human review comments on odysseus since
 so this is the longest-waiting fleet. **The three non-odysseus tracks have
 all landed**: backlot #577 merged 2026-10-10T13:59:45Z, libredb-studio
 #1628 merged 2026-10-11T00:34:47Z and repowise #3338 merged
-2026-10-11T07:56:49Z (see Tracks 008-010).
+2026-10-11T07:56:49Z (see Tracks 008-010). **backlot #614 (Track 011) is
+open with all CI green, awaiting first human review** (see Track 011).
 
 Two open courtesies, neither blocking:
 

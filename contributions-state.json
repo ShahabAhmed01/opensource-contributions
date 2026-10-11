@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-11T15:11:51Z",
+  "updatedAt": "2026-10-11T16:51:03Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -545,6 +545,53 @@
       "description": "Make a Python conditional-expression chain report one if decision instead of one per ifexp, matching the elif dispatch it compiles to and the flat ternary TypeScript already reports",
       "notes": "First repowise track. Issue is multi-language (nine grammars) and explicitly allows one language per commit or per PR; this fixes Python, the case the issue names first, and the issue stays open for the other eight. Claimed by comment issuecomment-6098334087 (2026-10-10T14:08:29Z) per .github/CONTRIBUTING.md, which reserves the issue. Extends PR #3278's flat_ternary_kinds mechanism (merged 2026-10-10T11:14:20Z) rather than adding a second one, as the issue asks: Python's grammar exposes no consequence/alternative fields, so the map gains an explicit ternary_arms_positional flag and the else-arm resolution moved into a _ternary_else_arm() helper; walk_if and every other map are unchanged. Measured: chain max_nesting 3 -> 1, equal to the equivalent elif dispatch; a ternary inside an if still nests (2). 5 new tests fail on the unfixed walker (3/3/2) before passing; one existing test renamed because it pinned the buggy nesting. No golden/fixture updates owed — #3278, the accepted precedent, updated none, and no Python golden scores a chain. Full tests/unit/ 28906 passed/20 skipped/6 xfailed on the pushed head b8224ee itself (57m01s); touched surface 3639 passed on the same head; ruff, mypy, doc-drift and git diff --check clean. The repo's own repowise-bot flagged three absent companion files; all three were checked and answered with evidence (comment issuecomment-6100296024) — no companion-file or golden updates are owed. Shallow clone: git rebase across a moved base is unusable, the commit was cherry-picked instead. CI workflows sit at action_required, the first-time-contributor approval gate — a gate, not a failure.",
       "issueUpdatedAt": "2026-10-10T14:08:29Z"
+    },
+    {
+      "repo": "brekkylab/backlot",
+      "project": "backlot",
+      "issueNumber": 586,
+      "issueTitle": "slack: conversations.history checks a bad cursor before a bad oldest or latest, and oldest before latest, where real checks latest, then oldest, then the cursor",
+      "issueUrl": "https://github.com/brekkylab/backlot/issues/586",
+      "issueState": "OPEN",
+      "prNumber": 620,
+      "prUrl": "https://github.com/brekkylab/backlot/pull/620",
+      "prState": "open",
+      "prTitle": "slack: conversations.history answers its errors in the order real reads them — latest, then oldest, then the cursor",
+      "branch": "contrib/issue-586-history-error-order",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/backlot",
+      "forkUrl": "https://github.com/ShahabAhmed01/backlot",
+      "status": "pr-opened",
+      "openedAt": "2026-10-11T16:45:32Z",
+      "prCreatedAt": "2026-10-11T16:45:32Z",
+      "lastVerified": "2026-10-11T16:51:03Z",
+      "baseCommit": "0c879173b26637aeda4a668ca2af271815f52bb1",
+      "commits": [
+        {
+          "sha": "b9af620c82acc1ecc260c3421635eb63dc26e785",
+          "subject": "slack: conversations.history answers its errors in the order real reads them (fixes #586)"
+        }
+      ],
+      "checks": {
+        "test (3.11)": "pass",
+        "gate": "pass",
+        "scan": "pass",
+        "test (3.12)": "pass",
+        "test (3.13)": "pass",
+        "test (3.14)": "pass",
+        "lint": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Reorder conversations.history's argument-error checks to real Slack's reading order — latest, then oldest, then the cursor — so a request with two or more unreadable arguments is named by the first real would read",
+      "notes": "Third backlot track, a direct continuation of the merged #554/#577 work on the same handler. Selected 2026-10-11: nuriyoo filed #586 on 2026-10-10 while reviewing our #577 PR, with a full measured table (slack.com/api 2026-10-10, user token, one request per row). At selection 0 comments, no assignee, no competing PR (searched PRs for 586 and conversations.history: #613 is a different limit/count task, #327/#196 are old and unrelated); re-verified open and claim-clean immediately before the PR. Backlot policy allows up to three open PRs after the first merge — #614 was the one open PR, this is the second. Defect: conversations_history decoded the cursor first (invalid_cursor), then checked oldest before latest, where real reads latest, then oldest, then the cursor. Fix is a pure reorder of the three guards in backlot/routers/slack.py — lo/hi computed identically, downstream window logic untouched — plus a comment citing the 2026-10-10 measurement. One parametrised test (test_slack_history_names_the_first_error_real_would) encodes the issue's 11 measured rows: 8 divergence rows fail on unmodified main (each answered invalid_cursor or invalid_ts_oldest where real answers the other), 3 single-argument controls pass on both; all 11 pass with the fix. The non-finite rows (oldest=nan&cursor=zzz, the inf pairs) became answerable only because the isfinite guard from merged #577 is on main now. Full suite 6346 passed/10 skipped on .[dev,official-sdk,llamaindex] Python 3.11 (the 10 skips are mcp, mirage, gdrive_fsspec and the HubSpot reader, not installed here); ruff check/format clean (152 files formatted); prose_check shows only the pre-existing tests/test_google.py:6355 finding. PR opened ready for review (never a draft) per policy item 7; template's three headings and three checkboxes followed; the ACL checkbox is unchecked with the reason (no new endpoint, the change is downstream of the auth and channel_not_found checks). CI 7/7 green on the first push (gate, lint, scan, test 3.11-3.14), mergeStateStatus CLEAN at 16:50Z. Copilot posted a non-review; no human review yet; not merged.",
+      "issueUpdatedAt": "2026-10-10T06:45:56Z"
     }
   ]
 }

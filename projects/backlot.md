@@ -1,7 +1,6 @@
 # Project notes — brekkylab/backlot
 
 Last verified: 2026-10-11
-
 ## Facts
 
 - Serves 11 real SaaS APIs — Slack, Gmail, Google Drive, GitHub, Jira,
@@ -175,3 +174,33 @@ uv sync --all-extras --locked              # what CI installs (all extras)
   `:1763`/`:2946`) and by removing the decorators and diffing the five
   methods' answers — the true reason is that the new decorators serve
   only GET/HEAD. Awaiting re-review.
+
+### #586 — conversations.history error order: latest, oldest, then the cursor (**PR OPEN, awaiting review** as PR #620, 2026-10-11)
+
+- Branch: `contrib/issue-586-history-error-order`; PR:
+  https://github.com/brekkylab/backlot/pull/620 (base `main`), closes
+  https://github.com/brekkylab/backlot/issues/586.
+- Filed by `nuriyoo` on 2026-10-10 while reviewing our merged #577 PR
+  ("Found while reviewing an open pull request that answers a non-finite
+  `oldest` or `latest` with these errors") — a direct continuation of the
+  same handler. Full measured table against slack.com/api (2026-10-10).
+- Fix: a pure reorder of the three error guards in `conversations_history`
+  to real's reading order — `latest` (`invalid_ts_latest`) before `oldest`
+  (`invalid_ts_oldest`), both before the cursor (`invalid_cursor`).
+  `lo`/`hi` computed identically; downstream window logic untouched; one
+  comment cites the measurement.
+- One parametrised test `test_slack_history_names_the_first_error_real_would`
+  encodes the issue's 11 measured rows (8 divergence + 3 single-argument
+  controls). Regression proof: 8/11 fail on unmodified main (each answered
+  `invalid_cursor` or `invalid_ts_oldest` where real answers the other),
+  3 controls pass on both; all 11 pass with the fix. The non-finite rows
+  became testable only because #577's `isfinite` guard is on main now.
+- Validation: full suite 6346 passed/10 skipped on
+  `.[dev,official-sdk,llamaindex]` Python 3.11; ruff check/format clean
+  (152 files); prose_check only the pre-existing `test_google.py:6355`
+  finding. CI 7/7 green on first push (gate, lint, scan, test 3.11–3.14),
+  mergeStateStatus CLEAN at 16:50Z.
+- Second open backlot PR (policy allows up to three after the first
+  merge; #614 is the other). Opened ready for review; template's three
+  headings and three checkboxes followed. Awaiting `nuriyoo`/`khj809`;
+  no human review yet; not merged.

@@ -1,15 +1,25 @@
 # Contribution Handoff
 
-Last updated: 2026-10-11T15:11:51Z (portfolio audit — see "Portfolio audit 2026-10-11T15:11Z")
+Last updated: 2026-10-11T16:55Z (backlot #586 / PR #620 opened)
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 8
+Monitoring Contributions: 9
 Merged Contributions: 3
 Closed/Superseded Contributions: 0
 
-Three of the eleven tracks have merged, all within the last 24 hours:
+**New this session (2026-10-11T16:45Z): backlot #586 / PR #620** — the
+`invalid_cursor`/`invalid_ts` precedence follow-up nuriyoo filed while
+reviewing our merged #577. `conversations_history`'s three error guards
+reordered to real's reading order (latest, oldest, cursor); one
+parametrised test over the issue's 11 measured rows (8 fail on unmodified
+main, all 11 pass with the fix); full suite 6346 passed/10 skipped; CI
+7/7 green on first push, mergeStateStatus CLEAN. Opened ready for review,
+awaiting `nuriyoo`/`khj809`. Not merged. This is the second open backlot
+PR (policy allows three).
+
+Three of the twelve tracks have merged, all within the last 24 hours:
 backlot #577 (2026-10-10T13:59Z), libredb-studio #1628 (2026-10-11T00:34Z)
 and repowise #3338 (2026-10-11T07:56Z). The seven odysseus PRs are
 unchanged since 2026-10-09 (no new comments, no reviews, no state change).
@@ -388,6 +398,49 @@ Next Action: Await re-review from nuriyoo/khj809 on the same branch. Do not
 ping again. On APPROVED nothing further is needed — CI is green and the PR
 is MERGEABLE.
 
+### Track 012
+Project: brekkylab/backlot
+Issue: #586
+PR: #620
+Branch: contrib/issue-586-history-error-order
+Status: PR OPEN — awaiting first review. Opened 2026-10-11T16:45:32Z ready
+for review (never a draft). Not merged.
+CI: ALL GREEN on the first push (7/7 — gate, lint, scan, test 3.11/3.12/
+3.13/3.14), verified 16:50Z; mergeStateStatus CLEAN, MERGEABLE at head
+b9af620. No first-time-contributor action_required gate (PR #577 lifted it).
+Review: copilot non-review (COMMENTED) only; no human review yet.
+Notes: Third backlot track, and a direct continuation of Track 008 (#577,
+merged): nuriyoo filed #586 on 2026-10-10T06:45:56Z while reviewing our
+#577 PR — "Found while reviewing an open pull request that answers a
+non-finite oldest or latest with these errors" — with a full measured table
+against slack.com/api (2026-10-10, user token, one request per row).
+Defect: `conversations_history` in backlot/routers/slack.py checked the
+cursor first (invalid_cursor), then oldest, then latest, where real reads
+latest, then oldest, then the cursor. So a request with two or more
+unreadable arguments was named by whichever Backlot parsed first: both
+timestamps unreadable answered oldest where real answers latest, and any
+unreadable timestamp beside an undecodable cursor answered invalid_cursor
+where real answers the timestamp's error. Fix is a pure reorder of the
+three guards (hi → lo → cursor), lo/hi computed identically, downstream
+window logic untouched; one comment cites the 2026-10-10 measurement.
+TDD: the new parametrised test `test_slack_history_names_the_first_error_
+real_would` encodes the issue's 11 measured rows (8 divergence + 3
+single-argument controls); with slack.py stashed to unmodified main, 8 of
+11 fail (each divergence row answered invalid_cursor or invalid_ts_oldest
+where real answers the other) and the 3 controls pass; restored, all 11
+pass. The non-finite rows (oldest=nan&cursor=zzz, the inf pairs) became
+testable only because #577's isfinite guard is on main now. Full suite
+6346 passed/10 skipped on .[dev,official-sdk,llamaindex] Python 3.11 (the
+10 skips are mcp, mirage, gdrive_fsspec, HubSpot reader); ruff check/
+format clean (152 files); prose_check only the pre-existing
+tests/test_google.py:6355 finding. Availability re-verified immediately
+before the PR: issue OPEN, 0 assignees, 0 comments, no competing PR
+(searched PRs for 586 and conversations.history: #613 is a different
+limit/count task; #327/#196 old and unrelated). Second open backlot PR
+(#614 is the other); policy allows three after the first merge.
+Next Action: Monitor PR #620 for first human review (nuriyoo/khj809);
+respond on the same branch. Do not ping.
+
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
 Re-ran the full issue-first selection loop to fill the freed slot:
@@ -418,11 +471,14 @@ started immediately:
 
 - **backlot — up to 3 open PRs.** The one-open-PR cap is lifted by the
   first merge, per the maintainer's own words on #577. Now at **two open
-  PRs** (#577 merged, #614 open). Best available target: 1-2 day human
-  turnaround, real CHANGES_REQUESTED/APPROVED cycles. The
-  `invalid_cursor`/`invalid_ts` precedence issue nuriyoo filed is the
-  ready follow-up and is a direct continuation of a change already merged
-  and understood.
+  PRs** (#614 and #620). The `invalid_cursor`/`invalid_ts` precedence
+  issue nuriyoo filed (#586) was taken this session and is PR #620,
+  awaiting first review. Remaining capacity: one more backlot slot, free
+  for the next measured-fidelity issue from the open pool (#611, #612,
+  #609, #608 in flight with other contributors, #605, #604, #603, #601,
+  #597, #594, #593, #589, #587, #579, #576, #573, #572, #571, #569, #568,
+  #567, #566 and the rest of the Slack/Google/Atlassian/HubSpot fidelity
+  queue — re-verify claim-clean at selection).
 - **libredb-studio — no cap observed**, and `cevheri` answers in
   minutes–hours. Claim-by-comment, 100% line-coverage gate, and now one
   merged PR on record. Reply to his unanswered question on #1411 first.
@@ -498,8 +554,10 @@ all landed**: backlot #577 merged 2026-10-10T13:59:45Z, libredb-studio
 2026-10-11T07:56:49Z (see Tracks 008-010). **backlot #614 (Track 011) is
 open with all CI green and a CHANGES_REQUESTED from `nuriyoo` that has been
 fully addressed — head `7abf5b4`, reply posted 14:29Z, awaiting
-re-review** (see Track 011). The outstanding item is a human decision, not
-work.
+re-review** (see Track 011). **backlot #620 (Track 012) is open with all CI
+green (7/7, mergeStateStatus CLEAN) awaiting its first human review** (see
+Track 012). The outstanding item on all nine open PRs is a human decision,
+not work.
 
 Two open courtesies, neither blocking:
 

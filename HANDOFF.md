@@ -1,6 +1,6 @@
 # Contribution Handoff
 
-Last updated: 2026-10-11T19:05Z (isomorphic-git #2286 / PR #2456 opened)
+Last updated: 2026-10-11T19:35Z (all-13 sweep: nothing blocked on us; isomorphic-git #2456 CI green + CodeRabbit reply)
 
 ## Portfolio Summary
 
@@ -23,9 +23,10 @@ screening ~34 repos / deep-verifying ~12 finalists — isomorphic-git
 merges outside contributors fast (10 substantive merges in two weeks),
 has a no-claim CONTRIBUTING, and pure-JS local testability (Node 22
 toolchain required; system Node 26 breaks the `@zenfs/core` fixtures).
-PR opened ready for review; MERGEABLE; `isomorphic-git-PR` check QUEUED
-behind the first-time-fork approval gate; CodeRabbit + Copilot bot
-entries only; awaiting first human review from `jcubic`.
+PR opened ready for review; MERGEABLE; `isomorphic-git-PR` check completed
+**SUCCESS** (first-time-fork approval gate); CodeRabbit posted one
+actionable comment (filepath+depth boundary), verified pre-existing and
+replied to with evidence; awaiting first human review from `jcubic`.
 
 The thirteenth track is the first new project since the 2026-10-09
 research; `projects/isomorphic-git.md` carries the full
@@ -471,9 +472,12 @@ Branch: feat/log-author-filter
 Status: PR OPEN — awaiting first review. Opened 2026-10-11T18:58:36Z
 ready for review (never a draft). Not merged. MERGEABLE; mergeStateStatus
 BLOCKED only by the first-time-fork workflow approval gate.
-CI: `isomorphic-git-PR` QUEUED (fork workflows need maintainer approval;
-the repo has no required-check branch protection, so this is informational,
-not a merge gate).
+CI: `isomorphic-git-PR` **SUCCESS / COMPLETED** (plus CodeRabbit,
+bundlewatch and security/snyk checks pass). The check ran to completion
+once the first-time-fork workflows were approved; the repo has no
+required-check branch protection, so it is informational, not a merge
+gate. `mergeStateStatus` still reads BLOCKED only because the fork-workflow
+approval gate has not been clicked by a maintainer — no check is red.
 Review: CodeRabbit comment + Copilot COMMENTED review only; no human
 review yet. Expected reviewer/maintainer: jcubic.
 Notes: First isomorphic-git track and the portfolio's first JS-library
@@ -617,6 +621,63 @@ Also refreshed #6475 and #6476 PR bodies with their validated head SHAs and
 an explicit statement that each fix is still absent from `dev` (confirmed by
 grepping `src/caldav_sync.py` and `src/context_compactor.py` on `dev`).
 
+## Portfolio sweep 2026-10-11T19:35Z (all 13 contributions, "is everything ok from my side")
+
+Every one of the 13 tracked contributions was re-verified against live
+GitHub. Method: `gh pr view` for state/mergeability, `commits` for heads,
+`commits/{sha}/check-runs` scoped to each PR's **current head SHA** (and
+collapsed to the **latest run per check name**, because the raw endpoint
+returns superseded historical runs too), `pulls/{n}/comments` and
+`issues/{n}/comments` for anything needing a reply, plus a full
+`commits/{sha}` existence probe for every recorded SHA in the state file.
+
+**Nothing is blocked on us. No unanswered reviews, no unanswered maintainer
+questions, no failing checks, no conflicts.** Specifically:
+
+- **3 merged PRs still merged**, merge commits unchanged (backlot #577
+  `78c06e50d2`, libredb-studio #1628 `ca7755b0cf`, repowise #3338
+  `41bf297d57`).
+- **10 open PRs: all OPEN, all MERGEABLE, none a draft, all on the correct
+  base.** Latest check run per check name is green on every one.
+  (The apparent red on #6475/#6476 was superseded 2026-10-03 runs of
+  `Check PR description`; the latest runs, 2026-10-11T15:03Z, are SUCCESS.)
+- **All 10 linked issues still OPEN** (none solved by someone else; no
+  competing PR merged).
+- **Every recorded commit SHA in the state file exists as a real object on
+  GitHub** (13/13 contributions, 0 mismatches). The one defect found and
+  fixed: isomorphic-git #2456's `commits` array was in preference order
+  rather than GitHub's chronological order; corrected to
+  `3fd4ab1e` (contributor) then `9cbc0feb` (feature).
+
+**isomorphic-git #2456 — CI completed green** (`isomorphic-git-PR`
+SUCCESS, plus CodeRabbit / bundlewatch / security-snyk checks pass) and
+CodeRabbit posted one actionable comment: the `filepath`+`depth` boundary
+can return `depth+1` when the boundary commit matches the author. Verified
+empirically as **pre-existing and unchanged by this patch**: on unmodified
+upstream main `909b97b1` (`authorRegex` absent), `log({filepath:'a.txt',
+depth:1})` already returns 2 commits — byte-identical to this branch — and
+the `author` filter sits in the single `pushCommit` choke point, so it can
+only *remove* commits, never add one. Declined CodeRabbit's proposed
+`endCommit` guard because it would change existing `filepath`+`depth`
+semantics for **all** callers (`depth:1 → 2` becomes `depth:1 → 1`), a
+behavior change out of scope for an author-filter feature. Evidence-based
+reply posted 19:26Z (comment `4242897410`), offering a separate
+follow-up issue/PR if maintainers prefer the strict bound.
+
+**One item needs a human decision, deliberately not actioned:** `cevheri`'s
+unanswered question on libredb issue #1411 ("how was first-contribute on
+libredb studio / which databases are you using") requires the account
+owner's personal context (which databases they actually use). It was **not**
+answered with fabricated specifics. A short factual reply about the
+contribution workflow (claim-by-comment, fast merge) is safe to send;
+the "which databases" half needs real input first.
+
+**Waiting on maintainers, not on us:** the odysseus seven have had zero
+human review for 3 days behind the `action_required` first-time-contributor
+gate; backlot #614 awaits `nuriyoo`'s re-review (all four requested items
+addressed, reply posted 14:29Z); backlot #620 and isomorphic-git #2456
+await first review. Per policy, no pings.
+
 ## Blockers
 
 None. Only the seven odysseus open PRs remain, all behind GitHub's
@@ -631,10 +692,10 @@ open with all CI green and a CHANGES_REQUESTED from `nuriyoo` that has been
 fully addressed — head `7abf5b4`, reply posted 14:29Z, awaiting
 re-review** (see Track 011). **backlot #620 (Track 012) is open with all CI
 green (7/7, mergeStateStatus CLEAN) awaiting its first human review** (see
-Track 012). **isomorphic-git #2456 (Track 013) is open, MERGEABLE, with
-its `isomorphic-git-PR` check queued behind the first-time-fork approval
-gate — informational here, not a required check — awaiting jcubic's first
-review** (see Track 013). The outstanding item on all ten open PRs is a
+Track 012). **isomorphic-git #2456 (Track 013) is open, MERGEABLE, with its
+`isomorphic-git-PR` check completed SUCCESS (the informational
+first-time-fork gate; no red checks) — awaiting jcubic's first review**
+(see Track 013). The outstanding item on all ten open PRs is a
 human decision, not work.
 
 Two open courtesies, neither blocking:

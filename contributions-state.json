@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-11T19:06:35Z",
+  "updatedAt": "2026-10-11T19:32:16Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-11T19:06:35Z",
+      "lastVerified": "2026-10-11T19:32:16Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -79,7 +79,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-11T19:06:35Z",
+      "lastVerified": "2026-10-11T19:32:16Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -122,7 +122,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-11T19:06:35Z",
+      "lastVerified": "2026-10-11T19:32:16Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -165,7 +165,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-11T19:06:35Z",
+      "lastVerified": "2026-10-11T19:32:16Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -208,7 +208,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-11T19:06:35Z",
+      "lastVerified": "2026-10-11T19:32:16Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -251,7 +251,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-11T19:06:35Z",
+      "lastVerified": "2026-10-11T19:32:16Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -294,7 +294,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-11T19:06:35Z",
+      "lastVerified": "2026-10-11T19:32:16Z",
       "baseCommit": null,
       "commits": [
         {
@@ -337,7 +337,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-11T19:06:35Z",
+      "lastVerified": "2026-10-11T19:32:16Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -380,7 +380,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-11T19:06:35Z",
+      "lastVerified": "2026-10-11T19:32:16Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -447,7 +447,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-11T19:06:35Z",
+      "lastVerified": "2026-10-11T19:32:16Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -510,7 +510,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-11T19:06:35Z",
+      "lastVerified": "2026-10-11T19:32:16Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -564,7 +564,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-11T19:06:35Z",
+      "lastVerified": "2026-10-11T19:32:16Z",
       "baseCommit": "0c879173b26637aeda4a668ca2af271815f52bb1",
       "commits": [
         {
@@ -608,25 +608,25 @@
       "baseBranch": "main",
       "fork": "ShahabAhmed01/isomorphic-git",
       "forkUrl": "https://github.com/ShahabAhmed01/isomorphic-git",
-      "status": "ci-running",
+      "status": "pr-opened",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-11T19:06:35Z",
+      "lastVerified": "2026-10-11T19:32:16Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
-          "sha": "9cbc0feb297b28367659c386a151734aa108fbcd",
-          "subject": "feat(log): add author filter"
-        },
-        {
           "sha": "3fd4ab1e6c6d89ef39617d6fe6e2f0e8af4f4f3f",
           "subject": "docs: add @ShahabAhmed01 as a contributor"
+        },
+        {
+          "sha": "9cbc0feb297b28367659c386a151734aa108fbcd",
+          "subject": "feat(log): add author filter"
         }
       ],
       "checks": {
-        "isomorphic-git-PR": "pending",
         "CodeRabbit": "pass",
         "bundlewatch": "pass",
+        "isomorphic-git-PR": "pass",
         "security/snyk (jcubic)": "pass"
       },
       "reviews": [
@@ -637,12 +637,20 @@
         {
           "author": "coderabbitai",
           "state": "COMMENTED"
+        },
+        {
+          "author": "ShahabAhmed01",
+          "state": "COMMENTED"
+        },
+        {
+          "author": "coderabbitai",
+          "state": "COMMENTED"
         }
       ],
       "mergedAt": null,
       "mergeCommit": null,
       "description": "Add an `author` option to git.log(): a case-insensitive JavaScript regular expression tested against the author's `Name <email>` string, applied before `depth` is counted and composable with `filepath`; filtering reads the author only, not the committer; an invalid regex rejects with SyntaxError",
-      "notes": "First isomorphic-git track. Selected 2026-10-11 after screening ~34 discovered repos and deep-verifying ~12 finalists; isomorphic-git had 10 substantive merges by outside contributors in the prior two weeks (incl. the analogous feat(log) #2385), a welcoming no-gate CONTRIBUTING (fork + branch + PR, no claim-comment protocol), and pure JS locally testable. Issue #2286 filed 2026-02-14 by a user asking for basic author filtering 'since it aims to be fully compatible with Git'; at selection OPEN, unassigned, 4 comments, zero competing PRs (searched PRs for 2286, 'author flag', cross-reference timeline = 0); re-verified open/unassigned/0 cross-references immediately before gh pr create. Implementation: src/commands/log.js compiles authorRegex once per call and guards the single pushCommit emission point that all seven commit-emission sites route through, so non-matching commits are skipped in output while history traversal (file tracking, depth accounting) is unchanged; src/api/log.js adds the documented param. One deliberate git divergence, stated in the JSDoc and PR body: git's --author is case-sensitive BRE, this is a case-insensitive JS RegExp (issue thread conflates author/committer — a dedicated test pins author-only matching). Four new tests (filter by name/email, case-insensitive match, regex metacharacters, no-match -> [], invalid regex rejects; depth counts matching commits like --max-count; combines with filepath; author != committer). Verification on Node 22.22.0 toolchain (system Node 26 breaks @zenfs/core fixtures used repo-wide, incl. untouched test files): focused test-log.js 14/14; TDD regression proof by stashing src/ -> new tests fail; full jest --ci 1433 passed / 2 failed, both the pre-existing clone 'noTags' 30s-timeout flake reproduced identically with and without the patch (27-28s pass, 30s fail); eslint src __tests__ clean; tsc -p tsconfig.json clean after rollup build + declaration emit, index.d.ts includes the new author param. Independent read-only subagent review returned approve-with-nits; applied before commit: reworded the JSDoc to stop claiming exact git parity (reviewer verified git is case-sensitive BRE), switched to repo-wide @param [args.author] style, null author treated as no-filter (was /null/i matching nothing), explicit boolean matchesAuthor, blank line + wording fix on the traversal comment, tightened invalid-regex assertion to /Invalid regular expression/, and added the author-vs-committer test the reviewer flagged as most valuable. Appendix A submodule test mirror deliberately not done: test-log-in-submodule.js is behind main (missing includeChanges tests) and recent feature PRs #2385/#2413 skipped it; offer to add stated in the PR body. CONTRIBUTING first-time step done: npm run add-contributor (commit 3fd4ab1e, matches merged PR #2449 which shipped the same two files). PR opened ready for review (never draft) 2026-10-11T18:58:36Z, 5 files +216/-9, MERGEABLE, mergeStateStatus BLOCKED (first-time fork workflows awaiting maintainer approval, isomorphic-git-PR check QUEUED); CodeRabbit commented and Copilot posted a COMMENTED review; no human review; not merged.",
+      "notes": "First isomorphic-git track. Selected 2026-10-11 after screening ~34 discovered repos and deep-verifying ~12 finalists; isomorphic-git had 10 substantive merges by outside contributors in the prior two weeks (incl. the analogous feat(log) #2385), a welcoming no-gate CONTRIBUTING (fork + branch + PR, no claim-comment protocol), and pure JS locally testable. Issue #2286 filed 2026-02-14 by a user asking for basic author filtering 'since it aims to be fully compatible with Git'; at selection OPEN, unassigned, 4 comments, zero competing PRs (searched PRs for 2286, 'author flag', cross-reference timeline = 0); re-verified open/unassigned/0 cross-references immediately before gh pr create. Implementation: src/commands/log.js compiles authorRegex once per call and guards the single pushCommit emission point that all seven commit-emission sites route through, so non-matching commits are skipped in output while history traversal (file tracking, depth accounting) is unchanged; src/api/log.js adds the documented param. One deliberate git divergence, stated in the JSDoc and PR body: git's --author is case-sensitive BRE, this is a case-insensitive JS RegExp (issue thread conflates author/committer — a dedicated test pins author-only matching). Four new tests (filter by name/email, case-insensitive match, regex metacharacters, no-match -> [], invalid regex rejects; depth counts matching commits like --max-count; combines with filepath; author != committer). Verification on Node 22.22.0 toolchain (system Node 26 breaks @zenfs/core fixtures used repo-wide, incl. untouched test files): focused test-log.js 14/14; TDD regression proof by stashing src/ -> new tests fail; full jest --ci 1433 passed / 2 failed, both the pre-existing clone 'noTags' 30s-timeout flake reproduced identically with and without the patch (27-28s pass, 30s fail); eslint src __tests__ clean; tsc -p tsconfig.json clean after rollup build + declaration emit, index.d.ts includes the new author param. Independent read-only subagent review returned approve-with-nits; applied before commit: reworded the JSDoc to stop claiming exact git parity (reviewer verified git is case-sensitive BRE), switched to repo-wide @param [args.author] style, null author treated as no-filter (was /null/i matching nothing), explicit boolean matchesAuthor, blank line + wording fix on the traversal comment, tightened invalid-regex assertion to /Invalid regular expression/, and added the author-vs-committer test the reviewer flagged as most valuable. Appendix A submodule test mirror deliberately not done: test-log-in-submodule.js is behind main (missing includeChanges tests) and recent feature PRs #2385/#2413 skipped it; offer to add stated in the PR body. CONTRIBUTING first-time step done: npm run add-contributor (commit 3fd4ab1e, matches merged PR #2449 which shipped the same two files). PR opened ready for review 2026-10-11T18:58:36Z, 5 files +216/-9, MERGEABLE. CI completed green: isomorphic-git-PR SUCCESS (plus CodeRabbit, bundlewatch, security/snyk checks pass). CodeRabbit posted one actionable comment (filepath+depth boundary can return depth+1 when the boundary commit matches author); verified empirically as PRE-EXISTING and unchanged by this patch — on unmodified upstream main 909b97b1, log({filepath:'a.txt',depth:1}) already returns 2 commits, identical to this branch, and the author filter sits in the single pushCommit choke point so it can only remove commits, never add one. Declined to apply CodeRabbit's endCommit guard because it would change existing filepath+depth semantics for ALL callers (depth:1 -> 2 becomes depth:1 -> 1), a behavior change out of scope for an author-filter feature; evidence-based reply posted 19:26Z (comment 4242897410), offering a separate follow-up issue/PR if maintainers prefer the strict bound. No human review; not merged.",
       "issueUpdatedAt": "2026-02-24T00:08:12Z"
     }
   ]

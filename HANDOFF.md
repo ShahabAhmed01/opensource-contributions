@@ -1,6 +1,6 @@
 # Contribution Handoff
 
-Last updated: 2026-10-11T08:45:00Z
+Last updated: 2026-10-11T14:35:00Z
 
 ## Portfolio Summary
 
@@ -9,12 +9,20 @@ Monitoring Contributions: 8
 Merged Contributions: 3
 Closed/Superseded Contributions: 0
 
-Three of ten tracks have merged, all within the last 24 hours: backlot
-#577 (2026-10-10T13:59Z), libredb-studio #1628 (2026-10-11T00:34Z) and
-repowise #3338 (2026-10-11T07:56Z). The seven remaining open PRs are all
-odysseus, unchanged since 2026-10-09 (no new comments, no reviews, no
-state change). New track added: backlot #614 (2026-10-11T08:32Z) — all CI
-green, awaiting first human review.
+Three of the eleven tracks have merged, all within the last 24 hours:
+backlot #577 (2026-10-10T13:59Z), libredb-studio #1628 (2026-10-11T00:34Z)
+and repowise #3338 (2026-10-11T07:56Z). The seven odysseus PRs are
+unchanged since 2026-10-09 (no new comments, no reviews, no state change).
+
+**The eighth, backlot #614, got the portfolio's second human review today.**
+`nuriyoo` requested changes at 2026-10-11T08:52:43Z, 20 minutes after the
+PR opened, opening with "The change is right" and asking for four specific
+items: a parametrised regression test (code supplied), two ACL-scoping
+rows, a **Not in this PR.** line, and an inline comment wrap. Items 1-3
+were pushed at 09:06Z (`9b1aad7`); item 4 was still outstanding and was
+applied at 14:26Z (`7abf5b4`) along with a correction to a false causal
+claim in our own description. CI 7/7 green on the response head; reply
+posted 14:29Z; awaiting re-review. Not merged.
 
 ## Active Tracks
 
@@ -330,26 +338,55 @@ Project: brekkylab/backlot
 Issue: #610
 PR: #614
 Branch: contrib/issue-610-s3-bucket-slash
-Status: MONITORING
-CI: ALL GREEN — gate, lint, scan, test (3.11/3.12/3.13/3.14) pass on
-first push (head 4c2feb1). No first-time-contributor action_required gate
-(previous merged PR #577 lifted the one-open-PR cap; up to three now
-permitted).
-Review: AWAITING_REVIEW (no human review; copilot non-review only).
+Status: CHANGES_REQUESTED — **review response pushed 2026-10-11T14:26:02Z**
+(head 7abf5b4). Not merged; PR OPEN and MERGEABLE.
+CI: ALL GREEN on the response head 7abf5b4 — gate, lint, scan, test (3.11/
+3.12/3.13/3.14), verified 14:31Z. Still no first-time-contributor
+action_required gate (previous merged PR #577 lifted the one-open-PR cap;
+up to three now permitted).
+Review: **CHANGES_REQUESTED by nuriyoo 2026-10-11T08:52:43Z** — the second
+human review cycle in this portfolio, 20 minutes after the PR opened. Opens
+with "The change is right", then four items. Copilot's only entry is a
+non-review (quota exhausted).
 Notes: Second backlot track. Issue labeled good first issue, help wanted,
 fidelity, hacktoberfest. Selected 2026-10-11: 0 comments, no assignee, no
-competing PR — claimed by comment at 08:19Z, re-verified clean at PR
-creation 08:32Z. Fix: two route decorators added to existing handlers
-(`@router.head("/{bucket}/")` on `head_bucket`, `@router.get("/{bucket}/",
-openapi_extra={"parameters": _P_BUCKET_GET})` on `bucket_get`), mirroring
-the `list_buckets` pattern of registering both `/s3` and `/s3/`. 16
-GET/HEAD query pairs measured against real S3 (2026-10-11); 11/16
-differed on unmodified main (slash → 404/key-refusal), all 16 match on fix
-branch. Full suite 6088 passed/10 skipped on `.[dev]`; ruff and
-prose_check clean. Backlog: maintainer nuriyoo/khj809 typically respond
-within hours (15/15 recent external merges with human CHANGES_REQUESTED/
-APPROVED cycles).
-Next Action: Monitor PR for maintainer review; respond on same branch.
+competing PR — claimed by comment at 08:19Z, PR opened 08:32Z. **What
+nuriyoo asked for:** (1) nothing pinned the answer — add a parametrised
+test over the issue's eight queries on GET and HEAD comparing `/{bucket}`
+with `/{bucket}/`, exact code and placement supplied, because
+`tests/test_s3.py` was absent from the diff and the three tests that failed
+without the fix all read the schema rather than sending a request to
+`/{bucket}/`; (2) two rows for the new path in the ACL-scoping table so the
+second checkbox has a scoped-token proof; (3) a **Not in this PR.** line for
+the five methods the issue did not measure; (4) an inline wrap on
+`tests/test_openapi.py:283` (111 chars against the file's 100). Items 1-3
+were already applied and pushed as `9b1aad7` at 09:06Z with the description
+corrected; **item 4 was still outstanding and was applied as `7abf5b4` at
+14:26Z**, this session. Fix itself unchanged: two route decorators
+(`@router.head("/{bucket}/")` on `head_bucket`,
+`@router.get("/{bucket}/", openapi_extra={"parameters": _P_BUCKET_GET})` on
+`bucket_get`), mirroring the `list_buckets` pattern of registering both
+`/s3` and `/s3/`; 11/16 of the issue's 16 GET/HEAD pairs differed on
+unmodified main, all 16 match on the fix branch. Regression replay
+reproduced the reviewer's number exactly — `s3.py` restored to `main` gives
+15 of the 16 new cases plus the ACL test failing (a HEAD with `?acl`
+already matched), restored back, all 17 pass. Full suite **6351 passed /
+10 skipped** on `.[dev,official-sdk,llamaindex]` Python 3.11 (the skips are
+`mcp`, `mirage`, `gdrive_fsspec`, HubSpot reader — not installed here);
+ruff check/format clean; prose_check shows only the pre-existing
+`tests/test_google.py:6355` finding. **One correction to our own
+description:** the first **Not in this PR.** paragraph gave a false reason
+("the object route is declared before the bucket routes"). Declaration order
+disproved it (bucket `s3.py:1069-1070`, object `:1763` and `:2946`), and
+removing the two decorators and diffing the five methods' answers
+byte-for-byte proved the true reason: the new decorators serve only GET and
+HEAD, so PUT/POST/DELETE/PATCH/OPTIONS never match them. The paragraph was
+rewritten to say that, and the correction is disclosed in the reply.
+Reply comment issuecomment-6110067054 posted 14:29Z; a PR author cannot
+formally re-request review (the API denies it), so the reply notifies.
+Next Action: Await re-review from nuriyoo/khj809 on the same branch. Do not
+ping again. On APPROVED nothing further is needed — CI is green and the PR
+is MERGEABLE.
 
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
@@ -406,7 +443,10 @@ so this is the longest-waiting fleet. **The three non-odysseus tracks have
 all landed**: backlot #577 merged 2026-10-10T13:59:45Z, libredb-studio
 #1628 merged 2026-10-11T00:34:47Z and repowise #3338 merged
 2026-10-11T07:56:49Z (see Tracks 008-010). **backlot #614 (Track 011) is
-open with all CI green, awaiting first human review** (see Track 011).
+open with all CI green and a CHANGES_REQUESTED from `nuriyoo` that has been
+fully addressed — head `7abf5b4`, reply posted 14:29Z, awaiting
+re-review** (see Track 011). The outstanding item is a human decision, not
+work.
 
 Two open courtesies, neither blocking:
 

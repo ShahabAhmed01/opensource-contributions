@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-11T09:11:39Z",
+  "updatedAt": "2026-10-11T14:38:49Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,16 +20,25 @@
       "status": "pr-opened",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-11T09:11:39Z",
+      "lastVerified": "2026-10-11T14:38:49Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
           "sha": "4c2feb189fa26b5e417af15c0b487720f08bf075",
           "subject": "s3: a bucket path ending in a slash is answered as the bucket, as real does (fixes #610)"
+        },
+        {
+          "sha": "9b1aad73b9e4481af7808160afa05ad23c141581",
+          "subject": "test(s3): add regression test for trailing slash fix and ACL coverage (addresses review #614)"
+        },
+        {
+          "sha": "7abf5b4df7485ace2a435f042fbeae08486e7bd8",
+          "subject": "tests: wrap the s3 alias comment at 100 columns (addresses review #614)"
         }
       ],
       "checks": {
         "test (3.11)": "pass",
+        "gate": "pass",
         "scan": "pass",
         "test (3.12)": "pass",
         "test (3.13)": "pass",
@@ -49,7 +58,7 @@
       "mergedAt": null,
       "mergeCommit": null,
       "description": "Add GET/HEAD /s3/{bucket}/ routes delegating to bucket handlers so a bucket path ending in / returns the bucket listing (matching real S3) instead of 404 NoSuchKey for an empty key",
-      "notes": "Issue labeled good first issue, help wanted, fidelity, hacktoberfest. 16 GET/HEAD query pairs measured against real S3; 11/16 differed on unmodified main. Fix mirrors list_buckets pattern of registering both /s3 and /s3/. No new endpoints, reuses existing bucket_get/head_bucket handlers. CI all green on first push.",
+      "notes": "Issue labeled good first issue, help wanted, fidelity, hacktoberfest. 16 GET/HEAD query pairs measured against real S3; 11/16 differed on unmodified main. Fix mirrors list_buckets pattern of registering both /s3 and /s3/. No new endpoints, reuses existing bucket_get/head_bucket handlers. CI all green on first push. Review cycle 2026-10-11: nuriyoo CHANGES_REQUESTED 08:52:43Z (first human review, opened 'The change is right') with four items — (1) a parametrised regression test over the issue's eight queries on GET and HEAD, exact code and placement supplied, because tests/test_s3.py was absent from the diff and the three tests that failed without the fix all read the schema instead of sending a request to /{bucket}/; (2) two rows for the new path in the ACL-scoping table; (3) a 'Not in this PR.' line for the five methods the issue did not measure; (4) an inline wrap on tests/test_openapi.py:283. Items 1-3 pushed as 9b1aad7 at 09:06Z with the description corrected, item 4 as 7abf5b4 at 14:26Z; reply comment issuecomment-6110067054 at 14:29Z. Regression replay reproduced the reviewer's number exactly: s3.py restored to main -> 15 of the 16 new cases plus the ACL test fail (a HEAD with ?acl already matched), fix restored -> all 17 pass. Full suite 6351 passed/10 skipped on .[dev,official-sdk,llamaindex] Python 3.11 (the 10 skips are mcp, mirage, gdrive_fsspec and the HubSpot reader, not installed here); ruff check/format clean; prose_check shows only the pre-existing tests/test_google.py:6355 finding. CI 7/7 green on 7abf5b4 (gate, lint, scan, test 3.11-3.14). Correction to our own description: the first 'Not in this PR.' paragraph claimed the object route was declared before the bucket routes, which is false (bucket routes at s3.py:1069-1070, object routes at :1763 and :2946) — verified by declaration order and by removing the two decorators and diffing the five methods' answers byte for byte; the true reason is that the new decorators serve only GET and HEAD, so PUT/POST/DELETE/PATCH/OPTIONS never match them. Awaiting re-review; PR OPEN and MERGEABLE; not merged.",
       "issueUpdatedAt": "2026-10-11T08:35:28Z"
     },
     {
@@ -70,7 +79,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-11T09:11:39Z",
+      "lastVerified": "2026-10-11T14:38:49Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -113,7 +122,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-11T09:11:39Z",
+      "lastVerified": "2026-10-11T14:38:49Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -156,7 +165,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-11T09:11:39Z",
+      "lastVerified": "2026-10-11T14:38:49Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -199,7 +208,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-11T09:11:39Z",
+      "lastVerified": "2026-10-11T14:38:49Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -242,7 +251,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-11T09:11:39Z",
+      "lastVerified": "2026-10-11T14:38:49Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -285,7 +294,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-11T09:11:39Z",
+      "lastVerified": "2026-10-11T14:38:49Z",
       "baseCommit": null,
       "commits": [
         {
@@ -328,7 +337,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-11T09:11:39Z",
+      "lastVerified": "2026-10-11T14:38:49Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -371,7 +380,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-11T09:11:39Z",
+      "lastVerified": "2026-10-11T14:38:49Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -430,7 +439,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-11T09:11:39Z",
+      "lastVerified": "2026-10-11T14:38:49Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -493,7 +502,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-11T09:11:39Z",
+      "lastVerified": "2026-10-11T14:38:49Z",
       "baseCommit": "b010215",
       "commits": [
         {

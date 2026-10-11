@@ -1,6 +1,6 @@
 # Project notes — brekkylab/backlot
 
-Last verified: 2026-10-10
+Last verified: 2026-10-11
 
 ## Facts
 
@@ -139,7 +139,7 @@ uv sync --all-extras --locked              # what CI installs (all extras)
   Backlot is now inside its own one-open-PR-at-a-time unlock: up to three
   open PRs here from here on.
 
-### #610 — S3 bucket path with trailing slash returns 404 instead of bucket listing (**IN REVIEW** as PR #614, 2026-10-11)
+### #610 — S3 bucket path with trailing slash returns 404 instead of bucket listing (**CHANGES REQUESTED, response pushed** as PR #614, 2026-10-11)
 
 - Branch: `contrib/issue-610-s3-bucket-slash`; PR:
   https://github.com/brekkylab/backlot/pull/614 (base `main`), closes
@@ -155,4 +155,23 @@ uv sync --all-extras --locked              # what CI installs (all extras)
   checks green on first push (gate, lint, scan, test 3.11–3.14).
 - No first-time-contributor `action_required` gate (previous merged PR #577
   lifted the one-PR-at-a-time limit). PR is mergeable (`clean` state).
-- Awaiting human review (nuriyoo/khj809 typically respond within hours).
+- **Review cycle 2026-10-11:** `nuriyoo` CHANGES_REQUESTED at 08:52:43Z,
+  first human review, opening with "The change is right". Four items —
+  (1) a parametrised regression test over the issue's eight queries on
+  GET and HEAD, exact code and placement supplied, because
+  `tests/test_s3.py` was absent from the diff and the three tests that
+  failed without the fix all read the schema rather than sending a
+  request to `/{bucket}/`; (2) two rows for the new path in the
+  ACL-scoping table; (3) a **Not in this PR.** line for the five methods
+  the issue did not measure; (4) an inline wrap on
+  `tests/test_openapi.py:283`. Items 1–3 pushed as `9b1aad7` at 09:06Z,
+  item 4 as `7abf5b4` at 14:26Z; reply comment issuecomment-6110067054.
+  The regression replay reproduced their number exactly (15/16 + the ACL
+  test fail with `s3.py` at `main`); full suite 6351 passed/10 skipped
+  on `.[dev,official-sdk,llamaindex]` Python 3.11; CI 7/7 green on the
+  response head. One correction to our own description: the original
+  **Not in this PR.** reason ("object route declared before the bucket
+  routes") was disproved by declaration order (`s3.py:1069-1070` vs
+  `:1763`/`:2946`) and by removing the decorators and diffing the five
+  methods' answers — the true reason is that the new decorators serve
+  only GET/HEAD. Awaiting re-review.

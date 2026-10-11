@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-10T17:10:58Z",
+  "updatedAt": "2026-10-11T05:12:12Z",
   "contributions": [
     {
       "repo": "odysseus-dev/odysseus",
@@ -20,7 +20,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-10T17:10:58Z",
+      "lastVerified": "2026-10-11T05:12:12Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -63,7 +63,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-10T17:10:58Z",
+      "lastVerified": "2026-10-11T05:12:12Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -106,7 +106,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-10T17:10:58Z",
+      "lastVerified": "2026-10-11T05:12:12Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -149,7 +149,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-10T17:10:58Z",
+      "lastVerified": "2026-10-11T05:12:12Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -192,7 +192,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-10T17:10:58Z",
+      "lastVerified": "2026-10-11T05:12:12Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -235,7 +235,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-10T17:10:58Z",
+      "lastVerified": "2026-10-11T05:12:12Z",
       "baseCommit": null,
       "commits": [
         {
@@ -278,7 +278,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-10T17:10:58Z",
+      "lastVerified": "2026-10-11T05:12:12Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -321,7 +321,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-10T17:10:58Z",
+      "lastVerified": "2026-10-11T05:12:12Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -368,19 +368,19 @@
       "issueNumber": 1411,
       "issueTitle": "Test Connection: Couchbase reports success for a bucket that does not exist, and Trino for a missing catalog",
       "issueUrl": "https://github.com/libredb/libredb-studio/issues/1411",
-      "issueState": "OPEN",
+      "issueState": "CLOSED",
       "prNumber": 1628,
       "prUrl": "https://github.com/libredb/libredb-studio/pull/1628",
-      "prState": "open",
+      "prState": "merged",
       "prTitle": "fix(test-connection): a missing Couchbase bucket refuses, a missing Trino catalog warns (#1411)",
       "branch": "fix/test-connection-bucket-catalog-1411",
       "baseBranch": "main",
       "fork": "ShahabAhmed01/libredb-studio",
       "forkUrl": "https://github.com/ShahabAhmed01/libredb-studio",
-      "status": "pr-opened",
+      "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-10T17:10:58Z",
+      "lastVerified": "2026-10-11T05:12:12Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -389,6 +389,25 @@
         }
       ],
       "checks": {
+        "Lint, Typecheck and Build": "pass",
+        "Analyze (actions)": "pass",
+        "Platform Integration Rules": "pass",
+        "Secret Scan": "pass",
+        "Analyze (javascript-typescript)": "pass",
+        "Unit & Integration Tests": "pass",
+        "Dependency Scan": "pass",
+        "Image Scan": "skipped",
+        "Cross-platform Tests (windows-latest)": "pass",
+        "Cross-platform Tests (macos-latest)": "pass",
+        "Engine Smoke - Build Payload": "pass",
+        "Helm Chart Lint": "pass",
+        "E2E Tests": "pass",
+        "Functional Smoke (PostgreSQL)": "pass",
+        "SonarCloud Analysis": "skipped",
+        "Engine Smoke (Node 24)": "pass",
+        "Engine Smoke (Node 26)": "pass",
+        "Channel E2E (tarball + npx)": "pass",
+        "CodeQL": "pass",
         "GitGuardian Security Checks": "pass",
         "Socket Security: Project Report": "pass",
         "Socket Security: Pull Request Alerts": "pass",
@@ -400,11 +419,11 @@
           "state": "COMMENTED"
         }
       ],
-      "mergedAt": null,
-      "mergeCommit": null,
+      "mergedAt": "2026-10-11T00:34:47Z",
+      "mergeCommit": "ca7755b0cff36a50978ced4159d5b1d208ab52c7",
       "description": "Couchbase connect() now refuses a 404 on /pools/default/buckets/<bucket> naming the bucket; Trino connect() warns, via connectWarnings(), naming a pinned catalog absent from system.metadata.catalogs",
       "notes": "Claimed by comment (2026-10-09T19:38:18Z) per repo policy before any code; re-verified unassigned/uncommented-by-others/no competing PR at claim time and immediately before the PR. TDD: all new behaviour tests shown failing on unmodified main first. Local: format/lint/typecheck/knip/chart:check/channels:showcase:check/readme:check/security:check/build pass; full suite green except tests/unit/test-runner-cli.test.ts (2 SIGINT tests) which fails identically on the unmodified base (proven by stash/re-run) and is unrelated; the runner never merges lcov on a red run, so coverage:check runs in CI (its 100% gate is a required check). The repo's catalog seam is system.metadata.catalogs (TRINO_CATALOG_LIST_SQL), not SHOW CATALOGS as the issue wording says; introspect.ts documents why, and PR #1628 states the deviation. Third-party scanners (Socket x2, GitGuardian, semgrep) ran green on first push; the repo's own workflows (CI, CodeQL Advanced, Security Scan, Platform Integration Check) are at action_required — the first-time-contributor approval gate, which must not be bypassed — so the required checks have not executed yet. Rebased 2026-10-10 onto main aad0c73 (+13 commits; the PR had gone CONFLICTING): the single conflict was object-route.ts's pinned-citation docblock, resolved by file ownership — upstream's postgres pins (4046, 4203, from #1626) kept alongside this branch's trino pins (1340, 1534), since upstream never touched trino and this branch never touched postgres — and verified by the docblock's own enforcing test (object-route-edit 19 pass), not by eye. All gates re-run green including the new distribution:check, focused set 741/741 across six files, full suite green except the proven test-runner-cli pair. Force-pushed with lease (53145e4 superseded by 6005817); GitHub recomputed MERGEABLE; all four scanners re-ran green on the new head; the repo's own workflows remain at action_required (first-time-contributor gate, not a failure, not bypassed).",
-      "issueUpdatedAt": "2026-10-09T22:43:56Z"
+      "issueUpdatedAt": "2026-10-11T00:34:48Z"
     },
     {
       "repo": "repowise-dev/repowise",
@@ -424,7 +443,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-10T17:10:58Z",
+      "lastVerified": "2026-10-11T05:12:12Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -432,7 +451,18 @@
           "subject": "fix(health): a Python conditional-expression chain nests like an elif dispatch"
         }
       ],
-      "checks": {},
+      "checks": {
+        "Python 3.11 tests": "pass",
+        "Python 3.12 tests": "pass",
+        "Python 3.13 tests": "pass",
+        "tree-sitter floor (query compilation)": "pass",
+        "Python lint (ruff)": "pass",
+        "Documentation drift": "pass",
+        "Integration tests": "skipped",
+        "Web UI lint + type check": "pass",
+        "VS Code extension test": "pass",
+        "Structurizr DSL parses": "pass"
+      },
       "reviews": [
         {
           "author": "copilot-pull-request-reviewer",

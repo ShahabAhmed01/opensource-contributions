@@ -107,7 +107,7 @@ git diff --check                  # whitespace
 
 ## Contribution history
 
-### #3285 — Python ternary chains (PR #3338 open, 2026-10-10)
+### #3285 — Python ternary chains (**MERGED** as PR #3338, 2026-10-11)
 
 - Branch: `fix/flat-ternary-python-3285-v2`; PR:
   https://github.com/repowise-dev/repowise/pull/3338 (base `main`), related to
@@ -128,3 +128,14 @@ git diff --check                  # whitespace
 - Opened 2026-10-10T16:55:51Z, MERGEABLE, awaiting the first-time-contributor
   CI approval gate and maintainer review. Full detail in
   `contributions/repowise/issue-3285.md`.
+- **MERGED 2026-10-11T07:56:49Z by RaghavChamadiya** — approved 07:56:46Z and
+  squash-merged three seconds later (commit `41bf297d57a4`) with no intervening
+  comment; 15h01m open. Issue #3285 stays open on purpose (Python half only).
+- Follow-up queue: the eight remaining grammars, one PR each as the issue asks.
+  java/c/cpp/csharp/dart/objectivec each need only a one-line map addition (their
+  grammars expose `consequence`/`alternative`, which is exactly why #3278's
+  mechanism covered TS/JS and why Python was the hard case); php is
+  left-associative and needs its own design, so take it last and alone.
+  Note the repo is maintainer-driven — 89 of the last 100 merged PRs are
+  RaghavChamadiya's — so sequence these behind a backlot slot rather than
+  counting on a fast turnaround.

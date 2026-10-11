@@ -1,13 +1,19 @@
 # Contribution Handoff
 
-Last updated: 2026-10-10T17:01:00Z
+Last updated: 2026-10-11T08:05:41Z
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 9
-Merged Contributions: 1
+Monitoring Contributions: 7
+Merged Contributions: 3
 Closed/Superseded Contributions: 0
+
+Three of ten tracks have merged, all within the last 24 hours: backlot
+#577 (2026-10-10T13:59Z), libredb-studio #1628 (2026-10-11T00:34Z) and
+repowise #3338 (2026-10-11T07:56Z). The seven remaining open PRs are all
+odysseus, unchanged since 2026-10-09 (no new comments, no reviews, no
+state change).
 
 ## Active Tracks
 
@@ -187,13 +193,20 @@ Project: libredb/libredb-studio
 Issue: #1411
 PR: #1628
 Branch: fix/test-connection-bucket-catalog-1411
-Status: MONITORING
-CI: SCANNERS GREEN ON REBASED HEAD — Socket Security x2, GitGuardian
-and semgrep all pass on 6005817 (2026-10-10); the repo's OWN workflows -
-CI, CodeQL Advanced, Security Scan, Platform Integration Check - sit at
-action_required, the first-time-contributor approval gate, exactly like
-odysseus; must not be bypassed (gate, not a failure)
-Review: AWAITING_REVIEW (no human review; copilot non-review only)
+Status: **MERGED 2026-10-11T00:34:47Z** by cevheri (squash); issue #1411
+closed COMPLETED at 00:34:48Z. Squash commit ca7755b0cff3. Track closed.
+CI: ALL GREEN — every workflow ran to completion on the rebased head
+6005817 once the first-time-contributor gate was approved: Lint/Typecheck/
+Build, Unit & Integration Tests, E2E Tests, Cross-platform Tests
+(windows-latest and macos-latest), Engine Smoke (Build Payload, Node 24,
+Node 26), Channel E2E (tarball + npx), Helm Chart Lint, CodeQL, Secret
+Scan, Dependency Scan, Analyze (actions), Analyze (javascript-typescript),
+Platform Integration Rules, plus the three scanners (GitGuardian, Socket
+Security x2, semgrep). Image Scan and SonarCloud skipped (not required for
+forks). The 100% line-coverage gate is a required check and passed.
+Review: no human review — cevheri merged directly on the strength of the
+claim comment and the rebased head, then posted "thanks and welcome" on
+the PR at 00:35:04Z. Only other review entry is the copilot bot.
 Notes: First libredb-studio track. Selection research 2026-10-09: ~26
 repos discovered, ~10 screened, libredb-studio verified in depth
 (447 merged PRs/30d nearly all external; maintainers kaya-abdullah/
@@ -230,21 +243,30 @@ trino 219, citations 140, object-route-edit 19, migration-generator
 189); full suite green except the proven test-runner-cli pair;
 force-pushed with lease (53145e4 superseded by 6005817); GitHub
 recomputed MERGEABLE.
-Next Action: Monitor PR for maintainer review (kaya-abdullah/cevheri
-respond within minutes-hours) and the first-time-contributor CI gate;
-respond on the same branch.
+Next Action: None — **merged**. Outstanding maintainer question still
+unanswered: cevheri asked on issue #1411 at 2026-10-09T22:43:56Z "how was
+first-contribute on libredb studio / which databases are you using on
+libredb studio". The issue is closed and the PR merged, so this is now
+courtesy rather than review — a short reply on #1411 reopens a channel
+with a maintainer who answers in minutes-hours, and libredb-studio is a
+productive next target (the repo has no open-PR cap).
 
 ### Track 010
 Project: repowise-dev/repowise
 Issue: #3285
 PR: #3338
 Branch: fix/flat-ternary-python-3285-v2
-Status: MONITORING
-CI: AT ACTION_REQUIRED — the first-time-contributor approval gate; the `CI`
-run for head b8224ee completed with that conclusion and no check has reported
-yet (`gh pr checks` reads "no checks reported on the branch"). A gate, not a
-failure; must not be bypassed. Every gate it will run was executed locally.
-Review: AWAITING_REVIEW (no comments, no reviews)
+Status: **MERGED 2026-10-11T07:56:49Z** by RaghavChamadiya (squash).
+Issue #3285 stays OPEN — deliberate: the PR fixes the Python half only
+("Related to", not "Closes"), leaving eight grammars as sequenced
+follow-ups. Track closed for the Python half.
+CI: the first-time-contributor gate on the `CI` run was approved and the
+workflows completed green on head b8224ee; merge was not blocked by any
+check.
+Review: APPROVED by RaghavChamadiya 2026-10-11T07:56:46Z, merged three
+seconds later at 07:56:49Z with no intervening comment — squash commit
+41bf297d. No human review comments during the PR's 15h01m life; only
+repowise-bot's co-change hint (answered) and copilot's non-review.
 Notes: First repowise track, and the first AGPL-3.0 repo in the portfolio.
 Selection research 2026-10-10: the issue is a maintainer-authored defect with a
 measured before/after table and a prescribed approach ("extend #3278's
@@ -291,9 +313,16 @@ commit was cherry-picked onto b010215 instead; `main` moved twice more
 head stays stable and GitHub reports MERGEABLE. Follow-ups deliberately left
 open: the other eight grammars — java/c/cpp/csharp/dart/objectivec are a
 one-line map change each, php is left-associative and needs its own design.
-Next Action: Monitor PR #3338 for the CI approval gate and maintainer review;
-respond on the same branch. If accepted, the remaining eight grammars of
-#3285 are sequenced follow-ups (one per PR, as the issue asks) — php last.
+Next Action: None for the Python half — **merged**. The remaining eight
+grammars of #3285 are the follow-up queue, one per PR as the issue asks.
+Measured effort: java/c/cpp/csharp/dart/objectivec are a one-line
+`flat_ternary_kinds`-style map change each (their grammars do expose
+consequence/alternative, which is why #3278 handled TS/JS but these were
+left); php is left-associative and needs its own design before it can be
+batched. Worth sequencing a second repowise PR now that a merge is on
+record — but note the repo is maintainer-driven (89 of the last 100 merged
+PRs are RaghavChamadiya's), so treat it as low-priority compared with a
+backlot slot, where the turnaround is 1-2 days.
 
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
@@ -314,16 +343,50 @@ Re-ran the full issue-first selection loop to fill the freed slot:
   assignee, no open PR, #6647 merged or sequenced, then branch from fresh dev).
 
 No fillable slot exists right now; all seven tracks stay MONITORING.
+(Recorded 2026-10-09; superseded in part by the post-merge capacity
+below — the odysseus seven are unchanged, but three slots have since
+freed up elsewhere.)
+
+## Post-merge capacity 2026-10-11
+
+Three PRs merged in the preceding 24 hours, which changes what can be
+started immediately:
+
+- **backlot — up to 3 open PRs.** The one-open-PR cap is lifted by the
+  first merge, per the maintainer's own words on #577. Best available
+  target: 1-2 day human turnaround, real CHANGES_REQUESTED/APPROVED
+  cycles. The `invalid_cursor`/`invalid_ts` precedence issue nuriyoo
+  filed is the ready follow-up and is a direct continuation of a change
+  already merged and understood.
+- **libredb-studio — no cap observed**, and `cevheri` answers in
+  minutes–hours. Claim-by-comment, 100% line-coverage gate, and now one
+  merged PR on record. Reply to his unanswered question on #1411 first.
+- **repowise — follow-ups queued, not urgent.** Eight grammars left on
+  #3285, but the repo is maintainer-driven (89/100 recent merges are
+  RaghavChamadiya's), so these are filler, not a priority.
+- **odysseus — 7 open PRs still unreviewed** since 2026-10-03, which is
+  the constraint that kept #6187 unstarted. Do not add an eighth until
+  this fleet moves.
 
 ## Blockers
 
-None. All seven odysseus open PRs and the repowise PR (#3338) sit behind GitHub's
-first-time-contributor `action_required` CI gate — an expected protection that
-must not be bypassed. No human review comments on odysseus since 2026-10-03;
-odysseus maintainers merge daily. **The backlot PR (#577) is no longer blocked —
-it merged 2026-10-10T13:59:45Z** (see Track 008). The libredb PR (#1628) briefly
-went CONFLICTING when main moved; it was rebased 2026-10-10 and is MERGEABLE
-again, scanners green, own workflows still at the approval gate.
+None. Only the seven odysseus open PRs remain, all behind GitHub's
+first-time-contributor `action_required` CI gate — an expected protection
+that must not be bypassed. No human review comments on odysseus since
+2026-10-03 (the PRs are 2-9 days old); odysseus maintainers merge daily,
+so this is the longest-waiting fleet. **The three non-odysseus tracks have
+all landed**: backlot #577 merged 2026-10-10T13:59:45Z, libredb-studio
+#1628 merged 2026-10-11T00:34:47Z and repowise #3338 merged
+2026-10-11T07:56:49Z (see Tracks 008-010).
+
+Two open courtesies, neither blocking:
+
+- cevheri's questions on libredb issue #1411 (2026-10-09T22:43:56Z, "how
+  was first-contribute on libredb studio / which databases are you using")
+  are still unanswered; he merged the PR anyway. Worth a short reply.
+- backlot's `invalid_cursor`/`invalid_ts` precedence issue, filed by
+  nuriyoo separately and explicitly out of scope for #577, is a ready
+  follow-up; backlot's one-open-PR cap is lifted to three since the merge.
 
 ## Environment
 

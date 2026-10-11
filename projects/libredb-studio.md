@@ -67,9 +67,11 @@ bun run build             # next build (+ copy-monaco)
   reason.
 - PR titles use conventional style: `fix(scope): sentence` /
   `feat(scope): ...`; recent merged titles confirm the shape.
-- CI is the merge gate; never bypass assignment/review/CI gates. First
-  PRs from new accounts are not held behind an `action_required` gate
-  here (observed on #1628: third-party scanners ran immediately).
+- CI is the merge gate; never bypass assignment/review/CI gates. A first
+  PR from a new account has its repo workflows (CI, CodeQL Advanced,
+  Security Scan, Platform Integration Check) held at an
+  `action_required` approval gate until a maintainer approves them —
+  only third-party scanners run on the first push. Confirmed on #1628.
 
 ## Why this project was selected (2026-10-09 research)
 
@@ -106,7 +108,7 @@ bun run build             # next build (+ copy-monaco)
 
 ## Contribution history
 
-### #1411 — Test Connection names a missing bucket/catalog (PR #1628 open, 2026-10-09)
+### #1411 — Test Connection names a missing bucket/catalog (**MERGED** as PR #1628, 2026-10-11)
 
 - Branch: `fix/test-connection-bucket-catalog-1411`; PR:
   https://github.com/libredb/libredb-studio/pull/1628 (base `main`),
@@ -133,3 +135,13 @@ bun run build             # next build (+ copy-monaco)
   741/741 across six files; full suite green except the known pair;
   force-pushed `6005817`; GitHub reports MERGEABLE; the four scanners
   re-ran green, own workflows remain at the approval gate.
+- **MERGED 2026-10-11T00:34:47Z by cevheri** (squash, `ca7755b0cff3`);
+  issue #1411 closed COMPLETED at 00:34:48Z. No human code review — he
+  merged on the claim comment and the rebased head, then posted "thanks
+  and welcome" on the PR at 00:35:04Z. Every required check had gone
+  green on `6005817` including the 100% coverage gate, plus E2E, the two
+  cross-platform matrices, three engine smokes, Helm lint and CodeQL.
+- **Correction to the policy note above**: #1628's own workflows *did*
+  sit at the first-time-contributor `action_required` gate until approved
+  — only the third-party scanners (GitGuardian, Socket x2, semgrep) ran
+  on the first push. Budget for that gate on a first libredb-studio PR.

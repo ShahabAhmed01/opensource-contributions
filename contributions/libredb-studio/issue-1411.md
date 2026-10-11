@@ -2,8 +2,12 @@
 
 ## Status
 
-In review — PR open, rebased onto current `main` (MERGEABLE again),
-scanners green, repo CI at the first-time-contributor gate
+**MERGED** — cevheri merged #1628 at 2026-10-11T00:34:47Z (squash, commit
+`ca7755b0cff3`); issue #1411 closed as COMPLETED at 00:34:48Z. No human
+code review: he merged on the strength of the claim comment and the
+rebased head, then posted "thanks and welcome" on the PR at 00:35:04Z.
+16h44m from PR to merge, of which ~3h was the CONFLICTING window that the
+2026-10-10 rebase closed.
 
 ## Issue
 
@@ -24,9 +28,10 @@ https://github.com/libredb/libredb-studio/issues/1411#issuecomment-6087957686
 [#1628 — fix(test-connection): a missing Couchbase bucket refuses, a missing Trino catalog warns (#1411)](https://github.com/libredb/libredb-studio/pull/1628)
 
 - Base branch: `main` (protected; required checks "Lint, Typecheck and
-  Build", "Unit & Integration Tests", "Secret Scan")
+  Build", "Unit & Integration Tests", "Secret Scan", plus the 100% line
+  coverage gate)
 - Opened: 2026-10-09T20:50:15Z
-- State: open, not a draft
+- State: **merged** 2026-10-11T00:34:47Z by cevheri (squash)
 - Fork head: `ShahabAhmed01:fix/test-connection-bucket-catalog-1411`
 - Closes: #1411 (`Closes #1411` in the body)
 - Size: 8 files, +182/−10
@@ -185,13 +190,40 @@ ns_server's own behaviour (plain-text "Object Not Found" →
 
 ## Review
 
-None yet — no human review, only the Copilot quota-limit non-review.
-Awaiting maintainer review; maintainers `kaya-abdullah` and `cevheri`
-respond to claims within minutes–hours per the selection research.
+- `copilot-pull-request-reviewer` left a quota-limit non-review on the
+  first commit; no inline findings, no code review.
+- **No human code review.** `cevheri` merged on the strength of the
+  claim comment and the rebased head, then posted "thanks and welcome"
+  on the PR at 2026-10-11T00:35:04Z. The claim-by-comment policy means
+  the plan itself was the thing reviewed — a detailed, file-by-file plan
+  in the claim comment is what got the PR merged unreviewed.
+- Separately, `cevheri` asked two questions on issue #1411 at
+  2026-10-09T22:43:56Z — "how was first-contribute on libredb studio"
+  and "which databases are you using on libredb studio" — still
+  **unanswered**. The issue is closed, so a short reply there is courtesy
+  and relationship-building rather than review, and it is the cheapest
+  available re-entry to a repo that answers in minutes–hours.
 
 ## Merge
 
-_Not merged._
+**Merged 2026-10-11T00:34:47Z by `cevheri`** — squash commit
+`ca7755b0cff36a50978ced4159d5b1d208ab52c7`; issue #1411 closed as
+COMPLETED at 00:34:48Z, one second later.
+
+Every check green on the rebased head `6005817`: Lint/Typecheck/Build,
+Unit & Integration Tests, E2E Tests, Cross-platform Tests (windows-latest
+and macos-latest), Engine Smoke (Build Payload, Node 24, Node 26),
+Channel E2E (tarball + npx), Helm Chart Lint, CodeQL, Secret Scan,
+Dependency Scan, Analyze (actions), Analyze (javascript-typescript),
+Platform Integration Rules, and the 100% line-coverage gate. Image Scan
+and SonarCloud skipped (not required for forks). 8 files, +182/−10.
+
+Timeline, end to end: opened 2026-10-09T20:50Z → CONFLICTING when `main`
+moved +13 commits → rebased 2026-10-10 (single `object-route.ts`
+pinned-citation conflict, resolved by file ownership and verified by that
+docblock's enforcing test) → gate approved and CI green → **merged
+2026-10-11T00:34:47Z.** 16h44m open. The rebase was what kept this
+mergeable; it would otherwise have sat conflicted.
 
 ## Lessons Learned
 

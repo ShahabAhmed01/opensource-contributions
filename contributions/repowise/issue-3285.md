@@ -2,8 +2,11 @@
 
 ## Status
 
-PR open and MERGEABLE, awaiting maintainer review and the first-time-contributor
-CI approval gate. Not merged.
+**MERGED** — RaghavChamadiya approved at 2026-10-11T07:56:46Z and squash-
+merged three seconds later at 07:56:49Z (commit `41bf297d57a4`), with no
+intervening comment. 15h01m open. Issue #3285 stays **open** by design:
+the PR fixes the Python half only ("Related to", not "Closes"), leaving
+the other eight grammars as sequenced follow-ups.
 
 ## Issue
 
@@ -27,7 +30,8 @@ The issue is explicitly multi-language: nine grammars are listed, with the instr
 
 - Base branch: `main`
 - Opened: 2026-10-10T16:55:51Z
-- State: open, `MERGEABLE`, not a draft; 1 commit, 4 files, +76/−8
+- State: **merged** 2026-10-11T07:56:49Z by RaghavChamadiya (squash, `41bf297d57a4`);
+  approved 07:56:46Z. 1 commit, 4 files, +76/−8
 - Fork head: `ShahabAhmed01:fix/flat-ternary-python-3285-v2` @ `b8224eefeaa2`
 - Related to #3285 (not "Closes") — Python only, so the issue stays open for the
   other eight grammars
@@ -182,11 +186,28 @@ snapshots.
   co-occurs with `languages.py` only because adding a *perf* language needs
   `call_kinds` there. Conclusion recorded publicly: no companion-file updates
   are owed, and no goldens either.
-- No human review yet.
+- **No human review comments at all** — the approval came straight from
+  the maintainer with no discussion. Worth recording: `repowise-bot`'s
+  suggestion of `@RaghavChamadiya` as reviewer was the only routing
+  signal, and he approved 15 hours later without commenting.
 
 ## Merge
 
-_Not merged._
+**Merged 2026-10-11T07:56:49Z by `RaghavChamadiya`** — squash commit
+`41bf297d57a470cf1412622cf2f4e7408638fa28`, approved at 07:56:46Z and
+merged three seconds later. 4 files, +76/−8, 1 commit.
+
+Issue #3285 remains **open** by design: the PR body says "Related to
+#3285" rather than "Closes", because only the Python half is fixed. The
+issue's own instruction ("one language per commit or per PR") is what
+makes the issue-stays-open outcome correct rather than a loose end.
+
+Timeline, end to end: issue #3285 filed 2026-10-10T10:26Z → claimed by
+comment 14:08Z → PR opened 16:55Z → repowise-bot co-change hint 16:56Z,
+answered 17:33Z → **approved and merged 2026-10-11T07:56Z.** 15h01m open,
+zero review cycles — the fastest merge in the portfolio, and the second
+repo where a detailed plan + TDD evidence went in without a human ever
+reading the diff aloud.
 
 ## Lessons Learned
 

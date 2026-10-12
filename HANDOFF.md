@@ -473,12 +473,26 @@ Project: brekkylab/backlot
 Issue: #586
 PR: #620
 Branch: contrib/issue-586-history-error-order
-Status: PR OPEN — awaiting first review. Opened 2026-10-11T16:45:32Z ready
-for review (never a draft). Not merged.
-CI: ALL GREEN on the first push (7/7 — gate, lint, scan, test 3.11/3.12/
-3.13/3.14), verified 16:50Z; mergeStateStatus CLEAN, MERGEABLE at head
-b9af620. No first-time-contributor action_required gate (PR #577 lifted it).
-Review: copilot non-review (COMMENTED) only; no human review yet.
+Status: PR OPEN — first human review answered same day. Opened
+2026-10-11T16:45:32Z ready for review (never a draft). `nuriyoo` reviewed
+2026-10-12T04:17:07Z with a COMMENT review (measurement-backed, three items +
+description note, explicitly not a request for changes); all items applied and
+pushed (head `a3138ec`, 10:0xZ), evidence reply comment `6121983174`. Not
+merged, no approval.
+CI: 7/7 GREEN on the response head (gate, lint, scan, test 3.11/3.12/3.13/
+3.14), mergeStateStatus CLEAN, MERGEABLE at base `c641b079`, verified
+2026-10-12T10:03Z after merging main in `c4e18f5`. No action_required gate.
+Review: copilot non-review (COMMENTED) + **nuriyoo COMMENTED
+2026-10-12T04:17:07Z** — re-measured against slack.com/api that morning (54
+requests; 43/49 refusals byte-for-byte at b9af620 vs 19 at main 0c87917;
+"the reorder is right … no request where this head answers a timestamp or
+cursor refusal differently from real"). Items: (1) fold the three refusal
+tests into one 24-row table (15 one-argument controls + 9 order rows) with
+the two old functions deleted, (2) move the order comment with the 2026-10-12
+sentence, (3) keep #613's limit line with this order below it when merging
+(that PR conflicted exactly where he predicted), plus description counts
+→ nine/fifteen/twenty-four. All applied: suggestions verbatim (`a3138ec`),
+main merged resolving per item 3 (`c4e18f5`), body updated, reply posted.
 Notes: Third backlot track, and a direct continuation of Track 008 (#577,
 merged): nuriyoo filed #586 on 2026-10-10T06:45:56Z while reviewing our
 #577 PR — "Found while reviewing an open pull request that answers a
@@ -509,8 +523,9 @@ before the PR: issue OPEN, 0 assignees, 0 comments, no competing PR
 limit/count task; #327/#196 old and unrelated). Second open backlot PR
 (#614 was the other until it merged 2026-10-12; #633 is the other now);
 policy allows three after the first merge.
-Next Action: Monitor PR #620 for first human review (nuriyoo/khj809);
-respond on the same branch. Do not ping.
+Next Action: Await `nuriyoo`'s response to comment `6121983174` (or an
+approval/merge). Monitor PR #620 on the same branch; respond on the same
+branch. Do not ping.
 
 ### Track 013
 Project: isomorphic-git/isomorphic-git
@@ -792,10 +807,12 @@ landed**: backlot #577 merged 2026-10-10T13:59:45Z, libredb-studio
 `nuriyoo`'s APPROVED, and isomorphic-git #2456 merged 2026-10-12T07:52:12Z
 by `jcubic` without a formal review (see Tracks 008-011, 013). **backlot #633 (Track 014) is
 open with CI 7/7 green on first push, MERGEABLE, awaiting its first
-human review** (see Track 014). **backlot #620 (Track 012) is open with all CI
-green (7/7, mergeStateStatus CLEAN) awaiting its first human review** (see
-Track 012). The outstanding item on all nine open PRs is a
-human decision, not work.
+human review** (see Track 014). **backlot #620 (Track 012) has its first
+human review — `nuriyoo`'s measurement-backed COMMENT of 2026-10-12T04:17Z
+(three items, "rather than a request for changes") — with all items applied
+and answered the same day: head `a3138ec`, CI 7/7 green, mergeStateStatus
+CLEAN, reply comment `6121983174`** (see Track 012). The outstanding item on
+all nine open PRs is a human decision, not work.
 
 Two open courtesies, neither blocking:
 

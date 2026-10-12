@@ -2,9 +2,13 @@
 
 ## Status
 
-**PR OPEN, AWAITING REVIEW** — PR #620 opened 2026-10-11T16:45:32Z, ready for
-review (never a draft). CI 7/7 green on the first push; `mergeStateStatus`
-CLEAN. Only the copilot non-review so far. Not merged.
+**PR OPEN — HUMAN REVIEW ANSWERED** — PR #620 opened 2026-10-11T16:45:32Z,
+ready for review (never a draft). `nuriyoo` reviewed 2026-10-12T04:17:07Z with
+a COMMENT review (three items + a description note, explicitly "a comment
+rather than a request for changes"); all items applied and pushed the same day
+(head `a3138ec`), evidence reply posted (comment `6121983174`). CI 7/7 green
+on the response head, `mergeStateStatus` CLEAN, MERGEABLE. Not merged, no
+approval yet.
 
 ## Issue
 
@@ -27,18 +31,23 @@ claim-clean immediately before the PR (Phase 13).
 
 - Base branch: `main` (the repo's only development branch)
 - Opened: 2026-10-11T16:45:32Z, ready for review
-- State: **open**, mergeable, CLEAN (all 7 checks green)
+- State: **open**, mergeable, CLEAN (all 7 checks green on head `a3138ec`,
+  verified 2026-10-12T10:03Z after the review-response push)
 - Fork head: `ShahabAhmed01:contrib/issue-586-history-error-order`
 - Closes: #586 (in the description, per policy item 5 — `Closes #N` in the body,
   no issue number in the title)
 
 ## Branch
 
-`contrib/issue-586-history-error-order` (from `upstream/main` @ `0c879173b26637aeda4a668ca2af271815f52bb1`)
+`contrib/issue-586-history-error-order` (from `upstream/main` @ `0c879173b26637aeda4a668ca2af271815f52bb1`;
+merged `main` @ `c641b0797d032bc24e6fb508f672609c29a6f83f` in `c4e18f5` after
+the review's point 3)
 
 ## Commits
 
 - `b9af620c82acc1ecc260c3421635eb63dc26e785` — slack: conversations.history answers its errors in the order real reads them (fixes #586) (2 files, +41/−5)
+- `c4e18f57a243c65fae36b884f68eced7bd9f600d` — Merge remote-tracking branch 'upstream/main' into contrib/issue-586-history-error-order (conflict resolved per review point 3: #613's limit line kept, this order below it)
+- `a3138ecf365b96d3d1aa62cac084992ef46cf04f` — tests(slack): fold the history refusal tests into one table (addresses review #620) (tests/test_slack.py, +12/−36)
 
 ## Problem
 
@@ -107,35 +116,74 @@ answerable at all only because the `isfinite` guard from merged #577 is on
 `main` now — the issue noted those rows were left out of its `8a69e96` table
 for that reason, and this branch completes them.
 
-- **Focused:** `pytest tests/test_slack.py` — pass (207 tests in the file).
-- **Full suite (2026-10-11):** `pytest` on a `.[dev,official-sdk,llamaindex]`
-  install, Python 3.11 — **6346 passed, 10 skipped**, 0 failed. The 10 skips
-  are the extras not installed here (`mcp`, `mirage`, `gdrive_fsspec`,
-  `llama-index-readers-hubspot`).
+- **Focused (original submission, 2026-10-11):** `pytest tests/test_slack.py`
+  — pass (207 tests in the file at `b9af620`).
+- **Focused (after the review fold, 2026-10-12):** `pytest tests/test_slack.py`
+  — **502 passed** on the merged head (the file also carries upstream's tests
+  landed since `0c87917`). The fold's own table: 24 rows, all pass on the
+  branch; with `main`'s `backlot/routers/slack.py` swapped in, exactly the
+  **nine** multi-argument rows fail and the **fifteen** one-argument rows pass
+  — the maintainer's stated 9/15, reproduced.
+- **Full suite (2026-10-12, after merging `main`):** `pytest` on a
+  `.[dev,official-sdk,llamaindex]` install, Python 3.11 — **6885 passed, 10
+  skipped**, 0 failed. (First-push run at `b9af620`: 6346 passed, 10 skipped.)
+  The 10 skips are the extras not installed here (`mcp`, `mirage`,
+  `gdrive_fsspec`, `llama-index-readers-hubspot`).
 - **Lint:** `ruff check . && ruff format --check .` — `All checks passed!`,
-  `152 files already formatted`.
-- **Prose check:** one pre-existing finding at `tests/test_google.py:6355`, a
-  file this change does not touch. No new findings (the handler comment carries
-  the measurement date; the test docstring points at the handler rather than
-  re-dating it, per the "said once" rule).
+  `152 files already formatted`; `ruff format` left the maintainer's two
+  suggested hunks byte-for-byte unchanged.
+- **Prose check:** `python scripts/prose_check.py --github HEAD^1`, and the
+  same run against `main` — both exit 0 (2026-10-12).
+- **Point-3 rows:** `limit=abc` beside `oldest`, beside `latest`, beside
+  `cursor` on the merged head each answer `invalid_arguments` carrying
+  `[ERROR] must provide a number [json-pointer:/limit]` — 3/3 in a local run,
+  matching the maintainer's re-measured `real` column.
 
 ## CI
 
 - First push (2026-10-11T16:45:32Z): `gate`, `lint`, `scan`,
   `test (3.11)`–`test (3.14)` all passing — **7/7**, verified at 16:50Z.
   `mergeStateStatus` CLEAN, mergeable.
+- Response push (2026-10-12, head `a3138ec`): **7/7 green again** (gate,
+  lint, scan, test 3.11–3.14), `mergeStateStatus` CLEAN, MERGEABLE at base
+  `c641b079`, verified 10:03Z.
 - No first-time-contributor `action_required` gate (previous merged PR #577
   lifted it; workflows ran on push without waiting).
 
 ## Review
 
-- `copilot-pull-request-reviewer` left a non-review (COMMENTED).
-- No human review yet. Awaiting `nuriyoo`/`khj809`.
+- `copilot-pull-request-reviewer` left a non-review (COMMENTED) on the
+  original push — the quota message, no substance.
+- **`nuriyoo` COMMENTED 2026-10-12T04:17:07Z** — a measurement-backed review:
+  he re-measured against slack.com/api that morning (54 requests, 04:05–04:07
+  UTC; at `b9af620`, 43 of 49 refusals answer byte-for-byte as real, vs 19 on
+  `main` `0c87917`) and confirmed "the reorder is right … no request where
+  `conversations.history` at this head answers a timestamp or cursor refusal
+  differently from real." Three items, explicitly "a comment rather than a
+  request for changes":
+  1. Fold the three refusal tests into the one parametrised table (inline
+     suggestion: 24 rows = 15 one-argument controls + 9 order rows incl. a new
+     `cursor, latest, oldest` order row; plus a diff deleting the two
+     functions the table replaces).
+  2. Move the order comment so `lo, hi = …` sits between the two comments,
+     with the 2026-10-12 re-measurement sentence (three in every query order,
+     and a POST form body).
+  3. The predicted conflict with the `limit` PR (#613): whoever lands second
+     keeps that PR's `limit` line with this order below it — and the merged
+     pair answers `limit=abc` as real does.
+  Plus a note that the description's counts (eight/three/eleven) and the two
+  listed test names no longer describe the folded file.
+- **Response (same day):** all items applied — both suggestions verbatim
+  (`a3138ec`), main merged with the conflict resolved exactly per item 3
+  (`c4e18f5`), description counts updated to nine/fifteen/twenty-four;
+  evidence reply posted as comment `6121983174` (the 9/15 and 24/24 replay
+  numbers, the 3/3 `limit=abc` local run, suite 6885/10, prose exit 0).
 
 ## Merge
 
 **Not merged.** GitHub confirms PR #620 is OPEN, MERGEABLE and CLEAN at head
-`b9af620`, with no human review and no approval.
+`a3138ec` on base `c641b079`, CI 7/7 green, with `nuriyoo`'s COMMENT review
+answered and no approval yet.
 
 ## Lessons Learned
 

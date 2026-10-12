@@ -2,11 +2,11 @@
 
 ## Status
 
-**PR OPEN** — #2456 opened 2026-10-11T18:58:36Z, ready for review (never a
-draft). MERGEABLE; `mergeStateStatus: BLOCKED` because a first-time fork's
-workflows await maintainer approval (`isomorphic-git-PR` check QUEUED).
-CodeRabbit commented and Copilot posted a COMMENTED review; no human
-review; not merged.
+**MERGED 2026-10-12T07:52:12Z** — `jcubic` merged #2456 directly (squash
+commit `c5916f4ce474c4305ec51c3cd9237f04e1027cd9`, title `feat(log): add
+author filter`) with no formal approval review. Opened 2026-10-11T18:58:36Z,
+ready for review (never a draft). CodeRabbit commented and Copilot posted a
+COMMENTED review; both were answered with evidence before the merge.
 
 ## Issue
 

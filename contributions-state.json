@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-12T05:25:33Z",
+  "updatedAt": "2026-10-12T09:32:01Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-12T05:25:33Z",
+      "lastVerified": "2026-10-12T09:32:01Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -62,7 +62,7 @@
       "mergedAt": "2026-10-12T04:31:35Z",
       "mergeCommit": "19d68c40e61c458da49cd0943c0083eff2565a3f",
       "description": "Add GET/HEAD /s3/{bucket}/ routes delegating to bucket handlers so a bucket path ending in / returns the bucket listing (matching real S3) instead of 404 NoSuchKey for an empty key",
-      "notes": "Issue labeled good first issue, help wanted, fidelity, hacktoberfest. 16 GET/HEAD query pairs measured against real S3; 11/16 differed on unmodified main. Fix mirrors list_buckets pattern of registering both /s3 and /s3/. No new endpoints, reuses existing bucket_get/head_bucket handlers. CI all green on first push. Review cycle 2026-10-11: nuriyoo CHANGES_REQUESTED 08:52:43Z (first human review, opened 'The change is right') with four items — (1) a parametrised regression test over the issue's eight queries on GET and HEAD, exact code and placement supplied, because tests/test_s3.py was absent from the diff and the three tests that failed without the fix all read the schema instead of sending a request to /{bucket}/; (2) two rows for the new path in the ACL-scoping table; (3) a 'Not in this PR.' line for the five methods the issue did not measure; (4) an inline wrap on tests/test_openapi.py:283. Items 1-3 pushed as 9b1aad7 at 09:06Z with the description corrected, item 4 as 7abf5b4 at 14:26Z; reply comment issuecomment-6110067054 at 14:29Z. Regression replay reproduced the reviewer's number exactly: s3.py restored to main -> 15 of the 16 new cases plus the ACL test fail (a HEAD with ?acl already matched), fix restored -> all 17 pass. Full suite 6351 passed/10 skipped on .[dev,official-sdk,llamaindex] Python 3.11 (the 10 skips are mcp, mirage, gdrive_fsspec and the HubSpot reader, not installed here); ruff check/format clean; prose_check shows only the pre-existing tests/test_google.py:6355 finding. CI 7/7 green on 7abf5b4 (gate, lint, scan, test 3.11-3.14). Correction to our own description: the first 'Not in this PR.' paragraph claimed the object route was declared before the bucket routes, which is false (bucket routes at s3.py:1069-1070, object routes at :1763 and :2946) — verified by declaration order and by removing the two decorators and diffing the five methods' answers byte for byte; the true reason is that the new decorators serve only GET and HEAD, so PUT/POST/DELETE/PATCH/OPTIONS never match them. Awaiting re-review; PR OPEN and MERGEABLE; not merged.",
+      "notes": "Issue labeled good first issue, help wanted, fidelity, hacktoberfest. 16 GET/HEAD query pairs measured against real S3; 11/16 differed on unmodified main. Fix mirrors list_buckets pattern of registering both /s3 and /s3/. No new endpoints, reuses existing bucket_get/head_bucket handlers. CI all green on first push. Review cycle 2026-10-11: nuriyoo CHANGES_REQUESTED 08:52:43Z (first human review, opened 'The change is right') with four items — (1) a parametrised regression test over the issue's eight queries on GET and HEAD, exact code and placement supplied, because tests/test_s3.py was absent from the diff and the three tests that failed without the fix all read the schema instead of sending a request to /{bucket}/; (2) two rows for the new path in the ACL-scoping table; (3) a 'Not in this PR.' line for the five methods the issue did not measure; (4) an inline wrap on tests/test_openapi.py:283. Items 1-3 pushed as 9b1aad7 at 09:06Z with the description corrected, item 4 as 7abf5b4 at 14:26Z; reply comment issuecomment-6110067054 at 14:29Z. Regression replay reproduced the reviewer's number exactly: s3.py restored to main -> 15 of the 16 new cases plus the ACL test fail (a HEAD with ?acl already matched), fix restored -> all 17 pass. Full suite 6351 passed/10 skipped on .[dev,official-sdk,llamaindex] Python 3.11 (the 10 skips are mcp, mirage, gdrive_fsspec and the HubSpot reader, not installed here); ruff check/format clean; prose_check shows only the pre-existing tests/test_google.py:6355 finding. CI 7/7 green on 7abf5b4 (gate, lint, scan, test 3.11-3.14). Correction to our own description: the first 'Not in this PR.' paragraph claimed the object route was declared before the bucket routes, which is false (bucket routes at s3.py:1069-1070, object routes at :1763 and :2946) — verified by declaration order and by removing the two decorators and diffing the five methods' answers byte for byte; the true reason is that the new decorators serve only GET and HEAD, so PUT/POST/DELETE/PATCH/OPTIONS never match them. Awaiting re-review; PR OPEN and MERGEABLE; not merged. MERGE UPDATE 2026-10-12: nuriyoo APPROVED at 04:31:31Z and merged at 04:31:35Z (merge commit 19d68c40e61c458da49cd0943c0083eff2565a3f) - the portfolio's fourth merge and the second with a full human review cycle. The four requested items were the whole review; nothing further was asked for on the response head 7abf5b4.",
       "issueUpdatedAt": "2026-10-12T04:31:36Z"
     },
     {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-12T05:25:33Z",
+      "lastVerified": "2026-10-12T09:32:01Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-12T05:25:33Z",
+      "lastVerified": "2026-10-12T09:32:01Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -169,7 +169,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-12T05:25:33Z",
+      "lastVerified": "2026-10-12T09:32:01Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -212,7 +212,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-12T05:25:33Z",
+      "lastVerified": "2026-10-12T09:32:01Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -255,7 +255,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-12T05:25:33Z",
+      "lastVerified": "2026-10-12T09:32:01Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -298,7 +298,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-12T05:25:33Z",
+      "lastVerified": "2026-10-12T09:32:01Z",
       "baseCommit": null,
       "commits": [
         {
@@ -341,7 +341,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-12T05:25:33Z",
+      "lastVerified": "2026-10-12T09:32:01Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -384,7 +384,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-12T05:25:33Z",
+      "lastVerified": "2026-10-12T09:32:01Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -451,7 +451,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-12T05:25:33Z",
+      "lastVerified": "2026-10-12T09:32:01Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -514,7 +514,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-12T05:25:33Z",
+      "lastVerified": "2026-10-12T09:32:01Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -568,7 +568,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-12T05:25:33Z",
+      "lastVerified": "2026-10-12T09:32:01Z",
       "baseCommit": "0c879173b26637aeda4a668ca2af271815f52bb1",
       "commits": [
         {
@@ -607,19 +607,19 @@
       "issueNumber": 2286,
       "issueTitle": "Support `--author` flag on `log` command",
       "issueUrl": "https://github.com/isomorphic-git/isomorphic-git/issues/2286",
-      "issueState": "OPEN",
+      "issueState": "CLOSED",
       "prNumber": 2456,
       "prUrl": "https://github.com/isomorphic-git/isomorphic-git/pull/2456",
-      "prState": "open",
+      "prState": "merged",
       "prTitle": "feat(log): add author filter",
       "branch": "feat/log-author-filter",
       "baseBranch": "main",
       "fork": "ShahabAhmed01/isomorphic-git",
       "forkUrl": "https://github.com/ShahabAhmed01/isomorphic-git",
-      "status": "pr-opened",
+      "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-12T05:25:33Z",
+      "lastVerified": "2026-10-12T09:32:01Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -655,11 +655,58 @@
           "state": "COMMENTED"
         }
       ],
+      "mergedAt": "2026-10-12T07:52:12Z",
+      "mergeCommit": "c5916f4ce474c4305ec51c3cd9237f04e1027cd9",
+      "description": "Add an `author` option to git.log(): a case-insensitive JavaScript regular expression tested against the author's `Name <email>` string, applied before `depth` is counted and composable with `filepath`; filtering reads the author only, not the committer; an invalid regex rejects with SyntaxError",
+      "notes": "First isomorphic-git track. Selected 2026-10-11 after screening ~34 discovered repos and deep-verifying ~12 finalists; isomorphic-git had 10 substantive merges by outside contributors in the prior two weeks (incl. the analogous feat(log) #2385), a welcoming no-gate CONTRIBUTING (fork + branch + PR, no claim-comment protocol), and pure JS locally testable. Issue #2286 filed 2026-02-14 by a user asking for basic author filtering 'since it aims to be fully compatible with Git'; at selection OPEN, unassigned, 4 comments, zero competing PRs (searched PRs for 2286, 'author flag', cross-reference timeline = 0); re-verified open/unassigned/0 cross-references immediately before gh pr create. Implementation: src/commands/log.js compiles authorRegex once per call and guards the single pushCommit emission point that all seven commit-emission sites route through, so non-matching commits are skipped in output while history traversal (file tracking, depth accounting) is unchanged; src/api/log.js adds the documented param. One deliberate git divergence, stated in the JSDoc and PR body: git's --author is case-sensitive BRE, this is a case-insensitive JS RegExp (issue thread conflates author/committer — a dedicated test pins author-only matching). Four new tests (filter by name/email, case-insensitive match, regex metacharacters, no-match -> [], invalid regex rejects; depth counts matching commits like --max-count; combines with filepath; author != committer). Verification on Node 22.22.0 toolchain (system Node 26 breaks @zenfs/core fixtures used repo-wide, incl. untouched test files): focused test-log.js 14/14; TDD regression proof by stashing src/ -> new tests fail; full jest --ci 1433 passed / 2 failed, both the pre-existing clone 'noTags' 30s-timeout flake reproduced identically with and without the patch (27-28s pass, 30s fail); eslint src __tests__ clean; tsc -p tsconfig.json clean after rollup build + declaration emit, index.d.ts includes the new author param. Independent read-only subagent review returned approve-with-nits; applied before commit: reworded the JSDoc to stop claiming exact git parity (reviewer verified git is case-sensitive BRE), switched to repo-wide @param [args.author] style, null author treated as no-filter (was /null/i matching nothing), explicit boolean matchesAuthor, blank line + wording fix on the traversal comment, tightened invalid-regex assertion to /Invalid regular expression/, and added the author-vs-committer test the reviewer flagged as most valuable. Appendix A submodule test mirror deliberately not done: test-log-in-submodule.js is behind main (missing includeChanges tests) and recent feature PRs #2385/#2413 skipped it; offer to add stated in the PR body. CONTRIBUTING first-time step done: npm run add-contributor (commit 3fd4ab1e, matches merged PR #2449 which shipped the same two files). PR opened ready for review 2026-10-11T18:58:36Z, 5 files +216/-9, MERGEABLE. CI completed green: isomorphic-git-PR SUCCESS (plus CodeRabbit, bundlewatch, security/snyk checks pass). CodeRabbit posted one actionable comment (filepath+depth boundary can return depth+1 when the boundary commit matches author); verified empirically as PRE-EXISTING and unchanged by this patch — on unmodified upstream main 909b97b1, log({filepath:'a.txt',depth:1}) already returns 2 commits, identical to this branch, and the author filter sits in the single pushCommit choke point so it can only remove commits, never add one. Declined to apply CodeRabbit's endCommit guard because it would change existing filepath+depth semantics for ALL callers (depth:1 -> 2 becomes depth:1 -> 1), a behavior change out of scope for an author-filter feature; evidence-based reply posted 19:26Z (comment 4242897410), offering a separate follow-up issue/PR if maintainers prefer the strict bound. No human review; not merged. MERGE UPDATE 2026-10-12: jcubic merged the PR at 07:52:12Z (squash commit c5916f4ce474c4305ec51c3cd9237f04e1027cd9) with no formal approval review - the portfolio's fifth merge and the first JS-library track. Two days from issue selection (2026-10-11T18:58Z) to merge.",
+      "issueUpdatedAt": "2026-10-12T08:05:19Z"
+    },
+    {
+      "repo": "brekkylab/backlot",
+      "project": "backlot",
+      "issueNumber": 603,
+      "issueTitle": "slack: a `token` query parameter authenticates and a bearer header outranks a `token` form field, where real refuses the first and reads the form field first",
+      "issueUrl": "https://github.com/brekkylab/backlot/issues/603",
+      "issueState": "OPEN",
+      "prNumber": 633,
+      "prUrl": "https://github.com/brekkylab/backlot/pull/633",
+      "prState": "open",
+      "prTitle": "slack: a token query parameter is refused as invalid_auth, and a token form field outranks the bearer header",
+      "branch": "contrib/issue-603-query-token-form-precedence",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/backlot",
+      "forkUrl": "https://github.com/ShahabAhmed01/backlot",
+      "status": "pr-opened",
+      "openedAt": "2026-10-12T09:23:04Z",
+      "prCreatedAt": "2026-10-12T09:23:04Z",
+      "lastVerified": "2026-10-12T09:32:01Z",
+      "baseCommit": "94e79a07bf",
+      "commits": [
+        {
+          "sha": "5aaea3b4ac98fd79e0a7f4ea8ea510e5da579fb0",
+          "subject": "slack: a token in the query string is refused as invalid_auth, and the token form field is read ahead of the bearer header (fixes #603)"
+        }
+      ],
+      "checks": {
+        "test (3.11)": "pass",
+        "gate": "pass",
+        "scan": "pass",
+        "test (3.12)": "pass",
+        "test (3.13)": "pass",
+        "test (3.14)": "pass",
+        "lint": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
       "mergedAt": null,
       "mergeCommit": null,
-      "description": "Add an `author` option to git.log(): a case-insensitive JavaScript regular expression tested against the author's `Name <email>` string, applied before `depth` is counted and composable with `filepath`; filtering reads the author only, not the committer; an invalid regex rejects with SyntaxError",
-      "notes": "First isomorphic-git track. Selected 2026-10-11 after screening ~34 discovered repos and deep-verifying ~12 finalists; isomorphic-git had 10 substantive merges by outside contributors in the prior two weeks (incl. the analogous feat(log) #2385), a welcoming no-gate CONTRIBUTING (fork + branch + PR, no claim-comment protocol), and pure JS locally testable. Issue #2286 filed 2026-02-14 by a user asking for basic author filtering 'since it aims to be fully compatible with Git'; at selection OPEN, unassigned, 4 comments, zero competing PRs (searched PRs for 2286, 'author flag', cross-reference timeline = 0); re-verified open/unassigned/0 cross-references immediately before gh pr create. Implementation: src/commands/log.js compiles authorRegex once per call and guards the single pushCommit emission point that all seven commit-emission sites route through, so non-matching commits are skipped in output while history traversal (file tracking, depth accounting) is unchanged; src/api/log.js adds the documented param. One deliberate git divergence, stated in the JSDoc and PR body: git's --author is case-sensitive BRE, this is a case-insensitive JS RegExp (issue thread conflates author/committer — a dedicated test pins author-only matching). Four new tests (filter by name/email, case-insensitive match, regex metacharacters, no-match -> [], invalid regex rejects; depth counts matching commits like --max-count; combines with filepath; author != committer). Verification on Node 22.22.0 toolchain (system Node 26 breaks @zenfs/core fixtures used repo-wide, incl. untouched test files): focused test-log.js 14/14; TDD regression proof by stashing src/ -> new tests fail; full jest --ci 1433 passed / 2 failed, both the pre-existing clone 'noTags' 30s-timeout flake reproduced identically with and without the patch (27-28s pass, 30s fail); eslint src __tests__ clean; tsc -p tsconfig.json clean after rollup build + declaration emit, index.d.ts includes the new author param. Independent read-only subagent review returned approve-with-nits; applied before commit: reworded the JSDoc to stop claiming exact git parity (reviewer verified git is case-sensitive BRE), switched to repo-wide @param [args.author] style, null author treated as no-filter (was /null/i matching nothing), explicit boolean matchesAuthor, blank line + wording fix on the traversal comment, tightened invalid-regex assertion to /Invalid regular expression/, and added the author-vs-committer test the reviewer flagged as most valuable. Appendix A submodule test mirror deliberately not done: test-log-in-submodule.js is behind main (missing includeChanges tests) and recent feature PRs #2385/#2413 skipped it; offer to add stated in the PR body. CONTRIBUTING first-time step done: npm run add-contributor (commit 3fd4ab1e, matches merged PR #2449 which shipped the same two files). PR opened ready for review 2026-10-11T18:58:36Z, 5 files +216/-9, MERGEABLE. CI completed green: isomorphic-git-PR SUCCESS (plus CodeRabbit, bundlewatch, security/snyk checks pass). CodeRabbit posted one actionable comment (filepath+depth boundary can return depth+1 when the boundary commit matches author); verified empirically as PRE-EXISTING and unchanged by this patch — on unmodified upstream main 909b97b1, log({filepath:'a.txt',depth:1}) already returns 2 commits, identical to this branch, and the author filter sits in the single pushCommit choke point so it can only remove commits, never add one. Declined to apply CodeRabbit's endCommit guard because it would change existing filepath+depth semantics for ALL callers (depth:1 -> 2 becomes depth:1 -> 1), a behavior change out of scope for an author-filter feature; evidence-based reply posted 19:26Z (comment 4242897410), offering a separate follow-up issue/PR if maintainers prefer the strict bound. No human review; not merged.",
-      "issueUpdatedAt": "2026-02-24T00:08:12Z"
+      "description": "Refuse a non-empty token query parameter as invalid_auth (an empty one beside a bearer header too) and read the token form field ahead of the bearer header, as real Slack does for apps created after 2021",
+      "notes": "Fourteenth track, second free backlot slot used after #614 merged. Selection 2026-10-12: issue claim-clean (0 comments, unassigned, no cross-referenced PR, no competing claim); backlot allows three open PRs after the first merge, #614's merge left #620 plus this. The issue's measurement is slack.com/api on 2026-10-11 with the user token of an app created 2026-09-17 (scopes channels:history, channels:read, search:read, users:read), 19 rows over auth.test (GET+POST), conversations.list, users.list, search.messages; Slack's changelog 'No more tokens in querystrings for newly created apps' (docs.slack.dev 2020-11-01) closed the query channel for apps created after February 24, 2021. Design: auth.slack_token reads the token form field ahead of the Authorization: Bearer header and no longer reads the query; new auth.slack_query_token_refused answers a non-empty token query parameter (whatever else the request carries) and an empty one beside a bearer header, checked in _caller_or_error before anything is resolved so the refusal preempts even a valid credential. Unmeasured combos (empty token= beside form-only, multiple token parameters) deliberately left unpinned and disclosed under 'Not in this PR.'. TDD: both new tests failed on unmodified main, pass after; revert-proof on the final base 94e79a0 reproduced 2 failed. Replay over backlot.serve(): main@94e79a0 diverges from the issue's real column on 11 of 19 rows, this branch 0 of 19. Full suite 6877 passed / 10 skipped (junit: 6887 events, 0 failures; skips = mcp 1, mirage 2, gdrive_fsspec 6, hubspot reader 1, none on the Slack surface; tests/test_slack.py 495 whole, tests/test_sdk.py 5 whole including the official slack_sdk). ruff check/format clean (152 files); prose_check --github HEAD^1 (CI's invocation) no findings; prose_check with the default base shows only pre-existing main findings (test_google.py:6355, test_s3.py:338). Rebased onto 94e79a0 with no conflicts (upstream +11 commits incl. merged #585 auth.test members and #613 number validation - no overlap). PR opened ready for review, gate/scan/lint green on first push, tests pending at last check. Not merged.",
+      "issueUpdatedAt": "2026-10-11T07:38:29Z"
     }
   ]
 }

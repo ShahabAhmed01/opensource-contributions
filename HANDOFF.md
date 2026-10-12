@@ -1,13 +1,51 @@
 # Contribution Handoff
 
-Last updated: 2026-10-11T19:35Z (all-13 sweep: nothing blocked on us; isomorphic-git #2456 CI green + CodeRabbit reply)
+Last updated: 2026-10-12T09:35Z (Track 014: backlot #603 → PR #633 open, CI 7/7 green; #614 merged 04:31Z, isomorphic-git #2456 merged 07:52Z — fifth merge, both caught this session)
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 10
-Merged Contributions: 3
+Monitoring Contributions: 9
+Merged Contributions: 5
 Closed/Superseded Contributions: 0
+
+**New this session (2026-10-12T09:30Z): backlot #603 / PR #633** —
+`slack: a token query parameter is refused as invalid_auth, and a token
+form field outranks the bearer header`. The two-part Slack auth
+divergence the maintainer filed as #603: a non-empty `token` query
+parameter authenticated (real answers `invalid_auth` — Slack closed the
+query channel for apps created after February 24, 2021, and Backlot is
+such an app), and the bearer header outranked the `token` form field
+(real reads the form field first). `auth.slack_token` now reads
+form-then-bearer and no longer touches the query; the new
+`auth.slack_query_token_refused` is answered in `_caller_or_error`
+before anything resolves, so a refused channel preempts even a valid
+credential. Two new tests (13 refusal rows + 8 precedence rows) failed
+on unmodified main and on a revert-proof against the final base
+`94e79a0` (`2 failed`); replay of the issue's 19 rows over
+`backlot.serve()`: main diverges on 11, the branch on 0. Full suite
+6877 passed/10 skipped (junit 6887 events, 0 failures; all skips
+import-gated and none Slack; `test_slack.py` 495 whole,
+`test_sdk.py` 5 whole incl. the official slack_sdk); ruff clean (152
+files); prose_check clean under CI's invocation (`--github HEAD^1`).
+Rebased onto `94e79a0` with no conflicts (upstream's +11 commits
+included merged #585 and #613 — no overlap). PR opened ready for
+review, **CI 7/7 green on first push** (verified 09:28Z), MERGEABLE,
+awaiting first human review. Not merged. Backlot open slot 2 of 3.
+
+**Also this session: #614 MERGED 2026-10-12T04:31:35Z** — `nuriyoo`
+APPROVED at 04:31:31Z, four seconds before the squash merge (commit
+`19d68c40`), on the response head `7abf5b4` with no further asks. The
+portfolio's fourth merge and the second to carry a full human review
+cycle (all four requested items). It freed the backlot slot Track 014
+used.
+
+**Also this session: isomorphic-git #2456 MERGED 2026-10-12T07:52:12Z**
+— `jcubic` merged it directly (squash `c5916f4c`) with no formal
+approval review, the portfolio's fifth merge and its first JS-library
+track, ~13 hours from PR to merge. Caught by the tracker's GitHub sync
+while preparing Track 014; this session's pre-creation rechecks had
+covered the backlot issue only.
 
 **New this session (2026-10-11T18:58Z): isomorphic-git #2286 / PR #2456** —
 `feat(log): add author filter`, the portfolio's first JavaScript-library
@@ -26,7 +64,9 @@ toolchain required; system Node 26 breaks the `@zenfs/core` fixtures).
 PR opened ready for review; MERGEABLE; `isomorphic-git-PR` check completed
 **SUCCESS** (first-time-fork approval gate); CodeRabbit posted one
 actionable comment (filepath+depth boundary), verified pre-existing and
-replied to with evidence; awaiting first human review from `jcubic`.
+replied to with evidence. **jcubic merged it 2026-10-12T07:52:12Z
+(squash `c5916f4c`) with no formal approval review** — the portfolio's
+fifth merge.
 
 The thirteenth track is the first new project since the 2026-10-09
 research; `projects/isomorphic-git.md` carries the full
@@ -42,9 +82,10 @@ main, all 11 pass with the fix); full suite 6346 passed/10 skipped; CI
 awaiting `nuriyoo`/`khj809`. Not merged. This is the second open backlot
 PR (policy allows three).
 
-Three of the thirteen tracks have merged, all within the last 24 hours:
-backlot #577 (2026-10-10T13:59Z), libredb-studio #1628 (2026-10-11T00:34Z)
-and repowise #3338 (2026-10-11T07:56Z). The seven odysseus PRs are
+Five of the fourteen tracks have merged: backlot #577
+(2026-10-10T13:59Z), libredb-studio #1628 (2026-10-11T00:34Z), repowise
+#3338 (2026-10-11T07:56Z), backlot #614 (2026-10-12T04:31Z) and
+isomorphic-git #2456 (2026-10-12T07:52Z). The seven odysseus PRs are
 unchanged since 2026-10-09 (no new comments, no reviews, no state change).
 
 **The eighth, backlot #614, got the portfolio's second human review today.**
@@ -55,7 +96,9 @@ rows, a **Not in this PR.** line, and an inline comment wrap. Items 1-3
 were pushed at 09:06Z (`9b1aad7`); item 4 was still outstanding and was
 applied at 14:26Z (`7abf5b4`) along with a correction to a false causal
 claim in our own description. CI 7/7 green on the response head; reply
-posted 14:29Z; awaiting re-review. Not merged.
+posted 14:29Z; awaiting re-review at that sweep. **nuriyoo then APPROVED
+at 2026-10-12T04:31:31Z and merged at 04:31:35Z (`19d68c40`) with no
+further asks** — the portfolio's fourth merge, second human-reviewed.
 
 ## Active Tracks
 
@@ -371,8 +414,10 @@ Project: brekkylab/backlot
 Issue: #610
 PR: #614
 Branch: contrib/issue-610-s3-bucket-slash
-Status: CHANGES_REQUESTED — **review response pushed 2026-10-11T14:26:02Z**
-(head 7abf5b4). Not merged; PR OPEN and MERGEABLE.
+Status: **MERGED 2026-10-12T04:31:35Z** (squash commit `19d68c40`) after
+`nuriyoo` APPROVED at 04:31:31Z on the response head `7abf5b4`, with no
+further asks — the portfolio's fourth merge and the second full human
+review cycle.
 CI: ALL GREEN on the response head 7abf5b4 — gate, lint, scan, test (3.11/
 3.12/3.13/3.14), verified 14:31Z. Still no first-time-contributor
 action_required gate (previous merged PR #577 lifted the one-open-PR cap;
@@ -380,7 +425,9 @@ up to three now permitted).
 Review: **CHANGES_REQUESTED by nuriyoo 2026-10-11T08:52:43Z** — the second
 human review cycle in this portfolio, 20 minutes after the PR opened. Opens
 with "The change is right", then four items. Copilot's only entry is a
-non-review (quota exhausted).
+non-review (quota exhausted). **APPROVED by nuriyoo 2026-10-12T04:31:31Z**
+on the response head, merged four seconds later; the review asked for
+nothing beyond the four items, all delivered.
 Notes: Second backlot track. Issue labeled good first issue, help wanted,
 fidelity, hacktoberfest. Selected 2026-10-11: 0 comments, no assignee, no
 competing PR — claimed by comment at 08:19Z, PR opened 08:32Z. **What
@@ -417,9 +464,9 @@ HEAD, so PUT/POST/DELETE/PATCH/OPTIONS never match them. The paragraph was
 rewritten to say that, and the correction is disclosed in the reply.
 Reply comment issuecomment-6110067054 posted 14:29Z; a PR author cannot
 formally re-request review (the API denies it), so the reply notifies.
-Next Action: Await re-review from nuriyoo/khj809 on the same branch. Do not
-ping again. On APPROVED nothing further is needed — CI is green and the PR
-is MERGEABLE.
+Next Action: None — merged 2026-10-12T04:31:35Z. Nothing owed on this
+track; the fork branch `contrib/issue-610-s3-bucket-slash` can be deleted
+whenever convenient.
 
 ### Track 012
 Project: brekkylab/backlot
@@ -460,7 +507,8 @@ tests/test_google.py:6355 finding. Availability re-verified immediately
 before the PR: issue OPEN, 0 assignees, 0 comments, no competing PR
 (searched PRs for 586 and conversations.history: #613 is a different
 limit/count task; #327/#196 old and unrelated). Second open backlot PR
-(#614 is the other); policy allows three after the first merge.
+(#614 was the other until it merged 2026-10-12; #633 is the other now);
+policy allows three after the first merge.
 Next Action: Monitor PR #620 for first human review (nuriyoo/khj809);
 respond on the same branch. Do not ping.
 
@@ -469,17 +517,18 @@ Project: isomorphic-git/isomorphic-git
 Issue: #2286
 PR: #2456
 Branch: feat/log-author-filter
-Status: PR OPEN — awaiting first review. Opened 2026-10-11T18:58:36Z
-ready for review (never a draft). Not merged. MERGEABLE; mergeStateStatus
-BLOCKED only by the first-time-fork workflow approval gate.
+Status: **MERGED 2026-10-12T07:52:12Z** (squash commit `c5916f4c`) by
+`jcubic` directly, with no formal approval review on record. Opened
+2026-10-11T18:58:36Z ready for review (never a draft) — the portfolio's
+fifth merge and its first JS-library track, ~13 hours from PR to merge.
 CI: `isomorphic-git-PR` **SUCCESS / COMPLETED** (plus CodeRabbit,
 bundlewatch and security/snyk checks pass). The check ran to completion
 once the first-time-fork workflows were approved; the repo has no
 required-check branch protection, so it is informational, not a merge
 gate. `mergeStateStatus` still reads BLOCKED only because the fork-workflow
 approval gate has not been clicked by a maintainer — no check is red.
-Review: CodeRabbit comment + Copilot COMMENTED review only; no human
-review yet. Expected reviewer/maintainer: jcubic.
+Review: CodeRabbit comment + Copilot COMMENTED review only; no formal
+human review — `jcubic` merged the PR as-is the next morning.
 Notes: First isomorphic-git track and the portfolio's first JS-library
 track. Issue #2286 (filed 2026-02-14, 4 comments) asks for basic author
 filtering on `log` "since it aims to be fully compatible with Git".
@@ -515,10 +564,62 @@ no-filter, explicit boolean, comment fix, tighter regex assertion, added
 the author-vs-committer test). Appendix A submodule mirror deliberately
 omitted (that file is behind main; #2385/#2413 skipped it) — offer
 stated in the PR body. Diff: 5 files +216/-9.
-Next Action: Monitor PR #2456 for first human review (jcubic); respond
-on the same branch. Do not ping. If CodeRabbit/Copilot raise substantive
-points, address them the way Track 011 did (evidence-first reply, fixes
-pushed as separate commits).
+Next Action: None — merged 2026-10-12T07:52:12Z. Nothing owed on this
+track.
+
+### Track 014
+Project: brekkylab/backlot
+Issue: #603
+PR: #633
+Branch: contrib/issue-603-query-token-form-precedence
+Status: **OPEN — CI 7/7 GREEN on the first push** (2026-10-12T09:28Z:
+gate, lint, scan, test 3.11/3.12/3.13/3.14). MERGEABLE (mergeStateStatus
+BEHIND — upstream main moved to `c641b07` after the rebase; no conflicts).
+Awaiting first human review. Not merged.
+CI: All seven checks pass on head `5aaea3b`, verified 09:28:02Z; no
+first-time-contributor gate (PR #577 lifted it). Local numbers CI agrees
+with: full suite 6877 passed/10 skipped on Python 3.11.17.
+Review: None yet — no reviews, no comments as of 09:28Z. Do not ping.
+Notes: Fourth backlot track, taken the morning after #614 merged (the
+merge freed this slot; backlot allows three open PRs after the first
+merge). Selection gate run twice: issue OPEN, unassigned, 0 comments, no
+cross-referenced PR at 08:28Z and again immediately before `gh pr create`
+at 09:22Z. The issue's two divergences, both silent: (1) a non-empty
+`token` query parameter authenticates where real answers `invalid_auth`
+— measured over auth.test GET+POST, conversations.list, users.list and
+search.messages with a bearer header or a form token beside it; Slack's
+changelog closed the query channel for apps created after February 24,
+2021 and Backlot's fixture app dates from 2026; (2) the bearer header
+outranks the `token` form field where real reads the form field first.
+Fix: `auth.slack_token` reads form-then-bearer and drops the query; new
+`auth.slack_query_token_refused` refuses a non-empty query token
+whatever else the request carries and an empty one beside a bearer
+header (empty-alone stays `not_authed`), answered in `_caller_or_error`
+before resolution so refusal preempts a valid credential elsewhere;
+`_caller_or_error`'s table and `docs/auth.md` move with the rule. Two
+unmeasured combos (empty `token=` beside form-only; multiple `token`
+params) deliberately left unpinned and disclosed as **Not in this PR.**
+TDD: the two new tests (13 refusal rows, 8 precedence rows) failed on
+unmodified main; revert-proof on the final base `94e79a0` reproduced
+`2 failed`. Replay of all 19 issue rows over `backlot.serve()`:
+main@94e79a0 diverges on 11, this branch on 0. Full suite 6877
+passed/10 skipped (junit: 6887 events, 0 failures; skips = mcp 1,
+mirage 2, gdrive_fsspec 6, hubspot reader 1, none Slack;
+`tests/test_slack.py` 495 whole; `tests/test_sdk.py` 5 whole incl. the
+official slack_sdk against `backlot.serve()`); ruff check/format clean
+(152 files); prose_check clean under CI's exact invocation
+(`--github HEAD^1`) — with the script's default base the fork's
+`origin/main` trails upstream and the range swallows main's pre-existing
+`test_google.py:6355`/`test_s3.py:338` findings, verified pre-existing on
+a clean `94e79a0` worktree. Rebase onto `94e79a0` was conflict-free
+(upstream's +11 commits included merged #585 auth.test member reorder and
+#613 number validation — no overlap with this diff; #585's reorder was
+why the identity tests assert `user_id` only). PR body follows the
+merged-#577/#614 template: `Closes #603`, three headings, three
+checkboxes (ACL box unchecked with the no-new-endpoint note, as #577
+did), replay table, AI-assistance disclosure.
+Next Action: Monitor PR #633 for first human review (nuriyoo/khj809);
+respond on the same branch. Do not ping. One backlot slot remains free.
 
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
@@ -683,19 +784,17 @@ await first review. Per policy, no pings.
 None. Only the seven odysseus open PRs remain, all behind GitHub's
 first-time-contributor `action_required` CI gate — an expected protection
 that must not be bypassed. No human review comments on odysseus since
-2026-10-03 (the PRs are 2-9 days old); odysseus maintainers merge daily,
-so this is the longest-waiting fleet. **The three non-odysseus tracks have
-all landed**: backlot #577 merged 2026-10-10T13:59:45Z, libredb-studio
-#1628 merged 2026-10-11T00:34:47Z and repowise #3338 merged
-2026-10-11T07:56:49Z (see Tracks 008-010). **backlot #614 (Track 011) is
-open with all CI green and a CHANGES_REQUESTED from `nuriyoo` that has been
-fully addressed — head `7abf5b4`, reply posted 14:29Z, awaiting
-re-review** (see Track 011). **backlot #620 (Track 012) is open with all CI
+2026-10-03 (the PRs are 3-10 days old); odysseus maintainers merge daily,
+so this is the longest-waiting fleet. **Five non-odysseus tracks have
+landed**: backlot #577 merged 2026-10-10T13:59:45Z, libredb-studio
+#1628 merged 2026-10-11T00:34:47Z, repowise #3338 merged
+2026-10-11T07:56:49Z, backlot #614 merged 2026-10-12T04:31:35Z after
+`nuriyoo`'s APPROVED, and isomorphic-git #2456 merged 2026-10-12T07:52:12Z
+by `jcubic` without a formal review (see Tracks 008-011, 013). **backlot #633 (Track 014) is
+open with CI 7/7 green on first push, MERGEABLE, awaiting its first
+human review** (see Track 014). **backlot #620 (Track 012) is open with all CI
 green (7/7, mergeStateStatus CLEAN) awaiting its first human review** (see
-Track 012). **isomorphic-git #2456 (Track 013) is open, MERGEABLE, with its
-`isomorphic-git-PR` check completed SUCCESS (the informational
-first-time-fork gate; no red checks) — awaiting jcubic's first review**
-(see Track 013). The outstanding item on all ten open PRs is a
+Track 012). The outstanding item on all nine open PRs is a
 human decision, not work.
 
 Two open courtesies, neither blocking:
@@ -703,9 +802,9 @@ Two open courtesies, neither blocking:
 - cevheri's questions on libredb issue #1411 (2026-10-09T22:43:56Z, "how
   was first-contribute on libredb studio / which databases are you using")
   are still unanswered; he merged the PR anyway. Worth a short reply.
-- backlot's `invalid_cursor`/`invalid_ts` precedence issue, filed by
-  nuriyoo separately and explicitly out of scope for #577, is a ready
-  follow-up; backlot's one-open-PR cap is lifted to three since the merge.
+- backlot capacity: three open PRs allowed since the first merge, two in
+  use (#620 and #633), one slot free for the next measured-fidelity issue
+  from the open pool (re-verify claim-clean at selection).
 
 ## Environment
 
@@ -721,12 +820,13 @@ Two open courtesies, neither blocking:
   bun 1.4.2 at ~/.bun/bin,
   1238 packages installed)
 - Backlot workspace: `~/opensource-work/backlot` (branch
-  `contrib/issue-554-non-finite-ts`, uv venv with `.[dev,official-sdk,
-  llamaindex]` — resolves to Python 3.11.17 in this workspace, which is
-  what the 2026-10-10 review-response runs used; the PR's first-run
-  numbers came from the original Python 3.14 install — both recorded in
-  the PR and the per-contribution record; bundled corpus imported in
-  `data/`)
+  `contrib/issue-603-query-token-form-precedence` @ `5aaea3b` cut from
+  upstream `main` `94e79a0`, uv venv with `.[dev,official-sdk,
+  llamaindex]` — resolves to Python 3.11.17, which Track 014's full
+  suite and the 2026-10-10 review-response runs used; the #577 PR's
+  first-run numbers came from the original Python 3.14 install — both
+  recorded in the PR and the per-contribution record; bundled corpus
+  imported in `data/`)
 - Repowise fork: https://github.com/ShahabAhmed01/repowise
 - Repowise remotes: `origin` = fork, `upstream` = repowise-dev/repowise
 - Repowise workspace: `~/opensource-work/repowise` (shallow clone `--depth 60`

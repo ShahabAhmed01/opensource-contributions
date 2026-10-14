@@ -1,6 +1,6 @@
 # Contribution Handoff
 
-Last updated: 2026-10-14T17:55Z (Tracks 015–016, markitdown: #2699 closed as a duplicate of #2675, and PR #2700 opened for #1897 on the maintainer's invitation; also caught backlot #633 merged 2026-10-14T08:06:47Z — seventh merge, recorded by the 6-hourly sync)
+Last updated: 2026-10-14T20:30Z (merge-readiness audit of all 8 open PRs: 7 odysseus branches re-verified green against current dev `c3819e3` — clean merges, focused suites 298 tests passing, branches byte-identical to remote heads; markitdown #2700 license/cla still queued; all blockers maintainer-side; nothing pushed, no pings)
 
 ## Portfolio Summary
 
@@ -65,6 +65,8 @@ Rebased onto `94e79a0` with no conflicts (upstream's +11 commits
 included merged #585 and #613 — no overlap). PR opened ready for
 review, **CI 7/7 green on first push** (verified 09:28Z), MERGEABLE,
 awaiting first human review. Not merged. Backlot open slot 2 of 3.
+**Update: MERGED 2026-10-14T08:06:47Z — seventh merge (see the #633
+MERGED entry above; Track 014 reconciled).**
 
 **Also this session: #614 MERGED 2026-10-12T04:31:35Z** — `nuriyoo`
 APPROVED at 04:31:31Z, four seconds before the squash merge (commit
@@ -113,13 +115,19 @@ parametrised test over the issue's 11 measured rows (8 fail on unmodified
 main, all 11 pass with the fix); full suite 6346 passed/10 skipped; CI
 7/7 green on first push, mergeStateStatus CLEAN. Opened ready for review,
 awaiting `nuriyoo`/`khj809`. Not merged. This is the second open backlot
-PR (policy allows three).
+PR (policy allows three). **Update: MERGED 2026-10-12T10:45:03Z (squash
+commit `4e7bb13f662abee8135231a9faba1d391d772181`) — the portfolio's sixth
+merge; caught by the 6-hourly sync; Track 012 below reconciled.**
 
 Five of the fourteen tracks have merged: backlot #577
 (2026-10-10T13:59Z), libredb-studio #1628 (2026-10-11T00:34Z), repowise
 #3338 (2026-10-11T07:56Z), backlot #614 (2026-10-12T04:31Z) and
 isomorphic-git #2456 (2026-10-12T07:52Z). The seven odysseus PRs are
 unchanged since 2026-10-09 (no new comments, no reviews, no state change).
+**Reconciled 2026-10-14T20:30Z: seven of sixteen tracks merged — the five
+above plus backlot #620 (2026-10-12T10:45Z) and backlot #633
+(2026-10-14T08:06Z); eight open (the odysseus seven + markitdown #2700),
+one closed-unmerged (#2699).**
 
 **The eighth, backlot #614, got the portfolio's second human review today.**
 `nuriyoo` requested changes at 2026-10-11T08:52:43Z, 20 minutes after the
@@ -506,12 +514,14 @@ Project: brekkylab/backlot
 Issue: #586
 PR: #620
 Branch: contrib/issue-586-history-error-order
-Status: PR OPEN — first human review answered same day. Opened
-2026-10-11T16:45:32Z ready for review (never a draft). `nuriyoo` reviewed
-2026-10-12T04:17:07Z with a COMMENT review (measurement-backed, three items +
-description note, explicitly not a request for changes); all items applied and
-pushed (head `a3138ec`, 10:0xZ), evidence reply comment `6121983174`. Not
-merged, no approval.
+Status: **MERGED 2026-10-12T10:45:03Z** (squash commit
+`4e7bb13f662abee8135231a9faba1d391d772181`) — the portfolio's sixth merge.
+Opened 2026-10-11T16:45:32Z ready for review (never a draft). `nuriyoo`
+reviewed 2026-10-12T04:17:07Z with a COMMENT review (measurement-backed,
+three items + description note, explicitly not a request for changes); all
+items applied and pushed (head `a3138ec`), evidence reply comment
+`6121983174`; merged ~40 minutes after the last local verification of the
+CLEAN state, caught by the 6-hourly sync (no formal approval recorded).
 CI: 7/7 GREEN on the response head (gate, lint, scan, test 3.11/3.12/3.13/
 3.14), mergeStateStatus CLEAN, MERGEABLE at base `c641b079`, verified
 2026-10-12T10:03Z after merging main in `c4e18f5`. No action_required gate.
@@ -554,11 +564,11 @@ tests/test_google.py:6355 finding. Availability re-verified immediately
 before the PR: issue OPEN, 0 assignees, 0 comments, no competing PR
 (searched PRs for 586 and conversations.history: #613 is a different
 limit/count task; #327/#196 old and unrelated). Second open backlot PR
-(#614 was the other until it merged 2026-10-12; #633 is the other now);
-policy allows three after the first merge.
-Next Action: Await `nuriyoo`'s response to comment `6121983174` (or an
-approval/merge). Monitor PR #620 on the same branch; respond on the same
-branch. Do not ping.
+(#614 was the other until it merged 2026-10-12; #633 was the other after
+that, until it merged 2026-10-14 — no open backlot PRs remain); policy
+allows three after the first merge.
+Next Action: None — merged. Backlot capacity fully restored: three open
+PRs allowed, three slots free (re-verify claim-clean at selection).
 
 ### Track 013
 Project: isomorphic-git/isomorphic-git
@@ -884,34 +894,89 @@ gate; backlot #614 awaits `nuriyoo`'s re-review (all four requested items
 addressed, reply posted 14:29Z); backlot #620 and isomorphic-git #2456
 await first review. Per policy, no pings.
 
+## Merge-readiness audit 2026-10-14T19:54–20:26Z (all 8 open PRs, "make sure they get merged")
+
+Requested review of every outstanding contribution. Method: live `gh` state
+per PR (state/mergeable/mergeStateStatus/head/reviewDecision), check-runs
+collapsed to latest per name, commit statuses, reviews + issue comments +
+inline review comments, linked-issue state and timelines, then a **fresh
+local merge of every branch against current upstream `dev`** and a test run
+of each merged result in an isolated Python 3.11 venv (`uv`, full
+`requirements-dev.txt`), on throwaway `audit-*` branches in a disposable
+worktree. Nothing was pushed; all seven original branches were re-verified
+byte-identical to their remote PR heads afterwards.
+
+**Result: all 8 PRs are OPEN, non-draft, MERGEABLE, with zero failing
+checks, zero conflicts, zero unanswered feedback, and every branch proven
+green against today's base. Nothing is fixable from our side.**
+
+- **The 7 odysseus PRs (#6453, #6472, #6473, #6475, #6476, #6647, #6648)**
+  show `mergeStateStatus: UNSTABLE` purely from the first-time-contributor
+  gate: combined commit status `pending` with **zero** listed statuses, the
+  only check-runs being the three green meta-checks (PR description,
+  Conventional Commits title, flag-unmergeable). No human reviews, no
+  comments, no inline review comments on any of the seven — only Copilot
+  `COMMENTED` reviews. All 7 linked issues still OPEN; bugs confirmed still
+  present on current `dev` (e.g. `sqlalchemy.ext.declarative` import still
+  at `core/database.py:11`; `max_tokens=512` still hardcoded at
+  `routes/calendar_routes.py:1873`), so none has been superseded.
+- **`dev` moved under us**: head is now `c3819e3` (2026-10-14T11:20:35Z,
+  including #6704's pytest-baseline restore), while the local clone's
+  `origin` is the fork — always fetch `upstream` for the true base.
+  `git merge-tree --write-tree upstream/dev <branch>`: **CLEAN-MERGE on all
+  7**. Baseline on pure `dev`: 216 passed (1 warning = the MovedIn20Warning
+  #6453 exists to remove).
+- **Merged-result test runs (all green):** #6453 warning count 0 after
+  merge + 178 passed; #6472 7 passed; #6473 13 passed; #6475 13 passed;
+  #6476 38 passed; #6647 47 passed (incl. re-verified ordering: notes-read
+  rows 123–125 precede the `ui` row 137, so first-match-wins routes
+  correctly); #6648 2 passed (node present). **298 tests passing across the
+  seven merged results.** Each diff also re-read line-by-line against
+  current `dev` semantics; no changes warranted.
+- **Odysseus is actively merging outside PRs** (e.g. #6704, #6701, #6693,
+  #6683, #6643 merged 2026-10-13; #6633, #6610 merged 2026-10-14), ~100
+  open PRs in the queue — our seven (5–12 days old) are simply waiting in
+  line behind review attention, not blocked by anything of ours. Per
+  policy: no pings.
+- **markitdown #2700**: MERGEABLE, `mergeStateStatus: BLOCKED` (CLA +
+  required review); `license/cla` still queued at 20:26Z (~2.5h,
+  first-time-contributor queue); only policy-bot comments; Copilot declined
+  (reviewer quota). Nothing actionable.
+
+**Honest boundary:** merges require maintainer action. Everything a
+contributor can legitimately do — mergeability, CI-equivalent local proof,
+review-quality diffs, no unanswered feedback, no duplicate lanes — is done.
+No gate was bypassed, no maintainer was pinged, no commit was pushed.
+
 ## Blockers
 
-None. Only the seven odysseus open PRs remain, all behind GitHub's
-first-time-contributor `action_required` CI gate — an expected protection
-that must not be bypassed. No human review comments on odysseus since
-2026-10-03 (the PRs are 3-10 days old); odysseus maintainers merge daily,
-so this is the longest-waiting fleet. **Five non-odysseus tracks have
-landed**: backlot #577 merged 2026-10-10T13:59:45Z, libredb-studio
+None from our side (see the 2026-10-14T20:26Z merge-readiness audit above).
+The seven odysseus PRs all sit behind GitHub's first-time-contributor
+`action_required` CI gate — an expected protection that must not be
+bypassed — with zero human review (5–12 days old); odysseus maintainers
+merge daily, so this is the longest-waiting fleet. **All seven non-odysseus
+tracks have landed**: backlot #577 merged 2026-10-10T13:59:45Z, libredb-studio
 #1628 merged 2026-10-11T00:34:47Z, repowise #3338 merged
 2026-10-11T07:56:49Z, backlot #614 merged 2026-10-12T04:31:35Z after
-`nuriyoo`'s APPROVED, and isomorphic-git #2456 merged 2026-10-12T07:52:12Z
-by `jcubic` without a formal review (see Tracks 008-011, 013). **backlot #633 (Track 014) is
-open with CI 7/7 green on first push, MERGEABLE, awaiting its first
-human review** (see Track 014). **backlot #620 (Track 012) has its first
-human review — `nuriyoo`'s measurement-backed COMMENT of 2026-10-12T04:17Z
-(three items, "rather than a request for changes") — with all items applied
-and answered the same day: head `a3138ec`, CI 7/7 green, mergeStateStatus
-CLEAN, reply comment `6121983174`** (see Track 012). The outstanding item on
-all nine open PRs is a human decision, not work.
+`nuriyoo`'s APPROVED, isomorphic-git #2456 merged 2026-10-12T07:52:12Z
+by `jcubic` without a formal review (Tracks 008-011, 013), **backlot #620
+merged 2026-10-12T10:45:03Z** after `nuriyoo`'s measurement-backed COMMENT
+of 2026-10-12T04:17Z (three items, "rather than a request for changes") all
+applied and answered the same day (head `a3138ec`, CI 7/7 green, reply
+comment `6121983174`, Track 012), and **backlot #633 merged
+2026-10-14T08:06:47Z — seventh merge** (Track 014). **markitdown #2700
+(Track 016) awaits `license/cla` and first review.** The outstanding item
+on all eight open PRs is a human decision, not work.
 
 Two open courtesies, neither blocking:
 
 - cevheri's questions on libredb issue #1411 (2026-10-09T22:43:56Z, "how
   was first-contribute on libredb studio / which databases are you using")
   are still unanswered; he merged the PR anyway. Worth a short reply.
-- backlot capacity: three open PRs allowed since the first merge, two in
-  use (#620 and #633), one slot free for the next measured-fidelity issue
-  from the open pool (re-verify claim-clean at selection).
+- backlot capacity: three open PRs allowed since the first merge and all
+  four backlot PRs (#577, #614, #620, #633) have merged — three slots
+  free, for the next measured-fidelity issue from the open pool
+  (re-verify claim-clean at selection).
 
 ## Environment
 

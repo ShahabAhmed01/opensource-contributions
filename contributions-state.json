@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-13T13:56:52Z",
+  "updatedAt": "2026-10-14T11:34:07Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-13T13:56:52Z",
+      "lastVerified": "2026-10-14T11:34:07Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-13T13:56:52Z",
+      "lastVerified": "2026-10-14T11:34:07Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-13T13:56:52Z",
+      "lastVerified": "2026-10-14T11:34:07Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -169,7 +169,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-13T13:56:52Z",
+      "lastVerified": "2026-10-14T11:34:07Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -212,7 +212,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-13T13:56:52Z",
+      "lastVerified": "2026-10-14T11:34:07Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -255,7 +255,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-13T13:56:52Z",
+      "lastVerified": "2026-10-14T11:34:07Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -298,7 +298,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-13T13:56:52Z",
+      "lastVerified": "2026-10-14T11:34:07Z",
       "baseCommit": null,
       "commits": [
         {
@@ -341,7 +341,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-13T13:56:52Z",
+      "lastVerified": "2026-10-14T11:34:07Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -384,7 +384,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-13T13:56:52Z",
+      "lastVerified": "2026-10-14T11:34:07Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -451,7 +451,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-13T13:56:52Z",
+      "lastVerified": "2026-10-14T11:34:07Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -514,7 +514,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-13T13:56:52Z",
+      "lastVerified": "2026-10-14T11:34:07Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -568,7 +568,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-13T13:56:52Z",
+      "lastVerified": "2026-10-14T11:34:07Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -630,7 +630,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-13T13:56:52Z",
+      "lastVerified": "2026-10-14T11:34:07Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -678,19 +678,19 @@
       "issueNumber": 603,
       "issueTitle": "slack: a `token` query parameter authenticates and a bearer header outranks a `token` form field, where real refuses the first and reads the form field first",
       "issueUrl": "https://github.com/brekkylab/backlot/issues/603",
-      "issueState": "OPEN",
+      "issueState": "CLOSED",
       "prNumber": 633,
       "prUrl": "https://github.com/brekkylab/backlot/pull/633",
-      "prState": "open",
+      "prState": "merged",
       "prTitle": "slack: a token query parameter is refused as invalid_auth, and a token form field outranks the bearer header",
       "branch": "contrib/issue-603-query-token-form-precedence",
       "baseBranch": "main",
       "fork": "ShahabAhmed01/backlot",
       "forkUrl": "https://github.com/ShahabAhmed01/backlot",
-      "status": "pr-opened",
+      "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-13T13:56:52Z",
+      "lastVerified": "2026-10-14T11:34:07Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -715,13 +715,17 @@
         {
           "author": "nuriyoo",
           "state": "CHANGES_REQUESTED"
+        },
+        {
+          "author": "nuriyoo",
+          "state": "APPROVED"
         }
       ],
-      "mergedAt": null,
-      "mergeCommit": null,
+      "mergedAt": "2026-10-14T08:06:47Z",
+      "mergeCommit": "0288cc807735f0fe97be40d50c240067b3091cd3",
       "description": "Refuse a non-empty token query parameter as invalid_auth (an empty one beside a bearer header too) and read the token form field ahead of the bearer header, as real Slack does for apps created after 2021",
       "notes": "Fourteenth track, second free backlot slot used after #614 merged. Selection 2026-10-12: issue claim-clean (0 comments, unassigned, no cross-referenced PR, no competing claim); backlot allows three open PRs after the first merge, #614's merge left #620 plus this. The issue's measurement is slack.com/api on 2026-10-11 with the user token of an app created 2026-09-17 (scopes channels:history, channels:read, search:read, users:read), 19 rows over auth.test (GET+POST), conversations.list, users.list, search.messages; Slack's changelog 'No more tokens in querystrings for newly created apps' (docs.slack.dev 2020-11-01) closed the query channel for apps created after February 24, 2021. Design: auth.slack_token reads the token form field ahead of the Authorization: Bearer header and no longer reads the query; new auth.slack_query_token_refused answers a non-empty token query parameter (whatever else the request carries) and an empty one beside a bearer header, checked in _caller_or_error before anything is resolved so the refusal preempts even a valid credential. Unmeasured combos (empty token= beside form-only, multiple token parameters) deliberately left unpinned and disclosed under 'Not in this PR.'. TDD: both new tests failed on unmodified main, pass after; revert-proof on the final base 94e79a0 reproduced 2 failed. Replay over backlot.serve(): main@94e79a0 diverges from the issue's real column on 11 of 19 rows, this branch 0 of 19. Full suite 6877 passed / 10 skipped (junit: 6887 events, 0 failures; skips = mcp 1, mirage 2, gdrive_fsspec 6, hubspot reader 1, none on the Slack surface; tests/test_slack.py 495 whole, tests/test_sdk.py 5 whole including the official slack_sdk). ruff check/format clean (152 files); prose_check --github HEAD^1 (CI's invocation) no findings; prose_check with the default base shows only pre-existing main findings (test_google.py:6355, test_s3.py:338). Rebased onto 94e79a0 with no conflicts (upstream +11 commits incl. merged #585 auth.test members and #613 number validation - no overlap). PR opened ready for review, gate/scan/lint green on first push, tests pending at last check. Not merged.",
-      "issueUpdatedAt": "2026-10-11T07:38:29Z"
+      "issueUpdatedAt": "2026-10-14T08:06:49Z"
     }
   ]
 }

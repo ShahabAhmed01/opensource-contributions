@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-12T09:32:01Z",
+  "updatedAt": "2026-10-14T15:28:48Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-12T09:32:01Z",
+      "lastVerified": "2026-10-14T15:28:48Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-12T09:32:01Z",
+      "lastVerified": "2026-10-14T15:28:48Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-12T09:32:01Z",
+      "lastVerified": "2026-10-14T15:28:48Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -169,7 +169,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-12T09:32:01Z",
+      "lastVerified": "2026-10-14T15:28:48Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -212,7 +212,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-12T09:32:01Z",
+      "lastVerified": "2026-10-14T15:28:48Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -255,7 +255,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-12T09:32:01Z",
+      "lastVerified": "2026-10-14T15:28:48Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -298,7 +298,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-12T09:32:01Z",
+      "lastVerified": "2026-10-14T15:28:48Z",
       "baseCommit": null,
       "commits": [
         {
@@ -341,7 +341,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-12T09:32:01Z",
+      "lastVerified": "2026-10-14T15:28:48Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -384,7 +384,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-12T09:32:01Z",
+      "lastVerified": "2026-10-14T15:28:48Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -451,7 +451,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-12T09:32:01Z",
+      "lastVerified": "2026-10-14T15:28:48Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -514,7 +514,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-12T09:32:01Z",
+      "lastVerified": "2026-10-14T15:28:48Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -556,19 +556,19 @@
       "issueNumber": 586,
       "issueTitle": "slack: conversations.history checks a bad cursor before a bad oldest or latest, and oldest before latest, where real checks latest, then oldest, then the cursor",
       "issueUrl": "https://github.com/brekkylab/backlot/issues/586",
-      "issueState": "OPEN",
+      "issueState": "CLOSED",
       "prNumber": 620,
       "prUrl": "https://github.com/brekkylab/backlot/pull/620",
-      "prState": "open",
+      "prState": "merged",
       "prTitle": "slack: conversations.history answers its errors in the order real reads them — latest, then oldest, then the cursor",
       "branch": "contrib/issue-586-history-error-order",
       "baseBranch": "main",
       "fork": "ShahabAhmed01/backlot",
       "forkUrl": "https://github.com/ShahabAhmed01/backlot",
-      "status": "pr-opened",
+      "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-12T10:03:00Z",
+      "lastVerified": "2026-10-14T15:28:48Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -586,7 +586,6 @@
       ],
       "checks": {
         "test (3.11)": "pass",
-        "gate": "pass",
         "scan": "pass",
         "test (3.12)": "pass",
         "test (3.13)": "pass",
@@ -601,13 +600,17 @@
         {
           "author": "nuriyoo",
           "state": "COMMENTED"
+        },
+        {
+          "author": "nuriyoo",
+          "state": "APPROVED"
         }
       ],
-      "mergedAt": null,
-      "mergeCommit": null,
+      "mergedAt": "2026-10-12T10:45:03Z",
+      "mergeCommit": "4e7bb13f662abee8135231a9faba1d391d772181",
       "description": "Reorder conversations.history's argument-error checks to real Slack's reading order — latest, then oldest, then the cursor — so a request with two or more unreadable arguments is named by the first real would read",
       "notes": "Third backlot track, a direct continuation of the merged #554/#577 work on the same handler. Selected 2026-10-11: nuriyoo filed #586 on 2026-10-10 while reviewing our #577 PR, with a full measured table (slack.com/api 2026-10-10, user token, one request per row). At selection 0 comments, no assignee, no competing PR (searched PRs for 586 and conversations.history: #613 is a different limit/count task, #327/#196 are old and unrelated); re-verified open and claim-clean immediately before the PR. Backlot policy allows up to three open PRs after the first merge — #614 was the one open PR, this is the second. Defect: conversations_history decoded the cursor first (invalid_cursor), then checked oldest before latest, where real reads latest, then oldest, then the cursor. Fix is a pure reorder of the three guards in backlot/routers/slack.py — lo/hi computed identically, downstream window logic untouched — plus a comment citing the 2026-10-10 measurement. One parametrised test (test_slack_history_names_the_first_error_real_would) encodes the issue's 11 measured rows: 8 divergence rows fail on unmodified main (each answered invalid_cursor or invalid_ts_oldest where real answers the other), 3 single-argument controls pass on both; all 11 pass with the fix. The non-finite rows (oldest=nan&cursor=zzz, the inf pairs) became answerable only because the isfinite guard from merged #577 is on main now. Full suite 6346 passed/10 skipped on .[dev,official-sdk,llamaindex] Python 3.11 (the 10 skips are mcp, mirage, gdrive_fsspec and the HubSpot reader, not installed here); ruff check/format clean (152 files formatted); prose_check shows only the pre-existing tests/test_google.py:6355 finding. PR opened ready for review (never a draft) per policy item 7; template's three headings and three checkboxes followed; the ACL checkbox is unchecked with the reason (no new endpoint, the change is downstream of the auth and channel_not_found checks). CI 7/7 green on the first push (gate, lint, scan, test 3.11-3.14), mergeStateStatus CLEAN at 16:50Z. Copilot posted a non-review; no human review yet; not merged. | Review response 2026-10-12: nuriyoo COMMENTED 04:17:07Z with a 54-request re-measurement against slack.com/api (04:05-04:07 UTC; 43/49 refusals byte-for-byte at b9af620 vs 19 at main 0c87917; explicitly \"a comment rather than a request for changes\") and three items plus a description note, all applied same day: (1) both inline suggestions verbatim - the three refusal tests folded into one 24-row table (15 one-argument controls + 9 order rows), the two old functions deleted per his diff; (2) the order comment moved between the lo/hi line and the checks with his 2026-10-12 sentence (every query order + POST form body); (3) main merged at c4e18f5 keeping #613 limit line above this order as he instructed (the conflict he predicted in point 3). Verification: main slack.py over the branch fails exactly 9 multi-arg rows / passes 15 one-arg (his 9/15), branch passes 24/24, test_slack.py 502, full suite 6885 passed/10 skipped, ruff clean, prose_check --github HEAD^1 exit 0, and limit=abc beside each of oldest/latest/cursor answers invalid_arguments with the \"[ERROR] must provide a number\" response_metadata, 3/3 locally. Description counts updated to nine/fifteen/twenty-four; evidence reply comment 6121983174. Head a3138ec, CI 7/7 SUCCESS, mergeState CLEAN at 10:03Z.",
-      "issueUpdatedAt": "2026-10-10T06:45:56Z"
+      "issueUpdatedAt": "2026-10-12T10:45:05Z"
     },
     {
       "repo": "isomorphic-git/isomorphic-git",
@@ -627,7 +630,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-12T09:32:01Z",
+      "lastVerified": "2026-10-14T15:28:48Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -675,19 +678,19 @@
       "issueNumber": 603,
       "issueTitle": "slack: a `token` query parameter authenticates and a bearer header outranks a `token` form field, where real refuses the first and reads the form field first",
       "issueUrl": "https://github.com/brekkylab/backlot/issues/603",
-      "issueState": "OPEN",
+      "issueState": "CLOSED",
       "prNumber": 633,
       "prUrl": "https://github.com/brekkylab/backlot/pull/633",
-      "prState": "open",
+      "prState": "merged",
       "prTitle": "slack: a token query parameter is refused as invalid_auth, and a token form field outranks the bearer header",
       "branch": "contrib/issue-603-query-token-form-precedence",
       "baseBranch": "main",
       "fork": "ShahabAhmed01/backlot",
       "forkUrl": "https://github.com/ShahabAhmed01/backlot",
-      "status": "pr-opened",
+      "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-12T09:32:01Z",
+      "lastVerified": "2026-10-14T15:28:48Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -708,13 +711,62 @@
         {
           "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
+        },
+        {
+          "author": "nuriyoo",
+          "state": "CHANGES_REQUESTED"
+        },
+        {
+          "author": "nuriyoo",
+          "state": "APPROVED"
+        }
+      ],
+      "mergedAt": "2026-10-14T08:06:47Z",
+      "mergeCommit": "0288cc807735f0fe97be40d50c240067b3091cd3",
+      "description": "Refuse a non-empty token query parameter as invalid_auth (an empty one beside a bearer header too) and read the token form field ahead of the bearer header, as real Slack does for apps created after 2021",
+      "notes": "Fourteenth track, second free backlot slot used after #614 merged. Selection 2026-10-12: issue claim-clean (0 comments, unassigned, no cross-referenced PR, no competing claim); backlot allows three open PRs after the first merge, #614's merge left #620 plus this. The issue's measurement is slack.com/api on 2026-10-11 with the user token of an app created 2026-09-17 (scopes channels:history, channels:read, search:read, users:read), 19 rows over auth.test (GET+POST), conversations.list, users.list, search.messages; Slack's changelog 'No more tokens in querystrings for newly created apps' (docs.slack.dev 2020-11-01) closed the query channel for apps created after February 24, 2021. Design: auth.slack_token reads the token form field ahead of the Authorization: Bearer header and no longer reads the query; new auth.slack_query_token_refused answers a non-empty token query parameter (whatever else the request carries) and an empty one beside a bearer header, checked in _caller_or_error before anything is resolved so the refusal preempts even a valid credential. Unmeasured combos (empty token= beside form-only, multiple token parameters) deliberately left unpinned and disclosed under 'Not in this PR.'. TDD: both new tests failed on unmodified main, pass after; revert-proof on the final base 94e79a0 reproduced 2 failed. Replay over backlot.serve(): main@94e79a0 diverges from the issue's real column on 11 of 19 rows, this branch 0 of 19. Full suite 6877 passed / 10 skipped (junit: 6887 events, 0 failures; skips = mcp 1, mirage 2, gdrive_fsspec 6, hubspot reader 1, none on the Slack surface; tests/test_slack.py 495 whole, tests/test_sdk.py 5 whole including the official slack_sdk). ruff check/format clean (152 files); prose_check --github HEAD^1 (CI's invocation) no findings; prose_check with the default base shows only pre-existing main findings (test_google.py:6355, test_s3.py:338). Rebased onto 94e79a0 with no conflicts (upstream +11 commits incl. merged #585 auth.test members and #613 number validation - no overlap). PR opened ready for review, gate/scan/lint green on first push, tests pending at last check. Not merged.",
+      "issueUpdatedAt": "2026-10-14T08:06:49Z"
+    },
+    {
+      "repo": "microsoft/markitdown",
+      "project": "markitdown",
+      "issueNumber": 1784,
+      "issueTitle": "A one-byte document is generated with no error output",
+      "issueUrl": "https://github.com/microsoft/markitdown/issues/1784",
+      "issueState": "OPEN",
+      "prNumber": 2699,
+      "prUrl": "https://github.com/microsoft/markitdown/pull/2699",
+      "prState": "open",
+      "prTitle": "fix(csv): emit UserWarning when input is empty (fixes #1784)",
+      "branch": "contrib/issue-1784-csv-empty-warning",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/markitdown",
+      "forkUrl": "https://github.com/ShahabAhmed01/markitdown",
+      "status": "pr-opened",
+      "openedAt": "2026-10-14T15:27:51Z",
+      "prCreatedAt": "2026-10-14T15:25:04Z",
+      "lastVerified": "2026-10-14T15:28:48Z",
+      "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
+      "commits": [
+        {
+          "sha": "de494313668a463462890c9557340ec62d78463a",
+          "subject": "fix(csv): emit UserWarning when input is empty (fixes #1784)"
+        }
+      ],
+      "checks": {
+        "license/cla": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
         }
       ],
       "mergedAt": null,
       "mergeCommit": null,
-      "description": "Refuse a non-empty token query parameter as invalid_auth (an empty one beside a bearer header too) and read the token form field ahead of the bearer header, as real Slack does for apps created after 2021",
-      "notes": "Fourteenth track, second free backlot slot used after #614 merged. Selection 2026-10-12: issue claim-clean (0 comments, unassigned, no cross-referenced PR, no competing claim); backlot allows three open PRs after the first merge, #614's merge left #620 plus this. The issue's measurement is slack.com/api on 2026-10-11 with the user token of an app created 2026-09-17 (scopes channels:history, channels:read, search:read, users:read), 19 rows over auth.test (GET+POST), conversations.list, users.list, search.messages; Slack's changelog 'No more tokens in querystrings for newly created apps' (docs.slack.dev 2020-11-01) closed the query channel for apps created after February 24, 2021. Design: auth.slack_token reads the token form field ahead of the Authorization: Bearer header and no longer reads the query; new auth.slack_query_token_refused answers a non-empty token query parameter (whatever else the request carries) and an empty one beside a bearer header, checked in _caller_or_error before anything is resolved so the refusal preempts even a valid credential. Unmeasured combos (empty token= beside form-only, multiple token parameters) deliberately left unpinned and disclosed under 'Not in this PR.'. TDD: both new tests failed on unmodified main, pass after; revert-proof on the final base 94e79a0 reproduced 2 failed. Replay over backlot.serve(): main@94e79a0 diverges from the issue's real column on 11 of 19 rows, this branch 0 of 19. Full suite 6877 passed / 10 skipped (junit: 6887 events, 0 failures; skips = mcp 1, mirage 2, gdrive_fsspec 6, hubspot reader 1, none on the Slack surface; tests/test_slack.py 495 whole, tests/test_sdk.py 5 whole including the official slack_sdk). ruff check/format clean (152 files); prose_check --github HEAD^1 (CI's invocation) no findings; prose_check with the default base shows only pre-existing main findings (test_google.py:6355, test_s3.py:338). Rebased onto 94e79a0 with no conflicts (upstream +11 commits incl. merged #585 auth.test members and #613 number validation - no overlap). PR opened ready for review, gate/scan/lint green on first push, tests pending at last check. Not merged.",
-      "issueUpdatedAt": "2026-10-11T07:38:29Z"
+      "description": "Emits a UserWarning when CSV/TSV input is empty or produces no meaningful rows, while preserving the existing empty Markdown result for backward compatibility. Added import warnings and warnings.warn() in CsvConverter.convert() when rows is empty after trimming blank rows.",
+      "notes": "Research rationale: Issue #1784 tracked the missing UserWarning for empty CSV input. The fix adds a warning that is emitted when CSV parsing yields no meaningful rows, while still returning empty markdown for backward compatibility. No new dependencies. No breaking changes. Follows project conventions (Conventional Commits, existing test patterns). CI license/cla check passes. PR opened ready for maintainer review.",
+      "issueUpdatedAt": "2026-09-09T12:35:58Z"
     }
   ]
 }

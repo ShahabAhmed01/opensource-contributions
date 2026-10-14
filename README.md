@@ -35,3 +35,7 @@ This repository keeps a factual record of contribution work: the issue, the pull
 
 - **odysseus-dev/odysseus** — self-hosted AI workspace (Python/FastAPI, AGPL-3.0). Notes: [`projects/odysseus.md`](projects/odysseus.md).
 - **brekkylab/backlot** — API-fidelity server for 11 real SaaS APIs (Python/FastAPI, MIT). Notes: [`projects/backlot.md`](projects/backlot.md).
+- **libredb/libredb-studio** — web-based SQL IDE over twenty-seven database engines (TypeScript/Bun, MIT). Notes: [`projects/libredb-studio.md`](projects/libredb-studio.md).
+- **repowise-dev/repowise** — codebase intelligence for AI and humans: health scores, docs, git analytics (Python/uv + React, AGPL-3.0). Notes: [`projects/repowise.md`](projects/repowise.md).
+- **isomorphic-git/isomorphic-git** — pure-JavaScript implementation of git for the browser and Node (JavaScript, MIT). Notes: [`projects/isomorphic-git.md`](projects/isomorphic-git.md).
+- **microsoft/markitdown** — file-format-to-Markdown converter with a plugin system (Python, MIT). Notes: [`projects/markitdown.md`](projects/markitdown.md).

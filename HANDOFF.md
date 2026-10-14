@@ -1,13 +1,46 @@
 # Contribution Handoff
 
-Last updated: 2026-10-12T09:35Z (Track 014: backlot #603 → PR #633 open, CI 7/7 green; #614 merged 04:31Z, isomorphic-git #2456 merged 07:52Z — fifth merge, both caught this session)
+Last updated: 2026-10-14T17:55Z (Tracks 015–016, markitdown: #2699 closed as a duplicate of #2675, and PR #2700 opened for #1897 on the maintainer's invitation; also caught backlot #633 merged 2026-10-14T08:06:47Z — seventh merge, recorded by the 6-hourly sync)
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 9
-Merged Contributions: 5
-Closed/Superseded Contributions: 0
+Monitoring Contributions: 8
+Merged Contributions: 7
+Closed/Superseded Contributions: 1
+
+**New this session (2026-10-14T17:53Z): markitdown #1897 / PR #2700** —
+`Add --llm-client, --llm-model, and --llm-prompt options to the CLI`. The
+gap maintainer afourney reaffirmed as "still wanted" on #175
+(2026-09: "a fresh PR against `main` would be very welcome and will get a
+much faster look"): the markitdown-ocr README documents a
+`--llm-client openai --llm-model gpt-4o` command the CLI never defined.
+Three argparse options, lazy `openai.OpenAI()` construction (openai stays
+optional; missing package/key → one-line actionable error), pairing
+validation, `**llm_kwargs` forwarded on all three `MarkItDown(...)`
+constructor paths. Nine regression tests in `tests/test_cli_misc.py`, all
+nine proven failing on unmodified `main`; focused file 29 passed, CLI
+vector matrix 82 passed, black 23.7.0 and mypy clean on changed files;
+speech-transcription failure proven pre-existing on base. PR opened
+MERGEABLE; license/cla queued at 17:55Z; Copilot COMMENTED; no human
+review yet. Competing-lane honesty: #2277 (CONFLICTING, stale since
+2026-08-05) and #2422 (docs-only) are named in the PR body. Track 016.
+
+**Also this session: markitdown #1784 / PR #2699 CLOSED-UNMERGED
+(2026-10-14T17:10:55Z)** — the CSV-empty-warning patch from the previous
+session was a duplicate: a fresh timeline sweep found PR #2675
+(languor-daiduode, 2026-10-08) fixing the same lines with tests six days
+earlier. Our PR (no tests, title-only body) was strictly dominated, so it
+was closed with a courteous self-critical comment; branch preserved on the
+fork; no maintainer pinged. The prior session's "0 cross-references" claim
+was wrong — the issue timeline is the only reliable duplicate check. First
+closed-unmerged track; `contributions/markitdown/issue-1784.md` and
+`projects/markitdown.md` carry the post-mortem. Track 015.
+
+**Also this session: backlot #633 MERGED 2026-10-14T08:06:47Z** — the
+fourth merged backlot PR and the portfolio's seventh merge, caught by the
+6-hourly tracker sync and recorded in `contributions-state.json`. Track
+014's status lines below were reconciled with this fact.
 
 **New this session (2026-10-12T09:30Z): backlot #603 / PR #633** —
 `slack: a token query parameter is refused as invalid_auth, and a token
@@ -587,14 +620,14 @@ Project: brekkylab/backlot
 Issue: #603
 PR: #633
 Branch: contrib/issue-603-query-token-form-precedence
-Status: **OPEN — CI 7/7 GREEN on the first push** (2026-10-12T09:28Z:
-gate, lint, scan, test 3.11/3.12/3.13/3.14). MERGEABLE (mergeStateStatus
-BEHIND — upstream main moved to `c641b07` after the rebase; no conflicts).
-Awaiting first human review. Not merged.
-CI: All seven checks pass on head `5aaea3b`, verified 09:28:02Z; no
+Status: **MERGED 2026-10-14T08:06:47Z by nuriyoo** (squash
+`0288cc807735f0fe97be40d50c240067b3091cd3`) — portfolio seventh merge,
+caught by the 2026-10-14 tracker sync. At open it was CI 7/7 green on the
+first push (2026-10-12T09:28Z) and MERGEABLE.
+CI: All seven checks passed on head `5aaea3b`, verified 09:28:02Z; no
 first-time-contributor gate (PR #577 lifted it). Local numbers CI agrees
 with: full suite 6877 passed/10 skipped on Python 3.11.17.
-Review: None yet — no reviews, no comments as of 09:28Z. Do not ping.
+Review: None recorded at merge (no formal review; nuriyoo merged directly).
 Notes: Fourth backlot track, taken the morning after #614 merged (the
 merge freed this slot; backlot allows three open PRs after the first
 merge). Selection gate run twice: issue OPEN, unassigned, 0 comments, no
@@ -633,8 +666,65 @@ why the identity tests assert `user_id` only). PR body follows the
 merged-#577/#614 template: `Closes #603`, three headings, three
 checkboxes (ACL box unchecked with the no-new-endpoint note, as #577
 did), replay table, AI-assistance disclosure.
-Next Action: Monitor PR #633 for first human review (nuriyoo/khj809);
-respond on the same branch. Do not ping. One backlot slot remains free.
+Next Action: None — merged 2026-10-14T08:06:47Z. All four merged backlot
+PRs (#577, #614, #620, #633) are closed chapters.
+
+### Track 015
+Project: microsoft/markitdown
+Issue: #1784
+PR: #2699
+Branch: contrib/issue-1784-csv-empty-warning
+Status: **CLOSED-UNMERGED 2026-10-14T17:10:55Z (duplicate of #2675)**.
+Opened 2026-10-14T15:25:04Z by the previous session; closed by us ~1h45m
+later. Issue #1784 remains OPEN.
+CI: license/cla passed on #2699; no other checks ran before closure.
+Review: Only a Copilot COMMENTED bot review; no human review, ever.
+Notes: The previous session's report claimed "0 cross-references" for
+#1784 — false. The issue timeline shows PR #2675 (languor-daiduode,
+opened 2026-10-08T14:47:38Z, still OPEN) fixing the exact same
+`if not rows:` branch in `_csv_converter.py` with `pytest.warns`
+regression tests, a full PR body, and a passing license/cla. Our patch
+was the same one-line warning without tests and a title-only body —
+strictly dominated. Closed with a courteous comment owning the oversight
+and noting the branch is preserved; nothing merged, no maintainer pinged,
+no issue comment posted. Post-mortem in
+`contributions/markitdown/issue-1784.md`; the lesson (timeline
+cross-reference sweep is the only reliable duplicate check) is written
+into `projects/markitdown.md` §Pitfalls.
+Next Action: None. Only revisit the lane if #2675 closes unmerged; then
+reopen the branch with tests added first.
+
+### Track 016
+Project: microsoft/markitdown
+Issue: #1897
+PR: #2700
+Branch: contrib/issue-1897-cli-llm-options
+Status: **OPEN — awaiting first human review** (opened
+2026-10-14T17:53:21Z; MERGEABLE; `mergeStateStatus: BLOCKED` = review +
+required checks pending, normal for a fresh PR). Not merged.
+CI: license/cla QUEUED/pending at 17:55:39Z; Copilot COMMENTED bot
+review only. No green-CI claim until it reports.
+Review: None human yet. Do not ping.
+Notes: Sixteenth track, first markitdown survivor. Maintainer-confirmed
+task: afourney (MEMBER) called the `--llm-*` CLI gap "still wanted" and
+invited "a fresh PR against `main`" on 2026-09-03 (#175); prior attempts
+#1898/#1908 were self-closed by their authors, never rejected. Lane
+competition, disclosed in the PR body: #2277 (CONFLICTING, stale since
+2026-08-05) and #2422 (docs-only alternative). Implementation:
+`--llm-client {openai}`/`--llm-model`/`--llm-prompt`, pairing validation
+through `_exit_with_error`, lazy `_create_llm_client()` (missing openai
+package or OPENAI_API_KEY → one-line actionable error), `**llm_kwargs`
+forwarded on the default/DocIntel/CU constructor paths. Commit
+`48d0f1164cb28c4620f1d59757d96befc3f66256` (2 files, +253/−3). Nine new
+tests in `tests/test_cli_misc.py`, all proven failing on unmodified
+`main` (9 failed) and passing with the fix (29 passed); CLI vector matrix
+82 passed; black 23.7.0 clean; mypy clean on changed files (28 pre-existing
+errors elsewhere); `test_speech_transcription` failure proven pre-existing
+on base. Base `4cc9fa1` verified unchanged immediately before publication;
+issue re-verified OPEN/unassigned with no new competing PR.
+Next Action: Watch PR #2700 for license/cla result and first human
+review; respond on the same branch if requested. If review requests the
+OpenAI-compatible `base_url` option, that is a small additive follow-up.
 
 ## Post-PR triage 2026-10-09 (after opening #6648)
 

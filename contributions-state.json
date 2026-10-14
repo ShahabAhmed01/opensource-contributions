@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-14T15:28:48Z",
+  "updatedAt": "2026-10-14T18:20:29Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-14T15:28:48Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-14T15:28:48Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-14T15:28:48Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -169,7 +169,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-14T15:28:48Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -212,7 +212,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-14T15:28:48Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -255,7 +255,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-14T15:28:48Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -298,7 +298,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-14T15:28:48Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
       "baseCommit": null,
       "commits": [
         {
@@ -341,7 +341,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-14T15:28:48Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -384,7 +384,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-14T15:28:48Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -451,7 +451,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-14T15:28:48Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -514,7 +514,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-14T15:28:48Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -568,7 +568,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-14T15:28:48Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -630,7 +630,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-14T15:28:48Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -690,7 +690,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-14T15:28:48Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -736,16 +736,16 @@
       "issueState": "OPEN",
       "prNumber": 2699,
       "prUrl": "https://github.com/microsoft/markitdown/pull/2699",
-      "prState": "open",
+      "prState": "closed",
       "prTitle": "fix(csv): emit UserWarning when input is empty (fixes #1784)",
       "branch": "contrib/issue-1784-csv-empty-warning",
       "baseBranch": "main",
       "fork": "ShahabAhmed01/markitdown",
       "forkUrl": "https://github.com/ShahabAhmed01/markitdown",
-      "status": "pr-opened",
+      "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-14T15:28:48Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -765,8 +765,49 @@
       "mergedAt": null,
       "mergeCommit": null,
       "description": "Emits a UserWarning when CSV/TSV input is empty or produces no meaningful rows, while preserving the existing empty Markdown result for backward compatibility. Added import warnings and warnings.warn() in CsvConverter.convert() when rows is empty after trimming blank rows.",
-      "notes": "Research rationale: Issue #1784 tracked the missing UserWarning for empty CSV input. The fix adds a warning that is emitted when CSV parsing yields no meaningful rows, while still returning empty markdown for backward compatibility. No new dependencies. No breaking changes. Follows project conventions (Conventional Commits, existing test patterns). CI license/cla check passes. PR opened ready for maintainer review.",
+      "notes": "Closed as a duplicate of PR #2675 (languor-daiduode, opened 2026-10-08, still open), which fixes the same root cause in CsvConverter.convert() and already includes regression coverage. The previous session's availability check wrongly reported zero competing PRs; a fresh timeline cross-reference sweep found #2675 six days older and strictly stronger (same warning plus tests plus a full PR body). Per the no-duplicate rule the PR was closed on 2026-10-14T17:10:55Z with a courteous comment; the feature branch contrib/issue-1784-csv-empty-warning is preserved on the fork and can be reopened with tests added if #2675 is ever closed unmerged. Issue #1784 remains open. No human review ever occurred on #2699 (only a Copilot COMMENTED review); the license/cla check passed.",
       "issueUpdatedAt": "2026-09-09T12:35:58Z"
+    },
+    {
+      "repo": "microsoft/markitdown",
+      "project": "markitdown",
+      "issueNumber": 1897,
+      "issueTitle": "Unrecognized Arguments Error in markitdown CLI for undocumented arguments",
+      "issueUrl": "https://github.com/microsoft/markitdown/issues/1897",
+      "issueState": "OPEN",
+      "prNumber": 2700,
+      "prUrl": "https://github.com/microsoft/markitdown/pull/2700",
+      "prState": "open",
+      "prTitle": "Add --llm-client, --llm-model, and --llm-prompt options to the CLI",
+      "branch": "contrib/issue-1897-cli-llm-options",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/markitdown",
+      "forkUrl": "https://github.com/ShahabAhmed01/markitdown",
+      "status": "ci-running",
+      "openedAt": "2026-10-14T17:53:21Z",
+      "prCreatedAt": "2026-10-14T17:53:21Z",
+      "lastVerified": "2026-10-14T18:20:29Z",
+      "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
+      "commits": [
+        {
+          "sha": "48d0f1164cb28c4620f1d59757d96befc3f66256",
+          "subject": "Add --llm-client, --llm-model, and --llm-prompt options to the CLI"
+        }
+      ],
+      "checks": {
+        "license/cla": "pending"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Adds --llm-client/--llm-model/--llm-prompt CLI flags that construct a lazy LLM client and forward llm_client/llm_model/llm_prompt kwargs to MarkItDown on all three constructor paths, making the command documented in the markitdown-ocr README actually work.",
+      "notes": "Research rationale: issue #1897 (OPEN, unassigned, unchanged since 2026-05-20) reports that the markitdown-ocr README documents `markitdown document.pdf --use-plugins --llm-client openai --llm-model gpt-4o` but the CLI never defined the --llm-* flags (the issue also wrongly blames --use-plugins, which has existed since PR #318). Acceptance evidence: maintainer afourney (MEMBER) wrote on 2026-09-03 in PR #175 (https://github.com/microsoft/markitdown/pull/175) that llm_client/llm_model/llm_prompt remain a genuine gap, 'the feature is still wanted', and 'a fresh PR against main would be very welcome and will get a much faster look'. Prior attempts #1898 and #1908 were self-closed by their authors after maintainer silence, never rejected. Competition check at publication: #2277 implements similar flags but is CONFLICTING with main and untouched since 2026-08-05; #2422 is a docs-only alternative that deletes the flags from the README; no open PR references #1897. Implementation: three argparse options in packages/markitdown/src/markitdown/__main__.py, lazy openai.OpenAI() construction with actionable errors for missing package/API key, pairing validation (model required with client; model/prompt rejected without client), forwarded via **llm_kwargs on the default, DocIntel, and CU constructor paths. Nine regression tests added to tests/test_cli_misc.py; all nine fail against unmodified main. Known risks: review latency (zero maintainer responses on the sibling PRs; 402 open PRs), only the openai backend offered, and design choices (choices list, pairing rules) may draw review feedback.",
+      "issueUpdatedAt": "2026-05-20T13:26:35Z"
     }
   ]
 }

@@ -90,6 +90,30 @@ uv sync --all-extras --locked              # what CI installs (all extras)
   intended behavior the same day; Sall25/folio — no license, hard
   reject; moudlajs/jinx — no external merges).
 
+## Fidelity evidence refreshed 2026-10-16/17 (research addendum, Track 017)
+
+- **External merge cadence (live re-verification):** 50 outside-contributor
+  PRs merged in the last 30 days alone (since 2026-09-16) — the deepest
+  external-merge pipeline among the portfolio's six projects;
+  isomorphic-git 11 since 2026-09-26, repowise 28+, libredb-studio 27
+  (their best review lane is now heavily self-claimed by senior
+  contributors within hours).
+- **Same-day task churn, verified first-hand 2026-10-16:** of five
+  `good first issue`/`help wanted` fidelity issues filed that day
+  (#778/#774/#775/#776/#763), three were claimed by open PRs
+  (#781/#783/#785) while research was still screening; #775 and #763
+  were the free pair; #775 won on acceptance clarity. The established
+  pitfall above (re-verify issue state immediately before publishing)
+  was practiced and held: still unclaimed at PR-creation time.
+- Issue #775 selection rationale: an exact measured real-vs-Backlot
+  matrix in the issue (Jira Cloud, 2026-10-16), a root cause that leans on
+  the already-merged `_JAVA_TRIMMED` reading of #762, and a test file the
+  dev install fully covers — acceptance criteria were observable and
+  locally verifiable end to end.
+- Verification still no-network: pytest on the dev install + ruff +
+  prose_check (which caught a re-dated measurement and shaped final
+  comment wording). Counts: 7685 passed / 38 skipped on Python 3.14.8.
+
 ## Pitfalls learned
 
 - The issues are minted in batches and a fast-moving pool of
@@ -204,3 +228,26 @@ uv sync --all-extras --locked              # what CI installs (all extras)
   merge; #614 is the other). Opened ready for review; template's three
   headings and three checkboxes followed. Awaiting `nuriyoo`/`khj809`;
   no human review yet; not merged.
+
+### #775 — comment read's `orderBy` trimmed as Python strips, not as Java does (**PR OPEN, awaiting review** as PR #786, 2026-10-16)
+
+- Branch: `jira-comment-orderby-java-trim`; PR:
+  https://github.com/brekkylab/backlot/pull/786 (base `main` @
+  `41199cfbc3`), closes https://github.com/brekkylab/backlot/issues/775.
+- Filed by `nuriyoo` on 2026-10-16 (found while reviewing the merged
+  #762). Full record: [`contributions/backlot/issue-775.md`](../contributions/backlot/issue-775.md).
+- Fix: `_jira_order_desc` trims with the module's existing `_JAVA_TRIMMED`
+  (Java's `String.trim`, the same trim `_jira_project_order` applies on
+  `project/search`) before the direction sigil and again after it.
+- Three new `takes` rows (incl. the boundary case both trims agree on,
+  `%0Bcreated`) and two new `refuses` rows (no-break space, em space);
+  the four diverging rows fail with the router revert and pass with it.
+- Validation: full suite **7685 passed / 38 skipped** on `.[dev]`
+  (Python 3.14.8, uv venv; the 38 are the extra-gated files CONTRIBUTING
+  maps, none touching Jira); ruff lint/format and the PLW1514 preview
+  rule clean; `prose_check` clean both bases (it flagged a re-dated
+  measurement; tests now point at the router's dating); `git diff
+  --check` clean; independent read-only review passed.
+- CI: all 8 checks green at 2026-10-16T20:52:53Z (gate/scan/lint +
+  test 3.11–3.15; bare `test` skipped as the workflow's shape). Copilot
+  bot COMMENTED; no human review yet; not merged.

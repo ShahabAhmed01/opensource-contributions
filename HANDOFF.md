@@ -1,13 +1,62 @@
 # Contribution Handoff
 
-Last updated: 2026-10-14T20:30Z (merge-readiness audit of all 8 open PRs: 7 odysseus branches re-verified green against current dev `c3819e3` — clean merges, focused suites 298 tests passing, branches byte-identical to remote heads; markitdown #2700 license/cla still queued; all blockers maintainer-side; nothing pushed, no pings)
+Last updated: 2026-10-16T20:52Z (backlot #775 / PR #786: the closing trim
+of a Jira comment read's `orderBy` now follows Java's `String.trim`, as
+the merged `project/search` path already does. Tracker sync run via the
+REST shim also refreshed live statuses of the seven unrelated open PRs
+below — three odysseus tracks now read `ci-failed` upstream
+(#6475/#6476/#6473: "Check PR description" fails on their current heads at
+2026-10-16T20:51Z, GitHub-reported), odysseus #6453/#6472/#6647/#6648 and
+markitdown #2700 still open/unreviewed; markitdown #2700 remains
+`In review` with pending license/cla)
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 8
+Monitoring Contributions: 9
 Merged Contributions: 7
 Closed/Superseded Contributions: 1
+
+**New this session (2026-10-16T20:52Z): backlot #775 / PR #786** —
+`jira: a comment read trims orderBy as Java's trim does, so a no-break
+space is refused and U+0001 is served`. nuriyoo measured the divergence
+against Jira Cloud on #775 (2026-10-16): a comment read's `orderBy` was
+stripped with Python's `str.strip()` (NBSP/em space lifted off, U+0001
+kept), while real trims as Java's `String.trim` (chars ≤ U+0020 only).
+`_jira_order_desc` now trims with the module's `_JAVA_TRIMMED` — the same
+bytes the merged `project/search` path (#762, the PR whose review
+surfaced this issue) already uses — before the direction sigil and again
+after it. Five new parametrized rows (three `takes`, boundary included;
+two `refuses`); the four diverging ones fail on pre-change main. Full
+suite 7685 passed/38 skipped on `.[dev]` Python 3.14.8; ruff lint/format
+and PLW1514 preview clean; prose_check clean on both bases (it flagged
+the re-dated measurement; tests point at the router's dating); `git diff
+--check` clean; independent read-only review of the diff passed. PR
+opened MERGEABLE at 2026-10-16T20:48:05Z (template followed: three
+headings + three checkboxes, `Closes #775.`); **all 8 checks green at
+20:52:53Z** (gate/scan/lint + test 3.11–3.15); Copilot bot COMMENTED; no
+human review yet.
+Availability gates held: #778/#776/#774 claimed by #781/#783/#785 during
+screening, #775/#763 free, #775 chosen; re-verified live immediately
+before publishing. Track 017.
+
+**Discovery notes for this session** — screened the live state of all six
+portfolio projects plus fresh search results (search API, topic pages):
+libredb's best unassigned tasks (#1787/#1805) are short-window features or
+already claimed; repowise fires many unassigned bugs daily but its
+merge lane is broad yet impersonal; linux-vitals (real bugs, security
+labels) worth a future look. No hidden exclusions were touched
+(`lingdojo/kana-dojo` excluded on instruction; homelab-monitor
+locale-sync competitor still active per the tracker's prior audit;
+open-source-starter-lab only a lead).
+
+**Also this session: tracker-sync honesty** — the tracker's documented
+`update_tracker.py` needs the `gh` CLI, which is absent on this machine;
+a REST shim (`~/bin/gh`) reproduces the two calls the script makes. The
+run refreshed every entry's `lastVerified` to 2026-10-16T20:51:52Z and
+updated remote-derived fields; three odysseus tracks flipped to
+`ci-failed` because their live "Check PR description" checks fail on
+GitHub (verified against the API, not inferred) — see Blockers.
 
 **New this session (2026-10-14T17:53Z): markitdown #1897 / PR #2700** —
 `Add --llm-client, --llm-model, and --llm-prompt options to the CLI`. The
@@ -736,6 +785,40 @@ Next Action: Watch PR #2700 for license/cla result and first human
 review; respond on the same branch if requested. If review requests the
 OpenAI-compatible `base_url` option, that is a small additive follow-up.
 
+### Track 017
+Project: brekkylab/backlot
+Issue: #775
+PR: #786
+Branch: jira-comment-orderby-java-trim
+Status: **OPEN — awaiting first human review** (opened
+2026-10-16T20:48:05Z; MERGEABLE; base `main` @ `41199cf` verified current
+at publication). Not merged.
+CI: all 8 checks green at 2026-10-16T20:52:53Z (gate/scan/lint + test
+3.11–3.15); bare `test` job is the workflow's skipped shape. Copilot bot
+COMMENTED (a bot, not a review).
+Review: None human yet. nuriyoo/khj809 are the historical reviewers here
+(4 merges in this portfolio, all reviewed). Do not ping; per policy the
+PR is the reply.
+Notes: Seventeenth track, fifth backlot contribution. Issue filed
+2026-10-16 by `nuriyoo` from their Jira Cloud measurement: a comment
+read's `orderBy` was stripped with Python's `str.strip()` (NBSP/em space
+lifted off, U+0001 kept), real trims as Java's `String.trim` (chars
+≤ U+0020 only). `_jira_order_desc` now trims with `_JAVA_TRIMMED` — the
+bytes `_jira_project_order` (merged #762) already uses — before the
+direction sigil and again after it. Five new parametrized rows; the four
+diverging ones fail with the router reverted. Full suite 7685 passed/38
+skipped on `.[dev]` Python 3.14.8; ruff lint/format + PLW1514 preview +
+prose_check (both bases) + git diff --check clean; independent read-only
+review verified the trim semantics against every discriminating class.
+Lane check at screening: #778/#776/#774 claimed by #781/#783/#785;
+#775/#763 free; #775 chosen (acceptance clarity, dev-covered test file);
+issue re-verified open/unassigned/0-comments at 20:20Z, 20:40Z and at
+publication. Commit
+`166bb7affd2ec4d54c8af1605ab026d51692975b` (2 files, +33/−4).
+Next Action: Watch PR #786 for the first
+human review; respond on the same branch if changes are requested. No
+second PR in backlot during this execution (one-contribution rule).
+
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
 Re-ran the full issue-first selection loop to fill the freed slot:
@@ -950,23 +1033,41 @@ No gate was bypassed, no maintainer was pinged, no commit was pushed.
 
 ## Blockers
 
-None from our side (see the 2026-10-14T20:26Z merge-readiness audit above).
-The seven odysseus PRs all sit behind GitHub's first-time-contributor
-`action_required` CI gate — an expected protection that must not be
-bypassed — with zero human review (5–12 days old); odysseus maintainers
-merge daily, so this is the longest-waiting fleet. **All seven non-odysseus
-tracks have landed**: backlot #577 merged 2026-10-10T13:59:45Z, libredb-studio
+None from our side for Track 017 (see the 2026-10-16 session note in the
+header). Track 017 awaits only a first human review and its running test
+matrix; no action pending on us except that wait.
+
+NEW from the 2026-10-16T20:51Z sync (run with the REST shim, statuses from
+GitHub): the odysseus fleet's statuses moved with reality —
+
+- **#6475 and #6476 (Tracks 004/005) flipped to `ci-failed`**: their
+  current checks now include `Check PR description: fail` on the current
+  heads (`ce1fbcd`, `a3cce1b`), GitHub-reported. These were green against
+  dev `c3819e3` at the 2026-10-14 audit; the odysseus repo's
+  PR-description checker now rejects them, so they need either a body
+  edit to the repo's current checklist shape (inspection required) or
+  maintainer re-trigger — both are upstream-side actions; no edit made
+  here without inspecting the checker's new rule first.
+- #6473 (Track 006) remains `ci-failed`, now on one check only: `gitleaks`
+  reports failure on its head; every other check (including
+  `Check PR description`) passes, so its failure shape changed since the
+  2026-10-14 audit.
+- PRs #6453/#6472/#6647/#6648 still `pr-opened` on GitHub's checks with
+  the first-time-contributor `action_required` CI gate — an expected
+  protection that must not be bypassed — still with zero human review
+  (oldest 14 days).
+
+Historical record (unchanged): **all seven earlier non-odysseus tracks
+have landed** — backlot #577 merged 2026-10-10T13:59:45Z, libredb-studio
 #1628 merged 2026-10-11T00:34:47Z, repowise #3338 merged
 2026-10-11T07:56:49Z, backlot #614 merged 2026-10-12T04:31:35Z after
 `nuriyoo`'s APPROVED, isomorphic-git #2456 merged 2026-10-12T07:52:12Z
-by `jcubic` without a formal review (Tracks 008-011, 013), **backlot #620
-merged 2026-10-12T10:45:03Z** after `nuriyoo`'s measurement-backed COMMENT
-of 2026-10-12T04:17Z (three items, "rather than a request for changes") all
-applied and answered the same day (head `a3138ec`, CI 7/7 green, reply
-comment `6121983174`, Track 012), and **backlot #633 merged
-2026-10-14T08:06:47Z — seventh merge** (Track 014). **markitdown #2700
-(Track 016) awaits `license/cla` and first review.** The outstanding item
-on all eight open PRs is a human decision, not work.
+by `jcubic` without a formal review (Tracks 008-011, 013), backlot #620
+merged 2026-10-12T10:45:03Z after `nuriyoo`'s measurement-backed COMMENT
+of 2026-10-12T04:17Z (three items all applied and answered the same day,
+head `a3138ec`, CI 7/7 green, reply comment `6121983174`, Track 012),
+and backlot #633 merged 2026-10-14T08:06:47Z — seventh merge (Track 014).
+Track 015 (markitdown #2699) remains the one closed-unmerged record.
 
 Two open courtesies, neither blocking:
 

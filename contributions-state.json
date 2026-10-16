@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-16T04:03:22Z",
+  "updatedAt": "2026-10-16T20:58:39Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -47,7 +47,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -98,7 +98,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -141,7 +141,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -169,7 +169,7 @@
       "status": "ci-failed",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -200,7 +200,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -225,10 +225,10 @@
       "baseBranch": "dev",
       "fork": "ShahabAhmed01/odysseus",
       "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
-      "status": "pr-opened",
+      "status": "ci-failed",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -242,13 +242,13 @@
       "notes": "Track 004. Reported authentication failure against Radicale CalDAV behind Opencloud; scope limited to _build_dav_client plus focused redirect-hardening tests. Runtime validation performed 2026-10-09 (app booted on branch, changed path exercised); ready-for-review label applied.",
       "issueUpdatedAt": "2026-10-03T13:28:55Z",
       "checks": {
-        "Check PR description": "pass",
-        "Check PR title (Conventional Commits)": "pass",
-        "Flag unmergeable PRs": "pass"
+        "Flag unmergeable PRs": "pass",
+        "Check PR description": "fail",
+        "Check PR title (Conventional Commits)": "pass"
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ]
@@ -268,10 +268,10 @@
       "baseBranch": "dev",
       "fork": "ShahabAhmed01/odysseus",
       "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
-      "status": "pr-opened",
+      "status": "ci-failed",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -285,13 +285,13 @@
       "notes": "Track 005. Overlapping PR #6506 (Katsoragi, opened 2026-10-05) targets the same issue with a broader root-cause fix (context-window mapping + trim ordering + synthetic user turn) and is currently CONFLICTING; scopes recorded so the maintainer can sequence them. Runtime validation performed 2026-10-09 (app booted on branch, changed path exercised); ready-for-review label applied.",
       "issueUpdatedAt": "2026-10-05T20:48:57Z",
       "checks": {
-        "Check PR description": "pass",
-        "Check PR title (Conventional Commits)": "pass",
-        "Flag unmergeable PRs": "pass"
+        "Flag unmergeable PRs": "pass",
+        "Check PR description": "fail",
+        "Check PR title (Conventional Commits)": "pass"
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ]
@@ -314,7 +314,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": null,
       "commits": [
         {
@@ -329,7 +329,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -357,7 +357,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -372,7 +372,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -400,7 +400,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -431,7 +431,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
@@ -467,7 +467,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -502,7 +502,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -530,7 +530,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -552,7 +552,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
@@ -584,7 +584,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -610,7 +610,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
@@ -646,7 +646,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -659,18 +659,15 @@
         }
       ],
       "checks": {
-        "CodeRabbit": "pass",
-        "bundlewatch": "pass",
-        "isomorphic-git-PR": "pass",
-        "security/snyk (jcubic)": "pass"
+        "isomorphic-git-PR": "pass"
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
-          "author": "coderabbitai",
+          "author": "coderabbitai[bot]",
           "state": "COMMENTED"
         },
         {
@@ -678,7 +675,7 @@
           "state": "COMMENTED"
         },
         {
-          "author": "coderabbitai",
+          "author": "coderabbitai[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -706,7 +703,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -725,7 +722,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
@@ -761,7 +758,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -774,7 +771,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -802,7 +799,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-10-16T04:03:22Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -815,7 +812,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -824,6 +821,55 @@
       "description": "Adds --llm-client/--llm-model/--llm-prompt CLI flags that construct a lazy LLM client and forward llm_client/llm_model/llm_prompt kwargs to MarkItDown on all three constructor paths, making the command documented in the markitdown-ocr README actually work.",
       "notes": "Research rationale: issue #1897 (OPEN, unassigned, unchanged since 2026-05-20) reports that the markitdown-ocr README documents `markitdown document.pdf --use-plugins --llm-client openai --llm-model gpt-4o` but the CLI never defined the --llm-* flags (the issue also wrongly blames --use-plugins, which has existed since PR #318). Acceptance evidence: maintainer afourney (MEMBER) wrote on 2026-09-03 in PR #175 (https://github.com/microsoft/markitdown/pull/175) that llm_client/llm_model/llm_prompt remain a genuine gap, 'the feature is still wanted', and 'a fresh PR against main would be very welcome and will get a much faster look'. Prior attempts #1898 and #1908 were self-closed by their authors after maintainer silence, never rejected. Competition check at publication: #2277 implements similar flags but is CONFLICTING with main and untouched since 2026-08-05; #2422 is a docs-only alternative that deletes the flags from the README; no open PR references #1897. Implementation: three argparse options in packages/markitdown/src/markitdown/__main__.py, lazy openai.OpenAI() construction with actionable errors for missing package/API key, pairing validation (model required with client; model/prompt rejected without client), forwarded via **llm_kwargs on the default, DocIntel, and CU constructor paths. Nine regression tests added to tests/test_cli_misc.py; all nine fail against unmodified main. Known risks: review latency (zero maintainer responses on the sibling PRs; 402 open PRs), only the openai backend offered, and design choices (choices list, pairing rules) may draw review feedback.",
       "issueUpdatedAt": "2026-05-20T13:26:35Z"
+    },
+    {
+      "repo": "brekkylab/backlot",
+      "project": "backlot",
+      "issueNumber": 775,
+      "issueTitle": "jira: a comment read trims orderBy as Python does, so a no-break space is served and %01 is refused",
+      "issueUrl": "https://github.com/brekkylab/backlot/issues/775",
+      "issueState": "OPEN",
+      "issueUpdatedAt": "2026-10-16T16:19:29Z",
+      "prNumber": 786,
+      "prUrl": "https://github.com/brekkylab/backlot/pull/786",
+      "prState": "open",
+      "prTitle": "jira: a comment read trims orderBy as Java's trim does, so a no-break space is refused and U+0001 is served",
+      "branch": "jira-comment-orderby-java-trim",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/backlot",
+      "forkUrl": "https://github.com/ShahabAhmed01/backlot",
+      "status": "pr-opened",
+      "openedAt": "2026-10-16T20:48:05Z",
+      "prCreatedAt": "2026-10-16T20:48:05Z",
+      "lastVerified": "2026-10-16T20:58:39Z",
+      "baseCommit": "41199cfbc3d3b6b2bdedc587c25f46030ca22ca8",
+      "commits": [
+        {
+          "sha": "166bb7affd2ec4d54c8af1605ab026d51692975b",
+          "subject": "jira: a comment read trims orderBy as Java's trim does, so a no-break space is refused and U+0001 is served"
+        }
+      ],
+      "checks": {
+        "test": "skipped",
+        "gate": "pass",
+        "scan": "pass",
+        "test (3.12)": "pass",
+        "test (3.11)": "pass",
+        "test (3.15)": "pass",
+        "test (3.14)": "pass",
+        "test (3.13)": "pass",
+        "lint": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer[bot]",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Trims a Jira comment read's orderBy the way Java's String.trim does (the `_JAVA_TRIMMED` the merged project/search path introduced): every character up to U+0020 off both ends, so %01created and created%01 are 200 and a no-break space or an em space takes the same 400 the bare field's refusal gives.",
+      "notes": "Research rationale (2026-10-16/17): re-verified the six previously-merged projects live for fresh non-duplicate tasks; backlot's random-independent applicability is the strongest (50 external PRs merged in the last 30 days incl. 4 of ours; nuriyoo/khj809 run real change-request cycles). Five same-day good-first-issue tasks scanned; #778/#776/#774 were already claimed by open PRs #781/#783/#785 at discovery time, #775 and #763 were free; #775 selected on acceptance clarity (an exact measured matrix in the issue, correctness fully verifiable locally). Availability re-verified by API at 20:20Z, 20:40Z and immediately before PR creation: open, unassigned, 0 comments, no open PR referencing it. Fidelity evidence is the issue reporter's Jira Cloud measurement of 2026-10-16; correctness additionally corroborated by the merged #762 project/search reading of the same trim (Java String.trim spec <=U+0020). Policy: CONTRIBUTING.md + AGENTS.md + PR template (.github/pull_request_template.md), first-come fork lane (no claim-comment protocol), one-open-PR rule satisfied at 0 open. Test/verification instructions: CONTRIBUTING.md and AGENTS.md — pytest (dev install, no network), ruff check/format, prose_check.py, all run locally; CI runs CI.yaml matrix 3.11-3.15."
     }
   ]
 }

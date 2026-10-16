@@ -82,12 +82,25 @@ def gh_json(*args: str):
 
 
 def normalize_checks(rollup) -> dict:
-    checks = {}
+    # A PR's rollup can carry several runs under one check name (re-runs).
+    # Resolve each name to its newest run: pick the highest check-run id when
+    # the shim supplies one; without ids, trust GitHub's newest-first listing
+    # and keep the first occurrence (never the last, which is the oldest run).
+    latest: dict = {}
     for item in rollup or []:
         name = item.get("name") or item.get("context") or "check"
+        try:
+            rid = int(item.get("id")) if item.get("id") is not None else None
+        except (TypeError, ValueError):
+            rid = None
         raw = item.get("conclusion") or item.get("state") or "PENDING"
-        checks[name] = CHECK_STATES.get(str(raw).upper(), str(raw).lower())
-    return checks
+        mapped = CHECK_STATES.get(str(raw).upper(), str(raw).lower())
+        if rid is None:
+            if name not in latest:
+                latest[name] = mapped
+        elif name not in latest or rid > latest[name][0]:
+            latest[name] = (rid, mapped)
+    return {name: value[1] if isinstance(value, tuple) else value for name, value in latest.items()}
 
 
 def derive_status(pr: dict, checks: dict, reviews: list) -> str:

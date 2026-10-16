@@ -118,3 +118,37 @@ Last verified: 2026-10-09
   works. Deep links `#document-<id>` open a document directly; a compose doc is
   `POST /api/document {title:"New Email", content:"To: \nSubject: \n---\n",
   language:"email"}`.
+
+## Mergeability audit addendum 2026-10-17 (Tracks 001–007, all open)
+
+- All seven open odysseus PRs re-verified by API: every fork branch tip
+  byte-matches the live PR head; every linked issue still open; no record
+  has an unanswered human review or comment.
+- **#6475 (Track 004) and #6476 (Track 005)**: the long-recorded
+  `ci-failed` was a tracker artifact — our sync resolved duplicate check
+  names to the OLDEST run while GitHub lists check-runs newest-first, and
+  the repo's own description check had re-run green on 2026-10-03
+  (post-label event) and again after the 2026-10-09 description updates.
+  The checker's current rules were re-derived from
+  `.github/scripts/check-pr-description.js` `dev` and simulated locally;
+  both bodies pass every rule (Summary ≥20, `#NNN`-linked Linked Issue,
+  checked Type-of-Change box, checked duplicate-search box, How-to-Test
+  ≥30, and the runtime attestation box for `src/` classification). A
+  factual "Re-verification (2026-10-17)" body section was appended; the
+  `edited` event re-ran the check: success 2026-10-16T21:17:36Z
+  (#6475) / 21:17:40Z (#6476), `ready for review` labels present.
+- **#6473 (Track 003)**: the one genuine failure left in the fleet is
+  gitleaks, on upstream content — the workflow scans the full merge-ref
+  history (`gitleaks git .`) and flags 4 findings inside upstream commit
+  `dab660543b5b` ("chore(publication): close pre-integration release
+  blockers", `alteixeira20`, 2026-10-05). Our PR has a single commit
+  (`35e3b298d8f8`); no branch operation on our side can remove an upstream
+  history object, and a scope-limited bugfix PR must not grow a
+  `.gitleaks.toml` allowlist change. Every our-side check passes.
+- **Tracker tooling**: `scripts/update_tracker.py` now resolves each
+  check name to its newest run (highest check-run id; the `gh` shim emits
+  ids). Without this, re-runs made a passing check read as `fail`
+  indefinitely.
+- The repo's external-contributor approval gate (`mergeable_state`
+  unstable with no failing run; PR-level workflows run via
+  `pull_request_target` regardless) still holds for first human review.

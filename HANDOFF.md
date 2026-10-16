@@ -1,14 +1,16 @@
 # Contribution Handoff
 
-Last updated: 2026-10-16T20:52Z (backlot #775 / PR #786: the closing trim
-of a Jira comment read's `orderBy` now follows Java's `String.trim`, as
-the merged `project/search` path already does. Tracker sync run via the
-REST shim also refreshed live statuses of the seven unrelated open PRs
-below — three odysseus tracks now read `ci-failed` upstream
-(#6475/#6476/#6473: "Check PR description" fails on their current heads at
-2026-10-16T20:51Z, GitHub-reported), odysseus #6453/#6472/#6647/#6648 and
-markitdown #2700 still open/unreviewed; markitdown #2700 remains
-`In review` with pending license/cla)
+Last updated: 2026-10-17 (full mergeability audit of all 17 recorded
+contributions, asked as "make sure they are fully perfect from my side and
+100% mergeable": 7 merged PRs re-verified by API with exact merge-commit
+matches; the 9 open PRs re-verified for mergeable-state, per-name newest
+check conclusions, reviews/comments, fork-branch tips, issue states and
+body-rule conformance. Two odysseus `ci-failed` records (#6475/#6476) were
+a tracker-tooling artifact — the sync resolved duplicate check names to the
+OLDEST run — fixed in update_tracker.py + shim; both tracks re-verified
+green. #6473's gitleaks failure root-caused to upstream history content,
+not our diff. markitdown #2700 license/cla still QUEUED (service-side). No
+unanswered human review or comment anywhere.)
 
 ## Portfolio Summary
 
@@ -228,10 +230,18 @@ Issue: #5049
 PR: #6473
 Branch: fix/scheduler-research-settings-guard-5049
 Status: MONITORING
-CI: PASSING (action_required gate)
+CI: gitleaks FAIL — upstream history content, not our diff (see the
+2026-10-17 audit); every other check passes (description/title/unmergeable,
+pytest, compileall, CodeQL, analyze/linters, dependency-review).
 Review: AWAITING_REVIEW
 Notes: Target code still unfixed upstream (research_* still unguarded int()).
-MERGEABLE; no rebase needed.
+MERGEABLE; no rebase needed. 2026-10-17 root cause: the repo's secret-scan
+workflow runs `gitleaks git .` over the PR merge-ref's full history and
+finds 4 leaks inside upstream commit `dab660543b5b` ("chore(publication):
+close pre-integration release blockers", author `alteixeira20`,
+2026-10-05) — not authored here (this PR is a single commit, `35e3b298`);
+removing it needs an upstream history rewrite or allowlist, a maintainer
+action out of scope for this bugfix PR.
 Next Action: Monitor PR for maintainer review; respond on same branch.
 
 ### Track 004
@@ -240,7 +250,12 @@ Issue: #6464
 PR: #6475
 Branch: fix/caldav-opencloud-token-spaces-6464
 Status: MONITORING
-CI: PASSING (action_required gate)
+CI: PASSING — description/title/unmergeable green, `ready for review`
+label reapplied by the repo's checker. The 2026-10-03 `ci-failed` record
+was a stale failure: the failing runs predate the 2026-10-09 body updates
+that already satisfied the checker, and our tracker sync resolved duplicate
+check names to the OLDEST run — both fixed 2026-10-17; the fresh re-run
+after a factual Re-verification body edit is success (2026-10-16T21:17:36Z).
 Review: AWAITING_REVIEW
 Notes: Target code still unfixed upstream (caldav still username/password
 kwargs). MERGEABLE; no rebase needed.
@@ -252,7 +267,11 @@ Issue: #6314
 PR: #6476
 Branch: fix/agent-premature-stop-6314
 Status: MONITORING
-CI: PASSING (action_required gate)
+CI: PASSING — description/title/unmergeable green, `ready for review`
+label in place. The 2026-10-03 `ci-failed` record was stale (failing runs
+predate the body updates; sync tooling resolved duplicate check names to
+the oldest run) — both fixed 2026-10-17; the fresh re-run after the
+Re-verification body edit is success (2026-10-16T21:17:40Z).
 Review: AWAITING_REVIEW
 Notes: Target code still unfixed upstream (_sanitize_tool_messages unchanged).
 Competing PR #6506 targets the same issue/function; ours kept open and a
@@ -1031,31 +1050,95 @@ contributor can legitimately do — mergeability, CI-equivalent local proof,
 review-quality diffs, no unanswered feedback, no duplicate lanes — is done.
 No gate was bypassed, no maintainer was pinged, no commit was pushed.
 
+## Mergeability audit 2026-10-17 ("fully perfect from my side", all 17)
+
+Method: every record re-verified against the live GitHub API — merged
+PRs' merge-commit SHAs vs recorded, open PRs' mergeable/mergeable_state,
+the NEWEST conclusion of every check-run name, human reviews and comments,
+fork branch tips vs PR heads, linked-issue states, competing-PR states —
+plus a local re-implementation of odysseus' `check-pr-description.js`
+rules run against the two flagged PR bodies.
+
+- **7 merged PRs re-verified; every live merge commit matches the recorded
+  SHA exactly** (backlot #577 `78c06e50d256`, #614 `19d68c40e61c`,
+  #620 `4e7bb13f662a`, #633 `0288cc807735`; libredb-studio #1628
+  `ca7755b0cff3`; repowise #3338 `41bf297d57a4`; isomorphic-git #2456
+  `c5916f4ce474`).
+- **backlot #786 (Track 017)**: mergeable_state=clean; 8 success + the
+  workflow-shape skip; no human review yet; nothing actionable on our
+  side (per policy the PR is the reply).
+- **odysseus 7 PRs (#6453/#6472/#6473/#6475/#6476/#6647/#6648)**: all fork
+  branch tips byte-match the live PR heads; all 7 linked issues still
+  open; every PR-level check green after today's fix below; competing
+  PR #6506 (on #6314) still open but mergeable=False/dirty while ours is
+  mergeable. The heavier repo workflows remain behind GitHub's
+  external-contributor approval gate (`mergeable_state=unstable` with no
+  failing run) — protection that must not be bypassed.
+- **Tracker-tooling bug found and fixed (our side)**: `normalize_checks`
+  took the LAST rollup item per check name, and GitHub lists check-runs
+  newest-first — so any name with re-runs recorded its OLDEST conclusion.
+  That manufactured the persistent `ci-failed` on #6475/#6476 (the check
+  had already re-run green on 2026-10-03 and after the 2026-10-09 body
+  updates) and inflated the "Check PR description fails" reading of the
+  2026-10-16T20:51Z sync. Fixed in `scripts/update_tracker.py`
+  (newest-run resolution by check-run id) and in the `gh` shim (emits ids);
+  unit-checked against both rollup shapes.
+- **The two fixed tracks were made durable upstream**: appended a factual
+  "Re-verification (2026-10-17)" section to each PR body (head unchanged,
+  fork tip matches, mergeable, dev tip unchanged, issue open) — the
+  `edited` event re-ran the check, **success at 2026-10-16T21:17:36Z
+  (#6475) and 21:17:40Z (#6476)**; all three `ci / PR checks` entries
+  green, `ready for review` labels in place, and the checker deleted no
+  comment because it posts none when the description is complete.
+- **#6473's remaining failure is upstream content**: its gitleaks job
+  (`secret-scan.yml`, `gitleaks git .` — full merge-ref history) fails on
+  4 findings inside upstream commit `dab660543b5b` ("chore(publication):
+  close pre-integration release blockers", `alteixeira20`, 2026-10-05).
+  This PR carries a single commit (`35e3b298d8f8`); no rebase or merge can
+  remove another branch's history object. Every our-side check on that PR
+  (description, title, unmergeable, pytest, compileall, CodeQL, analyze,
+  dependency-review) passes.
+- **markitdown #2700 (Track 016)**: `license/cla` still QUEUED since
+  2026-10-14 (service-side queue; nothing our automation can sign). If it
+  flips to failed, the account signs through the CLA web flow (human
+  action). mergeable=True; no conflicts despite the 400+-PR backlog.
+- **markitdown #2699**: closed-unmerged as decided (Track 015); record
+  intact and untouched.
+- **No record of the 17 has an unanswered human review or comment** — bot
+  PRs only, everywhere they exist.
+
 ## Blockers
 
 None from our side for Track 017 (see the 2026-10-16 session note in the
 header). Track 017 awaits only a first human review and its running test
 matrix; no action pending on us except that wait.
 
-NEW from the 2026-10-16T20:51Z sync (run with the REST shim, statuses from
-GitHub): the odysseus fleet's statuses moved with reality —
+CORRECTIONS from the 2026-10-17 audit (supersedes the "NEW from the
+2026-10-16T20:51Z sync" items below, which were shaped by the
+check-name-resolution bug described in the audit):
 
-- **#6475 and #6476 (Tracks 004/005) flipped to `ci-failed`**: their
-  current checks now include `Check PR description: fail` on the current
-  heads (`ce1fbcd`, `a3cce1b`), GitHub-reported. These were green against
-  dev `c3819e3` at the 2026-10-14 audit; the odysseus repo's
-  PR-description checker now rejects them, so they need either a body
-  edit to the repo's current checklist shape (inspection required) or
-  maintainer re-trigger — both are upstream-side actions; no edit made
-  here without inspecting the checker's new rule first.
-- #6473 (Track 006) remains `ci-failed`, now on one check only: `gitleaks`
-  reports failure on its head; every other check (including
-  `Check PR description`) passes, so its failure shape changed since the
-  2026-10-14 audit.
-- PRs #6453/#6472/#6647/#6648 still `pr-opened` on GitHub's checks with
-  the first-time-contributor `action_required` CI gate — an expected
-  protection that must not be bypassed — still with zero human review
-  (oldest 14 days).
+- #6453/#6472/#6475/#6476/#6647/#6648 are **not** `ci-failed` and have
+  no failing check — the persistent `Check PR description: fail` reading
+  on #6475/#6476 was the earliest run's stale conclusion, not the check's
+  current state. Body edits + the tooling fix (see audit) make all three
+  `ci / PR checks` entries green on fresh 2026-10-16T21:17Z runs.
+- #6473 (Track 003 — the audit also relabels it; the sync block below
+  called it "Track 006" in error) remains the only `ci-failed` record, on
+  exactly one check: `gitleaks`, and from upstream history content
+  (`dab660543b5b`), not from our diff — see the audit for the root cause.
+- The approval gate and zero-human-review facts below still hold for
+  #6453/#6472/#6647/#6648.
+
+Original 2026-10-16T20:51Z sync reading, kept for the record (since
+corrected above; run with the REST shim, statuses from GitHub):
+
+- ~~#6475 and #6476 (Tracks 004/005) flipped to `ci-failed`~~ — stale
+  runs (see audit; fixed).
+- ~~#6473 (Track 006) remains `ci-failed`, now on one check only:
+  `gitleaks`~~ — track number is 003; failure root-caused upstream.
+- PRs #6453/#6472/#6647/#6648 `pr-opened` with the first-time-contributor
+  `action_required`/external-contributor gate — an expected protection
+  that must not be bypassed — still zero human review.
 
 Historical record (unchanged): **all seven earlier non-odysseus tracks
 have landed** — backlot #577 merged 2026-10-10T13:59:45Z, libredb-studio

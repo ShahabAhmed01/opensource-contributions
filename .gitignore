@@ -3,3 +3,5 @@ evidence/
 sessions/
 decisions/
 STATE.md
+__pycache__/
+*.pyc

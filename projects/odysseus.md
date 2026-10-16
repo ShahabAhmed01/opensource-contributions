@@ -145,6 +145,16 @@ Last verified: 2026-10-09
   (`35e3b298d8f8`); no branch operation on our side can remove an upstream
   history object, and a scope-limited bugfix PR must not grow a
   `.gitleaks.toml` allowlist change. Every our-side check passes.
+  Precisely (attempt-2 job log, 2026-10-15T23:54Z): 2442 commits / 84 MB
+  scanned, 4 findings, all `generic-api-key` in upstream's own
+  `THIRD_PARTY_PROVENANCE.json` at lines 281 / 650 / 726 / 737 — file the
+  upstream publication commit introduced; `dev` has no `.gitleaksignore`
+  and `.gitleaks.toml`'s `[[allowlists]]` do not cover that file, so every
+  scan re-run fails identically. Attempt 1 of the whole `pull_request`
+  fleet (PR day, 2026-10-03) is `action_required` — the scan had never
+  run until the 2026-10-15 maintainer approval; on that approval every
+  other workflow (ci.yml, CodeQL, container scans, dependency-review,
+  workflow-security) re-ran green for this PR.
 - **Tracker tooling**: `scripts/update_tracker.py` now resolves each
   check name to its newest run (highest check-run id; the `gh` shim emits
   ids). Without this, re-runs made a passing check read as `fail`

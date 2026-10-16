@@ -242,6 +242,17 @@ close pre-integration release blockers", author `alteixeira20`,
 2026-10-05) — not authored here (this PR is a single commit, `35e3b298`);
 removing it needs an upstream history rewrite or allowlist, a maintainer
 action out of scope for this bugfix PR.
+Attempt timeline (2026-10-17): attempt 1 of every `pull_request` workflow
+on this head is `action_required` — the scan never ran at PR open
+(2026-10-03). On 2026-10-15T23:53Z the maintainer-side approval re-ran the
+whole fleet (attempt 2): ci.yml, CodeQL, container scans, dependency
+review, workflow security ALL success — only Secret scan failed, in 24 s,
+on 4 `generic-api-key` findings in upstream's own `THIRD_PARTY_PROVENANCE.json`
+(lines 281/650/726/737; none in our diff). Upstream has no `.gitleaksignore`
+on `dev` and the existing `.gitleaks.toml` `[[allowlists]]` do not cover
+that file, so any re-run fails the same way. Gate for this PR is lifted
+after the Oct 15 approval; the remaining item is that one allowlist/list
+the maintainers own.
 Next Action: Monitor PR for maintainer review; respond on same branch.
 
 ### Track 004

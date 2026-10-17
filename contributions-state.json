@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-17T20:24:00Z",
+  "updatedAt": "2026-10-17T20:35:46Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -169,7 +169,7 @@
       "status": "ci-failed",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -228,7 +228,7 @@
       "status": "ci-failed",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -271,7 +271,7 @@
       "status": "ci-failed",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -314,7 +314,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": null,
       "commits": [
         {
@@ -357,7 +357,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -400,7 +400,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -467,7 +467,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -530,7 +530,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -584,7 +584,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -646,7 +646,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -706,7 +706,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -761,7 +761,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -802,7 +802,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -844,24 +844,28 @@
       "status": "pr-opened",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
-      "baseCommit": "41199cfbc3d3b6b2bdedc587c25f46030ca22ca8",
+      "lastVerified": "2026-10-17T20:35:46Z",
+      "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
-          "sha": "166bb7affd2ec4d54c8af1605ab026d51692975b",
+          "sha": "e1a0f3a31b094047fe3d61daac63e268450ce924",
           "subject": "jira: a comment read trims orderBy as Java's trim does, so a no-break space is refused and U+0001 is served"
+        },
+        {
+          "sha": "27e8922f62f6345948c563db2dc8d75f980b3215",
+          "subject": "jira: a comment read reads orderBy as Java reads it, so a control char stays behind the sigil and one line terminator at the end goes"
         }
       ],
       "checks": {
-        "test": "skipped",
-        "test (3.11)": "pass",
         "gate": "pass",
-        "scan": "pass",
-        "test (3.12)": "pass",
-        "test (3.13)": "pass",
+        "test": "skipped",
         "test (3.14)": "pass",
         "test (3.15)": "pass",
-        "lint": "pass"
+        "test (3.11)": "pass",
+        "test (3.13)": "pass",
+        "test (3.12)": "pass",
+        "lint": "pass",
+        "scan": "pass"
       },
       "reviews": [
         {
@@ -875,7 +879,7 @@
       ],
       "mergedAt": null,
       "mergeCommit": null,
-      "description": "Trims a Jira comment read's orderBy the way Java's String.trim does (the `_JAVA_TRIMMED` the merged project/search path introduced): every character up to U+0020 off both ends, so %01created and created%01 are 200 and a no-break space or an em space takes the same 400 the bare field's refusal gives.",
+      "description": "Reads a Jira comment read's orderBy as Java reads it (nuriyoo's 65-spelling measurement, 2026-10-17): the outer String.trim, then `^([+-]?)\\s*(.*)$` whose \\s is the six ASCII spaces and whose . and $ stop at a line terminator, so %01created and created%01 are 200, a control char behind the sigil stays in the refused field, and one line terminator at the end is served.",
       "notes": "Research rationale (2026-10-16/17): re-verified the six previously-merged projects live for fresh non-duplicate tasks; backlot's random-independent applicability is the strongest (50 external PRs merged in the last 30 days incl. 4 of ours; nuriyoo/khj809 run real change-request cycles). Five same-day good-first-issue tasks scanned; #778/#776/#774 were already claimed by open PRs #781/#783/#785 at discovery time, #775 and #763 were free; #775 selected on acceptance clarity (an exact measured matrix in the issue, correctness fully verifiable locally). Availability re-verified by API at 20:20Z, 20:40Z and immediately before PR creation: open, unassigned, 0 comments, no open PR referencing it. Fidelity evidence is the issue reporter's Jira Cloud measurement of 2026-10-16; correctness additionally corroborated by the merged #762 project/search reading of the same trim (Java String.trim spec <=U+0020). Policy: CONTRIBUTING.md + AGENTS.md + PR template (.github/pull_request_template.md), first-come fork lane (no claim-comment protocol), one-open-PR rule satisfied at 0 open. Test/verification instructions: CONTRIBUTING.md and AGENTS.md — pytest (dev install, no network), ruff check/format, prose_check.py, all run locally; CI runs CI.yaml matrix 3.11-3.15."
     },
     {
@@ -897,7 +901,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-17T18:19:47Z",
       "prCreatedAt": "2026-10-17T18:19:47Z",
-      "lastVerified": "2026-10-17T20:24:00Z",
+      "lastVerified": "2026-10-17T20:35:46Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {

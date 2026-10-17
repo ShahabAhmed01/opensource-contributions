@@ -278,7 +278,7 @@ uv sync --all-extras --locked              # what CI installs (all extras)
   headings and three checkboxes followed. Awaiting `nuriyoo`/`khj809`;
   no human review yet; not merged.
 
-### #775 — comment read's `orderBy` trimmed as Python strips, not as Java does (**PR OPEN — awaiting author response to nuriyoo's review** as PR #786, 2026-10-16)
+### #775 — comment read's `orderBy` trimmed as Python strips, not as Java does (**PR OPEN — review response pushed, awaiting re-review** as PR #786, 2026-10-16)
 
 - Branch: `jira-comment-orderby-java-trim`; PR:
   https://github.com/brekkylab/backlot/pull/786 (base `main` @
@@ -305,8 +305,18 @@ uv sync --all-extras --locked              # what CI installs (all extras)
   `String.trim` (a control character there stays; only the six ASCII
   spaces go), a line terminator behaves in two ways, the refused rows
   should assert the field real named, and a Java `^([+-]?)\s*(.*)$`
-  pattern is offered for beside `_JIRA_ORDER_FIELD`. Not yet answered;
-  the PR is now `behind` (base advanced to `e9b9d72` via #782).
+  pattern is offered for beside `_JIRA_ORDER_FIELD`.
+- Rework (2026-10-17T20:16Z): all four applied in `27e8922f` with the
+  suggestions verbatim (pattern pasted beside `_JIRA_ORDER_FIELD`,
+  `_jira_order_desc` reading it with `.match`, the takes rows, the
+  12-row refuses table asserting the field real named) and the branch
+  rebased onto `e9b9d72` (`e1a0f3a3` + `27e8922f`). PR renamed to "jira:
+  a comment read reads orderBy as Java reads it, so a no-break space is
+  refused and U+0001 is served" (both of its examples still hold). Full
+  suite 7872 passed / 38 skipped; ruff, PLW1514, `prose_check
+  upstream/main` and `git diff --check` clean; all 9 check-runs green by
+  2026-10-17T20:21:55Z; `mergeable_state: clean`. Reply comment
+  `6240438402` posted 20:22:46Z. Awaiting re-review; do not ping.
 
 ### #779 — a message at `latest` is served where real leaves it out (**PR OPEN, awaiting review** as PR #806, 2026-10-17)
 

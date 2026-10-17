@@ -1,13 +1,13 @@
 # Contribution Handoff
 
-Last updated: 2026-10-17 (new contribution: backlot #779 / PR #806 — the
-`latest` window bound in `conversations.history`, a one-expression fidelity
-fix with the issue's nine measured rows as a regression test; full matrix
-green 9/9 and `mergeable_state: clean` as of 18:25Z. Full audit of the
-other 17 records unchanged from the 2026-10-17 mergeability audit. Also
-recorded: **nuriyoo left a human review on the open #786 at
-2026-10-17T10:47Z asking for four changes**, which is now the most urgent
-open item in the portfolio — see Track 017 and Blockers.)
+Last updated: 2026-10-17T20:35Z (the #786 review response is done: all
+four of nuriyoo's points applied verbatim in `27e8922f`, the branch
+rebased onto `e9b9d72`, all 9 check-runs green by 20:21:55Z,
+`mergeable_state: clean`, the PR renamed, reply comment `6240438402`
+posted 20:22:46Z — Track 017. Also this session: a full re-audit of all
+18 records against live GitHub; every our-side item verified or fixed
+(2026-10-17T19:40Z audit section). Both open backlot PRs (#786, #806)
+are now wait-only.)
 
 ## Portfolio Summary
 
@@ -15,6 +15,27 @@ Active Contributions: 0
 Monitoring Contributions: 10
 Merged Contributions: 7
 Closed/Superseded Contributions: 1
+
+**This session (2026-10-17T19:40–20:35Z): #786 review response + full
+portfolio audit.** Every one of the 18 records was re-verified against
+live GitHub (merge-commit SHAs for the 7 merged; head/fork-tip/checks/
+reviews/issues for the 10 open; #2699 intact as closed-unmerged), plus a
+live `is:pr author:ShahabAhmed01 is:open` search confirming the
+account's 10 open PRs are exactly the 10 tracked. The one our-side
+defect — nuriyoo's unanswered four-point review on #786 — was fixed:
+their three code suggestions applied verbatim in `27e8922f`, the branch
+rebased onto `e9b9d72`, the PR renamed to "jira: a comment read reads
+orderBy as Java reads it, so a no-break space is refused and U+0001 is
+served" (both examples still hold), CI 9/9 green by 20:21:55Z,
+`mergeable_state: clean`, reply comment `6240438402` posted 20:22:46Z.
+Two non-defects were root-confirmed rather than papered over: #6473's
+`gitleaks` failure is upstream history (`dab660543b5b` re-verified an
+ancestor of `dev`, so every merge-ref contains its 4 findings — not
+fixable from our side, and non-required), and #2700's `license/cla` is a
+`microsoft-github-policy-service` check-run QUEUED since
+2026-10-14T17:53Z (re-running needs base-repo write access; the
+account's CLA already reads `pass` on #2699). Both backlot PRs are now
+wait-only. Track 017; audit section below.
 
 **New this session (2026-10-17T18:19Z): backlot #779 / PR #806** —
 `slack: a message at latest is left out unless inclusive is sent, as one at
@@ -874,51 +895,55 @@ Project: brekkylab/backlot
 Issue: #775
 PR: #786
 Branch: jira-comment-orderby-java-trim
-Status: **OPEN — awaiting author response to the first human review**
-(opened 2026-10-16T20:48:05Z; MERGEABLE; `mergeable_state: behind` — base
-`main` advanced from `41199cf` to `e9b9d72` (#782, 2026-10-17T11:56Z); no
-conflict). Not merged.
-CI: all 8 checks green at 2026-10-16T20:52:53Z (gate/scan/lint + test
-3.11–3.15); bare `test` job is the workflow's skipped shape. Copilot bot
-COMMENTED (a bot, not a review).
+Status: **OPEN — review response pushed, awaiting nuriyoo's re-review**
+(opened 2026-10-16T20:48:05Z; rebased onto `main` @ `e9b9d72` and
+reworked 2026-10-17T20:16Z; head `27e8922f62f6`, 2 commits; MERGEABLE;
+`mergeable_state: clean`). Not merged.
+CI: all 9 check-runs green on the reworked head by 2026-10-17T20:21:55Z
+(gate/lint/scan + test 3.11–3.15); bare `test` job is the workflow's
+skipped shape. Copilot bot COMMENTED (a bot, not a review).
 Review: **`nuriyoo` COMMENTED 2026-10-17T10:47:21Z — four change requests
-with code suggestions** (3 inline comments), none applied yet, no reply
-posted. Measured that day against Jira Cloud (65 spellings): (1) the strip
-after the direction sigil is *not* a second `String.trim` — `-%01created`
-is a 400 naming `\x01created` where the inner `_JAVA_TRIMMED` strip serves
-200, while `%20`/`%09`/`%0A`/`%0B`/`%0C`/`%0D` after the sigil do go;
-(2) a line terminator behaves in two ways — one at the end goes
-(`created%C2%85` is 200, this branch refuses), one anywhere else makes
-real name the value whole, sigil and all; (3) the refused rows should
-assert the field real named (12 measured rows offered, incl. `--created`
-→ `-created`, `%2B-created` → `-created`, empty → empty); (4) all 65
-answers fit Java's `^([+-]?)\s*(.*)$` under `find`, with a ready pattern
-to paste beside `_JIRA_ORDER_FIELD`. Do not ping; the PR is the reply.
+with code suggestions** (3 inline comments), from a fresh 65-spelling
+Jira Cloud measurement: (1) the strip after the direction sigil is *not*
+a second `String.trim` — `-%01created` is a 400 naming `\x01created`
+where the inner `_JAVA_TRIMMED` strip served 200, while
+`%20`/`%09`/`%0A`/`%0B`/`%0C`/`%0D` after the sigil do go; (2) a line
+terminator behaves in two ways — one at the end goes (`created%C2%85` is
+200), one anywhere else makes real name the value whole, sigil and all;
+(3) the refused rows should assert the field real named (12 measured
+rows offered); (4) all 65 answers fit Java's `^([+-]?)\s*(.*)$` under
+`find`, with a ready pattern to paste beside `_JIRA_ORDER_FIELD`.
+**All four applied in `27e8922f` (suggestions verbatim); reply comment
+`6240438402` posted 2026-10-17T20:22:46Z; the PR was renamed to "jira: a
+comment read reads orderBy as Java reads it, so a no-break space is
+refused and U+0001 is served" (both of its examples still hold under the
+new reading).**
 Notes: Seventeenth track, fifth backlot contribution. Issue filed
 2026-10-16 by `nuriyoo` from their Jira Cloud measurement: a comment
 read's `orderBy` was stripped with Python's `str.strip()` (NBSP/em space
 lifted off, U+0001 kept), real trims as Java's `String.trim` (chars
-≤ U+0020 only). `_jira_order_desc` now trims with `_JAVA_TRIMMED` — the
-bytes `_jira_project_order` (merged #762) already uses — before the
-direction sigil and again after it. Five new parametrized rows; the four
-diverging ones fail with the router reverted. Full suite 7685 passed/38
-skipped on `.[dev]` Python 3.14.8; ruff lint/format + PLW1514 preview +
-prose_check (both bases) + git diff --check clean; independent read-only
-review verified the trim semantics against every discriminating class.
-Lane check at screening: #778/#776/#774 claimed by #781/#783/#785;
-#775/#763 free; #775 chosen (acceptance clarity, dev-covered test file);
-issue re-verified open/unassigned/0-comments at 20:20Z, 20:40Z and at
-publication. Commit
-`166bb7affd2ec4d54c8af1605ab026d51692975b` (2 files, +33/−4).
-Next Action: Reply on the same branch (rebase onto `e9b9d72` while there):
-rework `_jira_order_desc` to read Java's `^([+-]?)\s*(.*)$` — sigil, then
-the six ASCII spaces only, `.`/`$` stopping at a line terminator, inner
-strip is not `String.trim` — move the suggested pattern beside
-`_JIRA_ORDER_FIELD`, add the reviewed rows (takes: `%01-created`,
-`-%0Bcreated`, `-%0D%0Acreated`, `created%C2%85`; refuses-with-named-field:
-the 12 offered), assert the named field on refusals, and re-run the full
-gate set before pushing. No second PR in backlot during this execution
-(one-contribution rule).
+≤ U+0020 only). The first cut (commit `166bb7a`, rebased to `e1a0f3a`)
+applied `_JAVA_TRIMMED` twice — outer trim, sigil, inner trim, matching
+`project/search` (#762)'s order — and the review disproved the inner
+trim: the comment read *reads* the value with `_JIRA_ORDER` (the
+reviewer's pattern, pasted below `_JIRA_ORDER_FIELD`, matched with
+`.match` so `^` holds only at the start). Final tables: 7 `takes` rows,
+12 `refuses` rows each asserting the field real's 400 named. Full suite
+on the rebased branch **7872 passed/38 skipped** on `.[dev]` Python
+3.14.8 under `PYTHONWARNDEFAULTENCODING=1`; collect-only delta vs the
+base is +16 = exactly the 7 takes + 9 refuses rows (the base itself
+gained +176 tests in the #782 rebase, which is why the absolute count
+moved); ruff lint/format + PLW1514 preview + prose_check
+(`upstream/main`) + `git diff --check` clean. Lane check at screening:
+#778/#776/#774 claimed by #781/#783/#785; #775/#763 free; #775 chosen
+(acceptance clarity, dev-covered test file); issue re-verified
+open/unassigned/0-comments at publication. Commits
+`e1a0f3a31b094047fe3d61daac63e268450ce924` +
+`27e8922f62f6345948c563db2dc8d75f980b3215` (2 files, +49/−9 vs base).
+Next Action: Await `nuriyoo`'s re-review or merge; respond on the same
+branch if anything further is asked. No ping. No second new PR in
+backlot during this execution (one-contribution rule; two open now, the
+after-first-merge limit is three).
 
 ### Track 018
 Project: brekkylab/backlot
@@ -957,8 +982,9 @@ no assignees, empty `closedByPullRequestsReferences`; plus no open PR
 naming it). Commit `8b042783e3b872d97ff212a9735a7071401bc6df`
 (2 files, +83/−2).
 Next Action: Watch PR #806 for the first human review; respond on the
-same branch if changes are requested. The higher-priority open action
-portfolio-wide remains #786 (Track 017), which has a waiting human review.
+same branch if changes are requested. (#786's waiting review was
+answered the same day — see Track 017 — so both backlot PRs are now
+wait-only.)
 
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
@@ -1174,6 +1200,9 @@ No gate was bypassed, no maintainer was pinged, no commit was pushed.
 
 ## Mergeability audit 2026-10-17 ("fully perfect from my side", all 17)
 
+(Superseded by the 2026-10-17T19:40Z audit above — all 18 records,
+post-#786-rework; kept for the record.)
+
 Method: every record re-verified against the live GitHub API — merged
 PRs' merge-commit SHAs vs recorded, open PRs' mergeable/mergeable_state,
 the NEWEST conclusion of every check-run name, human reviews and comments,
@@ -1235,17 +1264,68 @@ rules run against the two flagged PR bodies.
   #786 landed at 10:47:21Z and is unanswered as of 18:30Z; that is now
   the top open item (Track 017; Blockers).
 
+## Portfolio audit 2026-10-17T19:40–20:35Z (all 18 records, "perfect and 100% mergeable from my side")
+
+Method: every record in `contributions-state.json` re-verified against
+the live REST API in one scripted pass — merged PRs' merge-commit SHAs
+vs recorded; open PRs' state/draft/mergeable/mergeable_state, head vs
+recorded commits, fork branch tip vs PR head; the newest conclusion of
+every check-run name (check-runs merged with commit statuses, resolved
+by run id so re-runs resolve newest); all reviews; linked-issue states —
+plus a live `is:pr author:ShahabAhmed01 is:open` search for coverage.
+
+- **Coverage:** the search returns exactly 10 open PRs, and all 10 are
+  tracked — nothing of ours lives outside the ledger.
+- **7 merged PRs: every live merge commit matches the record byte-for-
+  byte** (backlot #577/#614/#620/#633, libredb-studio #1628, repowise
+  #3338, isomorphic-git #2456).
+- **#2699**: closed-unmerged as decided (Track 015); record intact.
+- **odysseus 7 PRs**: all OPEN, MERGEABLE, heads byte-match the recorded
+  commits and the fork tips, all 7 linked issues still open, every
+  repo-declared check green — `Check PR description`, `Check PR title
+  (Conventional Commits)` and `Flag unmergeable PRs` are success on all
+  seven (the repo's own checker run live, better than any local
+  re-implementation). `mergeable_state: unstable` on all seven is the
+  external-contributor approval gate; protection that must not be
+  bypassed.
+- **#6473's `gitleaks` is the one red check portfolio-wide, and it is
+  upstream content — re-confirmed live this session:** `dab660543b5b` is
+  an ancestor of `dev` (compare: status `ahead`, 71 commits ahead / 0
+  behind), and `secret-scan.yml` checks out the merge ref with
+  `fetch-depth: 0`, so every PR's scan sees that commit's 4 findings in
+  `THIRD_PARTY_PROVENANCE.json`. No rebase or push of ours can remove
+  base-branch history. It is non-required (unstable, not blocked) and
+  every our-side check on that PR passes.
+- **markitdown #2700's `license/cla` is a
+  `microsoft-github-policy-service` check-run QUEUED since
+  2026-10-14T17:53:29Z** (verified via the check-run's app slug — not a
+  workflow of the repo, nothing of ours to run). Re-running it needs
+  base-repo write access a contributor does not have; the account-level
+  CLA already reads `pass` on #2699 (2026-10-14). If it flips to failed,
+  the human signs through the CLA flow. `mergeable=True`, no conflicts
+  despite the backlog.
+- **backlot #806**: `clean`, 9/9 green; nothing owed.
+- **backlot #786**: the audit's one our-side defect (nuriyoo's
+  four-point review, unanswered) — fixed this session; see Track 017.
+- **No record has an unanswered human review or comment as of 20:35Z**
+  (#786's reply is posted; nothing human waits on us anywhere).
+
 ## Blockers
 
-Two open backlot PRs, both awaiting humans; one awaits us:
+Nothing is owed on our side anywhere in the portfolio (re-verified
+2026-10-17T20:35Z). Both open backlot PRs are wait-only:
 
-- **#786 (Track 017) — response owed (highest priority).** nuriyoo's
-  four-point review of 2026-10-17T10:47:21Z is unanswered; rework scoped
-  in Track 017's Review/Next Action; the PR is `behind` (base advanced by
-  #782) — rebase onto `e9b9d72` with the rework.
+- **#786 (Track 017) — wait only.** nuriyoo's four-point review was
+  applied verbatim (`27e8922f`), the branch rebased onto `e9b9d72`, CI
+  9/9 green, reply `6240438402` posted 20:22:46Z; awaiting re-review.
+  Do not ping.
 - **#806 (Track 018) — wait only.** Full 9/9 check-runs green (bare `test`
   = workflow-shape skip), `mergeable_state: clean`; no human review yet.
-  No action pending on us except the wait; do not ping.
+  Do not ping.
+- Outside backlot the only non-green items are service-side and not ours:
+  #6473's `gitleaks` (upstream history content, non-required) and
+  #2700's queued `license/cla` (microsoft-github-policy-service) — both
+  root-confirmed in the 2026-10-17T19:40Z audit above.
 
 The odysseus `ci-failed` corrections from the 2026-10-17 audit below
 still stand unchanged.

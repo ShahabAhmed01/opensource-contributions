@@ -1,23 +1,77 @@
 # Contribution Handoff
 
-Last updated: 2026-10-17 (full mergeability audit of all 17 recorded
-contributions, asked as "make sure they are fully perfect from my side and
-100% mergeable": 7 merged PRs re-verified by API with exact merge-commit
-matches; the 9 open PRs re-verified for mergeable-state, per-name newest
-check conclusions, reviews/comments, fork-branch tips, issue states and
-body-rule conformance. Two odysseus `ci-failed` records (#6475/#6476) were
-a tracker-tooling artifact — the sync resolved duplicate check names to the
-OLDEST run — fixed in update_tracker.py + shim; both tracks re-verified
-green. #6473's gitleaks failure root-caused to upstream history content,
-not our diff. markitdown #2700 license/cla still QUEUED (service-side). No
-unanswered human review or comment anywhere.)
+Last updated: 2026-10-17 (new contribution: backlot #779 / PR #806 — the
+`latest` window bound in `conversations.history`, a one-expression fidelity
+fix with the issue's nine measured rows as a regression test; full matrix
+green 9/9 and `mergeable_state: clean` as of 18:25Z. Full audit of the
+other 17 records unchanged from the 2026-10-17 mergeability audit. Also
+recorded: **nuriyoo left a human review on the open #786 at
+2026-10-17T10:47Z asking for four changes**, which is now the most urgent
+open item in the portfolio — see Track 017 and Blockers.)
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 9
+Monitoring Contributions: 10
 Merged Contributions: 7
 Closed/Superseded Contributions: 1
+
+**New this session (2026-10-17T18:19Z): backlot #779 / PR #806** —
+`slack: a message at latest is left out unless inclusive is sent, as one at
+oldest is`. `conversations_history` served a message whose ts equals
+`latest`, where real Slack leaves it out and puts it back only with
+`inclusive`; `_in_window` now reads `latest` the way it already read
+`oldest` (`ts_us > hi_us if inclusive else ts_us >= hi_us`), and the
+disproven "latest is inclusive" comment is replaced by the issue's own
+slack.com/api measurement (2026-10-16, nine rows). One parametrized test
+encodes all nine rows over HTTP; with the router at its base revision the
+`latest=T` row fails and the other eight pass on both revisions. Full suite
+7865 passed/38 skipped on `.[dev]` Python 3.14.8 under
+`PYTHONWARNDEFAULTENCODING=1`; ruff lint/format, the PLW1514 preview rule,
+`prose_check upstream/main` and `git diff --check` clean; independent
+read-only review found no defect (its two prose nits were applied before
+the commit). PR opened MERGEABLE at 2026-10-17T18:19:47Z (template
+followed: three headings + three checkboxes, `Closes #779.`); gate/lint/
+scan green at 18:20Z and the full 3.11–3.15 matrix green by 18:25Z (9/9
+check-runs completed, the bare `test` job is the workflow's skipped
+shape); `mergeable_state` moved from `blocked` to `clean` once the matrix
+finished. Copilot bot COMMENTED; no human review yet. Availability gates
+held: AGENTS.md's two fork-lane checks (no assignees, empty
+`closedByPullRequestsReferences`) plus no open PR naming #779, re-run
+immediately before publishing; open-PR count 1 of 3 → 2 of 3 after this
+one. Track 018.
+
+**Also verified this session: a human review is waiting on #786** —
+`nuriyoo` reviewed PR #786 (Track 017) at 2026-10-17T10:47:21Z and asked
+for four changes, with code suggestions attached: after the direction
+sigil the strip is *not* a second `String.trim` (a control character
+there stays, and the refused field is named differently), a line
+terminator behaves in two ways, and the refused rows should assert the
+field real named — all from a fresh 65-spelling Jira Cloud measurement on
+2026-10-17, with a suggested pattern to paste beside `_JIRA_ORDER_FIELD`.
+#786 now reads `mergeable_state: behind` (base `main` advanced from
+`41199cf` to `e9b9d72` via the #782 merge at 11:56Z) and is otherwise
+untouched (no reply posted, no commits added). This is the highest-value
+open action in the portfolio.
+
+**Discovery notes for this session** — issue-first (10 search queries →
+284 unique open tickets across 121 repos) plus repo-first (863-repo pool
+from 8 repository searches; external-merge probe over 614 repos; the
+probe itself was cut short by secondary rate limits and only partially
+usable, so the shortlist was verified by direct API calls instead). Six
+portfolio projects re-verified live; new candidates inspected but not
+chosen: repowise (4 external merges in the sampled 50, a 51-ticket
+unassigned queue, impersonal lane), libredb-studio (19 external merges;
+its free `good first issue` tickets are locale-sync docs and a nixpkgs
+packaging task), isomorphic-git (12 external merges; only three stale
+2017–2020 tickets), markitdown (repo stale since 2026-10-04), odysseus
+(15 external merges against 100+ open PRs, zero human review on six of
+ours). The issue-first pool also surfaced a large number of newly created
+low-star repos whose "good first issue" batches have no external-merge
+history; none was pursued. No hidden exclusions were touched
+(`lingdojo/kana-dojo` excluded on instruction; the homelab-monitor
+locale-sync competitor is out of scope; open-source-starter-lab remains
+only a lead).
 
 **New this session (2026-10-16T20:52Z): backlot #775 / PR #786** —
 `jira: a comment read trims orderBy as Java's trim does, so a no-break
@@ -820,15 +874,26 @@ Project: brekkylab/backlot
 Issue: #775
 PR: #786
 Branch: jira-comment-orderby-java-trim
-Status: **OPEN — awaiting first human review** (opened
-2026-10-16T20:48:05Z; MERGEABLE; base `main` @ `41199cf` verified current
-at publication). Not merged.
+Status: **OPEN — awaiting author response to the first human review**
+(opened 2026-10-16T20:48:05Z; MERGEABLE; `mergeable_state: behind` — base
+`main` advanced from `41199cf` to `e9b9d72` (#782, 2026-10-17T11:56Z); no
+conflict). Not merged.
 CI: all 8 checks green at 2026-10-16T20:52:53Z (gate/scan/lint + test
 3.11–3.15); bare `test` job is the workflow's skipped shape. Copilot bot
 COMMENTED (a bot, not a review).
-Review: None human yet. nuriyoo/khj809 are the historical reviewers here
-(4 merges in this portfolio, all reviewed). Do not ping; per policy the
-PR is the reply.
+Review: **`nuriyoo` COMMENTED 2026-10-17T10:47:21Z — four change requests
+with code suggestions** (3 inline comments), none applied yet, no reply
+posted. Measured that day against Jira Cloud (65 spellings): (1) the strip
+after the direction sigil is *not* a second `String.trim` — `-%01created`
+is a 400 naming `\x01created` where the inner `_JAVA_TRIMMED` strip serves
+200, while `%20`/`%09`/`%0A`/`%0B`/`%0C`/`%0D` after the sigil do go;
+(2) a line terminator behaves in two ways — one at the end goes
+(`created%C2%85` is 200, this branch refuses), one anywhere else makes
+real name the value whole, sigil and all; (3) the refused rows should
+assert the field real named (12 measured rows offered, incl. `--created`
+→ `-created`, `%2B-created` → `-created`, empty → empty); (4) all 65
+answers fit Java's `^([+-]?)\s*(.*)$` under `find`, with a ready pattern
+to paste beside `_JIRA_ORDER_FIELD`. Do not ping; the PR is the reply.
 Notes: Seventeenth track, fifth backlot contribution. Issue filed
 2026-10-16 by `nuriyoo` from their Jira Cloud measurement: a comment
 read's `orderBy` was stripped with Python's `str.strip()` (NBSP/em space
@@ -845,9 +910,55 @@ Lane check at screening: #778/#776/#774 claimed by #781/#783/#785;
 issue re-verified open/unassigned/0-comments at 20:20Z, 20:40Z and at
 publication. Commit
 `166bb7affd2ec4d54c8af1605ab026d51692975b` (2 files, +33/−4).
-Next Action: Watch PR #786 for the first
-human review; respond on the same branch if changes are requested. No
-second PR in backlot during this execution (one-contribution rule).
+Next Action: Reply on the same branch (rebase onto `e9b9d72` while there):
+rework `_jira_order_desc` to read Java's `^([+-]?)\s*(.*)$` — sigil, then
+the six ASCII spaces only, `.`/`$` stopping at a line terminator, inner
+strip is not `String.trim` — move the suggested pattern beside
+`_JIRA_ORDER_FIELD`, add the reviewed rows (takes: `%01-created`,
+`-%0Bcreated`, `-%0D%0Acreated`, `created%C2%85`; refuses-with-named-field:
+the 12 offered), assert the named field on refusals, and re-run the full
+gate set before pushing. No second PR in backlot during this execution
+(one-contribution rule).
+
+### Track 018
+Project: brekkylab/backlot
+Issue: #779
+PR: #806
+Branch: slack-history-latest-exclusive
+Status: **OPEN — awaiting first human review** (opened
+2026-10-17T18:19:47Z; MERGEABLE; `mergeable_state: clean` once the matrix
+finished at ~18:25Z; base `main` @ `e9b9d72` verified current at
+publication and still the tip). Not merged.
+CI: all 9 check-runs completed by 2026-10-17T18:24:59Z — gate/lint/scan
+success and test (3.11)–(3.15) all success; bare `test` is the workflow's
+skipped shape. Copilot bot COMMENTED (a bot review, not a human one).
+Review: None human yet. nuriyoo/khj809 are the historical reviewers here
+(4 merges in this portfolio, all reviewed). Do not ping; the PR is the
+reply.
+Notes: Eighteenth track, sixth backlot contribution. Issue filed
+2026-10-16 by `nuriyoo` while reviewing the merged #767: the `oldest`
+bound was exclusive unless `inclusive`, the `latest` bound kept equality.
+`_in_window` now reads `ts_us > hi_us if inclusive else ts_us >= hi_us`,
+so a message at `latest` is left out, the same ts on both bounds alone
+only with `inclusive`, and a bound a microsecond either side behaves as
+real does. One parametrized test encodes the issue's nine slack.com/api
+rows (2026-10-16) over HTTP on the `paged_slack` corpus; with the router
+at its base revision the `latest=T` row fails and the other eight pass on
+both revisions. Full suite 7865 passed/38 skipped on `.[dev]` Python
+3.14.8 under `PYTHONWARNDEFAULTENCODING=1`; ruff lint/format + PLW1514
+preview + prose_check (upstream/main) + `git diff --check` clean;
+independent read-only review verified all nine rows mechanically and
+found no defect (two prose nits applied). Lane check at screening
+(2026-10-17): #796/#794/#778/#776/#774 already claimed by open PRs,
+#792/#763/#749/#779 free; #779 chosen (measured acceptance contract,
+dev-covered test file, handler already known from #577/#620). Availability
+re-verified to the minute before publishing (AGENTS.md's two commands:
+no assignees, empty `closedByPullRequestsReferences`; plus no open PR
+naming it). Commit `8b042783e3b872d97ff212a9735a7071401bc6df`
+(2 files, +83/−2).
+Next Action: Watch PR #806 for the first human review; respond on the
+same branch if changes are requested. The higher-priority open action
+portfolio-wide remains #786 (Track 017), which has a waiting human review.
 
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
@@ -1075,9 +1186,12 @@ rules run against the two flagged PR bodies.
   #620 `4e7bb13f662a`, #633 `0288cc807735`; libredb-studio #1628
   `ca7755b0cff3`; repowise #3338 `41bf297d57a4`; isomorphic-git #2456
   `c5916f4ce474`).
-- **backlot #786 (Track 017)**: mergeable_state=clean; 8 success + the
-  workflow-shape skip; no human review yet; nothing actionable on our
-  side (per policy the PR is the reply).
+- **backlot #786 (Track 017)**: mergeable_state=clean at audit time; 8
+  success + the workflow-shape skip. **Superseded later that day**: at
+  10:47:21Z nuriyoo's human review landed (COMMENTED, four change
+  requests — see Track 017), so the "no human review yet" reading and the
+  `clean` state no longer hold: the PR is now `behind` (base advanced via
+  #782) and awaits our rework.
 - **odysseus 7 PRs (#6453/#6472/#6473/#6475/#6476/#6647/#6648)**: all fork
   branch tips byte-match the live PR heads; all 7 linked issues still
   open; every PR-level check green after today's fix below; competing
@@ -1116,13 +1230,25 @@ rules run against the two flagged PR bodies.
 - **markitdown #2699**: closed-unmerged as decided (Track 015); record
   intact and untouched.
 - **No record of the 17 has an unanswered human review or comment** — bot
-  PRs only, everywhere they exist.
+  PRs only, everywhere they exist. **Update (post-audit, 2026-10-17)**:
+  this held when the audit ran and no longer does — nuriyoo's review on
+  #786 landed at 10:47:21Z and is unanswered as of 18:30Z; that is now
+  the top open item (Track 017; Blockers).
 
 ## Blockers
 
-None from our side for Track 017 (see the 2026-10-16 session note in the
-header). Track 017 awaits only a first human review and its running test
-matrix; no action pending on us except that wait.
+Two open backlot PRs, both awaiting humans; one awaits us:
+
+- **#786 (Track 017) — response owed (highest priority).** nuriyoo's
+  four-point review of 2026-10-17T10:47:21Z is unanswered; rework scoped
+  in Track 017's Review/Next Action; the PR is `behind` (base advanced by
+  #782) — rebase onto `e9b9d72` with the rework.
+- **#806 (Track 018) — wait only.** Full 9/9 check-runs green (bare `test`
+  = workflow-shape skip), `mergeable_state: clean`; no human review yet.
+  No action pending on us except the wait; do not ping.
+
+The odysseus `ci-failed` corrections from the 2026-10-17 audit below
+still stand unchanged.
 
 CORRECTIONS from the 2026-10-17 audit (supersedes the "NEW from the
 2026-10-16T20:51Z sync" items below, which were shaped by the

@@ -1,6 +1,6 @@
 # Project notes — brekkylab/backlot
 
-Last verified: 2026-10-11
+Last verified: 2026-10-17
 ## Facts
 
 - Serves 11 real SaaS APIs — Slack, Gmail, Google Drive, GitHub, Jira,
@@ -8,8 +8,10 @@ Last verified: 2026-10-11
   possible gap from the real thing, so clients built against the real
   APIs work unchanged. The corpus is supplied by the user (a bundled
   `hello.jsonl` covers every source).
-- Python 3.11+ / FastAPI / SQLite. MIT license. ~424 stars. Created
-  2026-07-02; very active (commits merged to `main` daily).
+- Python 3.11+ / FastAPI / SQLite. MIT license. 288 stars / 58 forks
+  (live 2026-10-17; the earlier "~424" reading could not be reproduced
+  and is superseded). Created 2026-07-02; very active (commits merged to
+  `main` daily; `main` head `e9b9d72` on 2026-10-17T11:56Z).
 - Default and only development branch: `main`. PRs target `main`.
 - Python-style: line length 100, ruff with isort (`I`), `E402` ignored.
 - House vocabulary: **source** = one of the APIs Backlot serves
@@ -114,6 +116,40 @@ uv sync --all-extras --locked              # what CI installs (all extras)
   prose_check (which caught a re-dated measurement and shaped final
   comment wording). Counts: 7685 passed / 38 skipped on Python 3.14.8.
 
+## Fidelity evidence refreshed 2026-10-17 (research addendum, Track 018)
+
+- **External merge cadence (live re-verification, 2026-10-17):** of the
+  150 most recently closed PRs, 140 are merged and **138 of those are
+  outside-contributor merges since 2026-09-16** (authors with
+  `author_association` in CONTRIBUTOR/NONE/FIRST_TIME_CONTRIBUTOR), from
+  **41 distinct external authors** — by far the deepest external-merge
+  pipeline among the portfolio's six projects. Median merge latency for
+  that sample is **34.7h** (min 0.2h, max 78.4h); ours are 4 of the 138
+  (all merged 2026-10-10 → 10-14).
+- **Human review, live again:** `nuriyoo` ran COMMENTED → APPROVED cycles
+  on #767 (comments 2026-10-16T14:28Z, approval 2026-10-17T09:47Z), #769
+  (14:42Z → 09:53Z), #773 (14:57Z → 09:59Z) and #782 (09:58Z → 11:56Z);
+  first substantive response lands within hours of the PR opening.
+  `khj809` merges too. Nothing here is a bot merge.
+- **Queue depth:** 43 open `good first issue` tickets and 91 open
+  `help wanted` on 2026-10-17; 17 open PRs. The same-day claim pressure
+  of 2026-10-16 continued: on the 2026-10-17 batch, #796/#794 were
+  claimed by #801/#804 within hours of filing, and three contributors
+  (CRYPTONIKAV, WynandVStaden, jnohclee-rgb) hold several tickets each.
+  Two open PRs (#787, #802) even duplicate one issue's fix — the
+  maintainers let the earlier one win and close the other, so a free
+  ticket is worth re-checking to the minute before publishing.
+- **Free tickets at screening (2026-10-17):** #792 (confluence
+  `restriction/byOperation` expand), #763 (github unserved-operation
+  401), #749 (fidelity baseline notes), #779 (slack `latest` boundary).
+  #779 won: the issue carries a nine-row measured table as its acceptance
+  contract, the test file is dev-covered with no extra needed, and the
+  handler was already known from two merged PRs here (#577, #620) plus
+  the `#767` rewrite that left the boundary behind.
+- **Verification still no-network:** pytest on the `.[dev]` install + ruff
+  (+ the PLW1514 preview rule) + prose_check. Counts: **7865 passed / 38
+  skipped** on Python 3.14.8 the branch's base `e9b9d72`.
+
 ## Pitfalls learned
 
 - The issues are minted in batches and a fast-moving pool of
@@ -126,6 +162,19 @@ uv sync --all-extras --locked              # what CI installs (all extras)
   500 today; filed as out of scope in PR #577's description).
 - Comments and docstrings are load-bearing prose here: state what was
   measured and when, never the fix history, never `#NNN`.
+- Two allocations of the same comparison in one file can carry one bug
+  and only one be reported: #767 rewrote this helper's `oldest`/`latest`
+  reading to microsecond integers and the inclusive-`latest` half rode
+  through that rewrite untouched. When fixing a boundary, diff the
+  neighbouring branch of the same comparison.
+- A `good first issue` here can be duplicated by two open PRs before a
+  reviewer closes the later one (#787 vs #802, 2026-10-17). That makes
+  "no open PR references it" a check to re-run to the minute, not once at
+  screening.
+- `pytest`'s `addopts` already carries `-q`; adding another on the command
+  line stacks to `-qq` and eats the summary line, so the counts vanish
+  from the log while the run is still green. Use plain `pytest -rs` when
+  the numbers matter.
 
 ## Contribution history
 
@@ -229,7 +278,7 @@ uv sync --all-extras --locked              # what CI installs (all extras)
   headings and three checkboxes followed. Awaiting `nuriyoo`/`khj809`;
   no human review yet; not merged.
 
-### #775 — comment read's `orderBy` trimmed as Python strips, not as Java does (**PR OPEN, awaiting review** as PR #786, 2026-10-16)
+### #775 — comment read's `orderBy` trimmed as Python strips, not as Java does (**PR OPEN — awaiting author response to nuriyoo's review** as PR #786, 2026-10-16)
 
 - Branch: `jira-comment-orderby-java-trim`; PR:
   https://github.com/brekkylab/backlot/pull/786 (base `main` @
@@ -250,4 +299,42 @@ uv sync --all-extras --locked              # what CI installs (all extras)
   --check` clean; independent read-only review passed.
 - CI: all 8 checks green at 2026-10-16T20:52:53Z (gate/scan/lint +
   test 3.11–3.15; bare `test` skipped as the workflow's shape). Copilot
-  bot COMMENTED; no human review yet; not merged.
+  bot COMMENTED; not merged.
+- Review (2026-10-17T10:47:21Z): `nuriyoo` COMMENTED with four change
+  requests — the strip after the direction sigil is *not* a second
+  `String.trim` (a control character there stays; only the six ASCII
+  spaces go), a line terminator behaves in two ways, the refused rows
+  should assert the field real named, and a Java `^([+-]?)\s*(.*)$`
+  pattern is offered for beside `_JIRA_ORDER_FIELD`. Not yet answered;
+  the PR is now `behind` (base advanced to `e9b9d72` via #782).
+
+### #779 — a message at `latest` is served where real leaves it out (**PR OPEN, awaiting review** as PR #806, 2026-10-17)
+
+- Branch: `slack-history-latest-exclusive`; PR:
+  https://github.com/brekkylab/backlot/pull/806 (base `main` @
+  `e9b9d7238`), closes https://github.com/brekkylab/backlot/issues/779.
+- Filed by `nuriyoo` on 2026-10-16 ("Found while reviewing #767") with a
+  nine-row measurement against slack.com/api the same day.
+- Fix: one expression in `_in_window` — `ts_us > hi_us` →
+  `ts_us > hi_us if inclusive else ts_us >= hi_us` — so `latest` excludes
+  a message at the bound unless `inclusive` is sent, as `oldest` already
+  did; the disproven "latest is inclusive" comment is replaced by the
+  measurement. No parameter, schema or SQL-narrowing change.
+- One parametrized test over the issue's nine rows, driving the endpoint
+  over HTTP on the `paged_slack` corpus; with the router at its base
+  revision the `latest=T` row fails and the other eight pass on both
+  revisions; 9/9 pass with the fix.
+- Validation: full suite **7865 passed / 38 skipped** on `.[dev]`
+  (Python 3.14.8) under `PYTHONWARNDEFAULTENCODING=1`; ruff lint/format
+  and the PLW1514 preview rule clean; `prose_check upstream/main` clean;
+  `git diff --check` clean; independent read-only review found no defect
+  (its two prose nits were applied before the commit).
+- Availability: AGENTS.md's two fork-lane checks run live — #779 no
+  assignees, no `closedByPullRequestsReferences`, no open PR naming it —
+  and my open-PR count was 1 of 3 at publication.
+- CI: all 9 check-runs green by 2026-10-17T18:24:59Z (gate/lint/scan +
+  test 3.11–3.15; bare `test` skipped as the workflow's shape);
+  `mergeable_state` moved `blocked` → `clean` once the matrix finished.
+  Copilot bot COMMENTED; no human review yet; not merged. Second open
+  backlot PR (#786 is the other), which the after-first-merge limit of
+  three allows.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-17T15:20:04Z",
+  "updatedAt": "2026-10-17T19:03:33Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -169,7 +169,7 @@
       "status": "ci-failed",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -225,10 +225,10 @@
       "baseBranch": "dev",
       "fork": "ShahabAhmed01/odysseus",
       "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
-      "status": "ci-failed",
+      "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -242,9 +242,9 @@
       "notes": "Track 004. Reported authentication failure against Radicale CalDAV behind Opencloud; scope limited to _build_dav_client plus focused redirect-hardening tests. Runtime validation performed 2026-10-09 (app booted on branch, changed path exercised); ready-for-review label applied.",
       "issueUpdatedAt": "2026-10-03T13:28:55Z",
       "checks": {
-        "Check PR description": "fail",
+        "Flag unmergeable PRs": "pass",
         "Check PR title (Conventional Commits)": "pass",
-        "Flag unmergeable PRs": "pass"
+        "Check PR description": "pass"
       },
       "reviews": [
         {
@@ -268,10 +268,10 @@
       "baseBranch": "dev",
       "fork": "ShahabAhmed01/odysseus",
       "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
-      "status": "ci-failed",
+      "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -285,9 +285,9 @@
       "notes": "Track 005. Overlapping PR #6506 (Katsoragi, opened 2026-10-05) targets the same issue with a broader root-cause fix (context-window mapping + trim ordering + synthetic user turn) and is currently CONFLICTING; scopes recorded so the maintainer can sequence them. Runtime validation performed 2026-10-09 (app booted on branch, changed path exercised); ready-for-review label applied.",
       "issueUpdatedAt": "2026-10-05T20:48:57Z",
       "checks": {
-        "Check PR description": "fail",
-        "Check PR title (Conventional Commits)": "pass",
-        "Flag unmergeable PRs": "pass"
+        "Flag unmergeable PRs": "pass",
+        "Check PR description": "pass",
+        "Check PR title (Conventional Commits)": "pass"
       },
       "reviews": [
         {
@@ -314,7 +314,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": null,
       "commits": [
         {
@@ -357,7 +357,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -400,7 +400,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -467,7 +467,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -530,7 +530,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -584,7 +584,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -646,7 +646,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -659,10 +659,10 @@
         }
       ],
       "checks": {
-        "CodeRabbit": "pass",
-        "bundlewatch": "pass",
         "isomorphic-git-PR": "pass",
-        "security/snyk (jcubic)": "pass"
+        "security/snyk (jcubic)": "pass",
+        "bundlewatch": "pass",
+        "CodeRabbit": "pass"
       },
       "reviews": [
         {
@@ -706,7 +706,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -761,7 +761,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -802,7 +802,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -844,7 +844,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-10-17T15:20:04Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
       "baseCommit": "41199cfbc3d3b6b2bdedc587c25f46030ca22ca8",
       "commits": [
         {
@@ -853,6 +853,7 @@
         }
       ],
       "checks": {
+        "ring": "skipped",
         "test": "skipped",
         "gate": "pass",
         "scan": "pass",
@@ -877,6 +878,55 @@
       "mergeCommit": null,
       "description": "Trims a Jira comment read's orderBy the way Java's String.trim does (the `_JAVA_TRIMMED` the merged project/search path introduced): every character up to U+0020 off both ends, so %01created and created%01 are 200 and a no-break space or an em space takes the same 400 the bare field's refusal gives.",
       "notes": "Research rationale (2026-10-16/17): re-verified the six previously-merged projects live for fresh non-duplicate tasks; backlot's random-independent applicability is the strongest (50 external PRs merged in the last 30 days incl. 4 of ours; nuriyoo/khj809 run real change-request cycles). Five same-day good-first-issue tasks scanned; #778/#776/#774 were already claimed by open PRs #781/#783/#785 at discovery time, #775 and #763 were free; #775 selected on acceptance clarity (an exact measured matrix in the issue, correctness fully verifiable locally). Availability re-verified by API at 20:20Z, 20:40Z and immediately before PR creation: open, unassigned, 0 comments, no open PR referencing it. Fidelity evidence is the issue reporter's Jira Cloud measurement of 2026-10-16; correctness additionally corroborated by the merged #762 project/search reading of the same trim (Java String.trim spec <=U+0020). Policy: CONTRIBUTING.md + AGENTS.md + PR template (.github/pull_request_template.md), first-come fork lane (no claim-comment protocol), one-open-PR rule satisfied at 0 open. Test/verification instructions: CONTRIBUTING.md and AGENTS.md — pytest (dev install, no network), ruff check/format, prose_check.py, all run locally; CI runs CI.yaml matrix 3.11-3.15."
+    },
+    {
+      "repo": "brekkylab/backlot",
+      "project": "backlot",
+      "issueNumber": 779,
+      "issueTitle": "slack: conversations.history serves a message at latest without inclusive, where real leaves it out",
+      "issueUrl": "https://github.com/brekkylab/backlot/issues/779",
+      "issueState": "OPEN",
+      "issueUpdatedAt": "2026-10-17T10:01:27Z",
+      "prNumber": 806,
+      "prUrl": "https://github.com/brekkylab/backlot/pull/806",
+      "prState": "open",
+      "prTitle": "slack: a message at latest is left out unless inclusive is sent, as one at oldest is",
+      "branch": "slack-history-latest-exclusive",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/backlot",
+      "forkUrl": "https://github.com/ShahabAhmed01/backlot",
+      "status": "pr-opened",
+      "openedAt": "2026-10-17T18:19:47Z",
+      "prCreatedAt": "2026-10-17T18:19:47Z",
+      "lastVerified": "2026-10-17T19:03:33Z",
+      "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
+      "commits": [
+        {
+          "sha": "8b042783e3b872d97ff212a9735a7071401bc6df",
+          "subject": "slack: a message at latest is left out unless inclusive is sent, as one at oldest is"
+        }
+      ],
+      "checks": {
+        "gate": "pass",
+        "test": "skipped",
+        "test (3.12)": "pass",
+        "test (3.14)": "pass",
+        "test (3.11)": "pass",
+        "test (3.15)": "pass",
+        "test (3.13)": "pass",
+        "lint": "pass",
+        "scan": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Leaves out a message whose ts equals latest unless inclusive is sent, as one at oldest already was: _in_window now reads both bounds the same way, so latest=<a message's ts> alone is an empty page and inclusive=true puts that message back, alone when it is the bound on both sides.",
+      "notes": "Research rationale (2026-10-17): discovery ran issue-first (10 GitHub search queries, 284 unique open good-first-issue/help-wanted/bug issues across 121 repos) and repo-first (863-repo pool from 8 repository searches, external-merge probe on 614). Selection: backlot, re-verified live the same day — 138 outside-contributor PRs merged since 2026-09-17 from 41 distinct authors (4 of them ours), median merge latency 34.7h, 43 open good-first-issue tickets, 17 open PRs, human review cycles by nuriyoo (COMMENTED then APPROVED on #767/#769/#773, same day to next day) and khj809. Task #779 chosen over the other free same-day tickets (#792 confluence restriction/byOperation expand, #763 github unserved-operation 401, #749 fidelity baseline notes) and over the alternative projects (repowise 4 external merges in the sampled window with a 51-ticket unassigned queue and a broad impersonal lane; libredb-studio 19 external merges but its unassigned good-first-issue tickets are locale-sync docs PRs and a nixpkgs packaging task; isomorphic-git 12 external merges but only three stale 2017-2020 good-first-issue tickets; markitdown repo stale since 2026-10-04 with #2699 closed unmerged; odysseus 15 external merges against 100+ open PRs and zero human review across six of our own PRs since 2026-10-02). Acceptance criteria: the issue's own 9-row measurement against slack.com/api (2026-10-16, one public channel of 8 messages, one cache-busted request per row). Availability re-verified by API immediately before publishing: #779 OPEN, 0 assignees, 0 comments, closedByPullRequestsReferences empty, no open PR mentioning it — the two AGENTS.md fork-lane commands were run. Policy: CONTRIBUTING.md + AGENTS.md + .github/pull_request_template.md; backlot allows up to three open PRs after a merge of ours, 1 open at selection (#786) so 2 of 3 after this one. Verification instructions: CONTRIBUTING.md/AGENTS.md — pytest (dev install, no network), ruff check/format, PLW1514 preview, prose_check.py; CI runs the 3.11-3.15 matrix."
     }
   ]
 }

@@ -81,26 +81,46 @@ def gh_json(*args: str):
     return json.loads(text) if text else None
 
 
+def _check_newness(item: dict, position: int) -> tuple:
+    """Sort key choosing a check name's newest run, whichever shape the rollup is.
+
+    The scheduled sync reads real `gh pr view --json statusCheckRollup` (GraphQL:
+    no check-run ids, oldest-first listing) while a local sync reads the shim's
+    REST reconstruction (newest-first, with ids). Resolving duplicates by id
+    alone mis-reads the CI shape: its first occurrence is the OLDEST run, so a
+    check name with re-runs recorded its first, failing run (odysseus #6475 and
+    #6476, ledger 2026-10-17T20:24Z). Timestamps decide instead — `completedAt`,
+    then `startedAt`, then `createdAt`, so a re-run still in flight supersedes
+    the run it replaced. The id breaks ties only when it parses as an integer
+    (gh's node ids do not), and the earliest listing position is the last
+    resort: the documented default for shapes with no metadata at all.
+    """
+    stamp = (
+        item.get("completedAt")
+        or item.get("startedAt")
+        or item.get("createdAt")
+        or ""
+    )
+    try:
+        rid = int(item.get("id")) if item.get("id") is not None else -1
+    except (TypeError, ValueError):
+        rid = -1
+    return (stamp, rid, -position)
+
+
 def normalize_checks(rollup) -> dict:
     # A PR's rollup can carry several runs under one check name (re-runs).
-    # Resolve each name to its newest run: pick the highest check-run id when
-    # the shim supplies one; without ids, trust GitHub's newest-first listing
-    # and keep the first occurrence (never the last, which is the oldest run).
+    # Resolve each name to its newest run via _check_newness; an entry loses
+    # only to a strictly newer one, so metadata-less entries keep first place.
     latest: dict = {}
-    for item in rollup or []:
+    for position, item in enumerate(rollup or []):
         name = item.get("name") or item.get("context") or "check"
-        try:
-            rid = int(item.get("id")) if item.get("id") is not None else None
-        except (TypeError, ValueError):
-            rid = None
+        key = _check_newness(item, position)
         raw = item.get("conclusion") or item.get("state") or "PENDING"
         mapped = CHECK_STATES.get(str(raw).upper(), str(raw).lower())
-        if rid is None:
-            if name not in latest:
-                latest[name] = mapped
-        elif name not in latest or rid > latest[name][0]:
-            latest[name] = (rid, mapped)
-    return {name: value[1] if isinstance(value, tuple) else value for name, value in latest.items()}
+        if name not in latest or key > latest[name][0]:
+            latest[name] = (key, mapped)
+    return {name: value[1] for name, value in latest.items()}
 
 
 def derive_status(pr: dict, checks: dict, reviews: list) -> str:

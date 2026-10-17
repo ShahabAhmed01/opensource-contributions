@@ -1309,6 +1309,24 @@ plus a live `is:pr author:ShahabAhmed01 is:open` search for coverage.
   four-point review, unanswered) — fixed this session; see Track 017.
 - **No record has an unanswered human review or comment as of 20:35Z**
   (#786's reply is posted; nothing human waits on us anywhere).
+- **Post-audit correction (20:24–21:18Z): the 6-hourly CI sync mis-read
+  #6475/#6476, and the resolver is now fixed.** CI's 20:24Z run (real
+  `gh`, GraphQL rollup shape: no check-run ids, oldest-first listing)
+  resolved duplicate check names by first listing position and flipped
+  both odysseus PRs to `ci-failed` on `Check PR description` runs that
+  **failed on 2026-10-03** — ground truth (newest run resolved by REST
+  id, completed 2026-10-16T21:17Z) is `success`, exactly what every
+  shim-side sync read. `normalize_checks` now decides a name's newest
+  run by timestamp (`completedAt`, then `startedAt`, then `createdAt`,
+  so an in-flight re-run supersedes the run it replaced), with the
+  integer id as tie-break only and first position only for shapes with
+  no metadata at all. Validated against the real #6475 run sequence in
+  three rollup shapes plus active-re-run/status-only/shapeless/
+  same-second/node-id-string cases; the shim emits the same timestamp
+  keys, and the 21:18Z re-sync restored both records to
+  `pr-opened`/`pass`. Same flip-flop family as the check-name/id bug
+  fixed earlier on 2026-10-17 — now closed for both rollup shapes the
+  ledger is ever synced through.
 
 ## Blockers
 

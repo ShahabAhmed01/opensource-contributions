@@ -1167,6 +1167,81 @@ same branch if changes are requested. Do not open another starlette PR
 while #3682 is open. Before any future starlette work, re-run the
 corpus + discussion duplicate sweep (AI policy: duplicates ban).
 
+### Track 021
+Project: Kludex/uvicorn
+Issue: — (anchor: discussion #3108, not an issue)
+PR: #3215
+Branch: fix/shutdown-h11-error-state
+Status: **OPEN — 26/27 checks green (docs-preview skipped, fork PR), one BOT
+approval, awaiting first human review** (opened 2026-10-19T17:24:52Z;
+mergeable, `mergeable_state: clean` at 2026-10-19T20:38:44Z; base `main` @
+`cc6fea5b40ad559f7ca358a24b1a521451232281` verified current at publication;
+head `c8eb28cdaaf78c74cdf987736bbdb262aa4aa4d2`, 3 commits, on the
+`ShahabAhmed01/uvicorn` fork; 3 files, +94/−2). Not merged.
+CI: check, zizmor (x2), Run benchmarks, CodSpeed Performance Analysis, cubic
+AI reviewer, and Python 3.11–3.15 + free-threaded 3.14t/3.15t across
+ubuntu/macos/windows all success — 26 of 27 check-runs; `docs-preview`
+skipped because that job only runs for same-repo heads (docs built locally:
+`uv run zensical build --clean` → "No issues found"). Commit status
+`CodeRabbit` success at 17:51:48Z (CodeRabbit reports as a *status*, so
+`mergeable_state` reads `unstable` while it runs and `clean` after).
+codspeed bot comment: "Merging this PR will not alter performance". 27/27
+check-runs completed on `c8eb28c`, none failing.
+Review: No human yet. `Kludex` is the historical reviewer/merger of external
+PRs here (#3184, #3195, #3092, #3209). Copilot was quota-limited and posted
+no content; cubic found nothing in the fix commit, then raised two P3s on the
+new docs sentence (close stated for in-flight responses too; "closing
+handshake" implying a peer exchange `h11.ConnectionClosed()` never performs)
+— both valid, both fixed in `c8eb28c`, answered in-thread (replies
+`4316934181`, `4316934555`), after which cubic dropped the first finding;
+`coderabbitai[bot]` commented a walk-through then `APPROVED` at 17:51:44Z —
+**a bot approval, not a maintainer's**, so the ledger status "ready-to-merge"
+means automated approval + green CI, never maintainer sign-off. Do not ping;
+the PR is the reply.
+Notes: Twenty-first track, first uvicorn contribution. No issue was filed —
+the anchor is discussion #3108 (2026-08-29T13:25:39Z, `kazuki-ma`, category
+*Potential Issue*) reporting that `H11Protocol.shutdown()` sends
+`h11.ConnectionClosed()` with no `our_state` guard while `connection_lost()`
+guards it twice, so one connection in h11 `ERROR` raises `LocalProtocolError`
+out of `Server.shutdown()`'s loop and strands every later connection;
+`amasen02` confirmed it 2026-09-05 and proposed the patch; no PR ever
+referenced it. The discussion doubles as the PR template's required prior
+discussion. AI_POLICY.md honored: open+closed PRs, issues and **discussions**
+searched before writing code (duplicates ban); hard-gated repos rejected
+(hono, zod, vitest, pydantic, pytest, eslint, express, fastify, claude-mem),
+Pallets/yt-dlp/textual/fastapi rejected on AI policy, trending proved
+star-farmed; other candidates dropped (#3183 author drafting own patch,
+#3093 unreproducible, #3098 needs a PySocks dep, and claimed items
+#3164/#3052/#3109/#3153/#3071/#3165/#3175/#3188/#3213). Repro on `main` @
+`cc6fea5`: short body under `content-length: 10` → `our_state = ERROR` with
+the transport still open → `Server.shutdown()` raised `Can't send data when
+our state is ERROR`. Fix: guard the handshake with
+`if self.conn.our_state != h11.ERROR:` and still `transport.close()`; the
+commenter's `try/except` layers were deliberately **not** taken (unreachable
+after the guard, and uvicorn's line coverage gate of `fail_under = 100` over
+`uvicorn` **and** `tests` fails on dead lines), and a server-wide
+`try/except` around the shutdown loop would swallow unexpected errors.
+Verification: two regression tests fail without the fix (2 failed/6 passed)
+and pass with it (8 passed); **1378 passed / 13 skipped**; `./scripts/coverage`
+**100.00%** (8774 statements, 0 missed); `./scripts/check` clean (ruff
+format, mypy, ruff check); `zensical build --clean` clean. PR follows the
+template (three boxes ticked truthfully — the docs box because
+`docs/server-behavior.md` gained the shutdown sentence), links discussion
+#3108, records the duplicate search, discloses AI assistance. Workspace:
+isolated `~/opensource-work/uvicorn` clone; fork created this session via
+`POST /repos/Kludex/uvicorn/forks`; pushed via askpass so no token entered
+argv; the `uv.lock` churn this machine's uv version causes was reverted
+before every commit; tracker and other workspaces untouched until
+publication. Live verification at 2026-10-19T20:38:44Z: open, not draft,
+mergeable clean, 3 commits, 2 issue comments (codspeed, coderabbit), 4 review
+comments (2 cubic + 2 mine), 6 reviews (copilot, cubic x2, mine x2, coderabbit
+APPROVED), 0 human comments.
+Next Action: Watch PR #3215 for the first human review; respond on the same
+branch if changes are requested. Do not open another uvicorn PR while #3215
+is open. Before any future uvicorn work, re-run the corpus + discussion
+duplicate sweep (AI policy: duplicates ban) — and re-read `AI_POLICY.md`,
+which changes acceptance behaviour more often than the issue queue does.
+
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
 Re-ran the full issue-first selection loop to fill the freed slot:

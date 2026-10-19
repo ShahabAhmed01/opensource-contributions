@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-19T12:45:16Z",
+  "updatedAt": "2026-10-19T13:59:46Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -166,10 +166,10 @@
       "baseBranch": "dev",
       "fork": "ShahabAhmed01/odysseus",
       "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
-      "status": "ci-failed",
+      "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -178,25 +178,28 @@
         }
       ],
       "checks": {
-        "gitleaks": "fail",
-        "Focused test guidance (report-only)": "pass",
-        "Analyze (actions)": "pass",
-        "Trivy (image scan, advisory)": "pass",
-        "hadolint (Dockerfile lint)": "pass",
-        "dependency-review (PR gate)": "pass",
-        "actionlint": "pass",
-        "Check PR description": "pass",
+        "CodeQL": "pass",
         "Analyze (javascript-typescript)": "pass",
         "Analyze (python)": "pass",
+        "Analyze (actions)": "pass",
+        "gitleaks": "pass",
         "Trivy (image scan + SARIF upload)": "skipped",
-        "Python syntax (compileall)": "pass",
-        "pip-audit (advisory)": "pass",
         "zizmor (Actions SAST)": "pass",
-        "Check PR title (Conventional Commits)": "pass",
+        "actionlint": "pass",
+        "Trivy (image scan, advisory)": "pass",
+        "pip-audit (advisory)": "pass",
+        "dependency-review (PR gate)": "pass",
+        "Python tests (pytest 2/4)": "pass",
+        "Python tests (pytest 3/4)": "pass",
+        "Python tests (pytest 4/4)": "pass",
         "JS syntax (node --check)": "pass",
+        "Python syntax (compileall)": "pass",
+        "Focused test guidance (report-only)": "pass",
+        "Python tests (pytest 1/4)": "pass",
+        "hadolint (Dockerfile lint)": "pass",
         "Flag unmergeable PRs": "pass",
-        "Python tests (pytest)": "pass",
-        "CodeQL": "pass"
+        "Check PR title (Conventional Commits)": "pass",
+        "Check PR description": "pass"
       },
       "reviews": [
         {
@@ -228,7 +231,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -271,7 +274,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -314,7 +317,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": null,
       "commits": [
         {
@@ -357,7 +360,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -400,7 +403,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -467,7 +470,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -530,7 +533,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -584,7 +587,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -646,7 +649,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -706,7 +709,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -761,7 +764,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -802,7 +805,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -844,7 +847,7 @@
       "status": "merged",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -857,14 +860,15 @@
         }
       ],
       "checks": {
+        "ring": "skipped",
         "test": "skipped",
-        "test (3.11)": "pass",
         "scan": "pass",
-        "test (3.12)": "pass",
-        "test (3.13)": "pass",
-        "test (3.14)": "pass",
         "test (3.15)": "pass",
-        "lint": "pass"
+        "test (3.11)": "pass",
+        "lint": "pass",
+        "test (3.14)": "pass",
+        "test (3.12)": "pass",
+        "test (3.13)": "pass"
       },
       "reviews": [
         {
@@ -916,7 +920,7 @@
       "status": "merged",
       "openedAt": "2026-10-17T18:19:47Z",
       "prCreatedAt": "2026-10-17T18:19:47Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -973,7 +977,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-19T12:01:53Z",
       "prCreatedAt": "2026-10-19T12:01:53Z",
-      "lastVerified": "2026-10-19T12:45:16Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
       "baseCommit": "ff92bdd01c423b833a96c0ece823265c47d0e6be",
       "commits": [
         {
@@ -982,6 +986,7 @@
         }
       ],
       "checks": {
+        "ring": "skipped",
         "test": "skipped",
         "test (3.15)": "pass",
         "test (3.11)": "pass",
@@ -996,12 +1001,79 @@
         {
           "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
+        },
+        {
+          "author": "nuriyoo",
+          "state": "CHANGES_REQUESTED"
         }
       ],
       "mergedAt": null,
       "mergeCommit": null,
       "description": "Keeps a quoted from/to/cc/bcc value's quotes so _gmail_address_match reads its words alone: from:\"no-reply\" answers none where the same value unquoted answers the joined messages, as real reads it.",
       "notes": "Research rationale (2026-10-19): discovery ran both directions again — issue-first (GitHub search: 30 new good-first-issue issues created after 2026-09-15 with discussion, Python good-first-issue and help-wanted-bug batches, plus the portfolio's own six projects' fresh issues) and repo-first (live re-verification of the five alternative candidates by read-only agent). Screened 30+ repositories, deep-dived backlot plus five alternatives (repowise, odysseus, kestra-io/plugin-mongodb, springfall2008/batpred, microsoft/markitdown). Backlot re-won on evidence: of the 30 most recently closed PRs, all 30 merged (2026-10-17..19), every one human-authored outside work except nuriyoo's own, same-day merges including ours (#786 merged 2026-10-18, #806 merged 2026-10-19T06:34Z — the portfolio's 7th merge, made during this session's research), nuriyoo running real review cycles hours apart, 78 open issues, 13 open PRs. Alternatives rejected with cause: repowise 193 open PRs and issues #4176/#4146 claimed by same-day open PRs (#4191/#4193); odysseus 343 open PRs and our own #6648 untouched 10 days; kestra plugin-mongodb assign-first policy with 8 of 10 recent merges by one regular contributor, issues #162 claimed twice over; batpred 86 open PRs with merges concentrated in trusted regulars; markitdown 420 open PRs, no merge since 2026-10-04, our #2700 still queued. Task #831 chosen from the free gmail lane (filed 2026-10-19T06:02Z by nuriyoo, found while reviewing merged #805) over #828 (same lane, also free) for the narrowest single-root-cause scope, and over #834 (three divergences in one issue — too broad) and #843/#835 (claimed within the hour by skritosss's PR #848 / dhvani7014's PR #836 on adjacent issues; #835's charset family was taken by #836 before selection). Availability re-verified by API to the minute before PR creation: #831 OPEN, 0 assignees, 0 comments, locked=false, timeline cross-references only merged #805, 0 open PRs naming it, main still ff92bdd, 0 open PRs of ours (policy allows 3 post-merge). Policy: CONTRIBUTING.md items 1-7 + AGENTS.md + .github/pull_request_template.md; one logical change, regression test required, pytest+ruff green locally before opening, PR title carries the issue's gmail: prefix, Closes #831 in the body, template's three headings and three checkboxes. Verification: uv venv + uv pip install -e '.[all]' (zero-skip install per template), pytest -rs, PYTHONWARNDEFAULTENCODING=1 pytest, ruff check/format, --preview --select PLW1514, prose_check.py (exit 1 = 4 findings byte-identical to clean main). No live gmail.googleapis.com call from this environment (no Google token); the acceptance measurement is the issue's own 603-message Workspace matrix (2026-10-19), transcribed into the docstring beside the rule, and the reproduction runs locally over backlot.serve()."
+    },
+    {
+      "repo": "Kludex/starlette",
+      "project": "starlette",
+      "issueNumber": null,
+      "issueTitle": null,
+      "issueUrl": null,
+      "issueState": null,
+      "issueUpdatedAt": null,
+      "prNumber": 3682,
+      "prUrl": "https://github.com/Kludex/starlette/pull/3682",
+      "prState": "open",
+      "prTitle": "Include all matching routes in the `Allow` header of `405` responses",
+      "branch": "fix/405-allow-multiple-routes",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/starlette",
+      "forkUrl": "https://github.com/ShahabAhmed01/starlette",
+      "status": "pr-opened",
+      "openedAt": "2026-10-19T13:17:51Z",
+      "prCreatedAt": "2026-10-19T13:17:51Z",
+      "lastVerified": "2026-10-19T13:59:46Z",
+      "baseCommit": "dc20b216f065af3a487722141da9a29dcac388d1",
+      "commits": [
+        {
+          "sha": "f53602fbb848b57c8ccdb52173c04ac5841cb295",
+          "subject": "Include all matching routes in the `Allow` header of `405` responses"
+        },
+        {
+          "sha": "9fb409771097e7eed3fb1cebddad9694b34808b2",
+          "subject": "Keep custom route 405 handling when methods cannot be inferred"
+        }
+      ],
+      "checks": {
+        "CodSpeed Performance Analysis": "pass",
+        "check": "pass",
+        "zizmor": "pass",
+        "cubic · AI code reviewer": "pass",
+        "Docs preview (Cloudflare)": "skipped",
+        "Run benchmarks": "pass",
+        "Python 3.12": "pass",
+        "Python 3.14": "pass",
+        "Python 3.15": "pass",
+        "Python 3.13": "pass",
+        "Python 3.11": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        },
+        {
+          "author": "cubic-dev-ai",
+          "state": "COMMENTED"
+        },
+        {
+          "author": "ShahabAhmed01",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Collects every route that partially matches the path so a 405 response's Allow header lists the methods of all of them (RFC 9110 section 10.2.1) in a deterministic sorted order, instead of only the first route's; a custom route that exposes no methods keeps its own handle() dispatch.",
+      "notes": "Selection (2026-10-19): discovery ranked trending and popular repositories under the 70% merge-readiness / 30% visibility weighting and screened each for an external-acceptance record, a responsive maintainer and an available task in JS/TS/Python CLI, dev-tooling, testing or backend work. Hard-gated or unusable: hono, zod, vitest and pydantic (assignment or auto-close gates, collaborator-only lanes), pytest (openly rejects purely agentic drive-by PRs), eslint (OpenJS CLA click-through), express and fastify (bug swarms race every issue within hours), claude-mem (too volatile). Excluded by instruction: lingdojo/kana-dojo, SikamikanikoBG/homelab-monitor (no locale-dup work) and P-r-e-m-i-u-m/open-source-starter-lab (lead only). Kludex/starlette won on measured acceptance: AI_POLICY.md explicitly permits AI contributions (with a hard rule to search open and closed PRs, issues and discussions first - duplicates get the contributor banned), no first-timer gate, and the owner merged external PRs #3542, #3585, #3622, #3631 and #3654 between September and mid-October 2026 while shipping his own #3675/#3679 on 13-18 October; 12674 stars, BSD-3-Clause, Python >=3.11, verifiable locally. Risk acknowledged: Kludex was in defensive cull mode (batch PR closes on 4/6/9/11/13/17/18 October, #3577 answered 'Do you need this? Are you a human that needs this?', PR template requires prior discussion), so the chosen bug had to be spec-level and already discussed. Candidate bugs killed as duplicates (all closed unmerged): mixed byte-range 416 vs RFC 9110 (PR #3604, closed 10-04), GZipMiddleware Accept-Encoding q=0/wildcard/case (PR #3495, 'open a discussion'), HTTPSRedirectMiddleware IPv6 brackets (PR #3638, closed 10-17), the include_query_params swarm (#3661/#3636/#3571/#3554/#3553) and the authority-// swarm (issue #3579, fixed by owner PR #3671). Selected bug: Router.app kept only the first Match.PARTIAL route, so with several routes on one path a 405 advertised just the first route's methods - reproduced on main dc20b21 in three shapes (bare Router, Starlette app, two distinct patterns resolving to one path), all answered 'HEAD, GET' with POST absent, violating RFC 9110 section 10.2.1. Duplicate elimination per AI_POLICY.md: the 3007-item open+closed issues/PR corpus grepped for 405, Allow, method not allowed, partial match, sibling, 'first route', 'GET, PUT, DELETE' and 2738 (0 proposing PRs); all 33 open PRs re-listed and their bodies scanned (only adjacency: #3665's two-line == to is in the same match loop, and owner PR #3339's trie rewrite, whose patch was fetched and shown to keep first-partial dispatch - closed #3426/#3466 likewise); discussions paginated in full (622 total) - discussion #2738 (2024-10-25) reports exactly this bug and Kludex answered 'Seems valid.' two minutes later, never fixed, never PR'd - so it doubles as the prior discussion the PR template demands. Implementation: collect all PARTIAL routes, and when more than one matches build the union of their methods only if every match exposes a non-empty methods (custom BaseRoute classes that advertise differently keep their own handle()), sorted for a deterministic header; Route.handle now joins sorted(self.methods) (previously a set, order varied per process); docs/routing.md gains a paragraph; docs/release-notes.md untouched (the 'Releasing' section of docs/contributing.md makes it maintainer-owned, and merged precedent #3585/#3640 did not touch it either). Verification: uv run coverage run -m pytest -q = 1400 passed, 2 skipped, 2 xfailed; scripts/coverage = 100% branch (fail-under=100); scripts/check (ruff format, mypy --strict, ruff check) clean; zensical build --clean 'No issues found'; repro script moved from 'HEAD, GET' to 'GET, HEAD, POST' on all three shapes. PR template followed (three headings, three checkboxes ticked truthfully, discussion #2738 linked, AI assistance disclosed). CI on head 9fb4097: 11/11 check-runs completed - check, zizmor x2, Python 3.11-3.15, Run benchmarks, cubic AI reviewer all success, Docs preview skipped; codspeed bot comment 'Merging this PR will not alter performance'. Reviews: copilot quota-limited (no content), cubic P2 (custom BaseRoute methods bypassed) reproduced as valid and fixed in 9fb4097 with threaded reply 4314473754; no human review yet, no pings. Workspace: isolated clone ~/opensource-work/starlette (branch cut from upstream main dc20b21, pushed to the ShahabAhmed01/starlette fork via askpass so no token appeared in argv); tracker, backlot and other workspaces untouched until publication. Track 020, first starlette contribution."
     }
   ]
 }

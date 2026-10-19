@@ -1,6 +1,10 @@
 # Contribution Handoff
 
-Last updated: 2026-10-17T20:35Z (the #786 review response is done: all
+Last updated: 2026-10-19T13:44Z (Track 020: starlette PR #3682 open with
+11/11 checks green and `mergeable_state: clean`, awaiting first human
+review — this same day also recorded Track 019, backlot #831/PR #851,
+opened 12:01Z. Track 017 note of 2026-10-17T20:35Z: the #786 review
+response is done: all
 four of nuriyoo's points applied verbatim in `27e8922f`, the branch
 rebased onto `e9b9d72`, all 9 check-runs green by 20:21:55Z,
 `mergeable_state: clean`, the PR renamed, reply comment `6240438402`
@@ -12,9 +16,34 @@ are now wait-only.)
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 9
+Monitoring Contributions: 10
 Merged Contributions: 9
 Closed/Superseded Contributions: 1
+
+**New this session (2026-10-19T13:17Z): starlette #3682** —
+`Include all matching routes in the Allow header of 405 responses`.
+`Router.app` kept only the first `Match.PARTIAL` route, so with two or
+more routes on one path a 405 advertised just that first route's methods
+— reproduced three ways on `dc20b21` (bare `Router`, `Starlette` app,
+`/items` + `/{name}`), always `HEAD, GET` with `POST` absent, violating
+RFC 9110 §10.2.1 (anchor: discussion #2738, which @Kludex answered
+"Seems valid." in 2024 and which no PR had touched in two years). The
+router now collects every partial match and renders the union of their
+methods, sorted for a deterministic header (`Route.handle` joins a
+sorted set now too), and only when every match exposes a non-empty
+`methods` — a custom `BaseRoute` keeps its own `handle()`, the guard
+cubic's P2 asked for, fixed in `9fb4097` with a threaded reply. Three
+new tests + one tightened assertion: **1400 passed / 2 skipped /
+2 xfailed, 100% branch coverage**, ruff + mypy strict clean, zensical
+build clean; `docs/routing.md` documents the behaviour, release-notes
+untouched (maintainer-owned). CI 11/11 green on `9fb4097` (check,
+zizmor x2, Python 3.11–3.15, benchmarks, cubic; docs preview skipped),
+codspeed bot: "will not alter performance", `mergeable_state: clean`
+at 13:44Z. Copilot quota-limited (no content); no human review yet, no
+pings. Duplicate sweeps before opening: 3007-item corpus, all 33 open
+PR bodies, all 622 discussions — discussion #2738 doubles as the PR
+template's required prior discussion; AI assistance disclosed in the
+body.
 
 **New this session (2026-10-19T12:01Z): backlot #831 / PR #851** —
 `gmail: a quoted address value with a - in it finds its words alone, as
@@ -1071,6 +1100,72 @@ Next Action: Watch PR #851 for the first human review; respond on the
 same branch if changes are requested. Do not open another backlot PR
 while #851 is open unless a genuinely distinct task justifies it (the
 post-first-merge limit is three; this is one of one active).
+
+### Track 020
+Project: Kludex/starlette
+Issue: — (anchor: discussion #2738, not an issue)
+PR: #3682
+Branch: fix/405-allow-multiple-routes
+Status: **OPEN — 11/11 checks green, awaiting first human review**
+(opened 2026-10-19T13:17:51Z; mergeable, `mergeable_state: clean` at
+2026-10-19T13:44:48Z; base `main` @ `dc20b216f065af3a487722141da9a29dcac388d1`
+verified current at publication; head `9fb409771097e7eed3fb1cebddad9694b34808b2`,
+2 commits, on the `ShahabAhmed01/starlette` fork; 3 files, +93/−9).
+Not merged.
+CI: check, zizmor (x2), Python 3.11–3.15, Run benchmarks and the cubic
+AI reviewer all success; Docs preview (Cloudflare) skipped (workflow
+shape). codspeed bot comment: "Merging this PR will not alter
+performance". 11/11 check-runs completed on `9fb4097`.
+Review: None human yet. `Kludex` is the historical reviewer/merger of
+external PRs here (#3542, #3585, #3622, #3631, #3654). Copilot was
+quota-limited and posted no content; cubic's P2 (a custom `BaseRoute`
+partial match with no `methods` would be bypassed) was valid, fixed in
+`9fb4097` with the guard plus `test_router_405_keeps_custom_route_
+handling`, and answered in-thread (comment `4314473754`). Do not ping;
+the PR is the reply.
+Notes: Twentieth track, first starlette contribution. No issue was
+filed — the anchor is discussion #2738 (2024-10-25T12:12Z, `ccrims0n`,
+category *Potential Issue*) reporting exactly this bug: three routes on
+one path answer a 405 with only the first route's `Allow`. `Kludex`
+replied "Seems valid." two minutes later; it sat unfixed for two years
+and no PR ever referenced it (corpus greps for `2738`, `discussions/2738`,
+`first route`, `GET, PUT, DELETE` → 0 among 3007 items), so the
+discussion doubles as the PR template's required prior discussion.
+AI_POLICY.md honored: open+closed PRs, issues and **discussions**
+searched before opening (duplicates ban); discussions paginated in full
+(622). Selection evidence: rejected hard-gated repos (hono, zod, vitest,
+pydantic — assign/auto-close; pytest — drive-by agentic PRs rejected;
+eslint — OpenJS CLA; express/fastify — bug swarms; claude-mem — volatile)
+and killed duplicate candidates (#3604 mixed byte ranges, #3495
+Accept-Encoding, #3638 IPv6 brackets, query-param swarm
+#3661/#3636/#3571/#3554/#3553, authority swarm #3579→#3671 — all closed
+unmerged). Repro on `main` @ `dc20b21`: bare `Router`, `Starlette` app
+and distinct patterns `/items` + `/{name}` all answered `HEAD, GET`
+with `POST` missing (RFC 9110 §10.2.1 / §15.5.17). Fix: collect every
+`Match.PARTIAL` route; when more than one matches, render the sorted
+union in `Router` (`HTTPException` when `"app" in scope`, else
+`PlainTextResponse`), **only** when every match exposes a non-empty
+`methods` — otherwise first-match `handle()` runs unchanged (custom
+routes safe); `Route.handle` joins `sorted(self.methods)`; new
+`docs/routing.md` paragraph; `docs/release-notes.md` untouched
+("Releasing" section is maintainer-owned; merged #3585/#3640 did not
+touch it). Verification: **1400 passed / 2 skipped / 2 xfailed**;
+`scripts/coverage` 100% branch (fail-under=100; tests count as source);
+`scripts/check` clean (ruff format, mypy --strict, ruff check);
+`zensical build --clean` clean. PR follows the template (three
+headings, three boxes ticked truthfully), links discussion #2738 and
+discloses AI assistance; body notes the in-flight neighbours #3665
+(`==`→`is` in the same loop) and owner #3339 (trie rewrite — patch
+fetched, keeps first-partial dispatch, not a duplicate) with an offer to
+rebase. Workspace: isolated `~/opensource-work/starlette` clone; fork
+created this session; pushed via askpass so no token entered argv;
+tracker/backlot and other workspaces untouched until publication.
+Live verification at 13:44:48Z: open, not draft, mergeable clean, 0
+human comments, reviews = two bots + my threaded reply.
+Next Action: Watch PR #3682 for the first human review; respond on the
+same branch if changes are requested. Do not open another starlette PR
+while #3682 is open. Before any future starlette work, re-run the
+corpus + discussion duplicate sweep (AI policy: duplicates ban).
 
 ## Post-PR triage 2026-10-09 (after opening #6648)
 

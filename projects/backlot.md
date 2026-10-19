@@ -1,6 +1,6 @@
 # Project notes — brekkylab/backlot
 
-Last verified: 2026-10-17
+Last verified: 2026-10-19
 ## Facts
 
 - Serves 11 real SaaS APIs — Slack, Gmail, Google Drive, GitHub, Jira,
@@ -348,3 +348,46 @@ uv sync --all-extras --locked              # what CI installs (all extras)
   Copilot bot COMMENTED; no human review yet; not merged. Second open
   backlot PR (#786 is the other), which the after-first-merge limit of
   three allows.
+
+## Fidelity evidence refreshed 2026-10-19 (research addendum, Track 019)
+
+- **External merge cadence (live):** of the 30 most recently closed
+  PRs, all 30 merged between 2026-10-17 and 2026-10-19 — outside
+  authors throughout (skritosss, tony1233200, shiaho777, CRYPTONIKAV,
+  WynandVStaden, jnohclee-rgb, HarshRajSinghania, stella42379,
+  mangeshraut712, yc25778-droid, Xinyue-Jiang-122, Ryanleoncoder,
+  DBVamsi, fankcoder, Lazarus000s, …) plus `nuriyoo`'s own merges.
+  Ours are two of them: #786 merged 2026-10-18, #806 merged
+  2026-10-19T06:34:01Z (merge commit `2ffef165`) — the portfolio's
+  seventh merge, landing mid-research. Median merge latency in the
+  2026-10-17 refresh was 34.7h; the same-day pattern continued.
+- **Human review, live:** `nuriyoo` runs review cycles hours apart
+  (Track 017/018 saw CHANGES_REQUESTED→APPROVED on #614 and COMMENTED
+  approvals on #767/#769/#773/#782); they file 10–20 fidelity issues a
+  day in measured batches, all from the same session's mail/token
+  measurements.
+- **Queue at screening (2026-10-19):** 78 open issues (many filed that
+  morning), 13 open PRs; same-day claim pressure real: of the fresh
+  batch, #843 went to `skritosss`'s PR #848 and #842 to `dhvani7014`'s
+  PR #836 within hours of filing. The gmail trio #828/#831/#834 (all
+  nuriyoo, found while reviewing merged #803/#805) had 0 competing PRs
+  at screening and at publication for #831.
+- **Selection:** #831 over #828 (lone-quote parse, same lane) for the
+  single root cause with the narrowest fix surface, and over #834 (three
+  measured divergences bundled — too broad for one reviewable change).
+  Verified by the same-day evidence, not the label: repo policy
+  (CONTRIBUTING items 1–7, AGENTS.md fork-lane checks, PR template)
+  unchanged since Track 018; test/lint commands unchanged.
+- **Verification this track:** `.[all]` zero-skip install — 11034
+  passed / 3 skipped (Docker, npx, llama_index reader — environmental);
+  `PYTHONWARNDEFAULTENCODING=1` suite green on `.[dev]` before the
+  upgrade; ruff lint/format + PLW1514 preview clean; prose_check exit 1
+  with four findings byte-identical to clean `main` (none on a line this
+  change adds).
+- **Independently reviewed candidate pool (same-day, read-only agent):**
+  repowise 193 open PRs, #4176/#4146 claimed same-day (#4191/#4193);
+  odysseus 343 open PRs, our #6648 untouched since 2026-10-09;
+  kestra plugin-mongodb assign-first, 8/10 recent merges one regular,
+  #162 doubly claimed; batpred 86 open PRs, merges concentrated in
+  trusted regulars; markitdown 420 open PRs, no merge since 2026-10-04.
+  Backlot remained the strongest lane by the rubric.

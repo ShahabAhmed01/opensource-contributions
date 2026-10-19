@@ -12,9 +12,42 @@ are now wait-only.)
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 10
-Merged Contributions: 7
+Monitoring Contributions: 9
+Merged Contributions: 9
 Closed/Superseded Contributions: 1
+
+**New this session (2026-10-19T12:01Z): backlot #831 / PR #851** —
+`gmail: a quoted address value with a - in it finds its words alone, as
+real reads it`. A quoted `from:`/`to:`/`cc:`/`bcc:` value with a `-` in it
+was stripped to the bare value before storage, so
+`_gmail_address_match` ran the hyphen-joined alternative on it and
+`from:"no-reply"` answered the messages of `from:noreply`, where real
+answers none (the issue's own gmail.googleapis.com matrix, 603-message
+mailbox, 2026-10-19, eight words across the four operators). `_take` now
+keeps the quotes on address values, the matcher reads a quoted value's
+words alone (exact-address path and `subject:`/`label:`/`in:`/`has:`
+untouched), and the `me` substitution reads through the quotes. Six new
+rows in `test_gmail_hyphenated_address_search` over both listings plus
+three parse pins in `tests/test_search.py`; with the router stashed to
+`ff92bdd` ten of the twelve new rows fail (the control
+`from:"noreply"` passes either way). Zero-skip run: **11034 passed /
+3 skipped** on `.[all]` (Docker/npx/llama_index-reader, environmental);
+`PYTHONWARNDEFAULTENCODING=1` suite green; ruff lint/format + PLW1514
+clean; prose_check exit 1 on four findings byte-identical to clean
+`main`. Independent read-only review: no critical/major findings, two
+wording nits applied pre-commit. CI 9/9 green (gate/lint/scan + test
+3.11–3.15), `mergeable_state: clean`, Copilot bot COMMENTED (not a
+human review), not merged. Availability re-checked by API to the minute
+before publication (open, 0 assignees, 0 comments, 0 competing PRs,
+base still `ff92bdd`). Track 019 below.
+
+**Merge news since the last audit: #806 (backlot #779) merged
+2026-10-19T06:34:01Z** (merge commit `2ffef165033c`) and **#786 (backlot
+#775) merged 2026-10-18** — the portfolio is now **9 merged, 9
+monitoring, 1 closed, 0 active (19 records)**; the counts above were
+refreshed from live `contributions-state.json` after the 2026-10-19
+sync. Both landed the same day this track's research ran, and #806's
+merge freed the same-day lane for #831.
 
 **This session (2026-10-17T19:40–20:35Z): #786 review response + full
 portfolio audit.** Every one of the 18 records was re-verified against
@@ -985,6 +1018,59 @@ Next Action: Watch PR #806 for the first human review; respond on the
 same branch if changes are requested. (#786's waiting review was
 answered the same day — see Track 017 — so both backlot PRs are now
 wait-only.)
+
+### Track 019
+Project: brekkylab/backlot
+Issue: #831
+PR: #851
+Branch: contrib/issue-831-gmail-quoted-address-value
+Status: **OPEN — awaiting first human review** (opened
+2026-10-19T12:01:53Z; mergeable, `mergeable_state: clean`; base `main`
+@ `ff92bdd` verified current at publication; head
+`cbe2c61e4861da3654934507b3a1f24866436685` verified by `ls-remote`
+before the PR). Not merged.
+CI: 9/9 check-runs green — gate/lint/scan success and test
+(3.11)–(3.15) all success; bare `test` is the workflow's skipped shape.
+Copilot bot COMMENTED (a bot review, not a human one).
+Review: None human yet. `nuriyoo`/`khj809` are the historical reviewers
+(#806's merge came from `nuriyoo` at 2026-10-19T06:34Z). Do not ping;
+the PR is the reply.
+Notes: Nineteenth track, seventh backlot contribution. Issue filed
+2026-10-19T06:02Z by `nuriyoo` while reviewing merged #805: a quoted
+address value with a `-` in it was read as if unquoted, so
+`from:"no-reply"` matched `noreply@shop.example` where gmail answers
+none (their 603-message matrix, eight words, four operators, 2026-10-19).
+`_take` keeps address-value quotes, `_gmail_address_match` reads a
+quoted value's words alone (quote pair stripped before the
+exact-address path; joined alternative gated on `not quoted`), and the
+`me` substitution compares through quotes — `subject:`/`label:`/`in:`/
+`has:` parsing byte-identical, lone `"` (#828's separate divergence)
+and `from:""` on their old paths. Six new rows over both listings plus
+three parse pins; regression proven by stashing the router (10/12 new
+rows fail, control passes) and independently by a read-only review
+agent's scratch-copy mutation run. Full suite **11034 passed/3 skipped**
+on `.[all]` Python 3.14.8 (skips: Docker, npx, llama_index reader —
+environmental, none gmail); `PYTHONWARNDEFAULTENCODING=1` 8184
+passed/38 skipped on the earlier `.[dev]` install; ruff lint/format +
+PLW1514 preview clean; prose_check exit 1 on four findings
+byte-identical to clean `main`; `git diff --check` clean. Review found
+no critical/major issue; two wording nits applied pre-commit. Lane check
+(2026-10-19): same-day claim pressure proved again — #843→PR #848,
+#842→PR #836 within hours; the gmail trio #828/#831/#834 was free at
+screening and #831 stayed free to the minute of `POST /pulls` (0 open
+PRs naming it, 0 assignees, timeline only merged #805). Alternatives
+scored down with cause in the state `notes` (repowise 193 open PRs +
+same-day claims; odysseus 343 + our #6648 untouched 10 days; kestra
+assign-first + single-contributor lane; batpred clique merges;
+markitdown frozen since 2026-10-04). Workspace: isolated worktree
+`~/opensource-work/backlot-831` (the `~/opensource-work/backlot`
+checkout's uncommitted #792 confluence work was left untouched). PR
+followed the template: three headings, three checkboxes, `Closes #831.`,
+`gmail:` title prefix, no issue number in comments (prose gate).
+Next Action: Watch PR #851 for the first human review; respond on the
+same branch if changes are requested. Do not open another backlot PR
+while #851 is open unless a genuinely distinct task justifies it (the
+post-first-merge limit is three; this is one of one active).
 
 ## Post-PR triage 2026-10-09 (after opening #6648)
 

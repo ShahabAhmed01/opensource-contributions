@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-20T16:59:46Z",
+  "updated_at": "2026-10-20T16:59:54Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -66,9 +66,9 @@
       "pr_url": null,
       "head_branch": "fix/issue-5569-non-utf8-charset-445b0cd7",
       "acquired_at": "2026-10-20T14:55:43Z",
-      "heartbeat_at": "2026-10-20T16:59:46Z",
+      "heartbeat_at": "2026-10-20T16:59:54Z",
       "expires_at": "2026-10-20T22:29:41Z",
-      "reservation_state": "ACTIVE"
+      "reservation_state": "RELEASED"
     }
   ],
   "tracker_writer": null

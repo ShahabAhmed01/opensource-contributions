@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-20T16:14:05Z",
+  "updated_at": "2026-10-20T16:27:48Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -64,8 +64,8 @@
       "pr_url": null,
       "head_branch": null,
       "acquired_at": "2026-10-20T14:55:43Z",
-      "heartbeat_at": "2026-10-20T16:05:19Z",
-      "expires_at": "2026-10-20T22:05:19Z",
+      "heartbeat_at": "2026-10-20T16:27:48Z",
+      "expires_at": "2026-10-20T22:27:48Z",
       "reservation_state": "ACTIVE"
     }
   ],

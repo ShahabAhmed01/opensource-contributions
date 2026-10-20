@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-20T16:10:05Z",
+  "updated_at": "2026-10-20T16:14:05Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -43,16 +43,17 @@
     },
     {
       "run_id": "ossrun-20261020T143539Z-b6ebdc41",
-      "status": "IMPLEMENTING",
+      "status": "PR_PUBLISHED",
       "repository": "pytest-dev/pytest",
       "issue_url": "https://github.com/pytest-dev/pytest/issues/15221",
       "issue_number": 15221,
-      "pr_url": null,
+      "pr_url": "https://github.com/pytest-dev/pytest/pull/15228",
       "head_branch": "contrib/issue-15221-collect-parent-cache-b6ebdc41",
       "acquired_at": "2026-10-20T15:01:09Z",
-      "heartbeat_at": "2026-10-20T16:10:05Z",
-      "expires_at": "2026-10-20T22:10:05Z",
-      "reservation_state": "ACTIVE"
+      "heartbeat_at": "2026-10-20T16:14:05Z",
+      "expires_at": "2026-10-20T17:14:05Z",
+      "reservation_state": "ACTIVE",
+      "pr_number": 15228
     },
     {
       "run_id": "ossrun-20261020T143636Z-445b0cd7",
@@ -68,5 +69,10 @@
       "reservation_state": "ACTIVE"
     }
   ],
-  "tracker_writer": null
+  "tracker_writer": {
+    "run_id": "ossrun-20261020T143539Z-b6ebdc41",
+    "acquired_at": "2026-10-20T16:14:05Z",
+    "heartbeat_at": "2026-10-20T16:14:05Z",
+    "expires_at": "2026-10-20T17:14:05Z"
+  }
 }

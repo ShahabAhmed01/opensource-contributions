@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-20T14:44:51Z",
+  "updated_at": "2026-10-20T14:53:46Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -17,16 +17,16 @@
     },
     {
       "run_id": "ossrun-20261020T143705Z-bd8fbd7f",
-      "status": "DISCOVERING",
-      "repository": null,
+      "status": "RESERVED",
+      "repository": "psf/black",
       "issue_url": null,
       "issue_number": null,
       "pr_url": null,
       "head_branch": null,
-      "acquired_at": null,
-      "heartbeat_at": "2026-10-20T14:39:04Z",
-      "expires_at": null,
-      "reservation_state": "NONE"
+      "acquired_at": "2026-10-20T14:53:44Z",
+      "heartbeat_at": "2026-10-20T14:53:46Z",
+      "expires_at": "2026-10-20T20:53:46Z",
+      "reservation_state": "ACTIVE"
     },
     {
       "run_id": "ossrun-20261020T143844Z-c775ddc9",

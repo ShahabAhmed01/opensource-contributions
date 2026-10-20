@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-20T14:36:33Z",
+  "runs": [
+    {
+      "run_id": "ossrun-20261020T143633Z-2eff4030",
+      "status": "DISCOVERING",
+      "repository": null,
+      "issue_url": null,
+      "issue_number": null,
+      "pr_url": null,
+      "head_branch": null,
+      "acquired_at": null,
+      "heartbeat_at": "2026-10-20T14:36:33Z",
+      "expires_at": null,
+      "reservation_state": "NONE"
+    }
+  ],
+  "tracker_writer": null
+}

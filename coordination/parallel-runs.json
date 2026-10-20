@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-20T16:27:48Z",
+  "updated_at": "2026-10-20T16:27:53Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -59,8 +59,8 @@
       "run_id": "ossrun-20261020T143636Z-445b0cd7",
       "status": "RESERVED",
       "repository": "honojs/hono",
-      "issue_url": "https://github.com/honojs/hono/issues/5567",
-      "issue_number": "5567",
+      "issue_url": "https://github.com/honojs/hono/issues/5569",
+      "issue_number": "5569",
       "pr_url": null,
       "head_branch": null,
       "acquired_at": "2026-10-20T14:55:43Z",

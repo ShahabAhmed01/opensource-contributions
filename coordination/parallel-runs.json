@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-20T16:29:41Z",
+  "updated_at": "2026-10-20T16:43:11Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -62,7 +62,7 @@
       "issue_url": "https://github.com/honojs/hono/issues/5569",
       "issue_number": "5569",
       "pr_url": null,
-      "head_branch": null,
+      "head_branch": "fix/issue-5569-non-utf8-charset-445b0cd7",
       "acquired_at": "2026-10-20T14:55:43Z",
       "heartbeat_at": "2026-10-20T16:29:41Z",
       "expires_at": "2026-10-20T22:29:41Z",

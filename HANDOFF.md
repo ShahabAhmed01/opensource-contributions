@@ -1,24 +1,56 @@
 # Contribution Handoff
 
-Last updated: 2026-10-19T13:44Z (Track 020: starlette PR #3682 open with
-11/11 checks green and `mergeable_state: clean`, awaiting first human
-review — this same day also recorded Track 019, backlot #831/PR #851,
-opened 12:01Z. Track 017 note of 2026-10-17T20:35Z: the #786 review
-response is done: all
-four of nuriyoo's points applied verbatim in `27e8922f`, the branch
-rebased onto `e9b9d72`, all 9 check-runs green by 20:21:55Z,
-`mergeable_state: clean`, the PR renamed, reply comment `6240438402`
-posted 20:22:46Z — Track 017. Also this session: a full re-audit of all
-18 records against live GitHub; every our-side item verified or fixed
-(2026-10-17T19:40Z audit section). Both open backlot PRs (#786, #806)
-are now wait-only.)
+Last updated: 2026-10-20T16:46Z (Track 022: pytest-dev/pytest PR #15228
+opened 2026-10-20T16:12:03Z — **34/34 check-runs success** plus
+`pre-commit.ci` and `docs/readthedocs.org:pytest` statuses on `e336c3e`,
+awaiting the first human review; the PR body carries an AI assistance
+disclosure per pytest's `CONTRIBUTING.rst` AI/LLM policy and was
+corrected once post-publication (stale ruff/mypy caveat → verified
+results; head untouched). This session also re-counted the Portfolio
+Summary from the ledger (Merged 9 → 11 with the 2026-10-19/20 merges)
+and re-synced every record against live GitHub.)
 
 ## Portfolio Summary
 
 Active Contributions: 0
 Monitoring Contributions: 10
-Merged Contributions: 9
+Merged Contributions: 11
 Closed/Superseded Contributions: 1
+
+**New this session (2026-10-20T16:12Z): pytest-dev/pytest #15221 / PR
+#15228** — `perf(collection): collect a parent level once for explicit
+file arguments`. Explicit file arguments re-collected their parent
+level once per argument ("files given directly multiple times on the
+command line should not be deduplicated" is implemented by skipping the
+per-level collection cache for that call), so
+`pytest a/test_1.py … a/test_N.py` scanned the directory once per
+argument and pruned all-but-one sibling every time — the issue's own
+Windows numbers: `perform_collect` 22.4s → 11.8s, `Session.collect`
+15.2s → 3.7s, `samefile_nofollow` 44,377 → 9,056; 315 arguments: 55.7s
+→ 20.7s. `perform_collect` now precomputes the file-argument paths that
+occur more than once among the initial arguments; `Session.collect`
+keeps collecting those fresh (`--keepduplicates` and `::`-part
+selections preserved) and reuses the level's cached report for
+once-only file arguments, still re-collecting failed cached reports;
+node ids and their order are unchanged (asserted literally). Four new
+tests, changelog `15221.improvement.rst`, AUTHORS line; the run's
+repro measured 2.31s/2.34s → 0.39–0.41s on 100 file arguments of a
+150-entry directory with identical items. Local suites green
+(143/103/68/733 …), ruff 0.17.1 + mypy 2.4.0 clean on the changed
+files, and **CI 34/34 check-runs success** + both commit statuses on
+`e336c3e` — `codecov/patch`'s early "failure" (76.47% of diff) was a
+partial-report artifact of uploads still in flight: it succeeded on
+its re-run at 16:19:17Z, matching the local coverage read that every
+added line executes. The PR body carries an **AI assistance
+disclosure** per `CONTRIBUTING.rst`'s "AI/LLM-Assisted Contributions
+Policy" (AI-assisted work with human accountability is welcome;
+*purely agentic* output is closed and banned — the real meaning of the
+prior session's "drive-by agentic PRs rejected" gate, re-read before
+this lane was unlocked), and the body edit also replaced a stale
+ruff/mypy caveat with the verified results, without moving the head.
+`mergeable: true`, `mergeable_state: blocked` (fork-PR protection
+gate), copilot bot COMMENTED, no human review yet, not merged.
+Track 022.
 
 **New this session (2026-10-19T13:17Z): starlette #3682** —
 `Include all matching routes in the Allow header of 405 responses`.
@@ -1241,6 +1273,86 @@ branch if changes are requested. Do not open another uvicorn PR while #3215
 is open. Before any future uvicorn work, re-run the corpus + discussion
 duplicate sweep (AI policy: duplicates ban) — and re-read `AI_POLICY.md`,
 which changes acceptance behaviour more often than the issue queue does.
+
+### Track 022
+Project: pytest-dev/pytest
+Issue: #15221
+PR: #15228
+Branch: contrib/issue-15221-collect-parent-cache-b6ebdc41
+Status: **OPEN — 34/34 check-runs success + `pre-commit.ci` and
+`docs/readthedocs.org:pytest` statuses, awaiting first human review**
+(opened 2026-10-20T16:12:03Z; mergeable `true`, `mergeable_state: blocked`
+— pytest's fork-PR protection gate — at the 16:32Z read; base `main` @
+`49ea4d0` verified the upstream tip at publication and again after
+opening; head `e336c3ed4681bb703771a72c0715a4ea43cdc64b`, a single
+commit, 4 files +166/−5, on the `ShahabAhmed01/pytest` fork). Not merged.
+CI: `check`, `codecov/patch`, `Changelog entry`, `package` and 30 `build`
+jobs (ubuntu/macos/windows × Python 3.10–3.15, pypy3-xdist, twisted 24/25
+on ubuntu+windows, asynctest, pluggy, xdist ×2, pexpect ×2,
+lsof-numpy-pexpect, freeze, doctesting, plugins) — **34 of 34 completed
+success, none failing**; commit statuses `pre-commit.ci - pr` success
+(16:12:22Z), `docs/readthedocs.org:pytest` success (16:13:55Z).
+`codecov/patch` first concluded **failure** at "76.47% of diff hit
+(target 100%)" while the long jobs were still uploading coverage, then
+concluded success on its re-run at 16:19:17Z; a local coverage run over
+`test_collection.py` + `test_main.py` had already shown every added line
+executed, so the mid-report failure was read as partial-report timing
+and waited out (this repo's `codecov.yml` sets patch target 100%).
+Review: No human review yet. `copilot-pull-request-reviewer[bot]`
+COMMENTED at 16:12:11Z and posted no content. No pings; the PR is the
+reply.
+Notes: Twenty-second track, first pytest contribution. pytest's
+`CONTRIBUTING.rst` "AI/LLM-Assisted Contributions Policy" is the line
+prior sessions had hardened pytest on ("drive-by agentic PRs
+rejected"): it bans *purely agentic* output and "clankers" with
+prejudice, welcomes AI-assisted work with human accountability and
+engagement, and encourages `Co-authored-by` trailers — so this lane
+was unlocked only after re-reading that section, and the PR opens with
+an "AI assistance disclosure" section naming the tooling (the
+post-publication body edit also replaced a stale ruff/mypy caveat with
+the verified results: ruff 0.17.1 `check`/`format --check` clean and
+mypy 2.4.0 clean on the changed files — both the pre-commit pins — plus
+pre-commit.ci green live). Issue #15221 (filed 2026-10-19T15:08:28Z by
+`kakazu5`, 0 comments, no labels, competitor-free at publication — the
+timeline's only cross-reference is this PR) is a measurement-led perf
+report: explicit file arguments re-collect the parent level per
+argument because `handle_dupes=False` ("files given directly multiple
+times on the command line should not be deduplicated") skips the
+per-level `_collection_cache`, and Windows' pruning adds the #11895
+short-path fallback (`samefile_nofollow`, two `lstat` per non-matching
+sibling per argument). Fix: `perform_collect` precomputes
+`_repeated_file_arguments` (file-argument paths occurring in more than
+one initial argument); `Session.collect` fresh-collects those and
+reuses the level's cached report for once-only file arguments, still
+fresh-collecting failed cached reports; ids and order asserted exact.
+Verification: repro 100 file arguments of a 150-entry directory,
+`--collect-only`, 2.31s/2.34s → 0.39–0.41s with identical items;
+`test_collection`+`test_main` 143 passed / 2 skipped / 1 xfailed;
+`acceptance_test` 103; `test_pytester`+`test_collect_imported_tests`+
+`test_nodes` 68; `testing/python/` 733; `git diff --check` clean.
+Workspace: isolated shallow clone (`pytest-shallow`) in the run
+workspace with `SETUPTOOLS_SCM_PRETEND_VERSION=9.1.2.dev0`; fork
+`ShahabAhmed01/pytest`; pushes and API via askpass so no token entered
+argv; the user's master checkout and other worktrees untouched until
+publication. Coordination: the run reserved pytest-dev/pytest in the
+shared registry (acquired 15:01:09Z) before any code; duplicate
+screens verified the rejected candidates as claimed (markitdown #2719
+competed by its reporter's own PR #2720, markitdown #2536 by five PRs +
+a claimant comment, pydantic #14019 by two closed PRs, laya by its
+filers' stated intent, deepseek-harness has issues/PRs disabled), and
+the standing exclusions were honored (kana-dojo, the SikamikanikoBG/
+homelab-monitor locale-sync, starter-lab lead-only). The tracker rows were written
+through the repo's own `scripts/update_tracker.py` fed by a REST-backed
+`gh` shim (no `gh` CLI here); one shim subtlety wrung out en route:
+REST leaks a *preview* `merge_commit_sha` on open PRs, which must
+surface as no `mergeCommit` (the first shim draft wrote bogus merge
+commits on ten open rows and was fixed before committing).
+Next Action: Watch PR #15228 for the first human review; respond from
+the account on the same branch if changes are requested. Do not open
+another pytest PR while #15228 is open. Before any future pytest work,
+re-read `CONTRIBUTING.rst`'s AI/LLM policy section — it is the binding
+gate on this lane (disclosed tooling, an accountable human behind the
+PR, review replies from the account).
 
 ## Post-PR triage 2026-10-09 (after opening #6648)
 

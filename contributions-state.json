@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-20T11:16:01Z",
+  "updatedAt": "2026-10-20T16:46:22Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -47,7 +47,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -98,7 +98,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -141,7 +141,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -169,7 +169,7 @@
       "status": "merged",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -203,7 +203,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
@@ -235,7 +235,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -255,7 +255,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ]
@@ -278,7 +278,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -298,7 +298,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ]
@@ -321,7 +321,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": null,
       "commits": [
         {
@@ -336,7 +336,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -364,7 +364,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -379,7 +379,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -407,7 +407,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -438,7 +438,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
@@ -474,7 +474,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -509,7 +509,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -537,7 +537,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -559,7 +559,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
@@ -591,7 +591,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -617,7 +617,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
@@ -653,7 +653,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -673,11 +673,11 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
-          "author": "coderabbitai",
+          "author": "coderabbitai[bot]",
           "state": "COMMENTED"
         },
         {
@@ -685,7 +685,7 @@
           "state": "COMMENTED"
         },
         {
-          "author": "coderabbitai",
+          "author": "coderabbitai[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -713,7 +713,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -732,7 +732,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
@@ -768,7 +768,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -781,7 +781,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -809,7 +809,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -822,7 +822,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         }
       ],
@@ -851,7 +851,7 @@
       "status": "merged",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -864,18 +864,19 @@
         }
       ],
       "checks": {
+        "ring": "skipped",
         "test": "skipped",
-        "test (3.11)": "pass",
         "scan": "pass",
-        "test (3.12)": "pass",
-        "test (3.13)": "pass",
-        "test (3.14)": "pass",
         "test (3.15)": "pass",
-        "lint": "pass"
+        "test (3.11)": "pass",
+        "lint": "pass",
+        "test (3.14)": "pass",
+        "test (3.12)": "pass",
+        "test (3.13)": "pass"
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
@@ -923,7 +924,7 @@
       "status": "merged",
       "openedAt": "2026-10-17T18:19:47Z",
       "prCreatedAt": "2026-10-17T18:19:47Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -944,7 +945,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
@@ -980,7 +981,7 @@
       "status": "merged",
       "openedAt": "2026-10-19T12:01:53Z",
       "prCreatedAt": "2026-10-19T12:01:53Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "ff92bdd01c423b833a96c0ece823265c47d0e6be",
       "commits": [
         {
@@ -1001,7 +1002,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
@@ -1037,7 +1038,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-19T13:17:51Z",
       "prCreatedAt": "2026-10-19T13:17:51Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "dc20b216f065af3a487722141da9a29dcac388d1",
       "commits": [
         {
@@ -1064,11 +1065,11 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
-          "author": "cubic-dev-ai",
+          "author": "cubic-dev-ai[bot]",
           "state": "COMMENTED"
         },
         {
@@ -1100,7 +1101,7 @@
       "status": "ready-to-merge",
       "openedAt": "2026-10-19T17:24:52Z",
       "prCreatedAt": "2026-10-19T17:24:52Z",
-      "lastVerified": "2026-10-20T11:16:01Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
       "baseCommit": "cc6fea5b40ad559f7ca358a24b1a521451232281",
       "commits": [
         {
@@ -1147,19 +1148,15 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer",
+          "author": "copilot-pull-request-reviewer[bot]",
           "state": "COMMENTED"
         },
         {
-          "author": "cubic-dev-ai",
+          "author": "cubic-dev-ai[bot]",
           "state": "COMMENTED"
         },
         {
-          "author": "cubic-dev-ai",
-          "state": "COMMENTED"
-        },
-        {
-          "author": "ShahabAhmed01",
+          "author": "cubic-dev-ai[bot]",
           "state": "COMMENTED"
         },
         {
@@ -1167,7 +1164,11 @@
           "state": "COMMENTED"
         },
         {
-          "author": "coderabbitai",
+          "author": "ShahabAhmed01",
+          "state": "COMMENTED"
+        },
+        {
+          "author": "coderabbitai[bot]",
           "state": "APPROVED"
         }
       ],
@@ -1175,6 +1176,82 @@
       "mergeCommit": null,
       "description": "Skips the h11 ConnectionClosed handshake for a connection whose local h11 state already failed and closes its transport anyway, so one connection in ERROR no longer raises LocalProtocolError out of Server.shutdown()'s loop and stops every later connection from being shut down too.",
       "notes": "Selection (2026-10-19): discovery re-ranked trending (daily/weekly/monthly) and popular repositories under the standing 70% merge-readiness / 30% visibility weighting, then screened each for a Python-verifiable task, an external-acceptance record and a live, unclaimed item. Toolchain gate: this environment has Python 3.14.8 + uv 0.13.1 and no Node/Rust/Go/Java, so JS/TS/Go/Rust targets could not be verified locally. AI-policy hard rejects: the Pallets org (palletsprojects.com/contributing/llm-ai closes AI contributions and blocks the author), yt-dlp (.NO_AI makes agents refuse to interact), Textualize/textual (AI PRs need prior @willmcgugan approval) and fastapi (no open issue queue). Standing exclusions honoured: lingdojo/kana-dojo, SikamikanikoBG/homelab-monitor (no locale-dup work), P-r-e-m-i-u-m/open-source-starter-lab (lead only), plus the prior-session hard gates (hono, zod, vitest, pydantic, pytest, eslint, express, fastify, claude-mem). Trending was unusable as a source: the 14 weekly entries are star-farmed AI-agent repositories (morluto/rea +229268, debpalash/VoiceStudio +16569, cathrynlavery/diagram-design +7901) with no contribution lanes. Runner-up candidates: psf/black (41947 stars, no AI policy, external merges within days) and aiohttp (16579 stars, AGENTS.md welcomes agents but ~810 open PRs make issue work a swarm) - both ranked below Kludex/uvicorn; pipx (12977 stars, same-day merges) had zero open items; httpx left February PRs unreviewed. Kludex/uvicorn won: 11017 stars / 1064 forks, BSD-3-Clause, Python >=3.11, AI_POLICY.md explicitly permits AI tools while banning duplicates, and docs/contributing.md requires contributions to start from a discussion - which is where this repo's live signal is (bug reports arrive as \"Potential Issue\" discussions; 559 discussions paginated in this session). Acceptance measured 2026-10-19: external merges #3209 (README logo, 2026-10-18), #3195 (raw_path access log), #3092 (negative --limit-max-requests-jitter) and #3184 (reload startup) all on 2026-10-11, alongside Kludex's own #3194/#3196/#3197/#3198/#3199/#3200 (2026-10-10/11) and #3214 (2026-10-19). Risk acknowledged: Kludex mass-closed roughly fifteen duplicate IPPROTO_TCP PRs on 2026-10-11 and fixed #3149 himself in #3199, so the duplicate rule is enforced harshly; 91 PRs were open at selection time. Candidate screening inside uvicorn discussions (every number re-checked against /search/issues this session): #3164 (use_colors combined with a dict log_config) already claimed by open PR #3179, #3052 (pre-handshake websocket disconnect) by closed PR #3057, #3109 (pipe closed between poll() and recv()) by open PR #3110, #3175 by issue #3202 + open PR #3203, #3188 by merged PR #3200, #3213 by merged PR #3214, #3153 by closed PR #3156, #3071 by closed PR #3075, #3165 by open PRs #3182/#3166; #3183 (log colour detection checks stdout while the default stream is stderr) is unclaimed but its author asked an unanswered design question and already drafted the patch, so implementing it would contest an open design; #3093 (100% CPU CLOSE_WAIT busy-loop) is unclaimed but two independent reporters could not reproduce the spin (only the socket leak), making it unverifiable here; #3098 (scope[\"client\"] None behind a process-wide SOCKS proxy) is unclaimed but needs a PySocks test dependency and is awaiting Kludex's answer to Safihre's 2026-09-23 ping. Selected: discussion #3108 (2026-08-29T13:25Z, kazuki-ma, \"Potential Issue\") - \"Graceful shutdown aborts when one connection is left in h11 ERROR state\"; amasen02's 2026-09-05 comment independently confirms the same asymmetry; nobody has filed an issue or PR for it. Duplicate elimination per AI_POLICY.md: /search/issues for \"3108\", \"3108\" in:title,body (type:pr and type:issue), \"our_state\", \"Can't send data\", \"shutdown h11\", \"h11 shutdown state\", \"LocalProtocolError shutdown\", \"shutdown abort\", \"graceful shutdown connection\" all returned no PR proposing this change (nearest neighbours: merged #2243 spurious pipelined LocalProtocolError, closed-unmerged #2882 abort phase, closed issue #1637 from 2021); all 91 open PRs listed and none touches H11Protocol.shutdown; discussions paginated (559) with no second report. Root cause: H11Protocol.shutdown() sent h11.ConnectionClosed() unguarded while its sibling connection_lost() guards with `if self.conn.our_state != h11.ERROR`, and h11's send_with_data_passthrough raises LocalProtocolError(\"Can't send data when our state is ERROR\") as its very first check - so transport.close() on the next line was unreachable, the connection stayed registered in server_state.connections, and the exception escaped Server.shutdown()'s `for connection in list(self.server_state.connections): connection.shutdown()` loop, stranding every connection after it. Integration repro on main cc6fea5: a 200 with content-length: 10 and a 2-byte body that the app swallows (broad except around send, the case discussion #3108 describes) left [('H11Protocol', IDLE, False), ('H11Protocol', ERROR, False)]; graceful shutdown then reported `serve() -> serve() raised LocalProtocolError: Can't send data when our state is ERROR` and the ERROR connection was still open afterwards. Fix: mirror connection_lost() - skip the ConnectionClosed handshake when our_state is ERROR and always close the transport, 6 added / 2 removed in uvicorn/protocols/http/h11_impl.py. Deliberately no bare try/except: h11 raises only when our_state is ERROR (excluded by the guard) or from a state where ConnectionClosed is illegal (SEND_RESPONSE/SWITCHED_PROTOCOL, neither reachable from this branch, since cycle is None implies IDLE and response_complete implies DONE or ERROR), so an unreachable except would break the repo's line-coverage fail_under=100 gate. Verification: uv run pytest tests/protocols/test_http.py -k \"error_state or shutdown\" = 8 passed with the fix (the 2 new tests plus the 6 existing shutdown tests), and 2 failed / 6 passed with only h11_impl.py reverted, both failures raising exactly `h11._util.LocalProtocolError: Can't send data when our state is ERROR`; ./scripts/test = 1378 passed, 13 skipped in 40.94s; ./scripts/coverage = 100.00% (8774 statements, 0 missed, fail_under=100, tests counted as source); ./scripts/check clean (ruff format, mypy over 84 files, ruff check). CHANGELOG.md/release-notes.md untouched - docs/contributing.md puts releasing (and therefore the changelog) with the maintainer. Two regression tests added: test_shutdown_after_h11_enters_error_state (connection level: the transport closes instead of raising) and test_server_shutdown_closes_every_connection_left_in_h11_error_state (real server with one ERROR and one healthy keep-alive connection; leaving run_server, which calls Server.shutdown(), must close both and empty server_state.connections). PR #3215 opened 2026-10-19T17:24:52Z, not draft, base main @ cc6fea5b40ad559f7ca358a24b1a521451232281 (verified current at publication), head c8eb28cdaaf78c74cdf987736bbdb262aa4aa4d2 (3 commits), 3 files +94/-2 (uvicorn/protocols/http/h11_impl.py +6/-2, tests/protocols/test_http.py +86/-0, docs/server-behavior.md +2/-0). The body follows the repo's PR template - # Summary plus a three-box # Checklist, all three ticked truthfully (prior discussion = #3108; a test per change; documentation updated with two sentences in docs/server-behavior.md's Graceful Process Shutdown section) - names the duplicate search performed per AI_POLICY.md and discloses AI assistance. CI on c8eb28c, last read 2026-10-19T20:38:44Z: 27 check-runs, 26 success (Python 3.11/3.12/3.13/3.14/3.15 and free-threaded 3.14t/3.15t across ubuntu/macos/windows, check, zizmor x2, Run benchmarks, CodSpeed Performance Analysis, cubic AI reviewer) + docs-preview skipped (that job only runs for same-repo branches), 0 failing; commit status 'CodeRabbit' success at 17:51:48Z; mergeable_state clean; codspeed bot comment \"Merging this PR will not alter performance\". Review: copilot-pull-request-reviewer quota-limited and posted no content (17:25:02Z); cubic-dev-ai found nothing in the fix commit (17:27:11Z), then two P3s on the new docs sentence at 17:38:28Z - that the close is stated for in-flight responses too, and that \"closing handshake\" implies a peer exchange h11.ConnectionClosed() never performs - both valid, both fixed in c8eb28c and answered in-thread (replies 4316934181 and 4316934555, 17:42Z), after which cubic dropped the first finding from its summary; coderabbitai[bot] left a walk-through issue comment (17:45:57Z) and then the only APPROVED review on the PR (17:51:44Z). That approval is from a bot, not from Kludex - no human maintainer has reviewed yet, so the ledger's derived status \"ready-to-merge\" means automated approval plus green CI, not maintainer sign-off, and the PR is open, not merged. Kludex is the historical reviewer/merger of uvicorn's external PRs (#3184, #3195, #3092, #3209). Per policy no pings; the PR is the reply. Workspace: isolated clone ~/opensource-work/uvicorn (branch cut from upstream main cc6fea5), fork ShahabAhmed01/uvicorn created this session via POST /repos/Kludex/uvicorn/forks, pushed with GIT_ASKPASS so no token entered argv; the unrelated uv.lock churn from the local uv version was reverted before every commit; tracker and other workspaces untouched until publication. Live verification at 2026-10-19T20:38:44Z: open, not draft, mergeable clean, 3 commits, 2 issue comments (codspeed, coderabbit) and 4 review comments (2 cubic + 2 mine), 1 bot approval, 0 human comments. Track 021, first uvicorn contribution."
+    },
+    {
+      "repo": "pytest-dev/pytest",
+      "project": "pytest",
+      "issueNumber": 15221,
+      "issueTitle": "Collecting many file arguments in the same directory re-collects the parent directory once per argument (O(args × siblings); Windows adds a samefile per sibling)",
+      "issueUrl": "https://github.com/pytest-dev/pytest/issues/15221",
+      "issueState": "OPEN",
+      "issueUpdatedAt": "2026-10-19T15:08:28Z",
+      "prNumber": 15228,
+      "prUrl": "https://github.com/pytest-dev/pytest/pull/15228",
+      "prState": "open",
+      "prTitle": "perf(collection): collect a parent level once for explicit file arguments",
+      "branch": "contrib/issue-15221-collect-parent-cache-b6ebdc41",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/pytest",
+      "forkUrl": "https://github.com/ShahabAhmed01/pytest",
+      "status": "pr-opened",
+      "openedAt": "2026-10-20T16:12:03Z",
+      "prCreatedAt": "2026-10-20T16:12:03Z",
+      "lastVerified": "2026-10-20T16:46:22Z",
+      "baseCommit": "49ea4d08714f9ae519b86ee17b6b50c1dd080f32",
+      "commits": [
+        {
+          "sha": "e336c3ed4681bb703771a72c0715a4ea43cdc64b",
+          "subject": "perf(collection): collect a parent level once for explicit file arguments"
+        }
+      ],
+      "checks": {
+        "check": "pass",
+        "codecov/patch": "pass",
+        "build (macos-py310)": "pass",
+        "build (macos-py314)": "pass",
+        "build (ubuntu-py310-unittest-twisted24)": "pass",
+        "build (ubuntu-py310-unittest-asynctest)": "pass",
+        "build (plugins)": "pass",
+        "build (ubuntu-py314)": "pass",
+        "build (macos-py315)": "pass",
+        "build (windows-py311)": "pass",
+        "build (macos-py313)": "pass",
+        "build (windows-py310-pluggy)": "pass",
+        "build (ubuntu-py310-lsof-numpy-pexpect)": "pass",
+        "build (ubuntu-py313-pexpect)": "pass",
+        "build (windows-py313)": "pass",
+        "build (ubuntu-py311)": "pass",
+        "build (ubuntu-pypy3-xdist)": "pass",
+        "build (doctesting)": "pass",
+        "build (windows-py315)": "pass",
+        "build (ubuntu-py310-pluggy)": "pass",
+        "build (ubuntu-py310-freeze)": "pass",
+        "build (windows-py310-xdist)": "pass",
+        "build (ubuntu-py315)": "pass",
+        "build (ubuntu-py310-xdist)": "pass",
+        "build (macos-py312)": "pass",
+        "build (ubuntu-py310-unittest-twisted25)": "pass",
+        "build (windows-py310-unittest-twisted25)": "pass",
+        "build (windows-py314)": "pass",
+        "build (windows-py310-unittest-twisted24)": "pass",
+        "build (ubuntu-py312)": "pass",
+        "build (windows-py310-unittest-asynctest)": "pass",
+        "build (windows-py312)": "pass",
+        "Changelog entry": "pass",
+        "package": "pass",
+        "docs/readthedocs.org:pytest": "pass",
+        "pre-commit.ci - pr": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer[bot]",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Reuses the parent level's cached collection report for explicit file arguments collected exactly once, so pytest a/test_1.py a/test_2.py … scans the directory once instead of once per argument (2.31s → 0.39s at 100 arguments of a 150-entry dir), while repeated file arguments (--keepduplicates, or the same file selected with different :: parts) still collect fresh per occurrence and failed cached reports are re-collected.",
+      "notes": "Selection (2026-10-20, coordination run ossrun-20261020T143539Z-b6ebdc41): the repo was reserved against the shared automation-coordination registry (one open repo-reserved run each; pytest-dev/pytest acquired 2026-10-20T15:01:09Z after two branch-init rejections), after discovery screened ~15 popular projects for a Python-verifiable, unclaimed item with external merge-acceptance evidence. pytest-dev/pytest: 14,616 stars / 3,523 forks, MIT, Python >=3.10 (live 2026-10-20), the highest-signal Python infrastructure repo of the day's crop. AI policy read carefully: pytest's CONTRIBUTING.rst 'AI/LLM-Assisted Contributions Policy' welcomes AI-assisted work with human accountability (pytest-core uses these tools daily) while 'purely agentic contributions are not accepted' and unattended output is closed and banned — the prior session's hard gate ('drive-by agentic PRs rejected') reads exactly this policy, so this run re-read the section before reserving, and the PR body carries an AI assistance disclosure paragraph with the account holder named as the responsible human standing behind the change. Standing exclusions honored: lingdojo/kana-dojo, SikamikanikoBG/homelab-monitor, P-r-e-m-i-u-m/open-source-starter-lab (lead only). Rejected alternatives after verification (2026-10-20): microsoft/markitdown #2719 (its reporter already opened PR #2720 — competing), markitdown #2536 (five competing PRs plus a claimant comment), pydantic #14019 (two closed competing PRs), laya (my target issues' filers each declared their own intent to work them), deepseek-harness (issues and PRs disabled — cannot contribute). Selected: pytest-dev/pytest issue #15221 'Collecting many file arguments in the same directory re-collects the parent directory once per argument', filed 2026-10-19T15:08:28Z by kakazu5 with a measurement-first report (Windows profiled timings, call counts, a workaround's deltas, byte-identical items claim on 9,608 and 38,514 nodes), 0 comments, no labels, unassigned at selection and still competitor-free at publication (the issue timeline's only cross-reference is this PR, verified after opening). Root cause: Session.collect passes handle_dupes=False for arguments ending in a single file path ('files given directly multiple times on the command line should not be deduplicated' — a deliberate contract), which skips the per-level _collection_cache, so the parent Dir re-collects whole for every file argument (hooks fired per sibling per argument, all siblings-but-one pruned); on Windows the pruning adds the #11895 short-path fallback (samefile_nofollow, two lstat per non-matching sibling per argument). Fix: Session.perform_collect precomputes self._repeated_file_arguments — file-argument paths that occur in more than one initial argument; Session.collect keeps fresh (handle_dupes=False) collection for those repeated paths so --keepduplicates and ::-part selections still run a file per argument, and reuses the level's cached report for file arguments collected exactly once; a cached report that previously failed is still re-collected fresh, so collection failures report unchanged. Node ids and their order are unchanged, which the new tests assert literally. Verification (Python 3.14.8, Linux, isolated shallow clone in the run workspace, SETUPTOOLS_SCM_PRETEND_VERSION=9.1.2.dev0): the issue's-shape repro — 100 file arguments of a 150-entry directory, --collect-only, one warm round each side — 2.31s/2.34s before, 0.39–0.41s after, identical items; testing/test_collection.py + testing/test_main.py 143 passed / 2 skipped / 1 xfailed; testing/acceptance_test.py 103 passed / 2 skipped / 1 xfailed; test_pytester + test_collect_imported_tests + test_nodes 68 passed / 1 skipped / 1 xfailed; testing/python/ 733 passed / 2 skipped / 3 xfailed; git diff --check clean; coverage over the two touched files afterwards showed every added line executed (pre-existing unrelated misses only), which matched codecov/patch's final success after an earlier partial upload (76.47% mid-rollup failure) re-ran once remaining uploads landed. Post-publication statics: ruff check and ruff format --check clean on the changed files (ruff 0.17.1 — the pre-commit pin; the install needed two download retries on the throttled network), mypy clean on src/_pytest/main.py + testing/test_collection.py under the repo config (mypy 2.4.0 — the pre-commit pin). PR #15228 'perf(collection): collect a parent level once for explicit file arguments' opened 2026-10-20T16:12:03Z, not draft, base main @ 49ea4d0 (upstream tip re-verified after opening), head e336c3e (single commit, +166/-5 across src/_pytest/main.py +57/-5, testing/test_collection.py +99, changelog/15221.improvement.rst +9, AUTHORS +1). Body: Fixes #15221 first line, summary, implementation, full local test table, scope note — and revised once after opening (body edit only, head untouched, 16:2xZ): the 'ruff/mypy not run locally' caveat had become stale and was replaced by the verified results, and the AI assistance disclosure was added per CONTRIBUTING.rst (Co-authored-by trailers offered on request, not force-pushed). CI on e336c3e at 2026-10-20T16:32Z: 34 check-runs, 34 success, 0 failing (check, codecov/patch, Changelog entry, package, and 30 build jobs: ubuntu/macos/windows x Python 3.10-3.15, pypy3-xdist, twisted 24/25, asynctest, pluggy, xdist, pexpect x2, lsof-numpy-pexpect, freeze, doctesting, plugins), commit statuses pre-commit.ci - pr success (16:12:22Z) and docs/readthedocs.org:pytest success (16:13:55Z), mergeable true, mergeable_state blocked (pytest's fork-PR protection gate). Review: copilot-pull-request-reviewer COMMENTED at 16:12:11Z with no content; no human review yet; no pings — the PR is the reply. Track 022, first pytest contribution."
     }
   ]
 }

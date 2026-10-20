@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-19T22:12:25Z",
+  "updatedAt": "2026-10-20T04:22:08Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -157,19 +157,19 @@
       "issueNumber": 5049,
       "issueTitle": "Scheduled research crashes on a non-numeric research_max_tokens in settings.json",
       "issueUrl": "https://github.com/odysseus-dev/odysseus/issues/5049",
-      "issueState": "OPEN",
+      "issueState": "CLOSED",
       "prNumber": 6473,
       "prUrl": "https://github.com/odysseus-dev/odysseus/pull/6473",
-      "prState": "open",
+      "prState": "merged",
       "prTitle": "fix(scheduler): fall back to defaults for non-numeric research settings",
       "branch": "fix/scheduler-research-settings-guard-5049",
       "baseBranch": "dev",
       "fork": "ShahabAhmed01/odysseus",
       "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
-      "status": "pr-opened",
+      "status": "merged",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -205,13 +205,17 @@
         {
           "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
+        },
+        {
+          "author": "alteixeira20",
+          "state": "APPROVED"
         }
       ],
-      "mergedAt": null,
-      "mergeCommit": null,
+      "mergedAt": "2026-10-19T22:44:19Z",
+      "mergeCommit": "268636c9aa73f83a615fe0c5ad8e66154e211524",
       "description": "Guard the three research_* settings reads in src/task_scheduler.py with try/except fallbacks to documented defaults (8192/90/3)",
       "notes": "Track 003. Open child of maintainer subtracker #5335 (RaresKeY) with explicit acceptance criteria. Prior PR #5050 (YAMRAJ13y) closed unmerged in 2026-07-23 transfer, never resubmitted — redo with attribution. Focused tests in tests/test_scheduler_research_settings_guard.py. Runtime validation performed 2026-10-09 (app booted on branch, changed path exercised); ready-for-review label applied.",
-      "issueUpdatedAt": "2026-10-03T14:49:15Z"
+      "issueUpdatedAt": "2026-10-19T22:44:29Z"
     },
     {
       "repo": "odysseus-dev/odysseus",
@@ -231,7 +235,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -274,7 +278,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -317,7 +321,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": null,
       "commits": [
         {
@@ -360,7 +364,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -403,7 +407,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -470,7 +474,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -533,7 +537,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -587,7 +591,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -649,7 +653,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -709,7 +713,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -764,7 +768,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -805,7 +809,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -847,7 +851,7 @@
       "status": "merged",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -919,7 +923,7 @@
       "status": "merged",
       "openedAt": "2026-10-17T18:19:47Z",
       "prCreatedAt": "2026-10-17T18:19:47Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -976,7 +980,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-19T12:01:53Z",
       "prCreatedAt": "2026-10-19T12:01:53Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "ff92bdd01c423b833a96c0ece823265c47d0e6be",
       "commits": [
         {
@@ -1029,7 +1033,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-19T13:17:51Z",
       "prCreatedAt": "2026-10-19T13:17:51Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "dc20b216f065af3a487722141da9a29dcac388d1",
       "commits": [
         {
@@ -1092,7 +1096,7 @@
       "status": "ready-to-merge",
       "openedAt": "2026-10-19T17:24:52Z",
       "prCreatedAt": "2026-10-19T17:24:52Z",
-      "lastVerified": "2026-10-19T22:12:25Z",
+      "lastVerified": "2026-10-20T04:22:08Z",
       "baseCommit": "cc6fea5b40ad559f7ca358a24b1a521451232281",
       "commits": [
         {

@@ -1,21 +1,49 @@
 # Contribution Handoff
 
-Last updated: 2026-10-20T16:46Z (Track 022: pytest-dev/pytest PR #15228
-opened 2026-10-20T16:12:03Z — **34/34 check-runs success** plus
-`pre-commit.ci` and `docs/readthedocs.org:pytest` statuses on `e336c3e`,
-awaiting the first human review; the PR body carries an AI assistance
-disclosure per pytest's `CONTRIBUTING.rst` AI/LLM policy and was
-corrected once post-publication (stale ruff/mypy caveat → verified
-results; head untouched). This session also re-counted the Portfolio
-Summary from the ledger (Merged 9 → 11 with the 2026-10-19/20 merges)
-and re-synced every record against live GitHub.)
+Last updated: 2026-10-20T16:42Z (Track 023: honojs/hono issue #5569 - the fix is
+committed, pushed and published as a branch linked in the issue, because
+honojs/hono restricts pull-request creation to collaborators and every attempt to
+open a PR was refused; no upstream PR, no CI, no review, not merged). This session
+also re-audited the candidate queue: three of the four most attractive hono issues
+were already claimed by other contributors' announced fork fixes and were dropped.
+Prior tracks, including Track 022 (pytest), are unchanged.
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 10
+Monitoring Contributions: 11
 Merged Contributions: 11
 Closed/Superseded Contributions: 1
+
+**New this session (2026-10-20T16:42Z): hono #5569** -
+`Lambda adapters corrupt text responses declared as Shift_JIS`. The AWS Lambda and
+Lambda@Edge adapters decided base64-vs-text from the content type alone, and
+`defaultIsContentTypeBinary()` calls `text/plain` non-binary whatever charset it
+declares - so `Response.text()` decoded a Shift_JIS body as UTF-8 and replaced
+every invalid byte with U+FFFD while the content type still claimed Shift_JIS. A
+`text/plain; charset=shift_jis` response holding the six bytes of "テスト"
+(`83 65 83 58 83 67`) came back as `EF BF BD 65 EF BF BD 58 EF BF BD 67`. The fix
+base64 encodes a response whose content type declares a charset other than UTF-8
+(new `isNonUtf8Charset()` helper, applied to all four shipped copies of the
+adapters), leaving the content type untouched. Verification: full suite 145 files /
+**5251 passed / 46 skipped / 0 failed**; adapter suites 111 passed; adapter package
+suites 100 and 69 passed; `tsc`, `vp lint`, `vp fmt --check` clean; the new tests
+fail without the fix. An independent read-only review found two MAJOR issues, both
+fixed before the commit (a vacuous control test that `c.text` let Hono's default
+content type overwrite, and the charset regex having no direct coverage). **No pull
+request exists and none could be opened**: `honojs/hono` sets
+`pull_request_creation_policy: collaborators_only` and `docs/CONTRIBUTING.md` says
+"Pull requests are limited to maintainers ... If you have already fixed it in your
+fork, you can link the branch in the issue. A maintainer may open a pull request
+from it, and your commits keep your name." Every attempt was refused (`POST
+/repos/honojs/hono/pulls` 404 for a same-repo head, another user's fork and this
+run's fork; `gh pr create` and the GraphQL `createPullRequest` mutation FORBIDDEN;
+the same request against `honojs/middleware`, policy `all`, returns 422 - so the
+block is repository-scoped). The repository's route was followed instead: commit
+`e13a1d2` pushed to the `ShahabAhmed01/hono` fork and the branch linked in issue
+#5569 as comment `6296083976`, offering to open the PR if a maintainer adds
+`ShahabAhmed01` as a collaborator. Not merged, no CI, no human review yet. Track
+023 below.
 
 **New this session (2026-10-20T16:12Z): pytest-dev/pytest #15221 / PR
 #15228** — `perf(collection): collect a parent level once for explicit
@@ -1354,6 +1382,79 @@ re-read `CONTRIBUTING.rst`'s AI/LLM policy section — it is the binding
 gate on this lane (disclosed tooling, an accountable human behind the
 PR, review replies from the account).
 
+### Track 023
+Project: honojs/hono
+Issue: #5569
+PR: - (none can be opened; `pull_request_creation_policy: collaborators_only`)
+Branch: fix/issue-5569-non-utf8-charset-445b0cd7
+Status: **COMMITTED, PUSHED AND PUBLISHED IN THE ISSUE - AWAITING A MAINTAINER'S
+NEXT MOVE** (comment `6296083976` on issue #5569 at 2026-10-20T16:42:08Z; commit
+`e13a1d279d20041f5a8abbd38ed68d7f17c8272d` on the `ShahabAhmed01/hono` fork; base
+`main` @ `5ca49b0720755c585c9a9835f0a479ceea36fb52` verified current at
+publication; 9 files, +329/-4). Not merged: there is no pull request, so there is
+no CI run and no review.
+CI: none - no pull request exists. Local verification instead: full suite 145 files,
+**5251 passed / 46 skipped / 0 failed**; `src/adapter` suites 111 passed; the
+`@hono/aws-lambda` and `@hono/lambda-edge` package suites 100 and 69 passed;
+`tsc -p tsconfig.spec.json`, `vp lint` and `vp fmt --check` clean;
+`git diff --check` clean.
+Review: no human review - there is no pull request to review. The issue carries my
+published comment with the root cause, the fix, the branch link and the test
+results; the comment also discloses AI assistance, as `docs/CONTRIBUTING.md`'s AI
+Usage Policy and the house PR convention require.
+Notes: Twenty-third track, first honojs/hono contribution. **The gate:**
+`honojs/hono` sets `pull_request_creation_policy: collaborators_only` in the
+repository object (it is `all` on every other project in this tracker), and
+`docs/CONTRIBUTING.md` states the same rule in words under "Issues instead of
+Pull Requests" - pull requests are limited to maintainers, and a contributor who
+has already fixed something in a fork links the branch in the issue so a
+maintainer can open the PR from it and the contributor's name stays on the
+commit. PR creation was refused from every angle: `POST /repos/honojs/hono/pulls`
+returned 404 for a same-repo head, for another user's fork and for this run's
+fork branch; `gh pr create` and the GraphQL `createPullRequest` mutation (with
+and without `headRepositoryId`) returned FORBIDDEN "does not have the correct
+permissions to execute `CreatePullRequest`"; the identical request against
+`honojs/middleware` (same org, policy `all`) returned 422 Validation Failed, and
+against `brekkylab/backlot`, `Kludex/starlette`, `Kludex/uvicorn` and
+`microsoft/markitdown` likewise - so the token and the account are fine and the
+refusal is repository-scoped. **Reproduction:** a `text/plain; charset=shift_jis`
+response holding `83 65 83 58 83 67` came back as
+`EF BF BD 65 EF BF BD 58 EF BF BD 67`. **Fix:** a new `isNonUtf8Charset()`
+helper reads the charset parameter (quoted or not; `utf-8`/`utf8` count as
+UTF-8; `text/plain; x-charset=foo` is not a charset declaration) and both
+adapters base64 encode such a response, so the runtime decodes the body back to
+the original bytes and the content type is left untouched; applied to all four
+shipped copies of the adapters plus the `@hono/aws-lambda` README (Binary Media
+Types note for API Gateway REST APIs). **Verification:** the new tests fail
+without the fix (`isBase64Encoded` false, body mojibake) and pass with it;
+the 5 `build/declaration-emit` / `build/jsx-types` failures seen first were
+environmental (they resolve the built package and need `dist/`), reproduced
+identically on the unmodified tree and cleared by `pnpm run build`. An
+independent read-only review over the whole diff produced a 39-case regex matrix
+and a 26-case content-type matrix, confirmed the regex on every edge case and
+found two MAJOR issues, both fixed before the commit: the lambda-edge "UTF-8
+charset" control test was vacuous (`c.text(str, {headers})` lets Hono's default
+content type overwrite the caller's - verified in `src/context.ts` - so it
+asserted nothing; it now uses `c.body(...)` with a lowercase charset) and the
+charset regex, which is the substance of the fix, had no direct coverage (now a
+10-case table test in both adapters). **Duplicate elimination:** the issue queue
+was swept for *announced fork fixes*, not only open PRs - #5567 and #5566
+(Kamaldeep-singh0), #5564 (okarin1511, who reports being unable to open a PR
+because of this very restriction) and #5520 (the reporter's own open PR #5521)
+were dropped as claimed; a working one-line fix for #5567 was written, verified
+and then discarded rather than duplicated. #5569 had no comment, no announced
+fix and no referencing PR among the 124 open PRs, and its state was re-checked
+immediately before publication. Workspace: isolated
+`~/opensource-work/runs/ossrun-20261020T143636Z-445b0cd7/upstream` (shallow
+clone `--depth 1` of `main`, Node 24.22.0, pnpm 12.6.0 via corepack); fork
+created this session via `POST /repos/honojs/hono/forks`; the tracker and every
+other workspace were untouched until publication. Next Action: watch issue #5569
+for a maintainer response; if `ShahabAhmed01` is added as a collaborator, open
+the pull request from `fix/issue-5569-non-utf8-charset-445b0cd7` with the PR
+description already written. Do not file a duplicate issue or a second fork
+branch for this bug, and do not open a PR while the repository's policy refuses
+it.
+
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
 Re-ran the full issue-first selection loop to fill the freed slot:
@@ -1805,6 +1906,9 @@ Two open courtesies, neither blocking:
   PIDs on those ports; build artifacts `http/`, `index.d.ts`,
   `__tests__/__fixtures__/index.json` are generated locally and are NOT
   part of the PR)
+- hono fork: https://github.com/ShahabAhmed01/hono
+- hono remotes: `origin` = fork, `upstream` = honojs/hono
+- hono workspace: `~/opensource-work/runs/ossrun-20261020T143636Z-445b0cd7/upstream` (shallow clone `--depth 1` of `main`; branch `fix/issue-5569-non-utf8-charset-445b0cd7` @ `e13a1d2` cut from `5ca49b0`; Node 24.22.0 at `~/opensource-work/node/bin`, pnpm 12.6.0 via corepack; `pnpm install --frozen-lockfile` needs ~10 min on this link, and `pnpm run build` must run before the `build/*.test.ts` suites pass)
 - Public tracker repo: https://github.com/ShahabAhmed01/opensource-contributions
 - Known env-dependent test failures (identical on unmodified dev): browser
   tests need Playwright chromium binaries; containment/workspace tests need a

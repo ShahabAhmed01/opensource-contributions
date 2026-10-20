@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-20T16:46:22Z",
+  "updatedAt": "2026-10-20T16:57:54Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -47,7 +47,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         },
         {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -98,7 +98,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         }
       ],
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -141,7 +141,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         }
       ],
@@ -169,7 +169,7 @@
       "status": "merged",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -203,7 +203,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         },
         {
@@ -235,7 +235,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -255,7 +255,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         }
       ]
@@ -278,7 +278,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -298,7 +298,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         }
       ]
@@ -321,7 +321,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": null,
       "commits": [
         {
@@ -336,7 +336,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         }
       ],
@@ -364,7 +364,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -379,7 +379,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         }
       ],
@@ -407,7 +407,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -438,7 +438,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         },
         {
@@ -474,7 +474,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -509,7 +509,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         }
       ],
@@ -537,7 +537,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -559,7 +559,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         },
         {
@@ -591,7 +591,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -617,7 +617,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         },
         {
@@ -653,7 +653,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -673,11 +673,11 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         },
         {
-          "author": "coderabbitai[bot]",
+          "author": "coderabbitai",
           "state": "COMMENTED"
         },
         {
@@ -685,7 +685,7 @@
           "state": "COMMENTED"
         },
         {
-          "author": "coderabbitai[bot]",
+          "author": "coderabbitai",
           "state": "COMMENTED"
         }
       ],
@@ -713,7 +713,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -732,7 +732,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         },
         {
@@ -768,7 +768,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -781,7 +781,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         }
       ],
@@ -809,7 +809,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -822,7 +822,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         }
       ],
@@ -851,7 +851,7 @@
       "status": "merged",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -864,19 +864,18 @@
         }
       ],
       "checks": {
-        "ring": "skipped",
         "test": "skipped",
-        "scan": "pass",
-        "test (3.15)": "pass",
         "test (3.11)": "pass",
-        "lint": "pass",
-        "test (3.14)": "pass",
+        "scan": "pass",
         "test (3.12)": "pass",
-        "test (3.13)": "pass"
+        "test (3.13)": "pass",
+        "test (3.14)": "pass",
+        "test (3.15)": "pass",
+        "lint": "pass"
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         },
         {
@@ -924,7 +923,7 @@
       "status": "merged",
       "openedAt": "2026-10-17T18:19:47Z",
       "prCreatedAt": "2026-10-17T18:19:47Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -945,7 +944,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         },
         {
@@ -981,7 +980,7 @@
       "status": "merged",
       "openedAt": "2026-10-19T12:01:53Z",
       "prCreatedAt": "2026-10-19T12:01:53Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "ff92bdd01c423b833a96c0ece823265c47d0e6be",
       "commits": [
         {
@@ -1002,7 +1001,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         },
         {
@@ -1038,7 +1037,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-19T13:17:51Z",
       "prCreatedAt": "2026-10-19T13:17:51Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "dc20b216f065af3a487722141da9a29dcac388d1",
       "commits": [
         {
@@ -1065,11 +1064,11 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         },
         {
-          "author": "cubic-dev-ai[bot]",
+          "author": "cubic-dev-ai",
           "state": "COMMENTED"
         },
         {
@@ -1101,7 +1100,7 @@
       "status": "ready-to-merge",
       "openedAt": "2026-10-19T17:24:52Z",
       "prCreatedAt": "2026-10-19T17:24:52Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "cc6fea5b40ad559f7ca358a24b1a521451232281",
       "commits": [
         {
@@ -1148,19 +1147,15 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         },
         {
-          "author": "cubic-dev-ai[bot]",
+          "author": "cubic-dev-ai",
           "state": "COMMENTED"
         },
         {
-          "author": "cubic-dev-ai[bot]",
-          "state": "COMMENTED"
-        },
-        {
-          "author": "ShahabAhmed01",
+          "author": "cubic-dev-ai",
           "state": "COMMENTED"
         },
         {
@@ -1168,7 +1163,11 @@
           "state": "COMMENTED"
         },
         {
-          "author": "coderabbitai[bot]",
+          "author": "ShahabAhmed01",
+          "state": "COMMENTED"
+        },
+        {
+          "author": "coderabbitai",
           "state": "APPROVED"
         }
       ],
@@ -1196,7 +1195,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-20T16:12:03Z",
       "prCreatedAt": "2026-10-20T16:12:03Z",
-      "lastVerified": "2026-10-20T16:46:22Z",
+      "lastVerified": "2026-10-20T16:57:54Z",
       "baseCommit": "49ea4d08714f9ae519b86ee17b6b50c1dd080f32",
       "commits": [
         {
@@ -1244,7 +1243,7 @@
       },
       "reviews": [
         {
-          "author": "copilot-pull-request-reviewer[bot]",
+          "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
         }
       ],
@@ -1252,6 +1251,40 @@
       "mergeCommit": null,
       "description": "Reuses the parent level's cached collection report for explicit file arguments collected exactly once, so pytest a/test_1.py a/test_2.py … scans the directory once instead of once per argument (2.31s → 0.39s at 100 arguments of a 150-entry dir), while repeated file arguments (--keepduplicates, or the same file selected with different :: parts) still collect fresh per occurrence and failed cached reports are re-collected.",
       "notes": "Selection (2026-10-20, coordination run ossrun-20261020T143539Z-b6ebdc41): the repo was reserved against the shared automation-coordination registry (one open repo-reserved run each; pytest-dev/pytest acquired 2026-10-20T15:01:09Z after two branch-init rejections), after discovery screened ~15 popular projects for a Python-verifiable, unclaimed item with external merge-acceptance evidence. pytest-dev/pytest: 14,616 stars / 3,523 forks, MIT, Python >=3.10 (live 2026-10-20), the highest-signal Python infrastructure repo of the day's crop. AI policy read carefully: pytest's CONTRIBUTING.rst 'AI/LLM-Assisted Contributions Policy' welcomes AI-assisted work with human accountability (pytest-core uses these tools daily) while 'purely agentic contributions are not accepted' and unattended output is closed and banned — the prior session's hard gate ('drive-by agentic PRs rejected') reads exactly this policy, so this run re-read the section before reserving, and the PR body carries an AI assistance disclosure paragraph with the account holder named as the responsible human standing behind the change. Standing exclusions honored: lingdojo/kana-dojo, SikamikanikoBG/homelab-monitor, P-r-e-m-i-u-m/open-source-starter-lab (lead only). Rejected alternatives after verification (2026-10-20): microsoft/markitdown #2719 (its reporter already opened PR #2720 — competing), markitdown #2536 (five competing PRs plus a claimant comment), pydantic #14019 (two closed competing PRs), laya (my target issues' filers each declared their own intent to work them), deepseek-harness (issues and PRs disabled — cannot contribute). Selected: pytest-dev/pytest issue #15221 'Collecting many file arguments in the same directory re-collects the parent directory once per argument', filed 2026-10-19T15:08:28Z by kakazu5 with a measurement-first report (Windows profiled timings, call counts, a workaround's deltas, byte-identical items claim on 9,608 and 38,514 nodes), 0 comments, no labels, unassigned at selection and still competitor-free at publication (the issue timeline's only cross-reference is this PR, verified after opening). Root cause: Session.collect passes handle_dupes=False for arguments ending in a single file path ('files given directly multiple times on the command line should not be deduplicated' — a deliberate contract), which skips the per-level _collection_cache, so the parent Dir re-collects whole for every file argument (hooks fired per sibling per argument, all siblings-but-one pruned); on Windows the pruning adds the #11895 short-path fallback (samefile_nofollow, two lstat per non-matching sibling per argument). Fix: Session.perform_collect precomputes self._repeated_file_arguments — file-argument paths that occur in more than one initial argument; Session.collect keeps fresh (handle_dupes=False) collection for those repeated paths so --keepduplicates and ::-part selections still run a file per argument, and reuses the level's cached report for file arguments collected exactly once; a cached report that previously failed is still re-collected fresh, so collection failures report unchanged. Node ids and their order are unchanged, which the new tests assert literally. Verification (Python 3.14.8, Linux, isolated shallow clone in the run workspace, SETUPTOOLS_SCM_PRETEND_VERSION=9.1.2.dev0): the issue's-shape repro — 100 file arguments of a 150-entry directory, --collect-only, one warm round each side — 2.31s/2.34s before, 0.39–0.41s after, identical items; testing/test_collection.py + testing/test_main.py 143 passed / 2 skipped / 1 xfailed; testing/acceptance_test.py 103 passed / 2 skipped / 1 xfailed; test_pytester + test_collect_imported_tests + test_nodes 68 passed / 1 skipped / 1 xfailed; testing/python/ 733 passed / 2 skipped / 3 xfailed; git diff --check clean; coverage over the two touched files afterwards showed every added line executed (pre-existing unrelated misses only), which matched codecov/patch's final success after an earlier partial upload (76.47% mid-rollup failure) re-ran once remaining uploads landed. Post-publication statics: ruff check and ruff format --check clean on the changed files (ruff 0.17.1 — the pre-commit pin; the install needed two download retries on the throttled network), mypy clean on src/_pytest/main.py + testing/test_collection.py under the repo config (mypy 2.4.0 — the pre-commit pin). PR #15228 'perf(collection): collect a parent level once for explicit file arguments' opened 2026-10-20T16:12:03Z, not draft, base main @ 49ea4d0 (upstream tip re-verified after opening), head e336c3e (single commit, +166/-5 across src/_pytest/main.py +57/-5, testing/test_collection.py +99, changelog/15221.improvement.rst +9, AUTHORS +1). Body: Fixes #15221 first line, summary, implementation, full local test table, scope note — and revised once after opening (body edit only, head untouched, 16:2xZ): the 'ruff/mypy not run locally' caveat had become stale and was replaced by the verified results, and the AI assistance disclosure was added per CONTRIBUTING.rst (Co-authored-by trailers offered on request, not force-pushed). CI on e336c3e at 2026-10-20T16:32Z: 34 check-runs, 34 success, 0 failing (check, codecov/patch, Changelog entry, package, and 30 build jobs: ubuntu/macos/windows x Python 3.10-3.15, pypy3-xdist, twisted 24/25, asynctest, pluggy, xdist, pexpect x2, lsof-numpy-pexpect, freeze, doctesting, plugins), commit statuses pre-commit.ci - pr success (16:12:22Z) and docs/readthedocs.org:pytest success (16:13:55Z), mergeable true, mergeable_state blocked (pytest's fork-PR protection gate). Review: copilot-pull-request-reviewer COMMENTED at 16:12:11Z with no content; no human review yet; no pings — the PR is the reply. Track 022, first pytest contribution."
+    },
+    {
+      "repo": "honojs/hono",
+      "project": "hono",
+      "issueNumber": 5569,
+      "issueTitle": "Lambda adapters corrupt text responses declared as Shift_JIS",
+      "issueUrl": "https://github.com/honojs/hono/issues/5569",
+      "issueState": "OPEN",
+      "issueUpdatedAt": "2026-10-20T16:42:08Z",
+      "prNumber": null,
+      "prUrl": null,
+      "prState": null,
+      "prTitle": null,
+      "branch": "fix/issue-5569-non-utf8-charset-445b0cd7",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/hono",
+      "forkUrl": "https://github.com/ShahabAhmed01/hono",
+      "status": "pushed",
+      "openedAt": "2026-10-20T16:42:08Z",
+      "prCreatedAt": null,
+      "lastVerified": "2026-10-20T16:57:54Z",
+      "baseCommit": "5ca49b0720755c585c9a9835f0a479ceea36fb52",
+      "commits": [
+        {
+          "sha": "e13a1d279d20041f5a8abbd38ed68d7f17c8272d",
+          "subject": "fix(aws-lambda,lambda-edge): keep the bytes of a response that declares a non-UTF-8 charset"
+        }
+      ],
+      "checks": {},
+      "reviews": [],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Base64 encodes a Lambda or Lambda@Edge response whose Content-Type declares a charset other than UTF-8, so Response.text() no longer replaces every non-UTF-8 byte with U+FFFD: a text/plain; charset=shift_jis body keeps its bytes instead of coming back as mojibake. Published as a branch linked in issue #5569, because honojs/hono restricts pull-request creation to collaborators and no upstream PR could be opened.",
+      "notes": "Twenty-third track, first honojs/hono contribution. HARD GATE: the repository object exposes pull_request_creation_policy=collaborators_only, and docs/CONTRIBUTING.md says it in words under 'Issues instead of Pull Requests' - 'Pull requests are limited to maintainers ... If you have already fixed it in your fork, you can link the branch in the issue. A maintainer may open a pull request from it, and your commits keep your name.' Every PR-creation attempt was refused: POST /repos/honojs/hono/pulls returned 404 Not Found for a same-repo head, for another user's fork and for this run's fork branch; gh pr create and the GraphQL createPullRequest mutation (with and without headRepositoryId) returned FORBIDDEN 'does not have the correct permissions to execute CreatePullRequest'; the same request against honojs/middleware (same org, policy all) returned 422, so the token and the account are fine and the refusal is repository-scoped. The repository's own route was followed instead: commit e13a1d279d20041f5a8abbd38ed68d7f17c8272d pushed to the ShahabAhmed01/hono fork at fix/issue-5569-non-utf8-charset-445b0cd7 (base main @ 5ca49b0) and the branch linked in issue #5569 as comment 6296083976 at 2026-10-20T16:42:08Z, with an offer to open the PR myself if a maintainer adds ShahabAhmed01 as a collaborator. 9 files, +329/-4, touching all four shipped copies of the adapters (src/adapter/{aws-lambda,lambda-edge} and adapters/{aws-lambda,lambda-edge}/src) plus the @hono/aws-lambda README. Root cause: the adapters decided base64-vs-text from the content type alone, and defaultIsContentTypeBinary() calls text/plain non-binary whatever charset it declares, so Response.text() decoded a Shift_JIS body as UTF-8 and replaced every invalid byte with U+FFFD while the content type still claimed Shift_JIS. Fix: a new isNonUtf8Charset() helper reads the charset parameter (quoted or not, utf-8/utf8 counted as UTF-8, x-charset=foo not a declaration) and both adapters base64 encode such a response, leaving the content type untouched. Verification: full suite 145 files / 5251 passed / 46 skipped / 0 failed; adapter suites 111 passed; adapter package suites 100 and 69 passed; tsc, vp lint and vp fmt --check clean; the new tests fail without the fix. The 5 build/declaration-emit and build/jsx-types failures seen first were environmental (they need dist/) and were reproduced identically on the unmodified tree and cleared by pnpm run build. An independent read-only review found two MAJOR issues, both fixed before the commit: a vacuous lambda-edge control test (c.text lets Hono's default content type overwrite the caller's, so it asserted nothing - now c.body with a lowercase charset) and the charset regex having no direct coverage (now a 10-case table test in both adapters). Duplicate elimination: #5567 and #5566 (announced fork fixes by Kamaldeep-singh0) and #5564 (announced fork fix by okarin1511, who reports being unable to open a PR because of this same restriction) and #5520 (the reporter's own open PR #5521) were all dropped as claimed; a one-line fix for #5567 was written, verified and then discarded rather than duplicated. NOT MERGED, no PR, no CI, no human review - the maintainers hold the next move. Next action: watch issue #5569 for a maintainer response; if ShahabAhmed01 is added as a collaborator, open the PR from fix/issue-5569-non-utf8-charset-445b0cd7 with the description already written."
     }
   ]
 }

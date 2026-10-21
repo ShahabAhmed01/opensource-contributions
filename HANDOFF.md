@@ -1,29 +1,50 @@
 # Contribution Handoff
 
-Last updated: 2026-10-21T19:51Z (Track 025: **pypa/pipx #2176 →
-PR #2177 opened 19:35Z**, `pre-commit.ci` and Read the Docs green,
-GitHub Actions tests/zizmor behind the first-time-contributor
-workflow-approval gate; see the "New this session" block and
-`contributions/pipx/issue-2176.md`. Previous this session: Track 024
-(microsoft/pyright #11879 → PR #11904 opened 19:19Z, same approval
-gate; `contributions/pyright/issue-11879.md`). Also this session: backlot
-#831/PR #851's merge state (merged 2026-10-20T05:18:22Z, commit
-`0b7aa0d`) re-verified against the API — the state record was already
-correct; and the **brekkylab org now restricts the authenticated
-account** ("Access to this site has been restricted" on
-`brekkylab/backlot` via API while the web UI still loads), which ends
-the backlot lane — no new backlot work is possible. Prior notes:
-2026-10-20T16:42Z Track 023 (hono #5569, branch linked in issue — the
-repo refuses PRs from non-collaborators) and 2026-10-20T16:12Z Track
-022 (pytest #15221 / PR #15228); 2026-10-19T13:44Z Track 020 starlette
-PR #3682.)
+Last updated: 2026-10-21T21:05Z (Track 026: **pytest-dev/pytest #3649 →
+PR #15239 opened 20:53Z**, `Changelog entry`/`package`/`pre-commit.ci`
+green with the `build` matrix still running; see the "New this session"
+block and `contributions/pytest/issue-3649.md`). Previous this session:
+Track 025 (pypa/pipx #2176 → PR #2177 opened 19:35Z) and Track 024
+(microsoft/pyright #11879 → PR #11904 opened 19:19Z). Also this session:
+the **brekkylab org restricts the authenticated account** ("Access to
+this site has been restricted" on `brekkylab/backlot` via API while the
+web UI still loads), which ends the backlot lane — no new backlot work
+is possible. Prior notes: 2026-10-20T16:42Z Track 023 (hono #5569,
+branch linked in issue — the repo refuses PRs from non-collaborators),
+2026-10-20T16:12Z Track 022 (pytest #15221 / PR #15228);
+2026-10-19T13:44Z Track 020 starlette PR #3682.)
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 13
+Monitoring Contributions: 14
 Merged Contributions: 11
 Closed/Superseded Contributions: 1
+
+**New this session (2026-10-21T21:05Z): pytest-dev/pytest #3649 / PR #15239**
+(Track 026) — `fix: don't enter the debugger for a syntax error`.
+`importtestmodule` re-raises a `SyntaxError` as a `CollectError` that
+keeps the original `SyntaxError` as its `__cause__`; because a
+`CollectError` is not a control-flow exception, `collect_one_node`
+treated it as interactive and `--pdb` opened the debugger on the `raise`
+statement instead of on the syntax error. `collect_one_node` now
+recognises that case (`is_syntax_error`) and skips
+`pytest_exception_interact`; the error is still reported with its full
+traceback, and every other collection error still opens the debugger
+(the `NameError` of #181 still does — `test_pdb_interaction_on_
+collection_issue181` and `test_pdb_collection_failure_is_shown` pass
+unchanged). Validation: `testing/` 4698 passed / 47 skipped / 13
+xfailed, `testing/test_debugging.py` 54 passed / 1 skipped, ruff 0.17.1
++ mypy 2.4.0 clean on the changed files, and a local coverage run with
+the repo's own config (`patch = ["subprocess"]`) shows every added line
+executed, which is what pytest's 100% `codecov/patch` target needs. The
+issue carries an explicit maintainer green light (asottile, 2018-10-19:
+"no no, this is definitely worth fixing") and had no linked or competing
+PR at publication. AI assistance disclosed in the PR body per
+`CONTRIBUTING.rst`; the body was revised once post-publication (a body
+edit only, the head did not move) to record that this account cannot
+comment on other users' issues in the repository, so the root-cause
+analysis lives in the PR description.
 
 **New this session (2026-10-21T19:35Z): pypa/pipx #2176 / PR #2177**
 (Track 025) — `fix: match pip's archive extensions for local paths`.
@@ -1674,6 +1695,33 @@ review; respond on the same branch if changes are requested. Do not
 open another pipx PR while #2177 is open, and do not duplicate
 #2173/#2174/#2175, #2171/#2172 or #2165/#2166.
 
+### Track 026
+Project: pytest-dev/pytest
+Issue: #3649
+PR: #15239
+Branch: fix/3649-pdb-syntax-error
+Status: MONITORING
+CI: RUNNING (Changelog entry, package, pre-commit.ci green; build matrix
+in progress; codecov/patch re-expected after the matrix uploads — the
+opening commit's "57.14% of diff hit" was a mid-rollup artifact, and the
+one genuinely uncovered line it pointed at was removed in commit
+`28d81d9` before anything else landed)
+Review: AWAITING_REVIEW (copilot-pull-request-reviewer COMMENTED, no
+content)
+Notes: Head `28d81d949d91da5e40e9160eb7e482307bd1f237` (two commits,
++28/-1 across src/_pytest/runner.py, testing/test_debugging.py,
+changelog/3649.bugfix.rst, AUTHORS), base `main` @ `c9bf1ed` (upstream
+tip re-verified at publication). `mergeable: true`,
+`mergeable_state: blocked` (pytest's fork-PR protection gate). The
+account is blocked from commenting on other users' issues in this
+repository ("User is blocked") but can comment on its own PRs — the
+root-cause analysis went into the PR description and the body was
+revised to say so. Local: `testing/` 4698 passed, ruff + mypy clean, a
+repo-config coverage run shows every added line executed. Full record:
+`contributions/pytest/issue-3649.md`.
+Next Action: Monitor PR for maintainer review; respond on the same
+branch. Do not ping.
+
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
 Re-ran the full issue-first selection loop to fill the freed slot:
@@ -2021,6 +2069,11 @@ plus a live `is:pr author:ShahabAhmed01 is:open` search for coverage.
 Nothing is owed on our side anywhere in the portfolio (re-verified
 2026-10-21T19:51Z). Open PRs are wait-only:
 
+- **pytest #15239 (Track 026) — wait only.** `Changelog entry`,
+  `package` and `pre-commit.ci` are green, the `build` matrix is still
+  running; no human review yet. Do not ping. Note the account cannot
+  comment on other users' issues in this repository, so any answer to a
+  maintainer question has to go into the PR thread.
 - **pipx #2177 (Track 025) — wait only.** `pre-commit.ci` and Read the
   Docs are green; GitHub Actions tests/zizmor are `action_required`
   behind the first-time-contributor approval gate (must not be
@@ -2180,6 +2233,13 @@ Two open courtesies, neither blocking:
   site has been restricted" via API; treat the backlot lane as closed
   until this clears.
 - Public tracker repo: https://github.com/ShahabAhmed01/opensource-contributions
+- Tracker sync without a `gh` binary: the generator only needs
+  `gh issue view <n> --repo <r> --json state,title,updatedAt` and
+  `gh pr view <n> --repo <r> --json <fields>`; a small REST-backed
+  shim (`/tmp/opencode/ghshim/gh` in the run workspace, token read
+  from the ambient git credential helper) satisfies both, and the
+  generator's own docstring anticipates exactly that shape
+  ("a local sync reads the shim's REST reconstruction").
 - Known env-dependent test failures (identical on unmodified dev): browser
   tests need Playwright chromium binaries; containment/workspace tests need a
   bubblewrap-visible interpreter path (venv on an external mount); wave3 local

@@ -139,3 +139,31 @@ coverage run -m pytest testing/test_collection.py               # codecov/patch 
   statuses at review time. AI assistance disclosed in the PR body per
   `CONTRIBUTING.rst`; body revised once post-publication (stale local
   statics replaced, disclosure added) without moving the head.
+
+### #3649 — `--pdb` should not enter the debugger for a syntax error (**PR OPEN, CI running** as PR #15239, 2026-10-21)
+
+- Branch: `fix/3649-pdb-syntax-error`; PR:
+  https://github.com/pytest-dev/pytest/pull/15239 (base `main` @
+  `c9bf1ed`), closes https://github.com/pytest-dev/pytest/issues/3649.
+- Full record: [`contributions/pytest/issue-3649.md`](../contributions/pytest/issue-3649.md).
+- Fix: `importtestmodule` re-raises a `SyntaxError` as a `CollectError`
+  that keeps the original `SyntaxError` as its `__cause__`;
+  `collect_one_node` now recognises that case and skips
+  `pytest_exception_interact`, so `--pdb` no longer opens the debugger
+  on the `raise` statement. The error is still reported with its full
+  traceback, and every other collection error still opens the debugger.
+- Why this issue: an explicit maintainer green light in the thread
+  (asottile, 2018-10-19 — "no no, this is definitely worth fixing"),
+  open since 2018, unclaimed (no linked or competing PR at publication),
+  and a crisp, single-cause bug with an unambiguous expected behaviour.
+- Validation: `testing/` 4698 passed / 47 skipped / 13 xfailed,
+  `testing/test_debugging.py` 54 passed / 1 skipped, ruff 0.17.1 + mypy
+  2.4.0 clean on the changed files, and a local coverage run with the
+  repo's own config (`patch = ["subprocess"]`) shows every added line
+  executed — pytest's `codecov/patch` target is 100% of the diff.
+- Repo facts learned on this lane (2026-10-21): this account is
+  **blocked from commenting on other users' issues** in pytest-dev/pytest
+  (the API answers "User is blocked") while commenting on its own pull
+  requests works — so root-cause analyses have to go into the PR
+  description, and an issue-comment-first workflow is not available
+  here. Pull-request creation, however, is allowed.

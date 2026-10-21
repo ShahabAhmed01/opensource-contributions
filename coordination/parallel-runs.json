@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-21T19:12:27Z",
+  "updated_at": "2026-10-21T19:24:25Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
       "status": "RESERVED",
-      "repository": "pydantic/pydantic",
-      "issue_url": "https://github.com/pydantic/pydantic/issues/14019",
-      "issue_number": 14019,
+      "repository": "pypa/pipx",
+      "issue_url": null,
+      "issue_number": null,
       "pr_url": null,
-      "head_branch": "fix/iterator-schema-generation",
-      "acquired_at": "2026-10-20T15:10:10Z",
-      "heartbeat_at": "2026-10-20T15:10:10Z",
-      "expires_at": "2026-10-20T21:10:10Z",
+      "head_branch": "fix/archive-extensions-2eff4030",
+      "acquired_at": "2026-10-21T19:24:25Z",
+      "heartbeat_at": "2026-10-21T19:24:25Z",
+      "expires_at": "2026-10-22T07:24:25Z",
       "reservation_state": "ACTIVE"
     },
     {

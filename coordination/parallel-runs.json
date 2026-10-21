@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-21T21:09:13Z",
+  "updated_at": "2026-10-21T21:09:21Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -24,8 +24,8 @@
       "pr_url": "https://github.com/pytest-dev/pytest/pull/15239",
       "head_branch": "fix/3649-pdb-syntax-error",
       "acquired_at": "2026-10-21T20:11:42Z",
-      "heartbeat_at": "2026-10-21T21:09:13Z",
-      "expires_at": "2026-10-22T03:09:13Z",
+      "heartbeat_at": "2026-10-21T21:09:21Z",
+      "expires_at": "2026-10-22T03:09:21Z",
       "reservation_state": "ACTIVE"
     },
     {

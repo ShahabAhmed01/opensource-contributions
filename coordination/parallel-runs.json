@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-21T19:42:08Z",
+  "updated_at": "2026-10-21T19:49:54Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -11,7 +11,7 @@
       "pr_url": null,
       "head_branch": "fix/archive-extensions-2eff4030",
       "acquired_at": "2026-10-21T19:24:25Z",
-      "heartbeat_at": "2026-10-21T19:30:33Z",
+      "heartbeat_at": "2026-10-21T19:49:54Z",
       "expires_at": "2026-10-22T07:24:25Z",
       "reservation_state": "ACTIVE"
     },
@@ -71,5 +71,9 @@
       "reservation_state": "RELEASED"
     }
   ],
-  "tracker_writer": null
+  "tracker_writer": {
+    "run_id": "ossrun-20261020T143633Z-2eff4030",
+    "acquired_at": "2026-10-21T19:49:54Z",
+    "expires_at": "2026-10-21T20:49:54Z"
+  }
 }

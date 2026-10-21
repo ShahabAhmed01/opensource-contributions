@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-21T19:24:25Z",
+  "updated_at": "2026-10-21T19:30:33Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
       "status": "RESERVED",
       "repository": "pypa/pipx",
-      "issue_url": null,
-      "issue_number": null,
+      "issue_url": "https://github.com/pypa/pipx/issues/2176",
+      "issue_number": 2176,
       "pr_url": null,
       "head_branch": "fix/archive-extensions-2eff4030",
       "acquired_at": "2026-10-21T19:24:25Z",
-      "heartbeat_at": "2026-10-21T19:24:25Z",
+      "heartbeat_at": "2026-10-21T19:30:33Z",
       "expires_at": "2026-10-22T07:24:25Z",
       "reservation_state": "ACTIVE"
     },

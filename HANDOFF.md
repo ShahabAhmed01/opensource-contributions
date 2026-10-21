@@ -1,9 +1,12 @@
 # Contribution Handoff
 
-Last updated: 2026-10-21T19:38Z (Track 024: **microsoft/pyright #11879 →
-PR #11904 opened 19:19Z**, CI queued behind the first-time-contributor
+Last updated: 2026-10-21T19:51Z (Track 025: **pypa/pipx #2176 →
+PR #2177 opened 19:35Z**, `pre-commit.ci` and Read the Docs green,
+GitHub Actions tests/zizmor behind the first-time-contributor
 workflow-approval gate; see the "New this session" block and
-`contributions/pyright/issue-11879.md`. Also this session: backlot
+`contributions/pipx/issue-2176.md`. Previous this session: Track 024
+(microsoft/pyright #11879 → PR #11904 opened 19:19Z, same approval
+gate; `contributions/pyright/issue-11879.md`). Also this session: backlot
 #831/PR #851's merge state (merged 2026-10-20T05:18:22Z, commit
 `0b7aa0d`) re-verified against the API — the state record was already
 correct; and the **brekkylab org now restricts the authenticated
@@ -18,9 +21,28 @@ PR #3682.)
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 12
+Monitoring Contributions: 13
 Merged Contributions: 11
 Closed/Superseded Contributions: 1
+
+**New this session (2026-10-21T19:35Z): pypa/pipx #2176 / PR #2177**
+(Track 025) — `fix: match pip's archive extensions for local paths`.
+Bare local archive filenames whose extensions pip supports but pipx did
+not (`.tar.xz`, `.tar.bz2`, `.tgz`, `.tar`, and the related pip
+spellings) are valid PEP 508 requirement names, so
+`valid_pypi_name()` canonicalized them and `pipx install
+empty_project-0.1.0.tar.xz` asked the index for
+`empty-project-0-1-0-tar-xz` instead of installing the file; the `./`
+form worked. `ARCHIVE_EXTENSIONS` now matches pip's full tuple and
+`_is_archive_name()` matches case-insensitively. Verification: the new
+regression tests pass on Python 3.11.17 and 3.15.0 (166/166 in
+`tests/test_package_specifier.py`); a valid `.tar.xz` sdist and an
+uppercase `.TAR.XZ` copy both install end-to-end; pre-commit on the
+changed files, `pre-commit.ci` and the Read the Docs build are green.
+The PR is open (not merged), `pre-commit.ci` and Read the Docs success,
+GitHub Actions tests/zizmor `action_required` behind the
+first-time-contributor approval gate (not bypassed), Copilot
+quota-limited, no human review. Track 025 below.
 
 **New this session (2026-10-21T19:19Z): pyright #11879 / PR #11904**
 (Track 024) — `Fix spurious error when functools.partial binds variadic
@@ -1587,6 +1609,71 @@ branch if changes are requested. Do not open another pyright PR while
 #11904 is open. If `license/cla` goes red despite the stored signature,
 ASK THE ACCOUNT HOLDER before replying to the CLA bot.
 
+### Track 025
+Project: pypa/pipx
+Issue: #2176 ("Bare local archives with .tar.xz, .tar.bz2, .tgz, or .tar are treated as PyPI names")
+PR: #2177
+Branch: fix/archive-extensions-2eff4030
+Status: **OPEN, READY FOR REVIEW — 2 EXTERNAL STATUSES SUCCESS;
+GITHUB ACTIONS TESTS/ZIZMOR ACTION_REQUIRED (first-time-contributor
+approval), NO HUMAN REVIEW** (opened 2026-10-21T19:35:20Z as a draft;
+marked ready shortly after opening; base `main` @
+`0c4acc88fc4d62b9a85f9c0cff8c938f81c84c2b` verified current at commit
+and publication; head `83fd7a8f82cb6adc84c44adf636c8743a18cf5b2`, 2
+commits, 3 files, +62/−4; fork `ShahabAhmed01/pipx`; not merged).
+CI: `pre-commit.ci - pr` SUCCESS and `docs/readthedocs.org:pipx`
+SUCCESS on head `83fd7a8`; the GitHub Actions `🧪 tests` and `zizmor`
+runs conclude `action_required` — the first-time-contributor
+workflow-approval gate, not a failing check and not bypassed. No
+commit statuses beyond those two.
+Review: Copilot COMMENTED but the body says it could not review
+because the requester reached the quota limit; no human review and no
+PR comments.
+Notes: Twenty-fifth track, first pypa/pipx contribution. pipx is a
+PyPA installer/runner for Python applications (MIT, 12,983 stars / 625
+forks live 2026-10-21; 13 open issues+PRs; active pushes, last
+17:41:51Z); external PRs merge (#2160, #2157, #2150 merged
+2026-10-15..17); no AI-specific contribution policy was found in
+`docs/contributing.rst` or `.github/CONTRIBUTING.md`. **Selection:**
+self-discovered while reading `src/pipx/package_specifier.py`, not
+taken from the issue pool. **Defect:** `ARCHIVE_EXTENSIONS` held only
+`.whl`, `.tar.gz`, `.zip`; a bare `empty_project-0.1.0.tar.xz` is a
+valid PEP 508 name, so `valid_pypi_name()` returned
+`empty-project-0-1-0-tar-xz` and `package_name_from_spec()` skipped
+local resolution; pip then looked up that nonexistent project. The
+`./empty_project-0.1.0.tar.xz` form worked because it failed the PEP
+508 parse and reached the local-path branch. **Fix:** align the tuple
+with pip's `ARCHIVE_EXTENSIONS` (adds `.tar.bz2`, `.tbz`, `.tar.xz`,
+`.txz`, `.tlz`, `.tar.lz`, `.tar.lzma`, `.tgz`, `.tar`) and match via
+`_is_archive_name()` case-insensitively, as pip's `is_archive_file()`
+does; tests cover every extension, mixed case and missing paths.
+**Verification:** TDD-style reproduction with a valid `.tar.xz` sdist
+built from `testdata/empty_project`: bare filename failed before the
+fix with `Could not find a version that satisfies the requirement
+empty-project-0-1-0-tar-xz`, succeeded after the fix, and an uppercase
+`.TAR.XZ` copy also installed and recorded its absolute path in
+`pipx_metadata.json`; `pytest tests/test_package_specifier.py -q`
+166/166 green on Python 3.11.17 and on Python 3.15.0 (separate
+`.venv315`, with pip installed because the conftest package-cache
+script invokes it); pre-commit on the three changed files green
+(ruff 0.17.0, flake8-lazy, codespell, mdformat); `ruff check` and
+`ruff format --check` clean. **Duplicate elimination:** searches for
+`tar.xz`, `tar.bz2`, `.tgz` and `ARCHIVE_EXTENSIONS` found no matching
+issue/PR before #2176; the concurrent pipx lanes are #2173
+(extras on bare archives, PRs #2174/#2175), #2171 (inline-metadata
+delimiter, PR #2172) and #2165 (`runpip` option values, PR #2166) —
+this change is limited to archive-extension recognition. Workspace:
+isolated
+`~/opensource-work/runs/ossrun-20261020T143633Z-2eff4030/upstream/pipx`
+(shallow clone of `main` @ `0c4acc8`); fork created this session; the
+shared tracker tree was untouched. Prepared with AI assistance under
+the account owner's direction; every claim checked against live GitHub
+or a local run.
+Next Action: Watch PR #2177 for workflow approval and the first human
+review; respond on the same branch if changes are requested. Do not
+open another pipx PR while #2177 is open, and do not duplicate
+#2173/#2174/#2175, #2171/#2172 or #2165/#2166.
+
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
 Re-ran the full issue-first selection loop to fill the freed slot:
@@ -1932,8 +2019,12 @@ plus a live `is:pr author:ShahabAhmed01 is:open` search for coverage.
 ## Blockers
 
 Nothing is owed on our side anywhere in the portfolio (re-verified
-2026-10-21T19:38Z). Open PRs are wait-only:
+2026-10-21T19:51Z). Open PRs are wait-only:
 
+- **pipx #2177 (Track 025) — wait only.** `pre-commit.ci` and Read the
+  Docs are green; GitHub Actions tests/zizmor are `action_required`
+  behind the first-time-contributor approval gate (must not be
+  bypassed); Copilot quota-limited, no human review. Do not ping.
 - **pyright #11904 (Track 024) — wait only.** Three check-runs queued
   behind the first-time-contributor workflow-approval gate
   (`mypy_primer` / `Type checker benchmark` need maintainer approval per
@@ -2061,6 +2152,18 @@ Two open courtesies, neither blocking:
   dev bundle needs `--typeshedpath packages/pyright-internal/typeshed-fallback`
   or every import resolves to Unknown; git identity set repo-locally to
   `Shahab Ahmed <192491541+ShahabAhmed01@users.noreply.github.com>`)
+- pipx fork: https://github.com/ShahabAhmed01/pipx
+- pipx remotes: `origin` = pypa/pipx, `fork` = ShahabAhmed01/pipx
+- pipx workspace:
+  `~/opensource-work/runs/ossrun-20261020T143633Z-2eff4030/upstream/pipx`
+  (shallow clone of `main` @ `0c4acc8`; branch
+  `fix/archive-extensions-2eff4030` @ `83fd7a8`; Python 3.11.17 in
+  `.venv` via `uv sync --frozen --group test`; Python 3.15.0 in
+  `.venv315` via `UV_PROJECT_ENVIRONMENT=.venv315 uv sync --frozen
+  --python 3.15 --group test`, then `uv pip install --python
+  .venv315/bin/python pip` because the conftest package-cache script
+  invokes pip; pre-commit needs a Python 3.15 executable on `PATH`,
+  available from `uv python install 3.15`)
 - GitHub API helper (no `gh` CLI on this box): `~/.config/gh/ghq.sh
   <api-path> [method] [data]` — the path MUST start with `/` (it is
   appended to `https://api.github.com`); token in

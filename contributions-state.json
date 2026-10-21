@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-21T19:41:15Z",
+  "updatedAt": "2026-10-21T19:51:23Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -169,7 +169,7 @@
       "status": "merged",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -235,7 +235,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -278,7 +278,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -321,7 +321,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": null,
       "commits": [
         {
@@ -364,7 +364,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -407,7 +407,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -474,7 +474,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -537,7 +537,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -591,7 +591,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -653,7 +653,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -713,7 +713,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -768,7 +768,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -809,7 +809,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -851,7 +851,7 @@
       "status": "merged",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -864,15 +864,14 @@
         }
       ],
       "checks": {
-        "ring": "skipped",
         "test": "skipped",
-        "scan": "pass",
-        "test (3.15)": "pass",
         "test (3.11)": "pass",
-        "lint": "pass",
-        "test (3.14)": "pass",
+        "scan": "pass",
         "test (3.12)": "pass",
-        "test (3.13)": "pass"
+        "test (3.13)": "pass",
+        "test (3.14)": "pass",
+        "test (3.15)": "pass",
+        "lint": "pass"
       },
       "reviews": [
         {
@@ -924,7 +923,7 @@
       "status": "merged",
       "openedAt": "2026-10-17T18:19:47Z",
       "prCreatedAt": "2026-10-17T18:19:47Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -981,7 +980,7 @@
       "status": "merged",
       "openedAt": "2026-10-19T12:01:53Z",
       "prCreatedAt": "2026-10-19T12:01:53Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "ff92bdd01c423b833a96c0ece823265c47d0e6be",
       "commits": [
         {
@@ -1038,7 +1037,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-19T13:17:51Z",
       "prCreatedAt": "2026-10-19T13:17:51Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "dc20b216f065af3a487722141da9a29dcac388d1",
       "commits": [
         {
@@ -1101,7 +1100,7 @@
       "status": "ready-to-merge",
       "openedAt": "2026-10-19T17:24:52Z",
       "prCreatedAt": "2026-10-19T17:24:52Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "cc6fea5b40ad559f7ca358a24b1a521451232281",
       "commits": [
         {
@@ -1196,7 +1195,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-20T16:12:03Z",
       "prCreatedAt": "2026-10-20T16:12:03Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "49ea4d08714f9ae519b86ee17b6b50c1dd080f32",
       "commits": [
         {
@@ -1272,7 +1271,7 @@
       "status": "pushed",
       "openedAt": "2026-10-20T16:42:08Z",
       "prCreatedAt": null,
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "5ca49b0720755c585c9a9835f0a479ceea36fb52",
       "commits": [
         {
@@ -1306,7 +1305,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-21T19:19:00Z",
       "prCreatedAt": "2026-10-21T19:19:00Z",
-      "lastVerified": "2026-10-21T19:41:15Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
       "baseCommit": "e80c920278f15973001d1a33414b0a7cafdc5ed2",
       "commits": [
         {
@@ -1329,6 +1328,52 @@
       "mergeCommit": null,
       "description": "Defer functools.partial's constructor-transform validation for positional arguments that target an unpacked-TypeVarTuple *args parameter, solve the TypeVarTuple from the remaining constraints, validate the bound arguments as a prefix of the solved tuple and trim them from the parameter type (or defer via a synthesized trailing TypeVarTuple when only partially solvable), so partial(idle_add, test, \"a\") no longer errors at creation time",
       "notes": "First pyright track and the first Microsoft-org contribution to survive (markitdown #2699 was closed unmerged as a duplicate of #2675). Selected 2026-10-21 from the standing discovery pass: microsoft/pyright clears the hard gates - no assignment protocol, CONTRIBUTING.md carries no AI hostility and no AI-disclosure requirement (checked; the repo ships .github/copilot-instructions.md, i.e. AI tooling is accepted), external PRs merge (e.g. #11894, an external pipeline migration, merged 2026-10-19), and the repo is a flagship dev tool (15692 stars / 1836 forks live 2026-10-21). Issue #11879 chosen: OPEN, bug label, 0 comments, no assignee, 0 timeline cross-references (checked via /issues/11879/timeline immediately before commit and before the PR - the search API is unusable with this token, which has no search scope); the only recent keyword-matching PR, #11892, is an unrelated comprehension-unpacking fix; base e80c920 == origin/main re-verified by fetch immediately before the commit. TDD: sample partial10.py registered as Partial10 in typeEvaluator8.test.ts fails on the unmodified base (21 errors vs 5 expected) and passes with the fix; typeEvaluator1-8 (1272 tests) green; package type-check 0 errors; eslint and prettier clean; the built CLI on the issue's own repro reports 0 errors with correct reveal_type values (method.__call__ = (*user_data: *tuple[int]) -> int) versus 5 errors on released 1.1.414. CLA: microsoft-github-policy-service posted the standard CLA request on the PR and license/cla sits queued; the same check PASSED silently on markitdown #2699, so the account carries a stored Microsoft CLA signature and no reply was posted - signing a CLA is the account holder's legal act and the agent did not perform it. CI note: CONTRIBUTING.md states external contributors need maintainer approval for the Azure pipeline workflows (mypy_primer, Type checker benchmark); that gate was not bypassed. Platform note: the brekkylab org restricted the account on 2026-10-22 (brekkylab/backlot answers 'Access to this site has been restricted' to the authenticated API while the web UI still loads), ending the backlot lane; pyright was chosen partly to diversify the portfolio away from a single org."
+    },
+    {
+      "repo": "pypa/pipx",
+      "project": "pipx",
+      "issueNumber": 2176,
+      "issueTitle": "Bare local archives with .tar.xz, .tar.bz2, .tgz, or .tar are treated as PyPI names",
+      "issueUrl": "https://github.com/pypa/pipx/issues/2176",
+      "issueState": "OPEN",
+      "issueUpdatedAt": "2026-10-21T19:30:20Z",
+      "prNumber": 2177,
+      "prUrl": "https://github.com/pypa/pipx/pull/2177",
+      "prState": "open",
+      "prTitle": "fix: match pip's archive extensions for local paths",
+      "branch": "fix/archive-extensions-2eff4030",
+      "baseBranch": "main",
+      "baseCommit": "0c4acc88fc4d62b9a85f9c0cff8c938f81c84c2b",
+      "fork": "ShahabAhmed01/pipx",
+      "forkUrl": "https://github.com/ShahabAhmed01/pipx",
+      "status": "pr-opened",
+      "openedAt": "2026-10-21T19:35:20Z",
+      "prCreatedAt": "2026-10-21T19:35:20Z",
+      "lastVerified": "2026-10-21T19:51:23Z",
+      "commits": [
+        {
+          "sha": "fb0c3ceb20299ebc09d706cccc2f07f76ff67fbc",
+          "subject": "fix: match pip's archive extensions for local paths"
+        },
+        {
+          "sha": "83fd7a8f82cb6adc84c44adf636c8743a18cf5b2",
+          "subject": "changelog: add fragment for #2177"
+        }
+      ],
+      "checks": {
+        "pre-commit.ci - pr": "pass",
+        "docs/readthedocs.org:pipx": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Treats bare local archive filenames with every pip-supported extension (.tar.xz, .tar.bz2, .tgz, .tar, .tbz, .txz, .tlz, .tar.lz, .tar.lzma, plus .whl/.tar.gz/.zip) as local paths, case-insensitively, so `pipx install empty_project-0.1.0.tar.xz` installs the file instead of looking up a canonicalized PyPI name.",
+      "notes": "Self-discovered bug in pipx's package-specifier parser; issue #2176 filed by this run after reproducing on main 0c4acc8 with a valid .tar.xz sdist. ARCHIVE_EXTENSIONS held only .whl, .tar.gz and .zip, so valid_pypi_name() canonicalized bare .tar.xz/.tar.bz2/.tgz/.tar filenames and pipx installed the wrong requirement; the ./ prefix worked. Fix aligns the tuple with pip's ARCHIVE_EXTENSIONS and matches case-insensitively via _is_archive_name(). Tests: 166 passed in tests/test_package_specifier.py on Python 3.11.17 and 3.15.0; end-to-end bare and uppercase .TAR.XZ installs; pre-commit on changed files, pre-commit.ci and Read the Docs pass. GitHub Actions tests/zizmor are action_required (first-time-contributor approval gate, not bypassed); no human review yet, Copilot quota-limited. Independent of concurrent pipx lanes #2173/#2174/#2175 (extras), #2171/#2172 (inline metadata), #2165/#2166 (runpip options). Fork created this session; isolated workspace under ~/opensource-work/runs/ossrun-20261020T143633Z-2eff4030/upstream/pipx. Prepared with AI assistance under the account owner's direction; all claims checked against live GitHub/local runs."
     }
   ]
 }

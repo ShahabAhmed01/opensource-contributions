@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-21T19:40:20Z",
+  "updated_at": "2026-10-21T19:42:08Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -17,16 +17,16 @@
     },
     {
       "run_id": "ossrun-20261020T143705Z-bd8fbd7f",
-      "status": "DISCOVERING",
-      "repository": null,
+      "status": "RESERVED",
+      "repository": "pytest-dev/pytest",
       "issue_url": null,
       "issue_number": null,
       "pr_url": null,
       "head_branch": null,
-      "acquired_at": null,
-      "heartbeat_at": "2026-10-21T19:12:27Z",
-      "expires_at": "2026-10-22T01:12:27Z",
-      "reservation_state": "NONE"
+      "acquired_at": "2026-10-21T19:42:08Z",
+      "heartbeat_at": "2026-10-21T19:42:08Z",
+      "expires_at": "2026-10-22T01:42:08Z",
+      "reservation_state": "ACTIVE"
     },
     {
       "run_id": "ossrun-20261020T143844Z-c775ddc9",

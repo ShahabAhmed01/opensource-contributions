@@ -1,21 +1,73 @@
 # Contribution Handoff
 
-Last updated: 2026-10-20T16:42Z (Track 023: honojs/hono issue #5569 - the fix is
-committed, pushed and published as a branch linked in the issue, because
-honojs/hono restricts pull-request creation to collaborators and every attempt to
-open a PR was refused; no upstream PR, no CI, no review, not merged). This session
-also re-audited the candidate queue: three of the four most attractive hono issues
-were already claimed by other contributors' announced fork fixes and were dropped.
-Prior tracks, including Track 022 (pytest), are unchanged.
+Last updated: 2026-10-21T19:38Z (Track 024: **microsoft/pyright #11879 →
+PR #11904 opened 19:19Z**, CI queued behind the first-time-contributor
+workflow-approval gate; see the "New this session" block and
+`contributions/pyright/issue-11879.md`. Also this session: backlot
+#831/PR #851's merge state (merged 2026-10-20T05:18:22Z, commit
+`0b7aa0d`) re-verified against the API — the state record was already
+correct; and the **brekkylab org now restricts the authenticated
+account** ("Access to this site has been restricted" on
+`brekkylab/backlot` via API while the web UI still loads), which ends
+the backlot lane — no new backlot work is possible. Prior notes:
+2026-10-20T16:42Z Track 023 (hono #5569, branch linked in issue — the
+repo refuses PRs from non-collaborators) and 2026-10-20T16:12Z Track
+022 (pytest #15221 / PR #15228); 2026-10-19T13:44Z Track 020 starlette
+PR #3682.)
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 11
+Monitoring Contributions: 12
 Merged Contributions: 11
 Closed/Superseded Contributions: 1
 
-**New this session (2026-10-20T16:42Z): hono #5569** -
+**New this session (2026-10-21T19:19Z): pyright #11879 / PR #11904**
+(Track 024) — `Fix spurious error when functools.partial binds variadic
+TypeVarTuple args`. `constructorTransform.ts` validated positional
+arguments bound to an unpacked-TypeVarTuple `*args` parameter directly
+against the *unsolved* TypeVarTuple, so
+`partial(idle_add, test, "a")` errored at creation
+(`Argument of type "Literal['a']" cannot be assigned to ... "*_DataTs"`)
+where the direct call was accepted. The transform now defers those
+arguments, solves the TypeVarTuple from the remaining constraints, and
+— solvable: validates the bound args as a PREFIX of the solved tuple
+and trims the parameter to the remainder
+(`(*args: *tuple[int, *tuple[str, ...]])` → `(*args: *tuple[str, ...])`;
+zero remainder → an empty unpacked tuple param, not param removal, since
+solving unpacks the var into Simple params); — partially solvable:
+defers via a synthesized trailing TypeVarTuple (`*Ts := (bound..., *Ts2)`
+with a fresh `${name}2` created via `TypeVarType.createInstance`, the
+instance form REQUIRED — the instantiable form breaks call-time solving
+and prints `type[_DataTs2]`); — unsolvable: leaves the param unchanged.
+Also strips the inherited `GradualCallableForm` flag from the
+synthesized `__call__` so `reveal_type` doesn't print `(…) -> int`.
+TDD: sample `partial10.py` (registered as `Partial10` in
+`typeEvaluator8.test.ts`, 5 expected errors) fails on the unmodified
+base with 21 errors and passes with the fix;
+`typeEvaluator1–8` 1272/1272 green; package type-check 0 errors; eslint
++ prettier clean; the built CLI on the issue's own repro reports **0
+errors** with `method.__call__ = (*user_data: *tuple[int]) -> int` and
+`variadic2(1) → tuple[str, str, int]`, versus 5 errors on released
+1.1.414. Issue re-verified claim-clean via the timeline endpoint (0
+cross-references; the search API is unusable with this token — no
+`search` scope) immediately before commit and before the PR; base
+`e80c920 == origin/main` re-fetched. PR open, `mergeable=true`,
+`license/cla` + `mypy_primer` + `Type checker benchmark` queued (the
+Azure checks need maintainer approval for external contributors — not
+bypassed); Copilot COMMENTED; the CLA bot asked for sign-off but the
+account carries a stored Microsoft CLA signature (`license/cla` passed
+silently on markitdown #2699) — **no CLA reply was posted by the
+agent**; first Microsoft-org contribution to survive (markitdown #2699
+closed unmerged as duplicate). Diversification: the brekkylab org now
+restricts the account, ending the backlot lane. Track 024 below.
+
+**Also merged since the 2026-10-20 handoff: backlot #831 / PR #851** —
+merged 2026-10-20T05:18:22Z by nuriyoo (commit `0b7aa0d`, after
+CHANGES_REQUESTED→APPROVED), the portfolio's 11th merge; state record
+re-verified against the API this session.
+
+**New previous session (2026-10-20T16:42Z): hono #5569** -
 `Lambda adapters corrupt text responses declared as Shift_JIS`. The AWS Lambda and
 Lambda@Edge adapters decided base64-vs-text from the content type alone, and
 `defaultIsContentTypeBinary()` calls `text/plain` non-binary whatever charset it
@@ -1455,6 +1507,86 @@ description already written. Do not file a duplicate issue or a second fork
 branch for this bug, and do not open a PR while the repository's policy refuses
 it.
 
+### Track 024
+Project: microsoft/pyright
+Issue: #11879 ("Unpack Parameter does not work with functools.partial")
+PR: #11904
+Branch: contrib/issue-11879-partial-typevartuple
+Status: **OPEN — 3 check-runs queued (first-time-contributor
+workflow-approval gate), Copilot COMMENTED** (opened 2026-10-21T19:19:00Z;
+`mergeable=true` at publication; base `main` @
+`e80c920278f15973001d1a33414b0a7cafdc5ed2` verified current at commit and
+at publication; head `27f23b28d10425673288683c0007327975930421`, 1 commit,
+on the `ShahabAhmed01/pyright` fork; 3 files, +297/−3). Not merged.
+CI: `license/cla`, `mypy_primer`, `Type checker benchmark` all queued —
+CONTRIBUTING.md states the Azure pipeline checks need maintainer approval
+for external contributors; the gate was not bypassed and no maintainer was
+pinged.
+Review: Copilot COMMENTED (bot); no human review yet. The
+microsoft-github-policy-service CLA request comment was posted on the PR
+and `license/cla` sits queued — the same check PASSED silently on markitdown
+#2699, so the account carries a stored Microsoft CLA signature; **no CLA
+sign reply was posted** (signing is the account holder's legal act).
+Notes: Twenty-fourth track, first pyright contribution and the first
+Microsoft-org contribution to survive (markitdown #2699 closed unmerged as
+duplicate of #2675). Selected 2026-10-21 from the standing discovery pass:
+15692-star flagship dev tool (1836 forks), external PRs merge (#11894
+external pipeline migration merged 2026-10-19; #11864/#11616
+type-evaluation fixes mid-October), no assignment protocol, no AI-hostility
+and no AI-disclosure requirement in CONTRIBUTING.md (the repo ships
+`.github/copilot-instructions.md`). Issue #11879: OPEN, `bug` label,
+0 comments, no assignee, 0 timeline cross-references at 2026-10-21T19:0xZ
+(via `/issues/11879/timeline` — the search API is unusable with this token,
+no `search` scope); the only recent keyword-matching PR (#11892) is an
+unrelated comprehension-unpacking fix; issue untouched since creation
+(2026-10-14T20:01:07Z). Defect: `constructorTransform.ts` validated each
+positional argument bound to an unpacked-TypeVarTuple `*args` parameter
+directly against the *unsolved* TypeVarTuple, so
+`partial(idle_add, test, "a")` errored at creation where the direct call
+was accepted. Fix (+197 net in `constructorTransform.ts`): defer args
+targeting the variadic param (`argIndex >= paramListDetails.argsIndex` —
+must include args landing exactly ON the variadic index), solve the
+TypeVarTuple from the non-variadic constraints, then — solvable: validate
+the bound args as a prefix of the solved tuple (per-entry `assignType`,
+throwaway tracker) and trim via `replaceVariadicParamType`
+(`FunctionType.specialize`); zero remainder →
+`makeTupleObject(evaluator, [], /* isUnpacked */ true)`, NOT param removal
+(solving unpacks the var into Simple params that cannot be filtered); —
+partially solvable: defer with `Ts := (bound..., *Ts2)`, the fresh
+TypeVarTuple named `${name}2` via `TypeVarType.createInstance` (instance
+form REQUIRED — the instantiable form breaks call-time solving and prints
+`type[_DataTs2]`), `cloneForUnpacked` + `cloneForScopeId`; — unsolvable:
+unchanged. Also strips the inherited `FunctionTypeFlags.GradualCallableForm`
+from the synthesized `__call__` (else it prints `(…) -> int`).
+Engine facts worth keeping: `applySolvedTypeVars` unpacks solved
+TypeVarTuple params into individual synthesized positional params (why a
+zero-bound `method2.__call__` prints `(str, int) -> int` — pre-existing
+behavior, kept); solutions are keyed by `nameWithScope` (hence the
+distinct `${name}2` name); `_pendingTypeVarTransformations` scope-guards
+recursive replacement; the constructor transform runs exactly once per
+partial creation; typeshed's `partial.__new__` takes `*args: Any` (no
+ParamSpec), so creation errors come only from the transform. Verification:
+TDD sample `partial10.py` registered as `Partial10` in
+`typeEvaluator8.test.ts` (5 expected) — fails on the unmodified base with
+21 errors, passes with the fix, every `reveal_type` pinned;
+`typeEvaluator1–8` 1272/1272 green; package type-check 0 errors; eslint
+clean on touched files; prettier applied; built CLI
+(`node packages/pyright/dist/pyright.js --typeshedpath
+packages/pyright-internal/typeshed-fallback` — dev bundles need the
+explicit typeshed path) on the issue's repro: **0 errors**,
+`method.__call__ = (*user_data: *tuple[int]) -> int`,
+`v1("b", 2) → tuple[str, str, int]`, versus 5 errors on released 1.1.414.
+Diversification: chosen partly after the brekkylab org restricted the
+account (2026-10-22 env note), ending the backlot lane. Workspace:
+`~/opensource-work/pyright`, Node 24.22.0 at `~/opensource-work/node/bin`,
+pnpm via corepack; git identity set repo-locally to the GitHub noreply
+address; fork created this session via `POST /repos/microsoft/pyright/forks`.
+Next Action: Watch PR #11904 for the workflow-approval gate, the
+`license/cla` resolution and the first human review; respond on the same
+branch if changes are requested. Do not open another pyright PR while
+#11904 is open. If `license/cla` goes red despite the stored signature,
+ASK THE ACCOUNT HOLDER before replying to the CLA bot.
+
 ## Post-PR triage 2026-10-09 (after opening #6648)
 
 Re-ran the full issue-first selection loop to fill the freed slot:
@@ -1800,15 +1932,22 @@ plus a live `is:pr author:ShahabAhmed01 is:open` search for coverage.
 ## Blockers
 
 Nothing is owed on our side anywhere in the portfolio (re-verified
-2026-10-17T20:35Z). Both open backlot PRs are wait-only:
+2026-10-21T19:38Z). Open PRs are wait-only:
 
-- **#786 (Track 017) — wait only.** nuriyoo's four-point review was
-  applied verbatim (`27e8922f`), the branch rebased onto `e9b9d72`, CI
-  9/9 green, reply `6240438402` posted 20:22:46Z; awaiting re-review.
-  Do not ping.
-- **#806 (Track 018) — wait only.** Full 9/9 check-runs green (bare `test`
-  = workflow-shape skip), `mergeable_state: clean`; no human review yet.
-  Do not ping.
+- **pyright #11904 (Track 024) — wait only.** Three check-runs queued
+  behind the first-time-contributor workflow-approval gate
+  (`mypy_primer` / `Type checker benchmark` need maintainer approval per
+  CONTRIBUTING.md — must not be bypassed); `license/cla` queued but the
+  account carries a stored Microsoft CLA signature (passed silently on
+  markitdown #2699), so no sign reply is expected from us. Do not ping.
+- **backlot lane CLOSED by platform action.** The brekkylab org answers
+  "Access to this site has been restricted" to the authenticated API
+  (2026-10-22 env note; the web UI still loads for now). #851's merge
+  (2026-10-20T05:18:22Z) predates the restriction and is recorded; no
+  new backlot work is possible and no backlot PR of ours is open.
+- **#786/#806 are wait-only** (both merged 2026-10-18/19 — the
+  two open backlot PRs of the 2026-10-17 note have since merged; see
+  the historical record below).
 - Outside backlot the only non-green items are service-side and not ours:
   #6473's `gitleaks` (upstream history content, non-required) and
   #2700's queued `license/cla` (microsoft-github-policy-service) — both
@@ -1909,6 +2048,34 @@ Two open courtesies, neither blocking:
 - hono fork: https://github.com/ShahabAhmed01/hono
 - hono remotes: `origin` = fork, `upstream` = honojs/hono
 - hono workspace: `~/opensource-work/runs/ossrun-20261020T143636Z-445b0cd7/upstream` (shallow clone `--depth 1` of `main`; branch `fix/issue-5569-non-utf8-charset-445b0cd7` @ `e13a1d2` cut from `5ca49b0`; Node 24.22.0 at `~/opensource-work/node/bin`, pnpm 12.6.0 via corepack; `pnpm install --frozen-lockfile` needs ~10 min on this link, and `pnpm run build` must run before the `build/*.test.ts` suites pass)
+- pyright fork: https://github.com/ShahabAhmed01/pyright
+- pyright remotes: `origin` = upstream microsoft/pyright, `fork` =
+  ShahabAhmed01/pyright (note the inverted naming versus older tracks)
+- pyright workspace: `~/opensource-work/pyright` (full clone of
+  `main`; branch `contrib/issue-11879-partial-typevartuple` @ `27f23b2`
+  cut from `e80c920`; Node 24.22.0 at `~/opensource-work/node/bin`,
+  pnpm via `corepack pnpm` with `COREPACK_ENABLE_DOWNLOAD_PROMPT=0`;
+  **jest must run from `packages/pyright-internal`**
+  (`pnpm exec jest --forceExit`); the built CLI entry is
+  `packages/pyright/dist/pyright.js` (NOT `pyright-internal.js`) and the
+  dev bundle needs `--typeshedpath packages/pyright-internal/typeshed-fallback`
+  or every import resolves to Unknown; git identity set repo-locally to
+  `Shahab Ahmed <192491541+ShahabAhmed01@users.noreply.github.com>`)
+- GitHub API helper (no `gh` CLI on this box): `~/.config/gh/ghq.sh
+  <api-path> [method] [data]` — the path MUST start with `/` (it is
+  appended to `https://api.github.com`); token in
+  `~/.config/gh/hosts.yml`; pipe to `jq`. The token has no `search`
+  scope — use `/repos/<o>/<r>/issues/<n>/timeline` (cross-reference
+  events) instead of the search API for competing-PR sweeps.
+- Tracker sync: `PATH="$HOME/bin:$PATH" python3 scripts/update_tracker.py`
+  (the `~/bin/gh` shim feeds `ghq.sh`); state file
+  `contributions-state.json` is serialized with
+  `json.dumps(indent=2, ensure_ascii=False) + "\n"` — round-trip with
+  the same parameters to avoid format churn.
+- Platform fact (2026-10-22 env note): the brekkylab org restricts the
+  authenticated account — `brekkylab/backlot` answers "Access to this
+  site has been restricted" via API; treat the backlot lane as closed
+  until this clears.
 - Public tracker repo: https://github.com/ShahabAhmed01/opensource-contributions
 - Known env-dependent test failures (identical on unmodified dev): browser
   tests need Playwright chromium binaries; containment/workspace tests need a

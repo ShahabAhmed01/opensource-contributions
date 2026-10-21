@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-20T16:57:54Z",
+  "updatedAt": "2026-10-21T19:41:15Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -169,7 +169,7 @@
       "status": "merged",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -235,7 +235,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -278,7 +278,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -321,7 +321,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": null,
       "commits": [
         {
@@ -364,7 +364,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -407,7 +407,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -474,7 +474,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -537,7 +537,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -591,7 +591,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -653,7 +653,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -713,7 +713,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -768,7 +768,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -809,7 +809,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -851,7 +851,7 @@
       "status": "merged",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -864,14 +864,15 @@
         }
       ],
       "checks": {
+        "ring": "skipped",
         "test": "skipped",
-        "test (3.11)": "pass",
         "scan": "pass",
-        "test (3.12)": "pass",
-        "test (3.13)": "pass",
-        "test (3.14)": "pass",
         "test (3.15)": "pass",
-        "lint": "pass"
+        "test (3.11)": "pass",
+        "lint": "pass",
+        "test (3.14)": "pass",
+        "test (3.12)": "pass",
+        "test (3.13)": "pass"
       },
       "reviews": [
         {
@@ -923,7 +924,7 @@
       "status": "merged",
       "openedAt": "2026-10-17T18:19:47Z",
       "prCreatedAt": "2026-10-17T18:19:47Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -980,7 +981,7 @@
       "status": "merged",
       "openedAt": "2026-10-19T12:01:53Z",
       "prCreatedAt": "2026-10-19T12:01:53Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "ff92bdd01c423b833a96c0ece823265c47d0e6be",
       "commits": [
         {
@@ -1037,7 +1038,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-19T13:17:51Z",
       "prCreatedAt": "2026-10-19T13:17:51Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "dc20b216f065af3a487722141da9a29dcac388d1",
       "commits": [
         {
@@ -1100,7 +1101,7 @@
       "status": "ready-to-merge",
       "openedAt": "2026-10-19T17:24:52Z",
       "prCreatedAt": "2026-10-19T17:24:52Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "cc6fea5b40ad559f7ca358a24b1a521451232281",
       "commits": [
         {
@@ -1195,7 +1196,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-20T16:12:03Z",
       "prCreatedAt": "2026-10-20T16:12:03Z",
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "49ea4d08714f9ae519b86ee17b6b50c1dd080f32",
       "commits": [
         {
@@ -1271,7 +1272,7 @@
       "status": "pushed",
       "openedAt": "2026-10-20T16:42:08Z",
       "prCreatedAt": null,
-      "lastVerified": "2026-10-20T16:57:54Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
       "baseCommit": "5ca49b0720755c585c9a9835f0a479ceea36fb52",
       "commits": [
         {
@@ -1285,6 +1286,49 @@
       "mergeCommit": null,
       "description": "Base64 encodes a Lambda or Lambda@Edge response whose Content-Type declares a charset other than UTF-8, so Response.text() no longer replaces every non-UTF-8 byte with U+FFFD: a text/plain; charset=shift_jis body keeps its bytes instead of coming back as mojibake. Published as a branch linked in issue #5569, because honojs/hono restricts pull-request creation to collaborators and no upstream PR could be opened.",
       "notes": "Twenty-third track, first honojs/hono contribution. HARD GATE: the repository object exposes pull_request_creation_policy=collaborators_only, and docs/CONTRIBUTING.md says it in words under 'Issues instead of Pull Requests' - 'Pull requests are limited to maintainers ... If you have already fixed it in your fork, you can link the branch in the issue. A maintainer may open a pull request from it, and your commits keep your name.' Every PR-creation attempt was refused: POST /repos/honojs/hono/pulls returned 404 Not Found for a same-repo head, for another user's fork and for this run's fork branch; gh pr create and the GraphQL createPullRequest mutation (with and without headRepositoryId) returned FORBIDDEN 'does not have the correct permissions to execute CreatePullRequest'; the same request against honojs/middleware (same org, policy all) returned 422, so the token and the account are fine and the refusal is repository-scoped. The repository's own route was followed instead: commit e13a1d279d20041f5a8abbd38ed68d7f17c8272d pushed to the ShahabAhmed01/hono fork at fix/issue-5569-non-utf8-charset-445b0cd7 (base main @ 5ca49b0) and the branch linked in issue #5569 as comment 6296083976 at 2026-10-20T16:42:08Z, with an offer to open the PR myself if a maintainer adds ShahabAhmed01 as a collaborator. 9 files, +329/-4, touching all four shipped copies of the adapters (src/adapter/{aws-lambda,lambda-edge} and adapters/{aws-lambda,lambda-edge}/src) plus the @hono/aws-lambda README. Root cause: the adapters decided base64-vs-text from the content type alone, and defaultIsContentTypeBinary() calls text/plain non-binary whatever charset it declares, so Response.text() decoded a Shift_JIS body as UTF-8 and replaced every invalid byte with U+FFFD while the content type still claimed Shift_JIS. Fix: a new isNonUtf8Charset() helper reads the charset parameter (quoted or not, utf-8/utf8 counted as UTF-8, x-charset=foo not a declaration) and both adapters base64 encode such a response, leaving the content type untouched. Verification: full suite 145 files / 5251 passed / 46 skipped / 0 failed; adapter suites 111 passed; adapter package suites 100 and 69 passed; tsc, vp lint and vp fmt --check clean; the new tests fail without the fix. The 5 build/declaration-emit and build/jsx-types failures seen first were environmental (they need dist/) and were reproduced identically on the unmodified tree and cleared by pnpm run build. An independent read-only review found two MAJOR issues, both fixed before the commit: a vacuous lambda-edge control test (c.text lets Hono's default content type overwrite the caller's, so it asserted nothing - now c.body with a lowercase charset) and the charset regex having no direct coverage (now a 10-case table test in both adapters). Duplicate elimination: #5567 and #5566 (announced fork fixes by Kamaldeep-singh0) and #5564 (announced fork fix by okarin1511, who reports being unable to open a PR because of this same restriction) and #5520 (the reporter's own open PR #5521) were all dropped as claimed; a one-line fix for #5567 was written, verified and then discarded rather than duplicated. NOT MERGED, no PR, no CI, no human review - the maintainers hold the next move. Next action: watch issue #5569 for a maintainer response; if ShahabAhmed01 is added as a collaborator, open the PR from fix/issue-5569-non-utf8-charset-445b0cd7 with the description already written."
+    },
+    {
+      "repo": "microsoft/pyright",
+      "project": "pyright",
+      "issueNumber": 11879,
+      "issueTitle": "Unpack Parameter does not work with functools.partial",
+      "issueUrl": "https://github.com/microsoft/pyright/issues/11879",
+      "issueState": "OPEN",
+      "issueUpdatedAt": "2026-10-14T20:01:38Z",
+      "prNumber": 11904,
+      "prUrl": "https://github.com/microsoft/pyright/pull/11904",
+      "prState": "open",
+      "prTitle": "Fix spurious error when functools.partial binds variadic TypeVarTuple args",
+      "branch": "contrib/issue-11879-partial-typevartuple",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/pyright",
+      "forkUrl": "https://github.com/ShahabAhmed01/pyright",
+      "status": "ci-running",
+      "openedAt": "2026-10-21T19:19:00Z",
+      "prCreatedAt": "2026-10-21T19:19:00Z",
+      "lastVerified": "2026-10-21T19:41:15Z",
+      "baseCommit": "e80c920278f15973001d1a33414b0a7cafdc5ed2",
+      "commits": [
+        {
+          "sha": "27f23b28d10425673288683c0007327975930421",
+          "subject": "Fix spurious error when functools.partial binds variadic TypeVarTuple args"
+        }
+      ],
+      "checks": {
+        "license/cla": "pending",
+        "mypy_primer": "pending",
+        "Type checker benchmark": "pending"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Defer functools.partial's constructor-transform validation for positional arguments that target an unpacked-TypeVarTuple *args parameter, solve the TypeVarTuple from the remaining constraints, validate the bound arguments as a prefix of the solved tuple and trim them from the parameter type (or defer via a synthesized trailing TypeVarTuple when only partially solvable), so partial(idle_add, test, \"a\") no longer errors at creation time",
+      "notes": "First pyright track and the first Microsoft-org contribution to survive (markitdown #2699 was closed unmerged as a duplicate of #2675). Selected 2026-10-21 from the standing discovery pass: microsoft/pyright clears the hard gates - no assignment protocol, CONTRIBUTING.md carries no AI hostility and no AI-disclosure requirement (checked; the repo ships .github/copilot-instructions.md, i.e. AI tooling is accepted), external PRs merge (e.g. #11894, an external pipeline migration, merged 2026-10-19), and the repo is a flagship dev tool (15692 stars / 1836 forks live 2026-10-21). Issue #11879 chosen: OPEN, bug label, 0 comments, no assignee, 0 timeline cross-references (checked via /issues/11879/timeline immediately before commit and before the PR - the search API is unusable with this token, which has no search scope); the only recent keyword-matching PR, #11892, is an unrelated comprehension-unpacking fix; base e80c920 == origin/main re-verified by fetch immediately before the commit. TDD: sample partial10.py registered as Partial10 in typeEvaluator8.test.ts fails on the unmodified base (21 errors vs 5 expected) and passes with the fix; typeEvaluator1-8 (1272 tests) green; package type-check 0 errors; eslint and prettier clean; the built CLI on the issue's own repro reports 0 errors with correct reveal_type values (method.__call__ = (*user_data: *tuple[int]) -> int) versus 5 errors on released 1.1.414. CLA: microsoft-github-policy-service posted the standard CLA request on the PR and license/cla sits queued; the same check PASSED silently on markitdown #2699, so the account carries a stored Microsoft CLA signature and no reply was posted - signing a CLA is the account holder's legal act and the agent did not perform it. CI note: CONTRIBUTING.md states external contributors need maintainer approval for the Azure pipeline workflows (mypy_primer, Type checker benchmark); that gate was not bypassed. Platform note: the brekkylab org restricted the account on 2026-10-22 (brekkylab/backlot answers 'Access to this site has been restricted' to the authenticated API while the web UI still loads), ending the backlot lane; pyright was chosen partly to diversify the portfolio away from a single org."
     }
   ]
 }

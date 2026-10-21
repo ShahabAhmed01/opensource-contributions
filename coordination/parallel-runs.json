@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-21T19:49:54Z",
+  "updated_at": "2026-10-21T19:54:32Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -8,11 +8,11 @@
       "repository": "pypa/pipx",
       "issue_url": "https://github.com/pypa/pipx/issues/2176",
       "issue_number": 2176,
-      "pr_url": null,
+      "pr_url": "https://github.com/pypa/pipx/pull/2177",
       "head_branch": "fix/archive-extensions-2eff4030",
       "acquired_at": "2026-10-21T19:24:25Z",
-      "heartbeat_at": "2026-10-21T19:49:54Z",
-      "expires_at": "2026-10-22T07:24:25Z",
+      "heartbeat_at": "2026-10-21T19:54:32Z",
+      "expires_at": "2026-10-22T07:54:32Z",
       "reservation_state": "ACTIVE"
     },
     {
@@ -71,9 +71,5 @@
       "reservation_state": "RELEASED"
     }
   ],
-  "tracker_writer": {
-    "run_id": "ossrun-20261020T143633Z-2eff4030",
-    "acquired_at": "2026-10-21T19:49:54Z",
-    "expires_at": "2026-10-21T20:49:54Z"
-  }
+  "tracker_writer": null
 }

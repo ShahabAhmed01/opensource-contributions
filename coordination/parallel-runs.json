@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-22T17:57:03Z",
+  "updated_at": "2026-10-22T18:19:55Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -72,16 +72,16 @@
     },
     {
       "run_id": "ossrun-20261022T175504Z-6a2a8b74",
-      "status": "DISCOVERING",
-      "repository": null,
-      "issue_url": null,
-      "issue_number": null,
+      "status": "RESERVED",
+      "repository": "Comfy-Org/ComfyUI",
+      "issue_url": "https://github.com/Comfy-Org/ComfyUI/issues/17294",
+      "issue_number": 17294,
       "pr_url": null,
       "head_branch": null,
-      "acquired_at": null,
-      "heartbeat_at": "2026-10-22T17:57:03Z",
-      "expires_at": null,
-      "reservation_state": "NONE"
+      "acquired_at": "2026-10-22T18:19:55Z",
+      "heartbeat_at": "2026-10-22T18:19:55Z",
+      "expires_at": "2026-10-23T00:19:55Z",
+      "reservation_state": "ACTIVE"
     }
   ],
   "tracker_writer": null

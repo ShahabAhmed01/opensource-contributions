@@ -79,8 +79,8 @@
       "pr_url": null,
       "head_branch": null,
       "acquired_at": "2026-10-22T18:19:55Z",
-      "heartbeat_at": "2026-10-22T18:19:55Z",
-      "expires_at": "2026-10-23T00:19:55Z",
+      "heartbeat_at": "2026-10-22T19:31:33Z",
+      "expires_at": "2026-10-23T01:31:33Z",
       "reservation_state": "ACTIVE"
     }
   ],

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-21T21:29:00Z",
+  "updatedAt": "2026-10-22T20:18:08Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -169,7 +169,7 @@
       "status": "merged",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -235,7 +235,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -278,7 +278,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -321,7 +321,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": null,
       "commits": [
         {
@@ -364,7 +364,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -407,7 +407,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -474,7 +474,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -537,7 +537,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -591,7 +591,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -653,7 +653,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -713,7 +713,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -768,7 +768,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -809,7 +809,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -851,7 +851,7 @@
       "status": "merged",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -923,7 +923,7 @@
       "status": "merged",
       "openedAt": "2026-10-17T18:19:47Z",
       "prCreatedAt": "2026-10-17T18:19:47Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -980,7 +980,7 @@
       "status": "merged",
       "openedAt": "2026-10-19T12:01:53Z",
       "prCreatedAt": "2026-10-19T12:01:53Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "ff92bdd01c423b833a96c0ece823265c47d0e6be",
       "commits": [
         {
@@ -1037,7 +1037,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-19T13:17:51Z",
       "prCreatedAt": "2026-10-19T13:17:51Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "dc20b216f065af3a487722141da9a29dcac388d1",
       "commits": [
         {
@@ -1100,7 +1100,7 @@
       "status": "ready-to-merge",
       "openedAt": "2026-10-19T17:24:52Z",
       "prCreatedAt": "2026-10-19T17:24:52Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "cc6fea5b40ad559f7ca358a24b1a521451232281",
       "commits": [
         {
@@ -1195,7 +1195,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-20T16:12:03Z",
       "prCreatedAt": "2026-10-20T16:12:03Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "49ea4d08714f9ae519b86ee17b6b50c1dd080f32",
       "commits": [
         {
@@ -1271,7 +1271,7 @@
       "status": "pushed",
       "openedAt": "2026-10-20T16:42:08Z",
       "prCreatedAt": null,
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "5ca49b0720755c585c9a9835f0a479ceea36fb52",
       "commits": [
         {
@@ -1305,7 +1305,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-21T19:19:00Z",
       "prCreatedAt": "2026-10-21T19:19:00Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "e80c920278f15973001d1a33414b0a7cafdc5ed2",
       "commits": [
         {
@@ -1349,7 +1349,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-21T19:35:20Z",
       "prCreatedAt": "2026-10-21T19:35:20Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "commits": [
         {
           "sha": "fb0c3ceb20299ebc09d706cccc2f07f76ff67fbc",
@@ -1394,7 +1394,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-21T20:53:14Z",
       "prCreatedAt": "2026-10-21T20:53:14Z",
-      "lastVerified": "2026-10-21T21:29:00Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
       "baseCommit": "c9bf1edf9e0d388f3e7bebc88576e608ffbc40a4",
       "commits": [
         {
@@ -1454,6 +1454,74 @@
       "mergeCommit": null,
       "description": "A test module that fails to import because of a syntax error is re-raised by pytest as a CollectError, which made --pdb open the debugger on the `raise` statement instead of on the syntax error; the debugger is now skipped for exactly that case (the CollectError keeps the SyntaxError as its cause), while the error is still reported with its full traceback and every other collection error still opens the debugger.",
       "notes": "Selection (2026-10-21, coordination run ossrun-20261020T143705Z-bd8fbd7f): the repo was reserved against the shared automation-coordination registry (one active repo-reserved run per repo across concurrent runs) after a long discovery pass over ~30 popular Python projects. pytest-dev/pytest: 14,614 stars / 3,523 forks, MIT, Python >=3.10 (live 2026-10-21), the de-facto standard test runner; outside contributions merge routinely (17 of the 25 PRs merged in the 90 days to 2026-10-20 were from non-core authors). Selected: issue #3649 'pytest syntax_error.py --pdb should not drop into pdb?', open since 2018-07-02, labeled type: bug / topic: collection / plugin: debugging, with an explicit maintainer green light on the issue (asottile, 2018-10-19: 'no no, this is definitely worth fixing') and no linked or competing PR at publication. Root cause: src/_pytest/python.py::importtestmodule re-raises a SyntaxError as a nodes.Collector.CollectError holding the formatted traceback; CollectError is not a control-flow exception, so collect_one_node treated it as interactive and entered the debugger - on the `raise` statement, not on the syntax error, which is what the issue reports. Fix: the CollectError keeps the original SyntaxError as its __cause__, so collect_one_node now checks is_syntax_error(call.excinfo.value) and skips pytest_exception_interact for it; the error is still reported exactly as before, and other collection errors (the NameError of #181) still open the debugger, so test_pdb_interaction_on_collection_issue181 and test_pdb_collection_failure_is_shown keep passing unchanged. Verification (Python 3.12.15, Linux, isolated clone in the run workspace, SETUPTOOLS_SCM_PRETEND_VERSION=9.0.0 for the shallow checkout): testing/ 4698 passed / 47 skipped / 13 xfailed / 7 xpassed; testing/test_debugging.py 54 passed / 1 skipped / 6 xpassed; ruff check and ruff format --check clean on the changed files (ruff 0.17.1 - the pre-commit pin); mypy clean on src/_pytest/runner.py under the repo config; a local coverage run with the repo's own config (patch = [\"subprocess\"]) shows every added line executed, which is what codecov/patch's 100% patch target needs. The first codecov/patch conclusion on the opening commit was a failure at 57.14% of diff hit, read as a mid-rollup artifact (it ran two minutes after the PR opened, before the build matrix had uploaded coverage) - but the local coverage run also showed one genuinely uncovered line, the unreachable 'did not raise' branch of the helper, which was removed in a second commit before anything else landed. PR #15239 'fix: don't enter the debugger for a syntax error' opened 2026-10-21T20:53:14Z, not draft, base main @ c9bf1ed (the upstream tip, re-verified at publication), head 28d81d9 (two commits, +28/-1 across src/_pytest/runner.py, testing/test_debugging.py, changelog/3649.bugfix.rst, AUTHORS). Body: summary, changelog note, filled checklist, testing plan and an AI assistance disclosure per CONTRIBUTING.rst's AI/LLM-Assisted Contributions Policy, revised once after opening to note that this account cannot comment on other users' issues in the repository (the root-cause analysis therefore lives in the PR description). Review: copilot-pull-request-reviewer[bot] COMMENTED with no content; no human review yet; no pings. Not merged."
+    },
+    {
+      "repo": "Comfy-Org/ComfyUI",
+      "project": "comfyui",
+      "issueNumber": 17294,
+      "issueTitle": "`__value__` wrapper is stripped from the stored prompt, so array widget values are lost when reopening an API-queued image",
+      "issueUrl": "https://github.com/Comfy-Org/ComfyUI/issues/17294",
+      "issueState": "OPEN",
+      "issueUpdatedAt": "2026-10-22T18:28:06Z",
+      "prNumber": 17303,
+      "prUrl": "https://github.com/Comfy-Org/ComfyUI/pull/17303",
+      "prState": "open",
+      "prTitle": "Preserve submitted `__value__` wrapper in the stored prompt",
+      "branch": "fix/17294-preserve-submitted-prompt",
+      "baseBranch": "master",
+      "fork": "ShahabAhmed01/ComfyUI",
+      "forkUrl": "https://github.com/ShahabAhmed01/ComfyUI",
+      "status": "pr-opened",
+      "openedAt": "2026-10-22T19:35:42Z",
+      "prCreatedAt": "2026-10-22T19:35:42Z",
+      "lastVerified": "2026-10-22T20:18:08Z",
+      "baseCommit": "1a82e6d01f395b43275c77acd289af1eb7090bb9",
+      "commits": [
+        {
+          "sha": "2c6e2551fe4f746716320cd747d47cf69af60388",
+          "subject": "Preserve submitted __value__ wrapper in the stored prompt"
+        }
+      ],
+      "checks": {
+        "cla-assistant": "pass",
+        "CodeRabbit": "pass",
+        "Socket Security: Project Report": "pass",
+        "Socket Security: Pull Request Alerts": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        },
+        {
+          "author": "coderabbitai",
+          "state": "CHANGES_REQUESTED"
+        },
+        {
+          "author": "ShahabAhmed01",
+          "state": "COMMENTED"
+        },
+        {
+          "author": "coderabbitai",
+          "state": "COMMENTED"
+        },
+        {
+          "author": "ShahabAhmed01",
+          "state": "COMMENTED"
+        },
+        {
+          "author": "coderabbitai",
+          "state": "COMMENTED"
+        },
+        {
+          "author": "coderabbitai",
+          "state": "APPROVED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Stops validate_inputs() writing the unwrapped {__value__: ...} widget value back into the submitted prompt in place before it is queued, so /history and the PNG prompt metadata keep the submitted wrapper and array widget values stay distinguishable from node links when reopening an API-queued image; get_input_data() unwraps the same way for exactly the inputs validation reads (required/optional), so what the node receives is unchanged.",
+      "notes": "Selection (2026-10-22, coordination run ossrun-20261022T175504Z-6a2a8b74): the repo was reserved against the shared automation-coordination registry (2026-10-22T18:19:55Z, verified by fetch-compare-retry) after discovery restricted to Python-ecosystem projects (this box has Python 3.14/uv only). Comfy-Org/ComfyUI: 141,980 stars / 16,740 forks, GPL-3.0, default branch master (live 2026-10-22), trending +3,948 stars/week observed 2026-10-22; AGENTS.md explicitly embraces agents with a hand-written-quality bar and rejects AI-slop patterns; external PRs merged recently (#17224, #17241). Rejected after policy/competition reads: pydantic (assignment gate; earlier account comments spam-marked, PR auto-closed), pre-commit (maintainer bans LLM contributions), pallets/click and pallets/flask (Pallets forbids autonomous agent PRs), sympy (AI policy closes substantially-AI PRs from newcomers), tox (all five open issues claimed/PR'd: #4182/#4184 have PRs #4183/#4185), black (recent issues covered by open PRs; #5524 -> PR #5525), attrs (#1637 has four competing PRs), httpx and scrapy (contested). Selected issue #17294 (filed by zolgear 2026-10-22T14:26:20Z, label Potential Bug): validate_inputs() unwrapped {__value__: ...} list-widget values by writing the bare value back into the prompt in place before server.post_prompt queued it, so PromptQueue.task_done history and the PNG hidden PROMPT (get_original_prompt) stored the bare list and array widget values became indistinguishable from node links on reopen. Intent comment posted 2026-10-22T18:28:06Z; competing sweep at publication (issue timeline + '17294' and '__value__' PR searches: #13095 open is an unrelated history-tokens bounty, #15729 closed, #13484 merged multicombo) found 0 competing PRs. Fix: validation unwraps into a local variable only (type coercions untouched); get_input_data() calls get_input_info first and unwraps __value__ gated on input_category in (required, optional) - exactly the set validate_inputs() iterates (hidden/undeclared inputs are read as submitted), which after review exchange with CodeRabbit (it conceded its single-key restriction would change declared-input behavior and recommended this gate) makes node-facing behaviour byte-for-byte pre-existing while only storage changes. Verification: regression test test_value_wrapper_preserved_in_history (TestArrayValueEcho node) red pre-fix - assert [1, 2, 3] == {'__value__': [1, 2, 3]} - green post-fix across all four server configs; full tests/execution 341 passed / 7 skipped; tests-unit 3108 passed / 0 failures / 88 skipped (junit); ruff check . clean; check-ai-co-authors.sh clean (single plain-author commit, no Co-authored-by trailers). Publication 2026-10-22T19:35:42Z: PR #17303 to master, head 2c6e255 (force-with-lease update 1bce165 -> 2c6e255 for the review gate), mergeable MERGEABLE, branch3 commits behind master at last check with 0 conflicts; CLA signed (cla-assistant confirmed 2026-10-22); external checks pass (cla-assistant, Socket Project Report, Socket PR Alerts, CodeRabbit review completed); ComfyUI's six workflows (Python Linting, Unit Tests, Execution Tests, Test server launches, Windows Line Endings, Check AI Co-Authors) sit at action_required - the first-time-contributor workflow-approval gate, not bypassed, no maintainer pinged; Copilot quota-limited (COMMENTED only); CodeRabbit initially CHANGES_REQUESTED, premise corrected in-thread, gate applied in 2c6e255, re-review pending; no human review. Not merged. Workspace: isolated ~/opensource-work/runs/ossrun-20261022T175504Z-6a2a8b74/comfyui (shallow clone of master @1a82e6d, Python 3.12.15 venv, torch 2.14.1+cpu, filelock added after a cancelled install left the venv incomplete); fork ShahabAhmed01/ComfyUI created this session; the shared tracker checkout /mnt/EOD/GitHub/opensource-contributions was not touched. Prepared with AI assistance under the account owner's direction; every claim above was checked against live GitHub state or a local run."
     }
   ]
 }

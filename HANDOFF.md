@@ -1,25 +1,72 @@
 # Contribution Handoff
 
-Last updated: 2026-10-21T21:05Z (Track 026: **pytest-dev/pytest #3649 →
-PR #15239 opened 20:53Z**, `Changelog entry`/`package`/`pre-commit.ci`
-green with the `build` matrix still running; see the "New this session"
-block and `contributions/pytest/issue-3649.md`). Previous this session:
-Track 025 (pypa/pipx #2176 → PR #2177 opened 19:35Z) and Track 024
-(microsoft/pyright #11879 → PR #11904 opened 19:19Z). Also this session:
-the **brekkylab org restricts the authenticated account** ("Access to
-this site has been restricted" on `brekkylab/backlot` via API while the
-web UI still loads), which ends the backlot lane — no new backlot work
-is possible. Prior notes: 2026-10-20T16:42Z Track 023 (hono #5569,
-branch linked in issue — the repo refuses PRs from non-collaborators),
-2026-10-20T16:12Z Track 022 (pytest #15221 / PR #15228);
-2026-10-19T13:44Z Track 020 starlette PR #3682.)
+Last updated: 2026-10-22T20:20Z (Track 027: **Comfy-Org/ComfyUI #17294 →
+PR #17303 opened 19:35Z**, CLA signed; `cla-assistant`/Socket ×2/
+CodeRabbit green; the six repo workflows `action_required` behind the
+first-time-contributor approval gate; CodeRabbit's initial change
+request answered in-thread and its own recommended gate applied in
+`2c6e255`, then APPROVED — human review still required; see the "New
+this session" block and
+`contributions/comfyui/issue-17294.md`). Previous this session: Track
+026 (pytest-dev/pytest #3649 → PR #15239 opened 20:53Z), Track 025
+(pypa/pipx #2176 → PR #2177 opened 19:35Z), and Track 024
+(microsoft/pyright #11879 → PR #11904 opened 19:19Z). Also this
+session: the **brekkylab org restricts the authenticated account**
+("Access to this site has been restricted" on `brekkylab/backlot` via
+API while the web UI still loads), which ends the backlot lane — no new
+backlot work is possible. Prior notes: 2026-10-20T16:42Z Track 023
+(hono #5569, branch linked in issue — the repo refuses PRs from
+non-collaborators), 2026-10-20T16:12Z Track 022 (pytest #15221 /
+PR #15228); 2026-10-19T13:44Z Track 020 starlette PR #3682.)
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 14
+Monitoring Contributions: 15
 Merged Contributions: 11
 Closed/Superseded Contributions: 1
+
+**New this session (2026-10-22T20:20Z): Comfy-Org/ComfyUI #17294 / PR
+#17303** (Track 027) — `Preserve submitted __value__ wrapper in the
+stored prompt`. `server.post_prompt` runs `validate_inputs()` over the
+submitted prompt **in place** before `prompt_queue.put(...)`, and the
+`__value__` unwrap for list widget values (the wrapper exists because a
+bare list in a prompt means a node link) ended with `inputs[x] = val`,
+so the queued prompt no longer matched the submission: `/history`
+(`PromptQueue.task_done`) and the PNG `PROMPT` metadata chunk stored
+the bare list, and array widget values became indistinguishable from
+node links when reopening an API-queued image (#17294, filed by
+zolgear 14:26Z, `Potential Bug`; intent comment 18:28Z; 0 competing PRs
+at publication). Validation now unwraps into a local variable only
+(type coercions untouched), and `get_input_data()` calls
+`get_input_info()` first and unwraps gated on
+`input_category in ("required", "optional")` — exactly the set
+`validate_inputs()` iterates — so hidden/undeclared inputs
+(`ACCEPT_ALL_INPUTS` pass-throughs) are read as submitted and
+node-facing behaviour is byte-for-byte pre-existing; only storage
+changed. The gate came out of the CodeRabbit exchange: it claimed the
+read unwrap changed undeclared-input behaviour and suggested
+single-key-only unwrapping; the reply showed that restriction would
+have changed declared-input behaviour (pre-fix validation collapses
+multi-key wrapper dicts via the write-back), CodeRabbit conceded and
+recommended the declaration gate, and `2c6e255` applied it (tightened
+to required+optional). Validation: the new
+`test_value_wrapper_preserved_in_history` with a `TestArrayValueEcho`
+testing node is red on upstream code with
+`assert [1, 2, 3] == {'__value__': [1, 2, 3]}` across all four server
+configs while the adjacent `test_undeclared_inputs` passes, green with
+the fix; `tests/execution` 341 passed / 7 skipped; `tests-unit` 3108
+passed / 0 failures / 88 skipped; `ruff check .` clean;
+`check-ai-co-authors.sh` clean (one plain-author commit, no AI
+`Co-authored-by` trailers — this repo's CI fails them). CLA signed via
+the exact-text comment (bot confirmed); Socket ×2 and `cla-assistant`
+green; the six repo workflows `action_required` (first-time-contributor
+approval gate — not bypassed, no pings); Copilot quota-limited; no
+human review; PR open and MERGEABLE, not merged. First ComfyUI
+contribution; workspace isolated under
+`~/opensource-work/runs/ossrun-20261022T175504Z-6a2a8b74/comfyui` on the
+`ShahabAhmed01/ComfyUI` fork; the shared checkout was untouched. Track
+027 below.
 
 **New this session (2026-10-21T21:05Z): pytest-dev/pytest #3649 / PR #15239**
 (Track 026) — `fix: don't enter the debugger for a syntax error`.
@@ -1721,6 +1768,44 @@ repo-config coverage run shows every added line executed. Full record:
 `contributions/pytest/issue-3649.md`.
 Next Action: Monitor PR for maintainer review; respond on the same
 branch. Do not ping.
+
+### Track 027
+Project: Comfy-Org/ComfyUI
+Issue: #17294
+PR: #17303
+Branch: fix/17294-preserve-submitted-prompt
+Status: MONITORING
+CI: AWAITING_APPROVAL (six repo workflows — Python Linting, Unit Tests,
+Execution Tests, Test server launches without errors, Check for Windows
+Line Endings, Check AI Co-Authors — completed as `action_required`, the
+first-time-contributor workflow-approval gate; not bypassed, no
+maintainer pinged; the same commands pass locally: `tests/execution` 341
+passed / 7 skipped, `tests-unit` 3108 passed / 0 failures, `ruff check
+.` clean). External checks green: cla-assistant, Socket Project Report,
+Socket PR Alerts, CodeRabbit review completed.
+Review: APPROVED (coderabbitai, 2026-10-22T20:13:45Z — it initially
+requested changes, conceded in-thread that its single-key restriction
+was wrong and recommended the declaration gate, which was applied in
+`2c6e255`; `reviewDecision` is `REVIEW_REQUIRED` pending human review).
+copilot-pull-request-reviewer COMMENTED only (quota limit). No human
+review.
+Notes: Head `2c6e2551fe4f746716320cd747d47cf69af60388` (one commit after
+a force-with-lease update from `1bce165` applying the review gate),
++49/-2 across execution.py, tests/execution/test_execution.py,
+tests/execution/testing_nodes/testing-pack/util.py; branch based on
+`1a82e6d`, master advanced to `a071826` by publication (3 commits
+behind, 0 conflicts, `MERGEABLE`). CLA signed via the exact-text
+comment; bot confirmed. Issue filed by zolgear 2026-10-22T14:26:20Z,
+intent comment 18:28:06Z, 0 competing PRs at publication (swept
+`17294` and `__value__` searches). Local: red/green proof — upstream
+`execution.py` stashed → the new test fails on all four server configs
+with the exact wrapper-stripping diff while `test_undeclared_inputs`
+passes; fix → 8/8 green; full suites re-run after the gate. Full
+record: `contributions/comfyui/issue-17294.md`.
+Next Action: Monitor PR for CodeRabbit re-review, maintainer approval
+of the `action_required` runs, and the first human review; respond on
+the same branch. Do not ping; do not open another ComfyUI PR while
+#17303 is open.
 
 ## Post-PR triage 2026-10-09 (after opening #6648)
 

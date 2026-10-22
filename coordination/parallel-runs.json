@@ -72,21 +72,20 @@
     },
     {
       "run_id": "ossrun-20261022T175504Z-6a2a8b74",
-      "status": "PR_PUBLISHED",
+      "status": "COMPLETED",
       "repository": "Comfy-Org/ComfyUI",
       "issue_url": "https://github.com/Comfy-Org/ComfyUI/issues/17294",
       "issue_number": 17294,
       "pr_url": "https://github.com/Comfy-Org/ComfyUI/pull/17303",
       "head_branch": "fix/17294-preserve-submitted-prompt",
       "acquired_at": "2026-10-22T18:19:55Z",
-      "heartbeat_at": "2026-10-22T19:36:14Z",
-      "expires_at": "2026-10-23T01:31:33Z",
-      "reservation_state": "ACTIVE",
-      "tracker_writer": {
-        "holder": "ossrun-20261022T175504Z-6a2a8b74",
-        "acquired_at": "2026-10-22T19:39:03Z",
-        "expires_at": "2026-10-23T01:39:03Z"
-      }
+      "heartbeat_at": "2026-10-22T20:21:37Z",
+      "expires_at": null,
+      "reservation_state": "RELEASED",
+      "tracker_writer": null,
+      "pr_number": 17303,
+      "completed_at": "2026-10-22T20:21:37Z",
+      "outcome": "Comfy-Org/ComfyUI#17294 fixed; PR https://github.com/Comfy-Org/ComfyUI/pull/17303 published 2026-10-22T19:35:42Z (head 2c6e255, MERGEABLE, based on 1a82e6d); CLA signed; cla-assistant/Socket Project Report/Socket PR Alerts green and CodeRabbit APPROVED after its recommended declaration gate was applied in 2c6e255; the six repo workflows are action_required behind the first-time-contributor approval gate (not bypassed); no human review, not merged; local verification: tests/execution 341 passed/7 skipped, tests-unit 3108 passed/0 failures, ruff check . clean, red/green regression proof on all 4 server configs; tracker record pushed to main (commit fc69d1a) and tracker-writer lease released"
     }
   ],
   "tracker_writer": null

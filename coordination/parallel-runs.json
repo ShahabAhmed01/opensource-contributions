@@ -158,10 +158,11 @@
       "pr_url": null,
       "head_branch": null,
       "acquired_at": "2026-10-23T14:52:00Z",
-      "heartbeat_at": "2026-10-23T14:52:00Z",
-      "expires_at": "2026-10-23T20:52:00Z",
+      "heartbeat_at": "2026-10-23T15:11:00Z",
+      "expires_at": "2026-10-23T19:15:00Z",
       "reservation_state": "ACTIVE",
-      "outcome": "reserved openclaw/openclaw 14:22-14:40Z; released without contribution work - queueable-fix lanes robot-raced to PRs within minutes; no issue/branch/PR was opened by this run"
+      "outcome": "reserved openclaw/openclaw 14:22-14:40Z; released without contribution work - queueable-fix lanes robot-raced to PRs within minutes; no issue/branch/PR was opened by this run",
+      "project_updated_at": "2026-10-23T15:11:00Z"
     },
     {
       "run_id": "ossrun-20261023T133906Z-406ada2a",

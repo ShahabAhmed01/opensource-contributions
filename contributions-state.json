@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T13:44:08Z",
+  "updatedAt": "2026-10-23T14:55:41Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -169,7 +169,7 @@
       "status": "merged",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -235,7 +235,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -278,7 +278,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -321,7 +321,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": null,
       "commits": [
         {
@@ -364,7 +364,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -407,7 +407,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -474,7 +474,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -537,7 +537,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -591,7 +591,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -653,7 +653,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -713,7 +713,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -768,7 +768,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -809,7 +809,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -851,7 +851,7 @@
       "status": "merged",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -923,7 +923,7 @@
       "status": "merged",
       "openedAt": "2026-10-17T18:19:47Z",
       "prCreatedAt": "2026-10-17T18:19:47Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -980,7 +980,7 @@
       "status": "merged",
       "openedAt": "2026-10-19T12:01:53Z",
       "prCreatedAt": "2026-10-19T12:01:53Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "ff92bdd01c423b833a96c0ece823265c47d0e6be",
       "commits": [
         {
@@ -1037,7 +1037,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-19T13:17:51Z",
       "prCreatedAt": "2026-10-19T13:17:51Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "dc20b216f065af3a487722141da9a29dcac388d1",
       "commits": [
         {
@@ -1100,7 +1100,7 @@
       "status": "ready-to-merge",
       "openedAt": "2026-10-19T17:24:52Z",
       "prCreatedAt": "2026-10-19T17:24:52Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "cc6fea5b40ad559f7ca358a24b1a521451232281",
       "commits": [
         {
@@ -1195,7 +1195,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-20T16:12:03Z",
       "prCreatedAt": "2026-10-20T16:12:03Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "49ea4d08714f9ae519b86ee17b6b50c1dd080f32",
       "commits": [
         {
@@ -1271,7 +1271,7 @@
       "status": "pushed",
       "openedAt": "2026-10-20T16:42:08Z",
       "prCreatedAt": null,
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "5ca49b0720755c585c9a9835f0a479ceea36fb52",
       "commits": [
         {
@@ -1305,7 +1305,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-21T19:19:00Z",
       "prCreatedAt": "2026-10-21T19:19:00Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "e80c920278f15973001d1a33414b0a7cafdc5ed2",
       "commits": [
         {
@@ -1349,7 +1349,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-21T19:35:20Z",
       "prCreatedAt": "2026-10-21T19:35:20Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "commits": [
         {
           "sha": "fb0c3ceb20299ebc09d706cccc2f07f76ff67fbc",
@@ -1394,7 +1394,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-21T20:53:14Z",
       "prCreatedAt": "2026-10-21T20:53:14Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "c9bf1edf9e0d388f3e7bebc88576e608ffbc40a4",
       "commits": [
         {
@@ -1474,7 +1474,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-22T19:35:42Z",
       "prCreatedAt": "2026-10-22T19:35:42Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "1a82e6d01f395b43275c77acd289af1eb7090bb9",
       "commits": [
         {
@@ -1542,7 +1542,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-23T11:59:34Z",
       "prCreatedAt": "2026-10-23T11:59:34Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "1190eeb39527e1ed81f9b35c931af66f31d05186",
       "commits": [
         {
@@ -1589,10 +1589,10 @@
       "baseBranch": "main",
       "fork": "ShahabAhmed01/spec-kit",
       "forkUrl": "https://github.com/ShahabAhmed01/spec-kit",
-      "status": "pr-opened",
+      "status": "ci-failed",
       "openedAt": "2026-10-23T13:37:57Z",
       "prCreatedAt": "2026-10-23T13:37:57Z",
-      "lastVerified": "2026-10-23T13:44:08Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
       "baseCommit": "27d14e20c187c1f2916540ea201ecbdc9f8ed588",
       "commits": [
         {
@@ -1601,9 +1601,28 @@
         }
       ],
       "checks": {
+        "version-bump": "fail",
+        "Dependency audit": "fail",
+        "Analyze (actions)": "pass",
+        "markdownlint": "pass",
+        "ruff": "pass",
+        "Analyze (python)": "pass",
+        "Dependency audit scheduled (${{ matrix.os }}, Python ${{ matrix.python-version }})": "skipped",
+        "shellcheck": "pass",
+        "pytest (ubuntu-latest, 3.13)": "pass",
+        "pytest (ubuntu-latest, 3.14)": "pass",
+        "pytest (windows-latest, 3.13)": "pass",
+        "pytest (windows-latest, 3.14)": "pass",
+        "pytest (macos-latest, 3.13)": "pass",
+        "pytest (macos-latest, 3.14)": "pass",
+        "CodeQL": "pass",
         "License compliance check": "pass"
       },
       "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        },
         {
           "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
@@ -1613,6 +1632,47 @@
       "mergeCommit": null,
       "description": "Documents the hyphenated installed skill names and per-agent invocation prefixes for the bundled bug extension (fixes #5036 part 1), and closes the re-assessment staleness gap (part 2): after a confirmed assessment overwrite the assess step offers to rename the older fix/test reports to *.stale.md instead of leaving them current, and the validation step refuses a fix.md older than the current assessment.md (header-date comparison with mtime fallback, interactive-confirm/automated-refuse).",
       "notes": "Issue self-validating (reporter ran the repo's own bug-assessment bot; labels triage-must-have, severity-medium, bug-assess) with no human claim and no competing PR (PR search + issue timeline verified twice: at selection and immediately before gh pr create). Two-part patch to extensions/bug/README.md, commands/speckit.bug.assess.md, commands/speckit.bug.test.md plus 7 static regression tests in tests/extensions/bug/test_bug_extension.py; prompt-template change only, no Python runtime code and no .lock.yml regeneration needed (lock files import the markdown at runtime). Red/green evidence: separate git worktree of origin/main @ 27d14e2 with the same test file fails exactly the 7 new tests (7 failed/27 passed), full suite 12,735 passed/461 skipped/0 failed on the final tree vs 12,728 baseline (Python 3.14.8, uv) and 34/34 on tests/extensions/bug; git diff --check clean; ruff not part of the repo toolchain. README wording cross-checked against docs/integrations/cli.md#command-invocation, src/specify_cli/_invocation_style.py and the root README's hyphenated examples. AI policy followed exactly (CONTRIBUTING 'AI contributions in Spec Kit'): PR-body disclosure naming agent/model/mode/extent, Assisted-by trailer on the commit, filer cap 0 open PRs at filing (cap 3). CI at open: License compliance check success; Lint/Security Audit/Test & Lint Python/Extension Version Guard/CodeQL all action_required (first-time-fork workflow approval by a maintainer required). Registry mechanics: registry.py writes per-run fields only; the top-level tracker_writer lease must go through its --state-json path (top-level merge)."
+    },
+    {
+      "repo": "ohmyzsh/ohmyzsh",
+      "project": "ohmyzsh",
+      "issueNumber": 14200,
+      "issueTitle": "extract: .deb members are extracted double-nested (control/) and data/ only survives by coincidence",
+      "issueUrl": "https://github.com/ohmyzsh/ohmyzsh/issues/14200",
+      "issueState": "OPEN",
+      "issueUpdatedAt": "2026-10-23T14:49:33Z",
+      "prNumber": 14199,
+      "prUrl": "https://github.com/ohmyzsh/ohmyzsh/pull/14199",
+      "prState": "open",
+      "prTitle": "fix(extract): extract .deb members without double nesting",
+      "branch": "fix/extract-deb-nesting-406ada2a",
+      "baseBranch": "master",
+      "fork": "ShahabAhmed01/ohmyzsh",
+      "forkUrl": "https://github.com/ShahabAhmed01/ohmyzsh",
+      "status": "pr-opened",
+      "openedAt": "2026-10-23T14:42:23Z",
+      "prCreatedAt": "2026-10-23T14:42:23Z",
+      "lastVerified": "2026-10-23T14:55:41Z",
+      "baseCommit": "2100c630ba4bd67bb48802c3e7da893a4fdaa1a0",
+      "commits": [
+        {
+          "sha": "9e81db23790c99ead1aac5b8256c43f1ed2d00da",
+          "subject": "fix(extract): extract .deb members into the result directories"
+        }
+      ],
+      "checks": {
+        "Add to project": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "fix(extract): extract .deb members into their result directories — the deb arm pre-created control/ and data/ then recursed with extract ../control.tar.*, so member tarballs landed double-nested (pkg/control/control/...) whenever control.tar had 2+ members, and data/ survived only when data.tar had a single top-level entry. Extract each member directly with tar -C into the prepared dirs reusing the plugin's per-compression chains; add .deb regression tests in default/target/remove modes.",
+      "notes": "AI-assisted (disclosed in PR body per ohmyzsh CONTRIBUTING); the bug had no upstream issue, issue #14200 filed by this run and linked via Fixes; red/green proof on master; fixture matrix gz/xz/zst/bz2 locally."
     }
   ]
 }

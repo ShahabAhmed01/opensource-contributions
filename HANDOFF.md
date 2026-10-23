@@ -1,13 +1,26 @@
 # Contribution Handoff
 
-Last updated: 2026-10-23T13:52Z (Track 029: **github/spec-kit #5036 →
-PR #5069 opened 13:37Z**, two-part fix of the bundled bug extension —
-documented the hyphenated installed command names and added the
-re-assessment staleness flow, red/green template tests, full suite
-12,735/0 fail; License check success, Lint/Test/CodeQL workflows
-awaiting first-time-fork maintainer approval; AI disclosed in body +
-commit trailer per spec-kit CONTRIBUTING; see the "New this session"
-block and `contributions/spec-kit/issue-5036.md`). Previous — Track
+Last updated: 2026-10-23T14:58Z (Track 030: **ohmyzsh/ohmyzsh #14200 →
+PR #14199 opened 14:42Z**, `fix(extract)`: .deb member archives now
+extract directly into the prepared `control/`/`data/` directories via
+`tar -C` instead of recursing through `extract ../control.tar.*`, which
+double-nested the control bundle (`pkg/control/control/...`) for ≥2
+members and kept `data/` only when `data.tar.*` had a single top-level
+entry; red/green proof (new cases fail on master's plugin), 9/9 suite
+PASS, gz/xz/zst/bz2 fixture matrix, zsh -n sweep clean; issue #14200
+self-filed 14:49Z with a verbatim-verified repro and linked via
+`Fixes #14200`; AI disclosed in the PR body per ohmyzsh CONTRIBUTING;
+checks: `Add to project` SUCCESS, the zsh-syntax CI had not posted a
+run for the fork PR yet, copilot[bot] COMMENTED, no human review, not
+merged; see the "New this session" block and
+`contributions/ohmyzsh/issue-14200.md`). Previous — Track 029:
+**github/spec-kit #5036 → PR #5069 opened 13:37Z**, two-part fix of
+the bundled bug extension (hyphenated installed command names,
+re-assessment staleness flow); License check success, Lint/Test/CodeQL
+await first-time-fork maintainer approval (`action_required`, mapped
+to ci-failed by the tracker sync); AI disclosed in body + commit
+trailer per spec-kit CONTRIBUTING; see the "New this session" block
+and `contributions/spec-kit/issue-5036.md`). Previous — Track
 028: **psf/black #2893 → PR #5592 opened 11:59Z**, preview-gated fix
 for the keyword-argument line-too-long bug; `docs/readthedocs.org:black`
 and `pre-commit.ci` SUCCESS, Copilot COMMENTED, no human review; see
@@ -33,17 +46,61 @@ PR #15228); 2026-10-19T13:44Z Track 020 starlette PR #3682.)
 
 ## Portfolio Summary
 
-(as of 2026-10-23T13:52Z, all 29 records resolved against live GitHub;
-24-entries-with-PR categories are `status` values in
-`contributions-state.json`)
+(as of 2026-10-23T14:58Z, all 30 records resolved against live GitHub;
+categories are `status` values in `contributions-state.json`)
 
 Active Contributions: 1 (honojs/hono #5569 — branch published as the
 clarification chain; hono restricts PR creation to collaborators)
-Monitoring Contributions: 15 (12 pr-opened, 2 ci-running, 1
-ready-to-merge)
+Monitoring Contributions: 16 (12 pr-opened, 2 ci-running, 1
+ready-to-merge, 1 ci-failed — spec-kit #5069 flipped from pr-opened
+because its first-time-fork workflows sit in `action_required`, which
+the sync maps to a failing check; awaiting maintainer approval, not a
+code failure)
 Merged Contributions: 11
 Closed/Superseded Contributions: 2 (markitdown #2699, starlette #3682
 — closed upstream 2026-10-23)
+
+**New this session (2026-10-23T14:58Z): ohmyzsh/ohmyzsh #14200 / PR
+#14199** (Track 030) — `fix(extract): extract .deb members without
+double nesting`. Own audit finding in the extract plugin's `.deb` arm:
+it pre-created `control/`/`data/` and recursed with `extract
+../control.tar.*` / `extract ../data.tar.*` from inside them, and the
+inner extract re-derived the same directory names relative to its own
+working directory, so a package with ≥2 control members extracted as
+`pkg/control/control/{conffiles,control,postinst}` while `data/`
+survived only when `data.tar.*` had exactly one top-level entry (the
+single-content step lifted it up) — the output layout varied with
+member count. The patch extracts each member archive directly into
+the prepared result directory (`tar … -C control` / `-C data`),
+reusing the plugin's own per-compression chains (pigz/pbzip2 `-I`
+invocation, `tar --xz --help` probe with `xzcat|tar` and
+`zstdcat|tar`/`--zstd` fallbacks), covering the member formats dpkg
+emits (gz/xz/zst, legacy bz2); new `.deb` regression tests pin the
+default, `--to-directory` and `-r` modes (control members in
+`<name>/control`, data members in `<name>/data`, no member debris, no
+double nesting). Validation: red/green proof (the new cases fail on
+master's plugin with "control members not extracted into
+.../pkg/control"), 9/9 suite PASS (6 prior lzma/Z cases + 3 new deb
+cases), gz/xz/zst/bz2 fixture matrix, `zsh -n` over the plugin and
+tests plus the CI-equivalent syntax sweep (`oh-my-zsh.sh`, `lib/*.zsh`,
+plugin files, completions), `git diff --check` clean; an independent
+read-only review passed with pre-existing-behaviour notes only
+(failure propagation through the trailing member cleanup and the
+missing-member abort stay at upstream parity; lz4/lrz member dispatch
+dropped — dpkg never emits those formats, disclosed in the PR).
+Process: the defect had no upstream issue, so the PR was filed first
+(14:42Z, base `2100c63` verified current, MERGEABLE) and issue #14200
+opened at 14:49Z with the verbatim-verified repro, then linked via
+`Fixes #14200` in the PR body; AI assistance disclosed in the PR body
+per ohmyzsh CONTRIBUTING (no per-commit trailer convention upstream,
+commit stays a pure Conventional Commit). Upstream state at record
+time: `Add to project` check SUCCESS; the repo's zsh-syntax CI had
+not posted a check-run for the fork PR yet;
+`copilot-pull-request-reviewer[bot]` COMMENTED (automated); no human
+review, not merged, `mergeable_state: blocked` (no approving review
+yet — normal for a fresh PR). Ledger:
+`contributions/ohmyzsh/issue-14200.md`; project notes:
+`projects/ohmyzsh.md`.
 
 **New this session (2026-10-23T13:52Z): github/spec-kit #5036 / PR
 #5069** (Track 029) — `fix(bug): document installed command names and

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T14:06:39Z",
+  "updated_at": "2026-10-23T14:09:16Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -178,16 +178,17 @@
     },
     {
       "run_id": "ossrun-20261023T135109Z-6d695fe6",
-      "status": "RESERVED",
+      "status": "ISSUE_VERIFIED",
       "repository": "anomalyco/opencode",
-      "issue_url": null,
-      "issue_number": null,
+      "issue_url": "https://github.com/anomalyco/opencode/issues/58121",
+      "issue_number": 58121,
       "pr_url": null,
       "head_branch": null,
       "acquired_at": "2026-10-23T13:59:00Z",
-      "heartbeat_at": "2026-10-23T13:59:00Z",
-      "expires_at": "2026-10-23T19:59:00Z",
-      "reservation_state": "ACTIVE"
+      "heartbeat_at": "2026-10-23T14:07:00Z",
+      "expires_at": "2026-10-23T20:07:00Z",
+      "reservation_state": "ACTIVE",
+      "note": "selected anomalyco/opencode#58121: pattern keyword disables plugin-tool input validation; no linked PR; fix = patterns:'ignore' in SchemaRepresentation.fromJsonSchemaDocument calls in packages/core/src/tool/runtime.ts + regression test; #58438 deprioritized (Dante-dan tracing, doc patch pending); #58463 deprioritized (crowded overflow-classification zone, PR 56454 nearby)"
     }
   ],
   "tracker_writer": null

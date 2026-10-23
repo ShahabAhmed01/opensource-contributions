@@ -1,6 +1,11 @@
 # Contribution Handoff
 
-Last updated: 2026-10-22T20:20Z (Track 027: **Comfy-Org/ComfyUI #17294 →
+Last updated: 2026-10-23T12:15Z (Track 028: **psf/black #2893 →
+PR #5592 opened 11:59Z**, preview-gated fix for the keyword-argument
+line-too-long bug; `docs/readthedocs.org:black` and `pre-commit.ci`
+SUCCESS, Copilot COMMENTED, no human review; see the "New this
+session" block and `contributions/black/issue-2893.md`). Previous —
+Track 027: **Comfy-Org/ComfyUI #17294 →
 PR #17303 opened 19:35Z**, CLA signed; `cla-assistant`/Socket ×2/
 CodeRabbit green; the six repo workflows `action_required` behind the
 first-time-contributor approval gate; CodeRabbit's initial change
@@ -22,9 +27,41 @@ PR #15228); 2026-10-19T13:44Z Track 020 starlette PR #3682.)
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 15
+Monitoring Contributions: 16
 Merged Contributions: 11
 Closed/Superseded Contributions: 1
+
+**New this session (2026-10-23T12:15Z): psf/black #2893 / PR #5592**
+(Track 028) — `Parenthesize unsplittable keyword argument values
+(preview)`. When a keyword argument's value is an expression Black
+cannot split (a bare attribute chain, plain name, or literal) and the
+whole argument exceeds the line length, Black had no split point and
+left the line too long: DOT is not a delimiter when preceded by a NAME
+and `=` is not a delimiter for arguments, so the reporter's 118-char
+line stayed over the limit, while an assignment RHS avoids exactly this
+via invisible parentheses (`parens=ASSIGNMENTS`). A new
+`visit_argument` hook wraps such a value in (invisible) parens,
+mirroring assignments, but only under three guards — the value is
+genuinely unsplittable (no brackets, no top-level delimiter, decided by
+the real `is_split_before/after_delimiter` so it stays in sync with
+`delimiter_split`), the name is ≥4 chars so moving the value to its own
+line actually shortens the overflowing line, and the `4+len(name)+2`
+head fits the line length — and it preserves the required parens around
+a walrus in a keyword argument (`f(x=(y := 1))`). Gated behind the new
+Preview flag `parenthesize_unsplittable_keyword_arguments` because
+Black's stability policy forbids changing stable output (stable mode is
+byte-for-byte unchanged; the bug is fixed under `--preview`/`--unstable`).
+Validation: full pytest suite 659 passed / 2 skipped / 17 subtests
+(baseline 658 + 1 new regression case); the new data case is a genuine
+red/green test (verified failing with the feature gate disabled,
+passing with it restored); `black --check src tests/test_*.py` clean;
+an independent fuzz review (~3000 synthetic inputs + 400 stdlib files)
+found no invalid, non-idempotent, or crashing output. PR #5592 open,
+MERGEABLE, not draft, `docs/readthedocs.org:black` + `pre-commit.ci`
+SUCCESS, Copilot COMMENTED, no human review, not merged. First
+psf/black contribution; workspace isolated under
+`~/opensource-work/runs/ossrun-20261023T093647Z-f689aac5/black` on the
+`ShahabAhmed01/black` fork. Track 028 below.
 
 **New this session (2026-10-22T20:20Z): Comfy-Org/ComfyUI #17294 / PR
 #17303** (Track 027) — `Preserve submitted __value__ wrapper in the
@@ -1806,6 +1843,32 @@ Next Action: Monitor PR for CodeRabbit re-review, maintainer approval
 of the `action_required` runs, and the first human review; respond on
 the same branch. Do not ping; do not open another ComfyUI PR while
 #17303 is open.
+
+### Track 028
+Project: psf/black
+Issue: #2893
+PR: #5592
+Branch: contrib/issue-2893-kwarg-linetoolong
+Status: MONITORING
+CI: PASSING — docs/readthedocs.org:black SUCCESS, pre-commit.ci - pr
+SUCCESS (both on head 7c38420b). No other checks pending.
+Review: AWAITING_REVIEW — copilot-pull-request-reviewer COMMENTED only;
+no human review.
+Notes: Head `7c38420bcedcb5894a488e21f4ef28e7038de1c1` (3 commits: the
+fix, a changelog PR-number update, and a pre-commit.ci auto-fix), 5
+files +161/−0, based on `main@1190eeb3`. The bug: a keyword argument's
+value gets no invisible parens (unlike an assignment RHS via
+`parens=ASSIGNMENTS`), so an unsplittable attribute-chain value has no
+split point and the line exceeds the limit (#2893, OPEN, labels
+T: bug + F: linetoolong, unassigned; collaborator JelleZijlstra: "We
+should fix this"). Fix: `visit_argument` wraps such values in (invisible)
+parens under three guards (unsplittable value, name ≥4 chars, head
+fits), plus `syms.argument` in the walrus-protection list so
+`f(x=(y := 1))` keeps its required parens; gated behind the new Preview
+flag `parenthesize_unsplittable_keyword_arguments` (stable output
+unchanged). Full record: `contributions/black/issue-2893.md`.
+Next Action: Monitor PR for the first human review; respond on the same
+branch. Do not open another black PR while #5592 is open.
 
 ## Post-PR triage 2026-10-09 (after opening #6648)
 

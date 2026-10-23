@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-22T20:18:08Z",
+  "updatedAt": "2026-10-23T12:15:09Z",
   "contributions": [
     {
       "repo": "brekkylab/backlot",
@@ -20,7 +20,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -83,7 +83,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -126,7 +126,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -169,7 +169,7 @@
       "status": "merged",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -235,7 +235,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -278,7 +278,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -321,7 +321,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": null,
       "commits": [
         {
@@ -364,7 +364,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -407,7 +407,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -474,7 +474,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -537,7 +537,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -591,7 +591,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -653,7 +653,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -713,7 +713,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -768,7 +768,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -809,7 +809,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -851,7 +851,7 @@
       "status": "merged",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -923,7 +923,7 @@
       "status": "merged",
       "openedAt": "2026-10-17T18:19:47Z",
       "prCreatedAt": "2026-10-17T18:19:47Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -980,7 +980,7 @@
       "status": "merged",
       "openedAt": "2026-10-19T12:01:53Z",
       "prCreatedAt": "2026-10-19T12:01:53Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "ff92bdd01c423b833a96c0ece823265c47d0e6be",
       "commits": [
         {
@@ -1037,7 +1037,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-19T13:17:51Z",
       "prCreatedAt": "2026-10-19T13:17:51Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "dc20b216f065af3a487722141da9a29dcac388d1",
       "commits": [
         {
@@ -1100,7 +1100,7 @@
       "status": "ready-to-merge",
       "openedAt": "2026-10-19T17:24:52Z",
       "prCreatedAt": "2026-10-19T17:24:52Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "cc6fea5b40ad559f7ca358a24b1a521451232281",
       "commits": [
         {
@@ -1183,7 +1183,7 @@
       "issueTitle": "Collecting many file arguments in the same directory re-collects the parent directory once per argument (O(args × siblings); Windows adds a samefile per sibling)",
       "issueUrl": "https://github.com/pytest-dev/pytest/issues/15221",
       "issueState": "OPEN",
-      "issueUpdatedAt": "2026-10-19T15:08:28Z",
+      "issueUpdatedAt": "2026-10-23T11:25:59Z",
       "prNumber": 15228,
       "prUrl": "https://github.com/pytest-dev/pytest/pull/15228",
       "prState": "open",
@@ -1195,7 +1195,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-20T16:12:03Z",
       "prCreatedAt": "2026-10-20T16:12:03Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "49ea4d08714f9ae519b86ee17b6b50c1dd080f32",
       "commits": [
         {
@@ -1271,7 +1271,7 @@
       "status": "pushed",
       "openedAt": "2026-10-20T16:42:08Z",
       "prCreatedAt": null,
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "5ca49b0720755c585c9a9835f0a479ceea36fb52",
       "commits": [
         {
@@ -1305,7 +1305,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-21T19:19:00Z",
       "prCreatedAt": "2026-10-21T19:19:00Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "e80c920278f15973001d1a33414b0a7cafdc5ed2",
       "commits": [
         {
@@ -1349,7 +1349,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-21T19:35:20Z",
       "prCreatedAt": "2026-10-21T19:35:20Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "commits": [
         {
           "sha": "fb0c3ceb20299ebc09d706cccc2f07f76ff67fbc",
@@ -1394,7 +1394,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-21T20:53:14Z",
       "prCreatedAt": "2026-10-21T20:53:14Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "c9bf1edf9e0d388f3e7bebc88576e608ffbc40a4",
       "commits": [
         {
@@ -1474,7 +1474,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-22T19:35:42Z",
       "prCreatedAt": "2026-10-22T19:35:42Z",
-      "lastVerified": "2026-10-22T20:18:08Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
       "baseCommit": "1a82e6d01f395b43275c77acd289af1eb7090bb9",
       "commits": [
         {
@@ -1522,6 +1522,56 @@
       "mergeCommit": null,
       "description": "Stops validate_inputs() writing the unwrapped {__value__: ...} widget value back into the submitted prompt in place before it is queued, so /history and the PNG prompt metadata keep the submitted wrapper and array widget values stay distinguishable from node links when reopening an API-queued image; get_input_data() unwraps the same way for exactly the inputs validation reads (required/optional), so what the node receives is unchanged.",
       "notes": "Selection (2026-10-22, coordination run ossrun-20261022T175504Z-6a2a8b74): the repo was reserved against the shared automation-coordination registry (2026-10-22T18:19:55Z, verified by fetch-compare-retry) after discovery restricted to Python-ecosystem projects (this box has Python 3.14/uv only). Comfy-Org/ComfyUI: 141,980 stars / 16,740 forks, GPL-3.0, default branch master (live 2026-10-22), trending +3,948 stars/week observed 2026-10-22; AGENTS.md explicitly embraces agents with a hand-written-quality bar and rejects AI-slop patterns; external PRs merged recently (#17224, #17241). Rejected after policy/competition reads: pydantic (assignment gate; earlier account comments spam-marked, PR auto-closed), pre-commit (maintainer bans LLM contributions), pallets/click and pallets/flask (Pallets forbids autonomous agent PRs), sympy (AI policy closes substantially-AI PRs from newcomers), tox (all five open issues claimed/PR'd: #4182/#4184 have PRs #4183/#4185), black (recent issues covered by open PRs; #5524 -> PR #5525), attrs (#1637 has four competing PRs), httpx and scrapy (contested). Selected issue #17294 (filed by zolgear 2026-10-22T14:26:20Z, label Potential Bug): validate_inputs() unwrapped {__value__: ...} list-widget values by writing the bare value back into the prompt in place before server.post_prompt queued it, so PromptQueue.task_done history and the PNG hidden PROMPT (get_original_prompt) stored the bare list and array widget values became indistinguishable from node links on reopen. Intent comment posted 2026-10-22T18:28:06Z; competing sweep at publication (issue timeline + '17294' and '__value__' PR searches: #13095 open is an unrelated history-tokens bounty, #15729 closed, #13484 merged multicombo) found 0 competing PRs. Fix: validation unwraps into a local variable only (type coercions untouched); get_input_data() calls get_input_info first and unwraps __value__ gated on input_category in (required, optional) - exactly the set validate_inputs() iterates (hidden/undeclared inputs are read as submitted), which after review exchange with CodeRabbit (it conceded its single-key restriction would change declared-input behavior and recommended this gate) makes node-facing behaviour byte-for-byte pre-existing while only storage changes. Verification: regression test test_value_wrapper_preserved_in_history (TestArrayValueEcho node) red pre-fix - assert [1, 2, 3] == {'__value__': [1, 2, 3]} - green post-fix across all four server configs; full tests/execution 341 passed / 7 skipped; tests-unit 3108 passed / 0 failures / 88 skipped (junit); ruff check . clean; check-ai-co-authors.sh clean (single plain-author commit, no Co-authored-by trailers). Publication 2026-10-22T19:35:42Z: PR #17303 to master, head 2c6e255 (force-with-lease update 1bce165 -> 2c6e255 for the review gate), mergeable MERGEABLE, branch3 commits behind master at last check with 0 conflicts; CLA signed (cla-assistant confirmed 2026-10-22); external checks pass (cla-assistant, Socket Project Report, Socket PR Alerts, CodeRabbit review completed); ComfyUI's six workflows (Python Linting, Unit Tests, Execution Tests, Test server launches, Windows Line Endings, Check AI Co-Authors) sit at action_required - the first-time-contributor workflow-approval gate, not bypassed, no maintainer pinged; Copilot quota-limited (COMMENTED only); CodeRabbit initially CHANGES_REQUESTED, premise corrected in-thread, gate applied in 2c6e255, re-review pending; no human review. Not merged. Workspace: isolated ~/opensource-work/runs/ossrun-20261022T175504Z-6a2a8b74/comfyui (shallow clone of master @1a82e6d, Python 3.12.15 venv, torch 2.14.1+cpu, filelock added after a cancelled install left the venv incomplete); fork ShahabAhmed01/ComfyUI created this session; the shared tracker checkout /mnt/EOD/GitHub/opensource-contributions was not touched. Prepared with AI assistance under the account owner's direction; every claim above was checked against live GitHub state or a local run."
+    },
+    {
+      "repo": "psf/black",
+      "project": "black",
+      "issueNumber": 2893,
+      "issueTitle": "Line too long: Keyword argument",
+      "issueUrl": "https://github.com/psf/black/issues/2893",
+      "issueState": "OPEN",
+      "issueUpdatedAt": "2022-02-21T20:32:50Z",
+      "prNumber": 5592,
+      "prUrl": "https://github.com/psf/black/pull/5592",
+      "prState": "open",
+      "prTitle": "Parenthesize unsplittable keyword argument values (preview)",
+      "branch": "contrib/issue-2893-kwarg-linetoolong",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/black",
+      "forkUrl": "https://github.com/ShahabAhmed01/black",
+      "status": "pr-opened",
+      "openedAt": "2026-10-23T11:59:34Z",
+      "prCreatedAt": "2026-10-23T11:59:34Z",
+      "lastVerified": "2026-10-23T12:15:09Z",
+      "baseCommit": "1190eeb39527e1ed81f9b35c931af66f31d05186",
+      "commits": [
+        {
+          "sha": "8b5a9ffc1556825b005ae56a695a27168d69321e",
+          "subject": "Parenthesize unsplittable keyword argument values (preview)"
+        },
+        {
+          "sha": "16fb45f05b9b70cc67c96f55cca8211a7ba9b7a8",
+          "subject": "Use PR number in changelog entry"
+        },
+        {
+          "sha": "7c38420bcedcb5894a488e21f4ef28e7038de1c1",
+          "subject": "[pre-commit.ci] auto fixes from pre-commit.com hooks"
+        }
+      ],
+      "checks": {
+        "docs/readthedocs.org:black": "pass",
+        "pre-commit.ci - pr": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Wraps the value of a keyword argument in (invisible) parentheses when it is an expression Black cannot split (a bare attribute chain, plain name, or literal) and the whole argument would exceed the line length, mirroring how assignment right-hand sides are already parenthesized via parens=ASSIGNMENTS; gated behind the new preview feature parenthesize_unsplittable_keyword_arguments because it changes output. Only wraps when the value is genuinely unsplittable (no brackets, no top-level delimiter) and wrapping can help (the name=( head fits within the line length and the name is long enough that the value line actually shortens), and preserves the required parens around a walrus in a keyword argument (f(x=(y := 1))).",
+      "notes": "Selection (2026-10-23, coordination run ossrun-20261023T093647Z-f689aac5): psf/black reserved against the shared automation-coordination registry (2026-10-23T10:37:15Z, verified by fetch-compare-retry) after discovery restricted to Python-ecosystem projects (this box has Python 3.14/uv only, no Node/Go/Rust). psf/black: ~42k stars, MIT, pull_request_creation_policy all, offline-testable with a self-contained test suite, no AI-contribution block; a prior run had declined it only because its then-open issues were covered by competing PRs, which no longer holds for #2893. Rejected after policy/competition reads: yt-dlp (NO AI policy), pydantic (assignment-required; earlier account comments spam-marked, PR auto-closed), pallets/click and pallets/flask (Pallets forbids autonomous agent PRs), sympy (AI policy closes substantially-AI newcomer PRs), repos with collaborators_only PR policy, redis-py and other black issues with competing PRs or maintainer declines. Selected issue #2893 \"Line too long: Keyword argument\" (OPEN, labeled T: bug + F: linetoolong, unassigned, filed 2022; collaborator JelleZijlstra commented \"We should fix this\"). Root cause: a keyword argument's value gets no invisible parens (unlike an assignment RHS, which visit_stmt wraps via parens=ASSIGNMENTS), so when the value is an unsplittable attribute chain there is no split point -- DOT is not a delimiter when preceded by a NAME, and = is not a delimiter for arguments -- and Black leaves the line over the limit (the reporter's example stayed 118 chars). Fix: a new visit_argument hook on LineGenerator wraps such a value in (invisible) parens, mirroring assignments, but only under three guards -- (1) the value is unsplittable (_is_unsplittable_argument_value: no brackets anywhere and no top-level delimiter, decided by the real is_split_before/after_delimiter so it stays in sync with delimiter_split), (2) the name is >=4 chars so moving the value to its own line actually shortens the overflowing line, and (3) the 4+len(name)+2 head (the shortest possible indent) fits the line length, else wrapping is pointless; syms.argument was also added to the walrus-protection list in maybe_make_parens_invisible_in_atom so f(x=(y := 1)) keeps its required parens. Because Black's stability policy forbids changing stable output, the whole behavior is gated behind a new Preview flag parenthesize_unsplittable_keyword_arguments (stable mode output is byte-for-byte unchanged; the reporter's bug is fixed under --preview/--unstable). Verification: full pytest suite 659 passed / 2 skipped / 17 subtests (baseline 658 + 1 new regression case); the new data case tests/data/cases/preview_parenthesize_unsplittable_keyword_arguments.py is a genuine red/green regression test (verified failing with the feature gate temporarily disabled, passing with it restored); black --check src tests/test_*.py clean (56 files unchanged); git diff --check clean; an independent fuzz review (~3000 synthetic inputs + 400 stdlib files, plus a baseline-vs-patched diff on ~40 targeted cases) found no invalid, non-idempotent, or crashing output -- outputs are STABLE and idempotent, and existing splittable kwargs (calls, subscripts, collections, binops, comparisons, string concatenation) and the over-long-name case in preview_cantfit_string are byte-for-byte unchanged. Publication 2026-10-23T11:59:34Z: PR #5592 to main (not draft, MERGEABLE), branch contrib/issue-2893-kwarg-linetoolong on the ShahabAhmed01/black fork (created this session), based on main@1190eeb3, head 7c38420b (3 commits: the fix, a changelog PR-number update, and a pre-commit.ci auto-fix), 5 files +161/−0; changelog entry added under Preview style referencing #5592; docs (future_style.md) updated as required by the feature-list test. CI at last check: docs/readthedocs.org:black SUCCESS, pre-commit.ci - pr SUCCESS; copilot-pull-request-reviewer COMMENTED; no human review, not merged. Workspace: isolated ~/opensource-work/runs/ossrun-20261023T093647Z-f689aac5/black (clone of psf/black main@1190eeb3, Python 3.12 venv with editable black); fork ShahabAhmed01/black created this session; the shared tracker checkouts were not edited until this record (done in a clean main worktree). Prepared with AI assistance under the account owner's direction; every claim above was checked against live GitHub state or a local run."
     }
   ]
 }

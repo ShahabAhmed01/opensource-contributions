@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T13:50:45Z",
+  "updated_at": "2026-10-23T13:51:03Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -163,17 +163,16 @@
     },
     {
       "run_id": "ossrun-20261023T133906Z-406ada2a",
-      "status": "ABANDONED",
-      "repository": "honojs/hono",
+      "status": "RESERVED",
+      "repository": "ohmyzsh/ohmyzsh",
       "issue_url": null,
       "issue_number": null,
       "pr_url": null,
       "head_branch": null,
-      "acquired_at": "2026-10-23T13:48:28.523Z",
-      "heartbeat_at": "2026-10-23T13:48:28.523Z",
-      "expires_at": "2026-10-23T19:48:28Z",
-      "reservation_state": "RELEASED",
-      "outcome": "honojs/hono reserved 13:41Z; released after policy check: hono CONTRIBUTING.md (main, retrieved 2026-10-23T13:5xZ) states outside contributors must use issues and forks; PRs limited to maintainers. No implementation, no claim, no fork push by this run. hono#5569 remains open/unclaimed by PRs; earlier session fork branch fix/issue-5569-non-utf8-charset-445b0cd7 (e13a1d27) untouched for maintainer pickup.",
+      "acquired_at": "2026-10-23T13:51:03.519Z",
+      "heartbeat_at": "2026-10-23T13:51:03.519Z",
+      "expires_at": "2026-10-23T19:51:03Z",
+      "reservation_state": "ACTIVE",
       "released_at": "2026-10-23T13:50:45Z"
     }
   ],

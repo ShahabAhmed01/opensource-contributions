@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T14:40:46Z",
+  "updated_at": "2026-10-23T14:43:53Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -165,18 +165,19 @@
     },
     {
       "run_id": "ossrun-20261023T133906Z-406ada2a",
-      "status": "VALIDATING",
+      "status": "PR_PUBLISHED",
       "repository": "ohmyzsh/ohmyzsh",
       "issue_url": null,
       "issue_number": null,
-      "pr_url": null,
-      "head_branch": "fix/extract-deb-nesting-406ada2a",
+      "pr_url": "https://github.com/ohmyzsh/ohmyzsh/pull/14199",
+      "head_branch": "ShahabAhmed01:fix/extract-deb-nesting-406ada2a",
       "acquired_at": "2026-10-23T13:51:03.519Z",
-      "heartbeat_at": "2026-10-23T14:40:46.723Z",
-      "expires_at": "2026-10-23T20:40:46Z",
+      "heartbeat_at": "2026-10-23T14:43:53.864Z",
+      "expires_at": "2026-10-23T20:43:53Z",
       "reservation_state": "ACTIVE",
       "released_at": "2026-10-23T13:50:45Z",
-      "phase": "fix implemented+tested (9/9 local PASS, red/green proof, 4 compressor variants); pre-publish duplicates rechecked; next: commit/push/PR"
+      "phase": "PR 14199 open (not draft, MERGEABLE, base master, head 9e81db23, based on 2100c63); 'Add to project' check SUCCESS; main syntax CI pending; copilot[bot] commented; no human review; awaiting tracker phase",
+      "pr_number": 14199
     },
     {
       "run_id": "ossrun-20261023T135109Z-6d695fe6",

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T14:16:30Z",
+  "updated_at": "2026-10-23T14:16:48Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -124,7 +124,7 @@
       "run_id": "ossrun-20261023T133917Z-54272c49",
       "status": "DISCOVERING",
       "repository": "pandas-dev/pandas",
-      "issue_url": "https://github.com/vitest-dev/vitest/issues/11660",
+      "issue_url": null,
       "issue_number": null,
       "pr_url": null,
       "head_branch": null,
@@ -132,7 +132,7 @@
       "heartbeat_at": "2026-10-23T14:28:00Z",
       "expires_at": "2026-10-23T20:28:00Z",
       "reservation_state": "ACTIVE",
-      "notes": "vitest released: all 5 approved unassigned issues claimed (#11380,#11682,#11668 open PRs; #11660 author holds work); issues_processed: vitest-outside-gate-obstacle"
+      "notes": "vitest released (5 approved unassigned issues all claimed: 11380/11682/11668 open PRs, 11660 author holds work + fork branch); now reserved pandas-dev/pandas; issues_processed: vitest-blocked-dup-mining"
     },
     {
       "run_id": "ossrun-20261023T133923Z-eb733394",

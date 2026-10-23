@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T14:40:00Z",
+  "updated_at": "2026-10-23T14:52:00Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -150,16 +150,16 @@
     },
     {
       "run_id": "ossrun-20261023T133919Z-427557e3",
-      "status": "DISCOVERING",
-      "repository": null,
-      "issue_url": null,
-      "issue_number": null,
+      "status": "RESERVED",
+      "repository": "python/mypy",
+      "issue_url": "https://github.com/python/mypy/issues/22284",
+      "issue_number": 22284,
       "pr_url": null,
       "head_branch": null,
-      "acquired_at": "2026-10-23T14:22:00Z",
-      "heartbeat_at": "2026-10-23T14:40:00Z",
-      "expires_at": null,
-      "reservation_state": "RELEASED",
+      "acquired_at": "2026-10-23T14:52:00Z",
+      "heartbeat_at": "2026-10-23T14:52:00Z",
+      "expires_at": "2026-10-23T20:52:00Z",
+      "reservation_state": "ACTIVE",
       "outcome": "reserved openclaw/openclaw 14:22-14:40Z; released without contribution work - queueable-fix lanes robot-raced to PRs within minutes; no issue/branch/PR was opened by this run"
     },
     {

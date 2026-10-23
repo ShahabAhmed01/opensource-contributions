@@ -227,14 +227,14 @@
       "pr_url": "https://github.com/langgenius/dify/pull/44663",
       "head_branch": "contrib/fix-encoding-detection-logic",
       "acquired_at": "2026-10-23T15:05:32Z",
-      "heartbeat_at": "2026-10-23T15:39:48.790427Z",
+      "heartbeat_at": "2026-10-23T16:20:52.619910Z",
       "expires_at": "2026-10-23T21:05:32Z",
-      "reservation_state": "PR_SUBMITTED",
+      "reservation_state": "PR_SUBMITTED_TRACKER_UPDATED",
       "issued_at_note": "fishing for self-discovered backend bug; fresh-issue+PR flow",
-      "tracker_lease": true
+      "tracker_lease": false
     }
   ],
-  "tracker_writer": "ossrun-20261023T143639Z-33bd71a1",
+  "tracker_writer": null,
   "tracker_writer_expires_at": null,
   "tracker_writer_lease_expires": "2026-10-23T17:29:45Z"
 }

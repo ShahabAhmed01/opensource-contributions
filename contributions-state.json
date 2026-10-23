@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T17:05:26Z",
+  "updatedAt": "2026-10-23T21:15:25Z",
   "contributions": [
     {
       "repo": "langgenius/dify",
@@ -20,7 +20,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-23T15:40:07Z",
       "prCreatedAt": "2026-10-23T15:40:07Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "2b35144b",
       "commits": [
         {
@@ -63,7 +63,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-23T15:15:52Z",
       "prCreatedAt": "2026-10-23T15:15:52Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "24b5ed8bcc60aa9a20cf4e3edf1444470e0e6464",
       "commits": [
         {
@@ -105,7 +105,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -168,7 +168,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -211,7 +211,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -254,7 +254,7 @@
       "status": "merged",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -320,7 +320,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -363,7 +363,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -406,7 +406,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": null,
       "commits": [
         {
@@ -449,7 +449,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -492,7 +492,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -559,7 +559,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -622,7 +622,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -676,7 +676,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -738,7 +738,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -798,7 +798,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -853,7 +853,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -894,7 +894,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -936,7 +936,7 @@
       "status": "merged",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -1008,7 +1008,7 @@
       "status": "merged",
       "openedAt": "2026-10-17T18:19:47Z",
       "prCreatedAt": "2026-10-17T18:19:47Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -1065,7 +1065,7 @@
       "status": "merged",
       "openedAt": "2026-10-19T12:01:53Z",
       "prCreatedAt": "2026-10-19T12:01:53Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "ff92bdd01c423b833a96c0ece823265c47d0e6be",
       "commits": [
         {
@@ -1122,7 +1122,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-19T13:17:51Z",
       "prCreatedAt": "2026-10-19T13:17:51Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "dc20b216f065af3a487722141da9a29dcac388d1",
       "commits": [
         {
@@ -1185,7 +1185,7 @@
       "status": "ready-to-merge",
       "openedAt": "2026-10-19T17:24:52Z",
       "prCreatedAt": "2026-10-19T17:24:52Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "cc6fea5b40ad559f7ca358a24b1a521451232281",
       "commits": [
         {
@@ -1280,7 +1280,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-20T16:12:03Z",
       "prCreatedAt": "2026-10-20T16:12:03Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "49ea4d08714f9ae519b86ee17b6b50c1dd080f32",
       "commits": [
         {
@@ -1356,7 +1356,7 @@
       "status": "pushed",
       "openedAt": "2026-10-20T16:42:08Z",
       "prCreatedAt": null,
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "5ca49b0720755c585c9a9835f0a479ceea36fb52",
       "commits": [
         {
@@ -1390,7 +1390,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-21T19:19:00Z",
       "prCreatedAt": "2026-10-21T19:19:00Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "e80c920278f15973001d1a33414b0a7cafdc5ed2",
       "commits": [
         {
@@ -1434,7 +1434,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-21T19:35:20Z",
       "prCreatedAt": "2026-10-21T19:35:20Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "commits": [
         {
           "sha": "fb0c3ceb20299ebc09d706cccc2f07f76ff67fbc",
@@ -1479,7 +1479,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-21T20:53:14Z",
       "prCreatedAt": "2026-10-21T20:53:14Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "c9bf1edf9e0d388f3e7bebc88576e608ffbc40a4",
       "commits": [
         {
@@ -1559,7 +1559,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-22T19:35:42Z",
       "prCreatedAt": "2026-10-22T19:35:42Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "1a82e6d01f395b43275c77acd289af1eb7090bb9",
       "commits": [
         {
@@ -1627,7 +1627,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-23T11:59:34Z",
       "prCreatedAt": "2026-10-23T11:59:34Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "1190eeb39527e1ed81f9b35c931af66f31d05186",
       "commits": [
         {
@@ -1644,12 +1644,72 @@
         }
       ],
       "checks": {
+        "generate wheels matrix": "pass",
+        "check": "pass",
+        "configure": "pass",
+        "docs (ubuntu-latest)": "pass",
+        "lint": "pass",
+        "test (3.10, ubuntu-latest)": "pass",
+        "docs (windows-latest)": "pass",
+        "test (3.10, macOS-latest)": "pass",
+        "test (3.10, windows-latest)": "pass",
+        "test (3.11, ubuntu-latest)": "pass",
+        "test (3.11, macOS-latest)": "pass",
+        "test (3.11, windows-latest)": "pass",
+        "test (3.11, windows-11-arm)": "pass",
+        "test (3.12.10, ubuntu-latest)": "pass",
+        "test (3.12.10, macOS-latest)": "pass",
+        "test (3.12.10, windows-latest)": "pass",
+        "test (3.12.10, windows-11-arm)": "pass",
+        "test (3.13, ubuntu-latest)": "pass",
+        "test (3.13, macOS-latest)": "pass",
+        "test (3.13, windows-latest)": "pass",
+        "test (3.13, windows-11-arm)": "pass",
+        "test (3.14, ubuntu-latest)": "pass",
+        "test (3.14, macOS-latest)": "pass",
+        "test (3.14, windows-latest)": "pass",
+        "test (3.14, windows-11-arm)": "pass",
+        "test (3.15, ubuntu-latest)": "pass",
+        "test (3.15, macOS-latest)": "pass",
+        "test (3.15, windows-latest)": "pass",
+        "test (3.15, windows-11-arm)": "pass",
+        "test (pypy3.11-v7.3.22, ubuntu-latest)": "pass",
+        "test (pypy3.11-v7.3.22, macOS-latest)": "pass",
+        "test (pypy3.11-v7.3.22, windows-latest)": "pass",
+        "sdist + pure wheel": "pass",
+        "analysis / base / assert-no-changes": "pass",
+        "uvloop (ubuntu-latest)": "pass",
+        "analysis / base / preview-new-changes": "pass",
+        "uvloop (macOS-latest)": "pass",
+        "uvloop (windows-latest)": "pass",
+        "uvloop (windows-11-arm)": "pass",
+        "mypyc wheels cp310-manylinux_x86_64": "pass",
+        "analysis / target / assert-no-changes": "pass",
+        "coveralls-finish": "pass",
+        "mypyc wheels cp312-macosx_x86_64": "pass",
+        "analysis / target / preview-new-changes": "pass",
+        "mypyc wheels cp314-win_amd64": "pass",
+        "publish-hatch": "skipped",
+        "compare / assert-no-changes": "pass",
+        "compare / preview-new-changes": "pass",
+        "publish-mypyc": "skipped",
+        "Coveralls - py3.10-ubuntu-latest": "pass",
+        "Coveralls - py3.11-ubuntu-latest": "pass",
+        "Coveralls - py3.12.10-ubuntu-latest": "pass",
+        "Coveralls - py3.13-ubuntu-latest": "pass",
+        "Coveralls - py3.14-ubuntu-latest": "pass",
+        "Coveralls - py3.15-ubuntu-latest": "pass",
+        "coverage/coveralls": "pass",
         "docs/readthedocs.org:black": "pass",
         "pre-commit.ci - pr": "pass"
       },
       "reviews": [
         {
           "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        },
+        {
+          "author": "cobaltt7",
           "state": "COMMENTED"
         }
       ],
@@ -1674,10 +1734,10 @@
       "baseBranch": "main",
       "fork": "ShahabAhmed01/spec-kit",
       "forkUrl": "https://github.com/ShahabAhmed01/spec-kit",
-      "status": "pr-opened",
+      "status": "ci-failed",
       "openedAt": "2026-10-23T13:37:57Z",
       "prCreatedAt": "2026-10-23T13:37:57Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "27d14e20c187c1f2916540ea201ecbdc9f8ed588",
       "commits": [
         {
@@ -1686,9 +1746,32 @@
         }
       ],
       "checks": {
+        "Analyze (actions)": "pass",
+        "version-bump": "pass",
+        "markdownlint": "pass",
+        "Dependency audit": "pass",
+        "ruff": "pass",
+        "Analyze (python)": "pass",
+        "pytest (ubuntu-latest, 3.13)": "fail",
+        "Dependency audit scheduled (${{ matrix.os }}, Python ${{ matrix.python-version }})": "skipped",
+        "shellcheck": "pass",
+        "pytest (ubuntu-latest, 3.14)": "fail",
+        "pytest (windows-latest, 3.13)": "fail",
+        "pytest (windows-latest, 3.14)": "fail",
+        "pytest (macos-latest, 3.13)": "fail",
+        "pytest (macos-latest, 3.14)": "fail",
+        "CodeQL": "pass",
         "License compliance check": "pass"
       },
       "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        },
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        },
         {
           "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
@@ -1726,7 +1809,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-23T14:42:23Z",
       "prCreatedAt": "2026-10-23T14:42:23Z",
-      "lastVerified": "2026-10-23T17:05:26Z",
+      "lastVerified": "2026-10-23T21:15:25Z",
       "baseCommit": "2100c630ba4bd67bb48802c3e7da893a4fdaa1a0",
       "commits": [
         {

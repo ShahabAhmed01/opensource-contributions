@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T14:56:54Z",
+  "updated_at": "2026-10-23T15:00:33Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -165,21 +165,24 @@
     },
     {
       "run_id": "ossrun-20261023T133906Z-406ada2a",
-      "status": "PR_PUBLISHED",
+      "status": "COMPLETED",
       "repository": "ohmyzsh/ohmyzsh",
-      "issue_url": null,
-      "issue_number": null,
+      "issue_url": "https://github.com/ohmyzsh/ohmyzsh/issues/14200",
+      "issue_number": 14200,
       "pr_url": "https://github.com/ohmyzsh/ohmyzsh/pull/14199",
       "head_branch": "ShahabAhmed01:fix/extract-deb-nesting-406ada2a",
       "acquired_at": "2026-10-23T13:51:03.519Z",
-      "heartbeat_at": "2026-10-23T14:45:57.678Z",
-      "expires_at": "2026-10-23T20:43:53Z",
-      "reservation_state": "ACTIVE",
+      "heartbeat_at": "2026-10-23T15:00:33.923Z",
+      "expires_at": null,
+      "reservation_state": "RELEASED",
       "released_at": "2026-10-23T13:50:45Z",
-      "phase": "PR 14199 open (not draft, MERGEABLE, base master, head 9e81db23, based on 2100c63); 'Add to project' check SUCCESS; main syntax CI pending; copilot[bot] commented; no human review; awaiting tracker phase",
+      "phase": "done \u2014 PR open awaiting human review; project reservation + tracker-writer lease released",
       "pr_number": 14199,
-      "tracker_writer": "ossrun-20261023T133906Z-406ada2a",
-      "tracker_writer_obtained_at": "2026-10-23T14:45:57.678Z"
+      "tracker_writer": null,
+      "tracker_writer_obtained_at": "2026-10-23T14:45:57.678Z",
+      "tracker_writer_released_at": "2026-10-23T15:00:33Z",
+      "completed_at": "2026-10-23T15:00:33Z",
+      "outcome": "PR ohmyzsh/ohmyzsh#14199 published 2026-10-23T14:42:23Z (fix(extract): extract .deb members without double nesting; commit 9e81db23790c99ead1aac5b8256c43f1ed2d00da, base master 2100c63), tracking issue #14200 filed 14:49:33Z and linked via Fixes; Add to project check success, repo zsh-syntax CI had not posted a run for the fork PR yet, copilot[bot] commented, no human review, NOT merged; tracker record pushed to main (commit 9e600f1094538f98e9c60e76b0dd9fff67520418) and tracker-writer lease + ohmyzsh/ohmyzsh reservation released"
     },
     {
       "run_id": "ossrun-20261023T135109Z-6d695fe6",
@@ -222,6 +225,6 @@
       "reservation_state": "ACTIVE"
     }
   ],
-  "tracker_writer": "ossrun-20261023T133906Z-406ada2a",
-  "tracker_writer_expires_at": "2026-10-23T20:45:57Z"
+  "tracker_writer": null,
+  "tracker_writer_expires_at": null
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T15:30:33Z",
+  "updated_at": "2026-10-23T15:32:45Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -122,17 +122,17 @@
     },
     {
       "run_id": "ossrun-20261023T133917Z-54272c49",
-      "status": "VALIDATING",
+      "status": "PR_READY",
       "repository": "pandas-dev/pandas",
       "issue_url": "https://github.com/pandas-dev/pandas/issues/71273",
       "issue_number": 71273,
       "pr_url": null,
       "head_branch": null,
       "acquired_at": "2026-10-23T14:28:00Z",
-      "heartbeat_at": "2026-10-23T18:15:00Z",
+      "heartbeat_at": "2026-10-23T18:25:00Z",
       "expires_at": "2026-10-23T20:28:00Z",
       "reservation_state": "ACTIVE",
-      "notes": "Implementation complete: parsing.pyx fix + tests in test_parsing.py and test_to_datetime.py + whatsnew entry. All targeted test suites pass (163 parsing, 32 infer-format, 2748 tslibs+scalar, 5993 io/arrays/indexes, 1112 tools). Fix aligns guess_datetime_format with dateutil POSIX semantics by declining guess for zone+offset spellings."
+      "notes": "Implementation complete and locally validated. Branch: contrib/issue-71273-offset-sign-54272c49 on ShahabAhmed01/pandas. Fix: guess_datetime_format declines guess for zone+offset strings to align array path with dateutil POSIX semantics. Tests: 4 in test_parsing.py + 1 parametrised in test_to_datetime.py (7 cases). Whatsnew: 2 entries under Bug fixes → Timezones. All targeted test suites pass. AGENTS.md requires user to push branch and open PR with AI disclosure (OpenCode + GLM-5.3-Flash-Free)."
     },
     {
       "run_id": "ossrun-20261023T133923Z-eb733394",

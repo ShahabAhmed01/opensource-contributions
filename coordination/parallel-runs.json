@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T15:29:02Z",
+  "updated_at": "2026-10-23T15:29:45Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -143,13 +143,14 @@
       "pr_url": "https://github.com/tobymao/sqlglot/pull/8765",
       "head_branch": "contrib/issue-8752-unnest-zero-tuple-default-eb733394",
       "acquired_at": "2026-10-23T13:40:57Z",
-      "heartbeat_at": "2026-10-23T15:29:02Z",
-      "expires_at": "2026-10-23T21:29:02Z",
+      "heartbeat_at": "2026-10-23T15:29:45Z",
+      "expires_at": "2026-10-23T21:29:45Z",
       "reservation_state": "ACTIVE",
       "registered_at": "2026-10-23T13:40:57Z",
       "outcome": "released: no qualifying un-owned task: fresh-pipeline issues are env-blocked or large (#8412 macOS, #8446 Windows, #8486 TLS-infra, #8508 packaging); #8425 occupied by in-flight PR #8426 from issue author; contested export-PR cluster #8100/#8078 (selection moved to tobymao/sqlglot)",
       "pr_number": 8765,
-      "head_sha": "11b0a18968778498e327eb10ab37f3255b3f15de"
+      "head_sha": "11b0a18968778498e327eb10ab37f3255b3f15de",
+      "tracker_writer_lease": "2026-10-23T17:29:45Z"
     },
     {
       "run_id": "ossrun-20261023T133919Z-427557e3",
@@ -230,6 +231,7 @@
       "issued_at_note": "fishing for self-discovered backend bug; fresh-issue+PR flow"
     }
   ],
-  "tracker_writer": null,
-  "tracker_writer_expires_at": null
+  "tracker_writer": "ossrun-20261023T133923Z-eb733394",
+  "tracker_writer_expires_at": null,
+  "tracker_writer_lease_expires": "2026-10-23T17:29:45Z"
 }

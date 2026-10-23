@@ -218,16 +218,16 @@
     },
     {
       "run_id": "ossrun-20261023T143639Z-33bd71a1",
-      "status": "RESERVED",
+      "status": "PR_PUBLISHED",
       "repository": "langgenius/dify",
-      "issue_url": null,
-      "issue_number": null,
-      "pr_url": null,
-      "head_branch": null,
+      "issue_url": "https://github.com/langgenius/dify/issues/44664",
+      "issue_number": 44664,
+      "pr_url": "https://github.com/langgenius/dify/pull/44663",
+      "head_branch": "contrib/fix-encoding-detection-logic",
       "acquired_at": "2026-10-23T15:05:32Z",
-      "heartbeat_at": "2026-10-23T15:05:32Z",
+      "heartbeat_at": "2026-10-23T15:36:18.528158Z",
       "expires_at": "2026-10-23T21:05:32Z",
-      "reservation_state": "ACTIVE",
+      "reservation_state": "PR_SUBMITTED",
       "issued_at_note": "fishing for self-discovered backend bug; fresh-issue+PR flow"
     }
   ],

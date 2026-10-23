@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T13:47:12Z",
+  "updated_at": "2026-10-23T13:48:28Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -163,15 +163,15 @@
     },
     {
       "run_id": "ossrun-20261023T133906Z-406ada2a",
-      "status": "DISCOVERING",
-      "repository": null,
+      "status": "RESERVED",
+      "repository": "honojs/hono",
       "issue_url": null,
       "issue_number": null,
       "pr_url": null,
       "head_branch": null,
-      "acquired_at": "2026-10-23T13:41:28Z",
-      "heartbeat_at": "2026-10-23T13:41:28Z",
-      "expires_at": null,
+      "acquired_at": "2026-10-23T13:48:28.523Z",
+      "heartbeat_at": "2026-10-23T13:48:28.523Z",
+      "expires_at": "2026-10-23T19:48:28Z",
       "reservation_state": "ACTIVE"
     }
   ],

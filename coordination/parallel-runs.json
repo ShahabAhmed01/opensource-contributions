@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T10:37:15Z",
+  "updated_at": "2026-10-23T12:09:41Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -89,16 +89,22 @@
     },
     {
       "run_id": "ossrun-20261023T093647Z-f689aac5",
-      "status": "RESERVED",
+      "status": "PR_PUBLISHED",
       "repository": "psf/black",
       "issue_url": "https://github.com/psf/black/issues/2893",
       "issue_number": 2893,
-      "pr_url": null,
-      "head_branch": null,
+      "pr_url": "https://github.com/psf/black/pull/5592",
+      "head_branch": "contrib/issue-2893-kwarg-linetoolong",
       "acquired_at": "2026-10-23T10:37:15Z",
-      "heartbeat_at": "2026-10-23T10:37:15Z",
+      "heartbeat_at": "2026-10-23T12:09:41Z",
       "expires_at": "2026-10-23T16:37:16Z",
-      "reservation_state": "ACTIVE"
+      "reservation_state": "ACTIVE",
+      "pr_number": 5592,
+      "tracker_writer": {
+        "holder": "ossrun-20261023T093647Z-f689aac5",
+        "acquired_at": "2026-10-23T12:09:41Z",
+        "expires_at": "2026-10-23T18:09:41Z"
+      }
     }
   ],
   "tracker_writer": null

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T13:39:49Z",
+  "updated_at": "2026-10-23T13:40:39Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -124,6 +124,19 @@
     {
       "run_id": "tracker_writer=\"ossrun-20261023T123818Z-0f9d84c3\"",
       "heartbeat_at": "2026-10-23T13:39:49Z"
+    },
+    {
+      "run_id": "ossrun-20261023T133917Z-54272c49",
+      "status": "DISCOVERING",
+      "repository": null,
+      "issue_url": null,
+      "issue_number": null,
+      "pr_url": null,
+      "head_branch": null,
+      "acquired_at": null,
+      "heartbeat_at": "2026-10-23T13:45:00Z",
+      "expires_at": null,
+      "reservation_state": null
     }
   ],
   "tracker_writer": null

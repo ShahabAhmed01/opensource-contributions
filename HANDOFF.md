@@ -1,24 +1,55 @@
 # Contribution Handoff
 
-Last updated: 2026-10-19T13:44Z (Track 020: starlette PR #3682 open with
-11/11 checks green and `mergeable_state: clean`, awaiting first human
-review — this same day also recorded Track 019, backlot #831/PR #851,
-opened 12:01Z. Track 017 note of 2026-10-17T20:35Z: the #786 review
-response is done: all
-four of nuriyoo's points applied verbatim in `27e8922f`, the branch
-rebased onto `e9b9d72`, all 9 check-runs green by 20:21:55Z,
-`mergeable_state: clean`, the PR renamed, reply comment `6240438402`
-posted 20:22:46Z — Track 017. Also this session: a full re-audit of all
-18 records against live GitHub; every our-side item verified or fixed
-(2026-10-17T19:40Z audit section). Both open backlot PRs (#786, #806)
-are now wait-only.)
+Last updated: 2026-10-23T15:21Z (Track 021: python/mypy PR #22285 opened
+15:10:41Z fixing #22280 — the native parser (default since 2.4) no longer
+followed modules imported only inside function bodies of an
+`ignore_errors` module; local suites 36/258/66/256 green, self-check
+`-p mypy` clean over 196 files; CI opened 15:10Z with the three fast
+checks (type-check own code py310 ubuntu+windows, Black + ruff) plus
+`pre-commit.ci` already SUCCESS and 20 checks in progress, including the
+six `mypy_primer` shards; issue #22280 ownership re-verified unclaimed
+just before publish: 0 mypy PR cross-references to the issue, only a
+numba dependency-bump PR referencing it. The mypy.ini-lane repro is
+described in `projects/mypy.md`; the earlier top note (Track 020
+starlette #3682 and its summary of Track 017) is unchanged and remains
+awaiting review only.)
 
 ## Portfolio Summary
 
 Active Contributions: 0
-Monitoring Contributions: 10
-Merged Contributions: 9
-Closed/Superseded Contributions: 1
+Monitoring Contributions: 9
+Merged Contributions: 11
+Closed/Superseded Contributions: 2
+
+**New this session (2026-10-23T15:21Z): python/mypy #22285** —
+`Follow modules imported inside skipped function bodies in the native
+parser`, fixing #22280. A module that only imports another module from
+inside a function body of an `ignore_errors` module (e.g. a lazy import
+in a method) stopped being followed when the native parser became the
+default in 2.4: mypy strips those bodies for speed and the Rust
+`ast_serialize` extension does not collect imports from skipped bodies,
+so `pkg/b.py` with `x: int = "moo"` behind `class A: def f(self) -> None:
+import pkg.b` under an `[mypy-pkg.a] ignore_errors = True` config
+reported "Success: no issues found" on master while mypy 2.3.1
+(pinned `ast-serialize` 0.13.1 in both) reported the assignment error.
+Root cause pinned on `8fdf437`: 2.3.1 defaulted to the legacy parser
+whose `fastparse` slow-strip path visits statements (imports recorded)
+before discarding bodies. The fix re-parses such a file once more with
+`skip_function_bodies=False` and takes only its serialized
+`import_bytes` — the stripped AST and skipped type-checking of the
+ignored module stay as-is; the deliberate extension behavior for inline
+`# mypy: ignore-errors=True` comment stripping is documented out of
+scope in the PR body. Regression case
+`testIgnoreErrorsMethodImportFollowed` (`check-inline-config.test`,
+config-file form mirroring the issue's repro) fails with an empty
+Actual without the fix and passes with it; `check-inline-config.test`
+36 passed, `mypy/test/test_nativeparse.py` 258 passed,
+`check-async-await.test` 66 passed, parse suite 256 passed (+75
+environment skips), self-check `-p mypy` clean over 196 files. Body
+discloses AI assistance. Duplicates swept: issue timeline carried only a
+numba dependency-bump cross-reference; the `--config-file tmp/mypy.ini`
+harness pattern came from `testInlineErrorCodesOverrideConfigSmall*`.
+Copilot bot COMMENTED; no human review yet, no pings.
 
 **New this session (2026-10-19T13:17Z): starlette #3682** —
 `Include all matching routes in the Allow header of 405 responses`.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T15:14:44Z",
+  "updated_at": "2026-10-23T15:16:08Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -187,17 +187,18 @@
     },
     {
       "run_id": "ossrun-20261023T135109Z-6d695fe6",
-      "status": "IMPLEMENTING",
+      "status": "PR_PUBLISHED",
       "repository": "anomalyco/opencode",
       "issue_url": "https://github.com/anomalyco/opencode/issues/58121",
       "issue_number": 58121,
-      "pr_url": null,
-      "head_branch": null,
+      "pr_url": "https://github.com/anomalyco/opencode/pull/58479",
+      "head_branch": "tool-pattern-validation",
       "acquired_at": "2026-10-23T13:59:00Z",
-      "heartbeat_at": "2026-10-23T15:12:00Z",
-      "expires_at": "2026-10-23T21:12:00Z",
+      "heartbeat_at": "2026-10-23T15:20:00Z",
+      "expires_at": "2026-10-23T21:20:00Z",
       "reservation_state": "ACTIVE",
-      "note": "implementation complete: fix applied (patterns:'ignore' option in packages/core/src/tool/runtime.ts jsonSchema()), 2 regression tests added+verified red-then-green; full core suite 6765 pass/33 skip/6 pre-existing Session.shell timing fails (baseline-identical), typecheck 493/137 == clean baseline, oxlint clean on both files"
+      "note": "PR anomalyco/opencode#58479 open non-draft to dev, head 2f542afa7fd60605957faad40bf593db1a8f2167 (base 24b5ed8bcc60aa9a20cf4e3edf1444470e0e6464), 2 files verified, mergeable_state blocked (awaiting CI/review)",
+      "pr_number": 58479
     },
     {
       "run_id": "ossrun-20261023T134326Z-80110525",

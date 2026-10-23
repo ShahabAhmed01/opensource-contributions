@@ -1,10 +1,17 @@
 # Contribution Handoff
 
-Last updated: 2026-10-23T12:15Z (Track 028: **psf/black #2893 →
-PR #5592 opened 11:59Z**, preview-gated fix for the keyword-argument
-line-too-long bug; `docs/readthedocs.org:black` and `pre-commit.ci`
-SUCCESS, Copilot COMMENTED, no human review; see the "New this
-session" block and `contributions/black/issue-2893.md`). Previous —
+Last updated: 2026-10-23T13:52Z (Track 029: **github/spec-kit #5036 →
+PR #5069 opened 13:37Z**, two-part fix of the bundled bug extension —
+documented the hyphenated installed command names and added the
+re-assessment staleness flow, red/green template tests, full suite
+12,735/0 fail; License check success, Lint/Test/CodeQL workflows
+awaiting first-time-fork maintainer approval; AI disclosed in body +
+commit trailer per spec-kit CONTRIBUTING; see the "New this session"
+block and `contributions/spec-kit/issue-5036.md`). Previous — Track
+028: **psf/black #2893 → PR #5592 opened 11:59Z**, preview-gated fix
+for the keyword-argument line-too-long bug; `docs/readthedocs.org:black`
+and `pre-commit.ci` SUCCESS, Copilot COMMENTED, no human review; see
+`contributions/black/issue-2893.md`. Previous —
 Track 027: **Comfy-Org/ComfyUI #17294 →
 PR #17303 opened 19:35Z**, CLA signed; `cla-assistant`/Socket ×2/
 CodeRabbit green; the six repo workflows `action_required` behind the
@@ -26,10 +33,53 @@ PR #15228); 2026-10-19T13:44Z Track 020 starlette PR #3682.)
 
 ## Portfolio Summary
 
-Active Contributions: 0
-Monitoring Contributions: 16
+(as of 2026-10-23T13:52Z, all 29 records resolved against live GitHub;
+24-entries-with-PR categories are `status` values in
+`contributions-state.json`)
+
+Active Contributions: 1 (honojs/hono #5569 — branch published as the
+clarification chain; hono restricts PR creation to collaborators)
+Monitoring Contributions: 15 (12 pr-opened, 2 ci-running, 1
+ready-to-merge)
 Merged Contributions: 11
-Closed/Superseded Contributions: 1
+Closed/Superseded Contributions: 2 (markitdown #2699, starlette #3682
+— closed upstream 2026-10-23)
+
+**New this session (2026-10-23T13:52Z): github/spec-kit #5036 / PR
+#5069** (Track 029) — `fix(bug): document installed command names and
+stale re-assessment flow`. Two findings in the bundled `bug` extension
+the bot triage had validated (`triage-must-have`, `severity-medium`):
+the README documented only the dotted canonical command IDs
+(`/speckit.bug.assess`) which never work in skills-based installs
+(agents install hyphenated skill names with per-agent prefixes —
+`/speckit-bug-*` Claude/Copilot-class, `$speckit-bug-*`
+Codex/ZCode/Command Code, `/skill:speckit-bug-*` Kimi), and a
+re-assessment that overwrites `assessment.md` left the earlier
+`fix.md`/`test.md` in place while the validation step kept reading them
+together with the new assessment. The patch is template/README only:
+an "Installed command names" table + hyphenated typical-flow examples
+in `extensions/bug/README.md`, a stale-rename ask (rename to
+`fix.stale.md`/`test.stale.md`, never delete) after a confirmed
+interactive overwrite in `speckit.bug.assess.md`, and a **Staleness
+check** prerequisite in `speckit.bug.test.md` (refuse a `fix.md`
+written before the current `assessment.md`, header-date comparison
+with mtime fallback, interactive-confirm/automated-refuse fallback).
+Automated mode stays refusal-based as before. Validation:
+`tests/extensions/bug` 34/34 with the change; full suite 12,735 passed
+/ 461 skipped / 0 failed (baseline 12,728, Python 3.14.8, ~6.5 min);
+red/green — a `git worktree` of `origin/main` @ `27d14e2` with the
+same test file fails exactly the 7 new tests (7 failed/27 passed);
+`git diff --check` clean. AI policy followed to the letter
+(spec-kit's CONTRIBUTING demands per-commit + per-comment AI
+disclosure): body disclosure naming OpenCode / GLM-5.3-Flash Free /
+autonomous / extent, `Assisted-by: OpenCode (model:
+GLM-5.3-Flash Free, autonomous)` on commit `45e3404`, filer cap 0/3
+open PRs at filing. CI state at open: License compliance `success`;
+Lint / Security Audit / Test & Lint Python / Extension Version Guard
+/ CodeQL all `action_required` — the first-time-fork workflow gate,
+needs a maintainer approval click before CI can run. This same day
+the upstream starlette #3682 record was corrected: the PR was **closed
+unmerged** upstream (table + state now read Closed). Track 029 below.
 
 **New this session (2026-10-23T12:15Z): psf/black #2893 / PR #5592**
 (Track 028) — `Parenthesize unsplittable keyword argument values

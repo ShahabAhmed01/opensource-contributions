@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T14:37:59Z",
+  "updated_at": "2026-10-23T14:40:46Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -165,17 +165,18 @@
     },
     {
       "run_id": "ossrun-20261023T133906Z-406ada2a",
-      "status": "RESERVED",
+      "status": "VALIDATING",
       "repository": "ohmyzsh/ohmyzsh",
       "issue_url": null,
       "issue_number": null,
       "pr_url": null,
-      "head_branch": null,
+      "head_branch": "fix/extract-deb-nesting-406ada2a",
       "acquired_at": "2026-10-23T13:51:03.519Z",
-      "heartbeat_at": "2026-10-23T13:51:03.519Z",
-      "expires_at": "2026-10-23T19:51:03Z",
+      "heartbeat_at": "2026-10-23T14:40:46.723Z",
+      "expires_at": "2026-10-23T20:40:46Z",
       "reservation_state": "ACTIVE",
-      "released_at": "2026-10-23T13:50:45Z"
+      "released_at": "2026-10-23T13:50:45Z",
+      "phase": "fix implemented+tested (9/9 local PASS, red/green proof, 4 compressor variants); pre-publish duplicates rechecked; next: commit/push/PR"
     },
     {
       "run_id": "ossrun-20261023T135109Z-6d695fe6",

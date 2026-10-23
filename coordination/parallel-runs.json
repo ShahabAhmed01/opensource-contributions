@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T14:16:48Z",
+  "updated_at": "2026-10-23T14:34:06Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -122,17 +122,17 @@
     },
     {
       "run_id": "ossrun-20261023T133917Z-54272c49",
-      "status": "DISCOVERING",
+      "status": "ISSUE_VERIFIED",
       "repository": "pandas-dev/pandas",
-      "issue_url": null,
-      "issue_number": null,
+      "issue_url": "https://github.com/pandas-dev/pandas/issues/71273",
+      "issue_number": 71273,
       "pr_url": null,
       "head_branch": null,
       "acquired_at": "2026-10-23T14:28:00Z",
-      "heartbeat_at": "2026-10-23T14:28:00Z",
+      "heartbeat_at": "2026-10-23T14:38:00Z",
       "expires_at": "2026-10-23T20:28:00Z",
       "reservation_state": "ACTIVE",
-      "notes": "vitest released (5 approved unassigned issues all claimed: 11380/11682/11668 open PRs, 11660 author holds work + fork branch); now reserved pandas-dev/pandas; issues_processed: vitest-blocked-dup-mining"
+      "notes": "vitest released (approved issues all claimed); pandas reserved (no CLA, AI-disclosure policy workable, outside merges verified in 85-merge sample); issue 71273 verified: no crossref PRs, unassigned; alternates 71264 (PR 71265 by reporter) and 71279 (PR 71308) rejected as dupes"
     },
     {
       "run_id": "ossrun-20261023T133923Z-eb733394",

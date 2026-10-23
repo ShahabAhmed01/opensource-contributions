@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T09:41:26Z",
+  "updated_at": "2026-10-23T10:37:15Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -89,16 +89,16 @@
     },
     {
       "run_id": "ossrun-20261023T093647Z-f689aac5",
-      "status": "DISCOVERING",
-      "repository": null,
-      "issue_url": null,
-      "issue_number": null,
+      "status": "RESERVED",
+      "repository": "psf/black",
+      "issue_url": "https://github.com/psf/black/issues/2893",
+      "issue_number": 2893,
       "pr_url": null,
       "head_branch": null,
-      "acquired_at": null,
-      "heartbeat_at": "2026-10-23T09:41:26Z",
-      "expires_at": null,
-      "reservation_state": "NONE"
+      "acquired_at": "2026-10-23T10:37:15Z",
+      "heartbeat_at": "2026-10-23T10:37:15Z",
+      "expires_at": "2026-10-23T16:37:16Z",
+      "reservation_state": "ACTIVE"
     }
   ],
   "tracker_writer": null

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T12:39:12Z",
+  "updated_at": "2026-10-23T12:43:44Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -106,12 +106,16 @@
     },
     {
       "run_id": "ossrun-20261023T123818Z-0f9d84c3",
-      "status": "DISCOVERING",
-      "repository": null,
+      "status": "RESERVED",
+      "repository": "apache/airflow",
       "reservation_state": "ACTIVE",
       "acquired_at": "2026-10-23T12:39:11Z",
-      "expires_at": "2026-10-23T18:39:11Z",
-      "heartbeat_at": "2026-10-23T12:39:12Z"
+      "expires_at": "2026-10-23T18:43:43Z",
+      "heartbeat_at": "2026-10-23T12:43:44Z",
+      "issue_url": null,
+      "issue_number": null,
+      "pr_url": null,
+      "head_branch": null
     }
   ],
   "tracker_writer": null

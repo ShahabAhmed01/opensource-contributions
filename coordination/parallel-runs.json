@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T15:36:31Z",
+  "updated_at": "2026-10-23T15:37:02Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -190,18 +190,20 @@
     },
     {
       "run_id": "ossrun-20261023T135109Z-6d695fe6",
-      "status": "PR_PUBLISHED",
+      "status": "COMPLETED",
       "repository": "anomalyco/opencode",
       "issue_url": "https://github.com/anomalyco/opencode/issues/58121",
       "issue_number": 58121,
       "pr_url": "https://github.com/anomalyco/opencode/pull/58479",
       "head_branch": "tool-pattern-validation",
       "acquired_at": "2026-10-23T13:59:00Z",
-      "heartbeat_at": "2026-10-23T15:20:00Z",
-      "expires_at": "2026-10-23T21:20:00Z",
-      "reservation_state": "ACTIVE",
+      "heartbeat_at": "2026-10-23T15:38:00Z",
+      "expires_at": null,
+      "reservation_state": "RELEASED",
       "note": "PR anomalyco/opencode#58479 open non-draft to dev, head 2f542afa7fd60605957faad40bf593db1a8f2167 (base 24b5ed8bcc60aa9a20cf4e3edf1444470e0e6464), 2 files verified, mergeable_state blocked (awaiting CI/review)",
-      "pr_number": 58479
+      "pr_number": 58479,
+      "completed_at": "2026-10-23T15:38:00Z",
+      "outcome": "PR anomalyco/opencode#58479 published 2026-10-23T15:15:52Z (head 2f542afa7, base dev@24b5ed8b, 2 files); check-standards/check-compliance/add-contributor-label SUCCESS; check/test/nix-eval FAIL (workflow file issue = runner provisioning infra, not code-related); PR auto-closed by repo automation at T15:16:50Z (state=closed, mergeable_state=blocked, merged=false); local verification: core suite 6765 pass/33 skip/6 pre-existing Session.shell timing fails, typecheck 493/137 == baseline, oxlint clean, red-then-green regression tests for pattern keyword; tracker record pushed to main (commit 57985f8); tracker-writer lease released; project reservation released"
     },
     {
       "run_id": "ossrun-20261023T134326Z-80110525",

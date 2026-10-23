@@ -2500,3 +2500,18 @@ Two open courtesies, neither blocking:
   bubblewrap-visible interpreter path (venv on an external mount); wave3 local
   tests need real model downloads; test_tls_overrides_scope fails due to
   in-tree worktree clones.
+
+## Track 030 — anomalyco/opencode #58121 → PR #58479 (2026-10-23)
+
+- **Repo**: https://github.com/anomalyco/opencode (220k★, MIT, weekly trending +6,750★)
+- **Issue**: #58121 "plugin tools with a JSON Schema `pattern` skip input validation entirely" — triaged and reproduced by maintainer bot on latest dev (24b5ed8)
+- **Root cause**: `packages/core/src/tool/runtime.ts` imported plugin/MCP tool JSON Schemas via `SchemaRepresentation.fromJsonSchemaDocument`, which rejects `pattern` keywords by default; the cache treated the failure as "cannot be imported" and validated *nothing* (required keys, types, lengths all skipped)
+- **Fix**: Import with `{ patterns: "ignore" }` — Effect's documented option for untrusted schemas; skips only regex constraints, preserves all other validation (ReDoS-safe)
+- **Tests added**: Two regression cases in `packages/core/test/tool-schema.test.ts` (raw JSON schema with pattern, serialized Zod plugin schema); red→green verified
+- **Verification**:
+  - Core suite: 6765 pass / 33 skip / 6 fail (all 6 `Session.shell` timing baselines identical on unmodified dev)
+  - Typecheck: identical histogram to baseline (493 errors in 137 files, all in other files)
+  - Oxlint: clean on both modified files
+- **PR**: #58479 (fix(core): keep validating tool inputs when JSON schema has pattern) — opened 2026-10-23T15:15:52Z, auto-closed by repo automation at T15:16:50Z (mergeable_state: blocked, not merged); check-standards/check-compliance/add-contributor-label pass; check/test/nix-eval fail due to "workflow file issue" (runner provisioning infra, unrelated to code)
+- **Branch**: tool-pattern-validation (2f542afa7fd60605957faad40bf593db1a8f2167) on ShahabAhmed01/opencode, base dev (24b5ed8bcc60aa9a20cf4e3edf1444470e0e6464)
+- **Outcome**: PR closed-unmerged; contribution recorded; tracker updated; reservation and tracker-writer lease to be released.

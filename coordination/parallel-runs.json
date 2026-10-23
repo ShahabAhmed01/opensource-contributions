@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T14:15:00Z",
+  "updated_at": "2026-10-23T14:16:14Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -122,16 +122,20 @@
     },
     {
       "run_id": "ossrun-20261023T133917Z-54272c49",
-      "status": "RESERVED",
-      "repository": "vitest-dev/vitest",
+      "status": "DISCOVERING",
+      "repository": "pandas-dev/pandas",
       "issue_url": "https://github.com/vitest-dev/vitest/issues/11660",
-      "issue_number": 11660,
+      "issue_number": null,
       "pr_url": null,
       "head_branch": null,
-      "acquired_at": "2026-10-23T14:22:00Z",
-      "heartbeat_at": "2026-10-23T14:22:00Z",
-      "expires_at": "2026-10-23T20:22:00Z",
-      "reservation_state": "ACTIVE"
+      "acquired_at": "2026-10-23T14:28:00Z",
+      "heartbeat_at": "2026-10-23T14:28:00Z",
+      "expires_at": "2026-10-23T20:28:00Z",
+      "reservation_state": {
+        "old": "RELEASED",
+        "new": "ACTIVE"
+      },
+      "notes": "vitest released: all 5 approved unassigned issues claimed (#11380,#11682,#11668 open PRs; #11660 author holds work); issues_processed: vitest-outside-gate-obstacle"
     },
     {
       "run_id": "ossrun-20261023T133923Z-eb733394",

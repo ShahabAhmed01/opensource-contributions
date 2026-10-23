@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-23T13:41:28Z",
+  "updated_at": "2026-10-23T13:45:21Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -135,16 +135,16 @@
     },
     {
       "run_id": "ossrun-20261023T133923Z-eb733394",
-      "status": "DISCOVERING",
-      "repository": null,
+      "status": "RESERVED",
+      "repository": "mitmproxy/mitmproxy",
       "issue_url": null,
       "issue_number": null,
       "pr_url": null,
       "head_branch": null,
       "acquired_at": "2026-10-23T13:40:57Z",
-      "heartbeat_at": "2026-10-23T13:40:57Z",
-      "expires_at": "2026-10-23T13:40:57Z",
-      "reservation_state": "INACTIVE",
+      "heartbeat_at": "2026-10-23T13:45:21Z",
+      "expires_at": "2026-10-23T19:45:21Z",
+      "reservation_state": "ACTIVE",
       "registered_at": "2026-10-23T13:40:57Z"
     },
     {

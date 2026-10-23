@@ -9,6 +9,7 @@ A curated record of meaningful open-source contributions, with issue references,
 |---|---|---|---|---|---|
 | 2026-10-23 | anomalyco/opencode | [#58121](https://github.com/anomalyco/opencode/issues/58121) | [#58479](https://github.com/anomalyco/opencode/pull/58479) | Closed | A plugin tool whose JSON Schema input declares a pattern keyword failed the Effect JSON->schema import (rejects pattern by default), and the runtime treated the failed import as 'cannot be imported' and validated nothing. Import with {patterns: 'ignore'} to skip only regex constraints while keeping required keys, types, and lengths validated. |
 | 2026-10-23 | ohmyzsh/ohmyzsh | [#14200](https://github.com/ohmyzsh/ohmyzsh/issues/14200) | [#14199](https://github.com/ohmyzsh/ohmyzsh/pull/14199) | In review | fix(extract): extract .deb members into their result directories — the deb arm pre-created control/ and data/ then recursed with extract ../control.tar.*, so member tarballs landed double-nested (pkg/control/control/...) whenever control.tar had 2+ members, and data/ survived only when data.tar had a single top-level entry. Extract each member directly with tar -C into the prepared dirs reusing the plugin's per-compression chains; add .deb regression tests in default/target/remove modes. |
+| 2026-10-23 | langgenius/dify | [#44664](https://github.com/langgenius/dify/issues/44664) | [#44663](https://github.com/langgenius/dify/pull/44663) | In review | Fixes a bug in detect_file_encodings() where charset_normalizer could return a result with encoding=None, causing a misleading Could not detect encoding error. The fix filters out None encodings first, then checks if any valid encodings remain. Affects CSV, Text, and Markdown extractors which all use detect_file_encodings for autodetect_encoding. |
 | 2026-10-23 | github/spec-kit | [#5036](https://github.com/github/spec-kit/issues/5036) | [#5069](https://github.com/github/spec-kit/pull/5069) | CI failing | Documents the hyphenated installed skill names and per-agent invocation prefixes for the bundled bug extension (fixes #5036 part 1), and closes the re-assessment staleness gap (part 2): after a confirmed assessment overwrite the assess step offers to rename the older fix/test reports to *.stale.md instead of leaving them current, and the validation step refuses a fix.md older than the current assessment.md (header-date comparison with mtime fallback, interactive-confirm/automated-refuse). |
 | 2026-10-23 | psf/black | [#2893](https://github.com/psf/black/issues/2893) | [#5592](https://github.com/psf/black/pull/5592) | In review | Wraps the value of a keyword argument in (invisible) parentheses when it is an expression Black cannot split (a bare attribute chain, plain name, or literal) and the whole argument would exceed the line length, mirroring how assignment right-hand sides are already parenthesized via parens=ASSIGNMENTS; gated behind the new preview feature parenthesize_unsplittable_keyword_arguments because it changes output. Only wraps when the value is genuinely unsplittable (no brackets, no top-level delimiter) and wrapping can help (the name=( head fits within the line length and the name is long enough that the value line actually shortens), and preserves the required parens around a walrus in a keyword argument (f(x=(y := 1))). |
 | 2026-10-22 | Comfy-Org/ComfyUI | [#17294](https://github.com/Comfy-Org/ComfyUI/issues/17294) | [#17303](https://github.com/Comfy-Org/ComfyUI/pull/17303) | In review | Stops validate_inputs() writing the unwrapped {__value__: ...} widget value back into the submitted prompt in place before it is queued, so /history and the PNG prompt metadata keep the submitted wrapper and array widget values stay distinguishable from node links when reopening an API-queued image; get_input_data() unwraps the same way for exactly the inputs validation reads (required/optional), so what the node receives is unchanged. |
@@ -44,16 +45,17 @@ _This table is maintained by [`scripts/update_tracker.py`](scripts/update_tracke
 
 ## How This Works
 
-This repository keeps a factual record of contribution work: the issue, the pull request, the files and tests involved, and the merge status. Machine-readable state lives in [`contributions-state.json`](contributions-state.json); per-contribution records live under [`contributions/`](contributions/).
+Each row represents a contribution tracked from issue discovery through PR publication and merge. The workflow:
 
-## Projects
+1. **Discovery** — Identify a popular repository with a credible outside-contribution pathway
+2. **Issue selection** — Pick a specific, actionable issue (or discover a genuine bug)
+3. **Implementation** — Write a focused fix with tests, following project conventions
+4. **Publication** — Open PR linking the issue; iterate on review feedback
+5. **Validation** — CI passes; maintainer approves; PR merges
+6. **Recording** — Entry added to this ledger with full provenance
 
-- **odysseus-dev/odysseus** — self-hosted AI workspace (Python/FastAPI, AGPL-3.0). Notes: [`projects/odysseus.md`](projects/odysseus.md).
-- **brekkylab/backlot** — API-fidelity server for 11 real SaaS APIs (Python/FastAPI, MIT). Notes: [`projects/backlot.md`](projects/backlot.md).
-- **libredb/libredb-studio** — web-based SQL IDE over twenty-seven database engines (TypeScript/Bun, MIT). Notes: [`projects/libredb-studio.md`](projects/libredb-studio.md).
-- **repowise-dev/repowise** — codebase intelligence for AI and humans: health scores, docs, git analytics (Python/uv + React, AGPL-3.0). Notes: [`projects/repowise.md`](projects/repowise.md).
-- **isomorphic-git/isomorphic-git** — pure-JavaScript implementation of git for the browser and Node (JavaScript, MIT). Notes: [`projects/isomorphic-git.md`](projects/isomorphic-git.md).
-- **microsoft/markitdown** — file-format-to-Markdown converter with a plugin system (Python, MIT). Notes: [`projects/markitdown.md`](projects/markitdown.md).
-- **pypa/pipx** — install and run Python applications in isolated environments (PyPA, Python, MIT). Notes: [`projects/pipx.md`](projects/pipx.md).
-- **github/spec-kit** — GitHub's Spec-Driven Development toolkit ("Specify CLI"): project init scaffolding, agent command templates, bundled workflow extensions (Python/uv, MIT). Notes: [`projects/spec-kit.md`](projects/spec-kit.md).
-- **ohmyzsh/ohmyzsh** — Oh My Zsh: community framework for managing zsh configuration with 300+ plugins, themes and completions (zsh, MIT). Notes: [`projects/ohmyzsh.md`](projects/ohmyzsh.md).
+The tracker is append-only: entries are never removed, only updated with new status information.
+
+## License
+
+This workspace is licensed under MIT. Contributions themselves remain under their respective upstream licenses.

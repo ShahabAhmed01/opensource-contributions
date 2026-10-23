@@ -1,7 +1,48 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T15:32:50Z",
+  "updatedAt": "2026-10-23T16:20:07Z",
   "contributions": [
+    {
+      "repo": "langgenius/dify",
+      "project": "dify",
+      "issueNumber": 44664,
+      "issueTitle": "Bug: detect_file_encodings raises misleading error when charset_normalizer returns encoding=None",
+      "issueUrl": "https://github.com/langgenius/dify/issues/44664",
+      "issueState": "OPEN",
+      "prNumber": 44663,
+      "prUrl": "https://github.com/langgenius/dify/pull/44663",
+      "prState": "open",
+      "prTitle": "fix(rag): correct encoding detection logic to filter None encodings first",
+      "branch": "contrib/fix-encoding-detection-logic",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/dify",
+      "forkUrl": "https://github.com/ShahabAhmed01/dify",
+      "status": "pr-opened",
+      "openedAt": "2026-10-23T15:40:07Z",
+      "prCreatedAt": "2026-10-23T15:40:07Z",
+      "lastVerified": "2026-10-23T16:20:07Z",
+      "baseCommit": "2b35144b",
+      "commits": [
+        {
+          "sha": "01276abdaf20f3763b1a85af02361ed50835b0ca",
+          "subject": "fix(rag): correct encoding detection logic to filter None encodings first"
+        }
+      ],
+      "checks": {
+        "labeler": "pass",
+        "label": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Fixes a bug in detect_file_encodings() where charset_normalizer could return a result with encoding=None, causing a misleading Could not detect encoding error. The fix filters out None encodings first, then checks if any valid encodings remain. Affects CSV, Text, and Markdown extractors which all use detect_file_encodings for autodetect_encoding.",
+      "notes": "Self-discovered bug in a cold, low-traffic module (helpers.py). Created issue #44664 and PR #44663 simultaneously per Dify's CONTRIBUTING.md guidance. PR links to issue via \"Fixes #44664\". CI labeler checks passed; Main CI Pipeline and autofix.ci show action_required (likely waiting for maintainer)."
+    },
     {
       "repo": "anomalyco/opencode",
       "project": "opencode",

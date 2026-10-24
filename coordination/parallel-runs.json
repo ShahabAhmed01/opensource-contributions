@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-24T07:10:42Z",
+  "updated_at": "2026-10-24T07:12:28Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -237,17 +237,18 @@
     },
     {
       "run_id": "ossrun-20261024T065401Z-adb75e71",
-      "status": "IMPLEMENTING",
+      "status": "PR_PUBLISHED",
       "repository": "pandas-dev/pandas",
       "issue_url": "https://github.com/pandas-dev/pandas/issues/71273",
       "issue_number": 71273,
-      "pr_url": null,
-      "head_branch": null,
+      "pr_url": "https://github.com/pandas-dev/pandas/pull/71508",
+      "head_branch": "ShahabAhmed01:contrib/issue-71273-offset-sign-adb75e71",
       "acquired_at": "2026-10-24T06:59:25Z",
-      "heartbeat_at": "2026-10-24T07:10:42Z",
-      "expires_at": "2026-10-24T13:10:42Z",
+      "heartbeat_at": "2026-10-24T07:12:28Z",
+      "expires_at": "2026-10-24T13:12:28Z",
       "reservation_state": "ACTIVE",
-      "notes": "Reclaimed continuation of expired prior lease ossrun-20261023T123818Z-0f9d84c3 (expired 2026-10-23T20:28:00Z; lease lapsed >10h). Live GitHub verified 2026-10-24T06:57Z: issue 71273 open, 0 comments, no assignees, Needs Triage; no commits reference 71273; no open/closed PRs reference it (searches: 'repo:pandas-dev/pandas is:pr 71273 in:body' and 'guess_datetime_format UTC+0300' both empty). Pre-publication heartbeat: implementation committed locally (commit d6843993, 4 files +105), red/green proven, tslibs+tools+scalar suites green with dateutil==2.9.0.post0 pin; pre-commit-equivalent style checks clean. Committing fixes..."
+      "notes": "Issue 71273 fixed; PR pandas-dev/pandas#71508 published 2026-10-24T07:12:09Z (head d68439938f8ceef5a1e44fbc95abed7e1b2f8914, base main@c4d25081f4, non-draft, 4 files +105). Local validation: tslibs+tools 2432 passed/0 fail, scalar/timestamp 1721 passed/0 fail with dateutil==2.9.0.post0; red/green proven; issue repro agrees on all spellings; ruff/format/isort/cython-lint/codespell/sphinx-lint clean; git diff --check clean. Next: CI observation then tracker update under tracker-writer lease.",
+      "pr_number": 71508
     }
   ],
   "tracker_writer": null,

@@ -1,6 +1,26 @@
 # Contribution Handoff
 
-Last updated: 2026-10-23T14:58Z (Track 030: **ohmyzsh/ohmyzsh #14200 →
+Last updated: 2026-10-24T07:21Z (Track 031: **pandas-dev/pandas #71273 →
+PR #71508 opened 07:12Z**, `to_datetime` parsed strings like
+`"2020-01-02 08:07:13 UTC+0300"` with the offset's opposite sign from the
+`Timestamp` constructor (dateutil applies the POSIX inverted sign to a
+zone-name-prefixed offset while the guessed `%z` format used the nominal
+sign, so the two paths disagreed by the full offset); `guess_datetime_format`
+now declines such strings (nonzero offsets, "UTC+0000" per GH#66827 keeps
+its guess) so every parse path agrees; 4 files +105, red/green proven,
+tslibs+tools 2432 pass / scalar+timestamp 1721 pass with
+python-dateutil==2.9.0.post0 (pandas CI pins dateutil<3, #71461);
+AI disclosed per pandas automated-contributions policy (OpenCode /
+glm-5.3-flash-free); pre-commit.ci's sort-whatsnew-items hook was applied
+and re-pushed (`b2fb3acf`); CI in flight at last check, no human review,
+not merged; this run reclaims the unpublished implementation of lapsed
+run ossrun-20261023T123818Z-0f9d84c3 (lease expired 2026-10-23T20:28Z,
+nothing was ever pushed) after full live-state re-verification; see the
+New this session block, `projects/pandas.md` and
+`contributions/pandas/issue-71273.md`). Previous —
+Track 030b: **anomalyco/opencode #58121 → PR #58479** (closed-unmerged
+by repo automation; see Track 030 tail section below). Previous —
+Track 030: **ohmyzsh/ohmyzsh #14200 →
 PR #14199 opened 14:42Z**, `fix(extract)`: .deb member archives now
 extract directly into the prepared `control/`/`data/` directories via
 `tar -C` instead of recursing through `extract ../control.tar.*`, which
@@ -46,19 +66,44 @@ PR #15228); 2026-10-19T13:44Z Track 020 starlette PR #3682.)
 
 ## Portfolio Summary
 
-(as of 2026-10-23T14:58Z, all 30 records resolved against live GitHub;
-categories are `status` values in `contributions-state.json`)
+(as of 2026-10-24T07:21Z, all 33 records resolved against live GitHub by
+`scripts/update_tracker.py` after appending the pandas record;
+categories are `status` values in `contributions-state.json`: 13
+pr-opened, 3 ci-running, 1 ready-to-merge, 1 pushed, 1 ci-failed, 11
+merged, 3 closed-unmerged)
 
 Active Contributions: 1 (honojs/hono #5569 — branch published as the
 clarification chain; hono restricts PR creation to collaborators)
-Monitoring Contributions: 16 (12 pr-opened, 2 ci-running, 1
-ready-to-merge, 1 ci-failed — spec-kit #5069 flipped from pr-opened
+Monitoring Contributions: 19 (13 pr-opened, 3 ci-running, 1
+ready-to-merge, 1 pushed, 1 ci-failed — spec-kit #5069 flipped from pr-opened
 because its first-time-fork workflows sit in `action_required`, which
 the sync maps to a failing check; awaiting maintainer approval, not a
 code failure)
 Merged Contributions: 11
 Closed/Superseded Contributions: 2 (markitdown #2699, starlette #3682
 — closed upstream 2026-10-23)
+
+**New this session (2026-10-24T07:21Z): pandas-dev/pandas #71273 / PR #71508**
+(Track 031) — `BUG: to_datetime interpreting zone-name+offset strings
+like "UTC+0300" with the wrong sign (GH#71273)`. Root cause: dateutil
+applies the POSIX (inverted) sign to a numeric offset directly after a
+timezone name while `strptime` applies the nominal sign to `%z`, so a
+format guessed via token rewriting (`strftime('%z')` against the rebuilt
+string) was self-consistent yet wrong for the original text —
+`to_datetime` shifted the instant by double the offset against
+`Timestamp`/`format="mixed"`. Fix in `guess_datetime_format`
+(`pandas/_libs/tslibs/parsing.pyx`): decline the guess when the string
+ends with a zone name followed by a nonzero numeric offset whose
+interpretations disagree; affected strings then parse through the
+dateutil fallback used by `Timestamp`. Verified: red/green on vanilla
+`main`; tslibs+tools 2432 pass, scalar/timestamp 1721 pass (dateutil
+pinned 2.9.0.post0 per pandas CI #71461 — 3.0.0 creates ~12 unrelated
+baseline failures, identical with/without the change); issue repro
+agrees on all spellings; ruff/format/isort/cython-lint/codespell/
+sphinx-lint clean; pre-commit.ci's sort-whatsnew-items flagged the
+first head (autofix disabled on this repo) so the hook result was
+replicated locally and re-pushed. PR body includes the pandas
+automated-contributions disclosure per contributing.rst.
 
 **New this session (2026-10-23T14:58Z): ohmyzsh/ohmyzsh #14200 / PR
 #14199** (Track 030) — `fix(extract): extract .deb members without
@@ -2515,3 +2560,73 @@ Two open courtesies, neither blocking:
 - **PR**: #58479 (fix(core): keep validating tool inputs when JSON schema has pattern) — opened 2026-10-23T15:15:52Z, auto-closed by repo automation at T15:16:50Z (mergeable_state: blocked, not merged); check-standards/check-compliance/add-contributor-label pass; check/test/nix-eval fail due to "workflow file issue" (runner provisioning infra, unrelated to code)
 - **Branch**: tool-pattern-validation (2f542afa7fd60605957faad40bf593db1a8f2167) on ShahabAhmed01/opencode, base dev (24b5ed8bcc60aa9a20cf4e3edf1444470e0e6464)
 - **Outcome**: PR closed-unmerged; contribution recorded; tracker updated; reservation and tracker-writer lease to be released.
+
+
+## Track 031 — pandas-dev/pandas #71273 → PR #71508 (2026-10-24)
+
+- **Repo**: https://github.com/pandas-dev/pandas (~50,260 stars /
+  ~20,578 forks retrieved 2026-10-24, BSD-3-Clause, created 2010-08-24)
+- **Issue**: #71273 "BUG: to_datetime and Timestamp give opposite
+  offsets for 'UTC+0300'" — filed 2026-10-17 by `digit50`, Needs
+  Triage, unassigned, 0 comments at selection. A complete report with
+  per-spelling output and root-cause pointers.
+- **Root cause**: dateutil applies the POSIX (inverted) sign to a
+  numeric offset that directly follows a zone name ("UTC+0300" parses
+  as −03:00), while `strptime` applies the nominal sign to `%z`
+  (+03:00). `guess_datetime_format` rewrote offset tokens via
+  `strftime("%z")` and validated against the *rebuilt* string, so the
+  guessed format was accepted while being wrong for the original
+  string: `pd.to_datetime(s)` then disagreed with `pd.Timestamp(s)` by
+  the full offset width (six hours for "UTC+0300"/"UTC-0300").
+- **Fix**: in `guess_datetime_format`
+  (`pandas/_libs/tslibs/parsing.pyx`), detect a zone name directly
+  followed by a nonzero numeric offset (`_timelex_zone_offset`
+  regex at end of string, one to two-digit hours, optional mm/ss) and
+  return `None` when dateutil's actual `utcoffset()` disagrees with
+  the nominal offset; affected strings fall back to the dateutil
+  parser used by `Timestamp`, so `to_datetime`, `Timestamp`,
+  `format="mixed"` and the always-correct `UTC+3` spelling all agree.
+  Zero offsets (`"UTC+0000"`) keep their guesses (GH#66827 context).
+- **Tests added**: 5-param
+  `pandas/tests/tslibs/test_parsing.py::test_guess_datetime_format_zone_with_offset`
+  (UTC+0300, UTC+03:00, GMT+03:00, EST+0330, "UTC +0300"), plus guards
+  `test_guess_datetime_format_offset_without_name` and
+  `test_guess_datetime_format_zone_with_zero_offset`; 6-param
+  `TestToDatetimeInferFormat::test_to_datetime_zone_with_offset`
+  asserting scalar/Series/`format="mixed"`/`Timestamp` agreement.
+  Red/green proven: vanilla `parsing.pyx` fails all 5 new params, the
+  guards still pass; with the fix all 13 cases pass.
+- **Verification**:
+  - `pytest pandas/tests/tslibs pandas/tests/tools -q -n 12` → 2432
+    passed / 75 skipped / 4 xfailed / 0 fail (dateutil
+    2.9.0.post0 — pandas CI pins `dateutil<3`, #71461; with 3.0.0
+    these suites show ~9-12 pre-existing failures identical with and
+    without the change)
+  - `pytest pandas/tests/scalar/timestamp -q -n 12` → 1721 passed /
+    58 skipped / 1 xfailed / 0 fail
+  - ruff check/format, isort, cython-lint, codespell, sphinx-lint,
+    `git diff --check` clean on touched files
+  - pre-commit.ci's `sort-whatsnew-items` hook failed on the first
+    head (pandas disables autofixes repo-side); the repo's own hook
+    script was replicated locally and the ordering re-pushed
+    (`b2fb3acf`), confirmed by a clean local run
+- **PR**: #71508 (BUG: to_datetime interpreting zone-name+offset
+  strings like "UTC+0300" with the wrong sign (GH#71273)) — opened
+  2026-10-24T07:12:09Z, non-draft, 4 files +105/−0, AI disclosure
+  present per pandas' automated-contributions policy
+  (OpenCode / glm-5.3-flash-free); copilot reviewer bot COMMENTED;
+  no human review; CI in flight; **not merged** as of last check
+- **Branch**: `contrib/issue-71273-offset-sign-adb75e71`
+  (head `b2fb3acfcce1f2932eac30eaf01c59839f047d35`) on
+  ShahabAhmed01/pandas, base main (`c4d25081f431b35d075f9ec2dfce3a848c9dbc26`)
+- **Coordination**: pandas reserved 07:00Z under the shared
+  coordination registry (remote-verified CAS), reclaiming the
+  unpublished implementation of lapsed run
+  `ossrun-20261023T123818Z-0f9d84c3` (lease expired
+  2026-10-23T20:28Z, nothing was ever pushed) after full live re-verification
+  (issue open/unclaimed; no commits or PRs referencing it; upstream
+  main unchanged from clone to publication)
+- **Outcome**: PR open awaiting CI and human review; tracker record
+  appended and tables regenerated via `scripts/update_tracker.py`;
+  project notes added (`projects/pandas.md`); coordination lease
+  renewal at PR publication; reservation to be released at run end.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-23T21:15:25Z",
+  "updatedAt": "2026-10-24T07:20:41Z",
   "contributions": [
     {
       "repo": "langgenius/dify",
@@ -20,7 +20,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-23T15:40:07Z",
       "prCreatedAt": "2026-10-23T15:40:07Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "2b35144b",
       "commits": [
         {
@@ -63,7 +63,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-23T15:15:52Z",
       "prCreatedAt": "2026-10-23T15:15:52Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "24b5ed8bcc60aa9a20cf4e3edf1444470e0e6464",
       "commits": [
         {
@@ -105,7 +105,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -168,7 +168,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -211,7 +211,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -254,7 +254,7 @@
       "status": "merged",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -320,7 +320,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -363,7 +363,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -406,7 +406,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": null,
       "commits": [
         {
@@ -449,7 +449,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -492,7 +492,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -559,7 +559,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -622,7 +622,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -676,7 +676,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -738,7 +738,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -798,7 +798,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -853,7 +853,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -894,7 +894,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -936,7 +936,7 @@
       "status": "merged",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -1008,7 +1008,7 @@
       "status": "merged",
       "openedAt": "2026-10-17T18:19:47Z",
       "prCreatedAt": "2026-10-17T18:19:47Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -1065,7 +1065,7 @@
       "status": "merged",
       "openedAt": "2026-10-19T12:01:53Z",
       "prCreatedAt": "2026-10-19T12:01:53Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "ff92bdd01c423b833a96c0ece823265c47d0e6be",
       "commits": [
         {
@@ -1122,7 +1122,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-19T13:17:51Z",
       "prCreatedAt": "2026-10-19T13:17:51Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "dc20b216f065af3a487722141da9a29dcac388d1",
       "commits": [
         {
@@ -1185,7 +1185,7 @@
       "status": "ready-to-merge",
       "openedAt": "2026-10-19T17:24:52Z",
       "prCreatedAt": "2026-10-19T17:24:52Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "cc6fea5b40ad559f7ca358a24b1a521451232281",
       "commits": [
         {
@@ -1280,7 +1280,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-20T16:12:03Z",
       "prCreatedAt": "2026-10-20T16:12:03Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "49ea4d08714f9ae519b86ee17b6b50c1dd080f32",
       "commits": [
         {
@@ -1356,7 +1356,7 @@
       "status": "pushed",
       "openedAt": "2026-10-20T16:42:08Z",
       "prCreatedAt": null,
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "5ca49b0720755c585c9a9835f0a479ceea36fb52",
       "commits": [
         {
@@ -1390,7 +1390,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-21T19:19:00Z",
       "prCreatedAt": "2026-10-21T19:19:00Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "e80c920278f15973001d1a33414b0a7cafdc5ed2",
       "commits": [
         {
@@ -1434,7 +1434,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-21T19:35:20Z",
       "prCreatedAt": "2026-10-21T19:35:20Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "commits": [
         {
           "sha": "fb0c3ceb20299ebc09d706cccc2f07f76ff67fbc",
@@ -1479,7 +1479,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-21T20:53:14Z",
       "prCreatedAt": "2026-10-21T20:53:14Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "c9bf1edf9e0d388f3e7bebc88576e608ffbc40a4",
       "commits": [
         {
@@ -1559,7 +1559,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-22T19:35:42Z",
       "prCreatedAt": "2026-10-22T19:35:42Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "1a82e6d01f395b43275c77acd289af1eb7090bb9",
       "commits": [
         {
@@ -1627,7 +1627,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-23T11:59:34Z",
       "prCreatedAt": "2026-10-23T11:59:34Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "1190eeb39527e1ed81f9b35c931af66f31d05186",
       "commits": [
         {
@@ -1737,7 +1737,7 @@
       "status": "ci-failed",
       "openedAt": "2026-10-23T13:37:57Z",
       "prCreatedAt": "2026-10-23T13:37:57Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "27d14e20c187c1f2916540ea201ecbdc9f8ed588",
       "commits": [
         {
@@ -1809,7 +1809,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-23T14:42:23Z",
       "prCreatedAt": "2026-10-23T14:42:23Z",
-      "lastVerified": "2026-10-23T21:15:25Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
       "baseCommit": "2100c630ba4bd67bb48802c3e7da893a4fdaa1a0",
       "commits": [
         {
@@ -1830,6 +1830,109 @@
       "mergeCommit": null,
       "description": "fix(extract): extract .deb members into their result directories — the deb arm pre-created control/ and data/ then recursed with extract ../control.tar.*, so member tarballs landed double-nested (pkg/control/control/...) whenever control.tar had 2+ members, and data/ survived only when data.tar had a single top-level entry. Extract each member directly with tar -C into the prepared dirs reusing the plugin's per-compression chains; add .deb regression tests in default/target/remove modes.",
       "notes": "AI-assisted (disclosed in PR body per ohmyzsh CONTRIBUTING); the bug had no upstream issue, issue #14200 filed by this run and linked via Fixes; red/green proof on master; fixture matrix gz/xz/zst/bz2 locally."
+    },
+    {
+      "repo": "pandas-dev/pandas",
+      "project": "pandas",
+      "issueNumber": 71273,
+      "issueTitle": "BUG: to_datetime and Timestamp give opposite offsets for 'UTC+0300'",
+      "issueUrl": "https://github.com/pandas-dev/pandas/issues/71273",
+      "issueState": "OPEN",
+      "issueUpdatedAt": "2026-10-17T19:19:56Z",
+      "prNumber": 71508,
+      "prUrl": "https://github.com/pandas-dev/pandas/pull/71508",
+      "prState": "open",
+      "prTitle": "BUG: to_datetime interpreting zone-name+offset strings like \"UTC+0300\" with the wrong sign (GH#71273)",
+      "branch": "contrib/issue-71273-offset-sign-adb75e71",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/pandas",
+      "forkUrl": "https://github.com/ShahabAhmed01/pandas",
+      "status": "ci-running",
+      "openedAt": "2026-10-24T07:12:09Z",
+      "prCreatedAt": "2026-10-24T07:12:09Z",
+      "lastVerified": "2026-10-24T07:20:41Z",
+      "baseCommit": "c4d25081f431b35d075f9ec2dfce3a848c9dbc26",
+      "commits": [
+        {
+          "sha": "d68439938f8ceef5a1e44fbc95abed7e1b2f8914",
+          "subject": "BUG: to_datetime interpreting zone-name+offset strings like \"UTC+0300\" with the wrong sign (GH#71273)"
+        },
+        {
+          "sha": "b2fb3acfcce1f2932eac30eaf01c59839f047d35",
+          "subject": "DOC: sort 71273 whatsnew entries (sort-whatsnew-items)"
+        }
+      ],
+      "checks": {
+        "Doctests": "pending",
+        "Doc Build and Upload (ubuntu-24.04)": "pending",
+        "ubuntu-24.04 py311": "pending",
+        "Install Extras - ${{ matrix.extra }}": "skipped",
+        "Build sdist": "skipped",
+        "zizmor": "pass",
+        "Doc Build and Upload (windows-2025)": "pending",
+        "ubuntu-24.04 py312": "pending",
+        "ubuntu-24.04 py313": "pending",
+        "ubuntu-24.04 py314": "pending",
+        "ubuntu-24.04-arm py311": "pending",
+        "ubuntu-24.04-arm py312": "pending",
+        "ubuntu-24.04-arm py313": "pending",
+        "ubuntu-24.04-arm py314": "pending",
+        "Downstream Compat": "pending",
+        "Minimum Versions": "pending",
+        "Freethreading": "pending",
+        "Without PyArrow": "pending",
+        "Locale: it_IT": "pending",
+        "Locale: zh_CN": "pending",
+        "Future configs legacy values": "pending",
+        "Future configs upcoming values": "pending",
+        "Numpy Nightly": "pending",
+        "Pyarrow Nightly": "pending",
+        "Type Checking": "pending",
+        "macos-15-intel py311": "pending",
+        "Build wheel for ${{ matrix.python }}-${{ matrix.buildplat[1] }}": "skipped",
+        "macos-15-intel py312": "pending",
+        "macos-15-intel py313": "pending",
+        "macos-15-intel py314": "pending",
+        "macos-15 py311": "pending",
+        "macos-15 py312": "pending",
+        "macos-15 py313": "pending",
+        "macos-15 py314": "pending",
+        "windows-2025 py311": "pending",
+        "windows-2025 py312": "pending",
+        "windows-2025 py313": "pending",
+        "windows-2025 py314": "pending",
+        "ASV Benchmarks": "pending",
+        "Linux-32-bit": "pending",
+        "Upload nightly packages to Anaconda": "skipped",
+        "Linux-Musl": "pending",
+        "pandas-stubs tests against pandas nightly": "skipped",
+        "Test install requirements-dev.txt": "pass",
+        "Windows-MinGW": "pending",
+        "publish": "skipped",
+        "Clang (ASAN/UBSAN)": "pending",
+        "Report nightly build failures": "skipped",
+        "python-dev (ubuntu-24.04)": "pending",
+        "create_release": "skipped",
+        "python-dev (macos-15-intel)": "pending",
+        "python-dev (macos-15)": "pending",
+        "python-dev (windows-2025)": "pending",
+        "Pyodide build": "pending",
+        "pre-commit.ci - pr": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "Strings like \"2020-01-02 08:07:13 UTC+0300\" got a guessed %z format that applied the nominal sign while dateutil (and so Timestamp and to_datetime(format=\"mixed\")) applies the POSIX inverted sign to a zone-name-prefixed offset, so to_datetime disagreed with Timestamp by the full offset. guess_datetime_format now declines such strings and every path agrees.",
+      "notes": [
+        "Selection (2026-10-24, coordination run ossrun-20261024T065401Z-adb75e71): pandas-dev/pandas reserved against the shared automation-coordination registry (acquired 07:00Z via fetch-edit-commit-push-fetch-verify; verified remotely). Live state verified before reservation: issue #71273 open, unassigned, Needs Triage, 0 comments; zero commits and zero PRs referencing it (searches 'repo:pandas-dev/pandas 71273 type:pr' -> 0; 'is:pr guess_datetime_format' -> all closed/historical). pandas ~50,260 stars / 20,578 forks (2026-10-24), BSD-3-Clause, AGPL-free, no CLA, no assignment gate; per-repo automated-contributions policy allows AI-assisted work with a specific disclosure (tool + model + effort), which the PR body carries. External-merge evidence within 30 days: #71457 (CONTRIBUTOR) merged 2026-10-23T16:29Z; big #71337 (14 files) merged 2026-10-22T22:11Z. This run reclaims the unpublished implementation of the lapsed run ossrun-20261023T123818Z-0f9d84c3 (lease expired 2026-10-23T20:28Z): fresh clone at current main, re-applied as a patch, re-reviewed in context, re-validated from scratch.",
+        "Implementation: parsing.pyx guess_datetime_format now declines (returns None) where the string ends with <zone name><optional space><sign><nonzero offset> and dateutil's interpretation (POSIX-inverted or direction-drop for a spaced offset) disagrees with the nominal offset a %z format would apply; affected strings fall back to the dateutil parser used by Timestamp so all parse paths agree. Zero-offset spellings (\"UTC+0000\", GH#66827) keep their guesses; \"+0300\" without a zone name is untouched.",
+        "Verification (2026-10-24, Python 3.12 uv venv + editable meson build, python-dateutil==2.9.0.post0 pinned per pandas CI #71461): red/green proven (vanilla parsing.pyx + these tests -> the 5 new zone-with-offset params fail, the 2 unchanged-behavior guards pass; with the fix all 13 targeted cases pass); pandas/tests/tslibs + pandas/tests/tools -> 2432 passed / 75 skipped / 4 xfailed / 0 failures; pandas/tests/scalar/timestamp -> 1721 passed / 58 skipped / 1 xfailed / 0 failures (with dateutil 3.0.0 these suites show ~9-12 pre-existing failures, identical with and without the change); issue repro script agrees on all spellings exactly as the issue's Expected Behavior; ruff check/format, isort, cython-lint, codespell, sphinx-lint, git diff --check all clean locally. pre-commit.ci flagged sort-whatsnew-items on the first head (autofix disabled repo-side); the same repo-local hook was replicated and its result pushed (b2fb3acfcce1f2932eac30eaf01c59839f047d35)."
+      ]
     }
   ]
 }

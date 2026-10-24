@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-24T06:55:23Z",
+  "updated_at": "2026-10-24T06:59:25Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -237,17 +237,17 @@
     },
     {
       "run_id": "ossrun-20261024T065401Z-adb75e71",
-      "status": "DISCOVERING",
-      "repository": null,
-      "issue_url": null,
-      "issue_number": null,
+      "status": "RESERVED",
+      "repository": "pandas-dev/pandas",
+      "issue_url": "https://github.com/pandas-dev/pandas/issues/71273",
+      "issue_number": 71273,
       "pr_url": null,
       "head_branch": null,
-      "acquired_at": null,
-      "heartbeat_at": "2026-10-24T06:55:23Z",
-      "expires_at": "2026-10-24T12:55:23Z",
-      "reservation_state": null,
-      "notes": "coordination checkout verified; discovered prior run ossrun-20261023T123818Z-0f9d84c3 pandas impl-complete-but-unpublished with expired lease; candidate under evaluation"
+      "acquired_at": "2026-10-24T06:59:25Z",
+      "heartbeat_at": "2026-10-24T06:59:25Z",
+      "expires_at": "2026-10-24T12:59:25Z",
+      "reservation_state": "ACTIVE",
+      "notes": "Reclaimed continuation of expired prior lease ossrun-20261023T123818Z-0f9d84c3 (expired 2026-10-23T20:28:00Z; lease lapsed >10h). Live GitHub verified 2026-10-24T06:57Z: issue 71273 open, 0 comments, no assignees, Needs Triage; no commits reference 71273; no open/closed PRs reference it (searches: 'repo:pandas-dev/pandas is:pr 71273 in:body' and 'guess_datetime_format UTC+0300' both empty). Prior implementation exists uncommitted in stale workspace; will be re-reviewed and re-validated from scratch in a fresh run checkout before publication."
     }
   ],
   "tracker_writer": null,

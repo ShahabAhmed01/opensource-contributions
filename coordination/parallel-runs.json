@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-24T07:12:28Z",
+  "updated_at": "2026-10-24T07:12:51Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -251,7 +251,7 @@
       "pr_number": 71508
     }
   ],
-  "tracker_writer": null,
-  "tracker_writer_expires_at": null,
-  "tracker_writer_lease_expires": "2026-10-23T17:29:45Z"
+  "tracker_writer": "ossrun-20261024T065401Z-adb75e71",
+  "tracker_writer_expires_at": "2026-10-24T08:12:51Z",
+  "tracker_writer_lease_expires": "2026-10-24T08:12:51Z"
 }

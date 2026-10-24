@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-24T07:12:51Z",
+  "updated_at": "2026-10-24T07:23:12Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -237,21 +237,24 @@
     },
     {
       "run_id": "ossrun-20261024T065401Z-adb75e71",
-      "status": "PR_PUBLISHED",
+      "status": "COMPLETED",
       "repository": "pandas-dev/pandas",
       "issue_url": "https://github.com/pandas-dev/pandas/issues/71273",
       "issue_number": 71273,
       "pr_url": "https://github.com/pandas-dev/pandas/pull/71508",
       "head_branch": "ShahabAhmed01:contrib/issue-71273-offset-sign-adb75e71",
       "acquired_at": "2026-10-24T06:59:25Z",
-      "heartbeat_at": "2026-10-24T07:12:28Z",
-      "expires_at": "2026-10-24T13:12:28Z",
-      "reservation_state": "ACTIVE",
+      "heartbeat_at": "2026-10-24T07:23:12Z",
+      "expires_at": "2026-10-24T07:23:12Z",
+      "reservation_state": "RELEASED",
       "notes": "Issue 71273 fixed; PR pandas-dev/pandas#71508 published 2026-10-24T07:12:09Z (head d68439938f8ceef5a1e44fbc95abed7e1b2f8914, base main@c4d25081f4, non-draft, 4 files +105). Local validation: tslibs+tools 2432 passed/0 fail, scalar/timestamp 1721 passed/0 fail with dateutil==2.9.0.post0; red/green proven; issue repro agrees on all spellings; ruff/format/isort/cython-lint/codespell/sphinx-lint clean; git diff --check clean. Next: CI observation then tracker update under tracker-writer lease.",
-      "pr_number": 71508
+      "pr_number": 71508,
+      "completed_at": "2026-10-24T07:23:12Z",
+      "outcome": "pandas-dev/pandas#71273 fixed; PR https://github.com/pandas-dev/pandas/pull/71508 published 2026-10-24T07:12:09Z (head b2fb3acfcce1f2932eac30eaf01c59839f047d35 after sort-whatsnew-items refix, base main@c4d25081f4, non-draft, 4 files +105; reclaims unpublished work of lapsed run ossrun-20261023T123818Z-0f9d84c3); pre-commit.ci PASS on second head, zizmor + Test install requirements-dev.txt pass, ~43 Actions unit-test workflows still pending at completion record; copilot bot COMMENTED; NO human review; NOT merged; local validation: tslibs+tools 2432 pass/0 fail, scalar/timestamp 1721 pass/0 fail with python-dateutil==2.9.0.post0 (CI pins dateutil<3 #71461), red/green proven on vanilla main, ruff/format/isort/cython-lint/codespell/sphinx-lint clean, AI disclosed per pandas automated-contributions policy; tracker record pushed to main (commit ac60f3a334b24e20fd7dc0e66810b9a113545352: state entry +33 records, projects/pandas.md, contributions/pandas/issue-71273.md, Track 031 handoff sections); tracker-writer lease released 2026-10-24T07:52Z; project reservation RELEASED at completion"
     }
   ],
-  "tracker_writer": "ossrun-20261024T065401Z-adb75e71",
-  "tracker_writer_expires_at": "2026-10-24T08:12:51Z",
-  "tracker_writer_lease_expires": "2026-10-24T08:12:51Z"
+  "tracker_writer": null,
+  "tracker_writer_expires_at": null,
+  "tracker_writer_lease_expires": null,
+  "tracker_writer_released_at": "2026-10-24T07:23:12Z"
 }

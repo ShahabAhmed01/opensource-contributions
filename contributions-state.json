@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-10-27T11:55:01Z",
+  "updatedAt": "2026-10-28T05:04:53Z",
   "contributions": [
     {
       "repo": "langgenius/dify",
@@ -20,7 +20,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-23T15:40:07Z",
       "prCreatedAt": "2026-10-23T15:40:07Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "2b35144b",
       "commits": [
         {
@@ -63,7 +63,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-23T15:15:52Z",
       "prCreatedAt": "2026-10-23T15:15:52Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "24b5ed8bcc60aa9a20cf4e3edf1444470e0e6464",
       "commits": [
         {
@@ -105,7 +105,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -168,7 +168,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -211,7 +211,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -254,7 +254,7 @@
       "status": "merged",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -320,7 +320,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -363,7 +363,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -406,7 +406,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": null,
       "commits": [
         {
@@ -449,7 +449,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -492,7 +492,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -559,7 +559,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -622,7 +622,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -676,7 +676,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -738,7 +738,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -798,7 +798,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -853,7 +853,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -894,7 +894,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -936,7 +936,7 @@
       "status": "merged",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -1008,7 +1008,7 @@
       "status": "merged",
       "openedAt": "2026-10-17T18:19:47Z",
       "prCreatedAt": "2026-10-17T18:19:47Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -1065,7 +1065,7 @@
       "status": "merged",
       "openedAt": "2026-10-19T12:01:53Z",
       "prCreatedAt": "2026-10-19T12:01:53Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "ff92bdd01c423b833a96c0ece823265c47d0e6be",
       "commits": [
         {
@@ -1122,7 +1122,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-19T13:17:51Z",
       "prCreatedAt": "2026-10-19T13:17:51Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "dc20b216f065af3a487722141da9a29dcac388d1",
       "commits": [
         {
@@ -1185,7 +1185,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-19T17:24:52Z",
       "prCreatedAt": "2026-10-19T17:24:52Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "cc6fea5b40ad559f7ca358a24b1a521451232281",
       "commits": [
         {
@@ -1280,7 +1280,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-20T16:12:03Z",
       "prCreatedAt": "2026-10-20T16:12:03Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "49ea4d08714f9ae519b86ee17b6b50c1dd080f32",
       "commits": [
         {
@@ -1356,7 +1356,7 @@
       "status": "pushed",
       "openedAt": "2026-10-20T16:42:08Z",
       "prCreatedAt": null,
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "5ca49b0720755c585c9a9835f0a479ceea36fb52",
       "commits": [
         {
@@ -1390,7 +1390,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-21T19:19:00Z",
       "prCreatedAt": "2026-10-21T19:19:00Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "e80c920278f15973001d1a33414b0a7cafdc5ed2",
       "commits": [
         {
@@ -1420,21 +1420,21 @@
       "issueNumber": 2176,
       "issueTitle": "Bare local archives with .tar.xz, .tar.bz2, .tgz, or .tar are treated as PyPI names",
       "issueUrl": "https://github.com/pypa/pipx/issues/2176",
-      "issueState": "OPEN",
-      "issueUpdatedAt": "2026-10-21T19:30:20Z",
+      "issueState": "CLOSED",
+      "issueUpdatedAt": "2026-10-28T02:54:14Z",
       "prNumber": 2177,
       "prUrl": "https://github.com/pypa/pipx/pull/2177",
-      "prState": "open",
-      "prTitle": "fix: match pip's archive extensions for local paths",
+      "prState": "merged",
+      "prTitle": "🐛 fix: install bare archives with any pip extension",
       "branch": "fix/archive-extensions-2eff4030",
       "baseBranch": "main",
       "baseCommit": "0c4acc88fc4d62b9a85f9c0cff8c938f81c84c2b",
       "fork": "ShahabAhmed01/pipx",
       "forkUrl": "https://github.com/ShahabAhmed01/pipx",
-      "status": "pr-opened",
+      "status": "merged",
       "openedAt": "2026-10-21T19:35:20Z",
       "prCreatedAt": "2026-10-21T19:35:20Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "commits": [
         {
           "sha": "fb0c3ceb20299ebc09d706cccc2f07f76ff67fbc",
@@ -1446,17 +1446,41 @@
         }
       ],
       "checks": {
-        "pre-commit.ci - pr": "pass",
-        "docs/readthedocs.org:pipx": "pass"
+        "📝 News fragment": "pass",
+        "🛡️ Analyze actions": "pass",
+        "🛡️ Run zizmor": "pass",
+        "🧪 test 3.15 - ubuntu-26.04": "pass",
+        "🛡️ Analyze python": "pass",
+        "🧪 test 3.15t - ubuntu-26.04": "pass",
+        "🧪 test 3.14 - ubuntu-26.04": "pass",
+        "🧪 test 3.13 - ubuntu-26.04": "pass",
+        "🧪 test 3.12 - ubuntu-26.04": "pass",
+        "🧪 test 3.11 - ubuntu-26.04": "pass",
+        "🧪 test 3.15 - windows-2025": "pass",
+        "🧪 test 3.15 - xcode-27": "pass",
+        "🔎 Type check": "pass",
+        "🔍 Check package distributions": "pass",
+        "📖 Build man page": "pass",
+        "🏗️ Build zipapp": "pass",
+        "🧪 Test zipapp on Windows": "pass",
+        "🚦 Required checks pass": "pass",
+        "CodeQL": "pass",
+        "zizmor": "pass",
+        "docs/readthedocs.org:pipx": "pass",
+        "pre-commit.ci - pr": "pass"
       },
       "reviews": [
         {
           "author": "copilot-pull-request-reviewer",
           "state": "COMMENTED"
+        },
+        {
+          "author": "gaborbernat",
+          "state": "APPROVED"
         }
       ],
-      "mergedAt": null,
-      "mergeCommit": null,
+      "mergedAt": "2026-10-28T02:54:13Z",
+      "mergeCommit": "3904e77ce883b993453549f813ffd1a2385b1398",
       "description": "Treats bare local archive filenames with every pip-supported extension (.tar.xz, .tar.bz2, .tgz, .tar, .tbz, .txz, .tlz, .tar.lz, .tar.lzma, plus .whl/.tar.gz/.zip) as local paths, case-insensitively, so `pipx install empty_project-0.1.0.tar.xz` installs the file instead of looking up a canonicalized PyPI name.",
       "notes": "Self-discovered bug in pipx's package-specifier parser; issue #2176 filed by this run after reproducing on main 0c4acc8 with a valid .tar.xz sdist. ARCHIVE_EXTENSIONS held only .whl, .tar.gz and .zip, so valid_pypi_name() canonicalized bare .tar.xz/.tar.bz2/.tgz/.tar filenames and pipx installed the wrong requirement; the ./ prefix worked. Fix aligns the tuple with pip's ARCHIVE_EXTENSIONS and matches case-insensitively via _is_archive_name(). Tests: 166 passed in tests/test_package_specifier.py on Python 3.11.17 and 3.15.0; end-to-end bare and uppercase .TAR.XZ installs; pre-commit on changed files, pre-commit.ci and Read the Docs pass. GitHub Actions tests/zizmor are action_required (first-time-contributor approval gate, not bypassed); no human review yet, Copilot quota-limited. Independent of concurrent pipx lanes #2173/#2174/#2175 (extras), #2171/#2172 (inline metadata), #2165/#2166 (runpip options). Fork created this session; isolated workspace under ~/opensource-work/runs/ossrun-20261020T143633Z-2eff4030/upstream/pipx. Prepared with AI assistance under the account owner's direction; all claims checked against live GitHub/local runs."
     },
@@ -1479,7 +1503,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-21T20:53:14Z",
       "prCreatedAt": "2026-10-21T20:53:14Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "c9bf1edf9e0d388f3e7bebc88576e608ffbc40a4",
       "commits": [
         {
@@ -1559,7 +1583,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-22T19:35:42Z",
       "prCreatedAt": "2026-10-22T19:35:42Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "1a82e6d01f395b43275c77acd289af1eb7090bb9",
       "commits": [
         {
@@ -1627,7 +1651,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-23T11:59:34Z",
       "prCreatedAt": "2026-10-23T11:59:34Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "1190eeb39527e1ed81f9b35c931af66f31d05186",
       "commits": [
         {
@@ -1737,7 +1761,7 @@
       "status": "ci-failed",
       "openedAt": "2026-10-23T13:37:57Z",
       "prCreatedAt": "2026-10-23T13:37:57Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "27d14e20c187c1f2916540ea201ecbdc9f8ed588",
       "commits": [
         {
@@ -1809,7 +1833,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-23T14:42:23Z",
       "prCreatedAt": "2026-10-23T14:42:23Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "2100c630ba4bd67bb48802c3e7da893a4fdaa1a0",
       "commits": [
         {
@@ -1854,7 +1878,7 @@
       "status": "ci-failed",
       "openedAt": "2026-10-24T07:12:09Z",
       "prCreatedAt": "2026-10-24T07:12:09Z",
-      "lastVerified": "2026-10-27T11:55:01Z",
+      "lastVerified": "2026-10-28T05:04:53Z",
       "baseCommit": "c4d25081f431b35d075f9ec2dfce3a848c9dbc26",
       "commits": [
         {

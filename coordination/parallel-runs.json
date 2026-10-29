@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-24T14:40:36Z",
+  "updated_at": "2026-10-29T16:45:19Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -261,9 +261,10 @@
       "pr_url": null,
       "head_branch": null,
       "acquired_at": null,
-      "heartbeat_at": "2026-10-24T14:40:36Z",
+      "heartbeat_at": "2026-10-29T16:45:19Z",
       "expires_at": null,
-      "reservation_state": null
+      "reservation_state": null,
+      "notes": "resumed after 5-day gap; re-verifying candidates against live GitHub state before reservation"
     }
   ],
   "tracker_writer": null,

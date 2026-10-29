@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-29T17:47:38Z",
+  "updated_at": "2026-10-29T17:53:41Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -269,16 +269,19 @@
     {
       "run_id": "ossrun-20261029T172141Z-977388f8",
       "status": "RESERVED",
-      "repository": "browser-use/browser-use",
-      "issue_url": null,
-      "issue_number": null,
+      "repository": "brekkylab/backlot",
+      "issue_url": "https://github.com/brekkylab/backlot/issues/1124",
+      "issue_number": 1124,
       "pr_url": null,
       "head_branch": null,
-      "acquired_at": "2026-10-29T17:47:38Z",
-      "heartbeat_at": "2026-10-29T17:47:38Z",
-      "expires_at": "2026-10-29T23:47:38Z",
+      "acquired_at": "2026-10-29T17:53:41Z",
+      "heartbeat_at": "2026-10-29T17:53:41Z",
+      "expires_at": "2026-10-29T23:53:41Z",
       "reservation_state": "ACTIVE",
-      "note": "Mitmproxy reservation released f5fa27a earlier; pivoted to browser-use (investigation: 8 labeled bugs screened, 2 claims (#6173 'I have opened [...]'), selected candidate issue #6135 pending in-repo verification of competing PRs)"
+      "note": "tracker documents maintainer-authorized 3-open-PR cap for backlot with zero currently open; candidate #1124: 0 comments, no assignee; verified no linked PRs in search + git grep before selection",
+      "release_note": [
+        "2026-10-29T17:49Z: released browser-use \u2014 candidate issue #6135 had THREE open/claim-PR duplicates (#6136 by ?, #6139 by ?, #6229 by ?) found after reservation; no external actions taken."
+      ]
     }
   ],
   "tracker_writer": null,

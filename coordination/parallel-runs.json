@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-29T17:44:31Z",
+  "updated_at": "2026-10-29T17:47:38Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -268,17 +268,17 @@
     },
     {
       "run_id": "ossrun-20261029T172141Z-977388f8",
-      "status": "DISCOVERING",
-      "repository": "mitmproxy/mitmproxy",
+      "status": "RESERVED",
+      "repository": "browser-use/browser-use",
       "issue_url": null,
       "issue_number": null,
       "pr_url": null,
       "head_branch": null,
-      "acquired_at": "2026-10-29T17:38:46Z",
-      "heartbeat_at": "2026-10-29T17:44:31Z",
-      "expires_at": null,
-      "reservation_state": "RELEASED",
-      "outcome_note": "Investigated 2026-10-29: CONTRIBUTING read, 12 issues inspected (#8425,8363,8486,8286,8412,8540,8290,8315,8431,8357,8283,8279). All actionable tasks have open/claimed PRs (#8426, #8467, #8365, #8287); choksi2212 claimed #8486 in comments. Remaining items rejected: macOS/Windows-only validation, TS web UI, Rust (mitmproxy_rs #8315), speculative dormant features (#8283, #8431). Releasing reservation; no external actions taken."
+      "acquired_at": "2026-10-29T17:47:38Z",
+      "heartbeat_at": "2026-10-29T17:47:38Z",
+      "expires_at": "2026-10-29T23:47:38Z",
+      "reservation_state": "ACTIVE",
+      "note": "Mitmproxy reservation released f5fa27a earlier; pivoted to browser-use (investigation: 8 labeled bugs screened, 2 claims (#6173 'I have opened [...]'), selected candidate issue #6135 pending in-repo verification of competing PRs)"
     }
   ],
   "tracker_writer": null,

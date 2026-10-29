@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-29T16:54:50Z",
+  "updated_at": "2026-10-29T17:13:25Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -261,10 +261,10 @@
       "pr_url": null,
       "head_branch": null,
       "acquired_at": null,
-      "heartbeat_at": "2026-10-29T16:54:50Z",
+      "heartbeat_at": "2026-10-29T17:13:25Z",
       "expires_at": null,
       "reservation_state": null,
-      "notes": "resumed after 1-week gap; live re-verification of candidates in progress"
+      "notes": "final gap sweep: coveragepy/hypothesis/tox untouched-window checks in progress"
     }
   ],
   "tracker_writer": null,

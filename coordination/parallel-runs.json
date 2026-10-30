@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-29T19:23:27Z",
+  "updated_at": "2026-10-30T04:29:48Z",
   "runs": [
     {
       "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -268,19 +268,20 @@
     },
     {
       "run_id": "ossrun-20261029T172141Z-977388f8",
-      "status": "RESERVED",
+      "status": "PR_PUBLISHED",
       "repository": "brekkylab/backlot",
       "issue_url": "https://github.com/brekkylab/backlot/issues/1124",
       "issue_number": 1124,
-      "pr_url": null,
-      "head_branch": null,
+      "pr_url": "https://github.com/brekkylab/backlot/pull/1153",
+      "head_branch": "contrib/issue-1124-agents-version-token-977388f8",
       "acquired_at": "2026-10-29T17:53:41Z",
-      "heartbeat_at": "2026-10-29T19:23:27Z",
-      "expires_at": "2026-10-30T01:23:27Z",
+      "heartbeat_at": "2026-10-30T04:29:48Z",
+      "expires_at": "2026-10-30T10:29:48Z",
       "reservation_state": "ACTIVE",
       "note": "tracker documents maintainer-authorized 3-open-PR cap for backlot with zero currently open; candidate #1124: 0 comments, no assignee; verified no linked PRs in search + git grep before selection",
       "release_note": [
-        "2026-10-29T17:49Z: released browser-use — candidate issue #6135 had THREE open/claim-PR duplicates (#6136 by ?, #6139 by ?, #6229 by ?) found after reservation; no external actions taken."
+        "2026-10-29T17:49Z: released browser-use — candidate issue #6135 had THREE open/claim-PR duplicates (#6136 by ?, #6139 by ?, #6229 by ?) found after reservation; no external actions taken.",
+        "2026-10-30T04:29Z: lease had expired 2026-10-30T01:23:27Z during the work gap; remote tip was still this run's 1973b78 with the slot unclaimed (no other run registered backlot); renewed unclaimed after publishing PR 1153."
       ]
     }
   ],

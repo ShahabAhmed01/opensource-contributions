@@ -1,6 +1,36 @@
 # Contribution Handoff
 
-Last updated: 2026-10-24T07:21Z (Track 031: **pandas-dev/pandas #71273 →
+Last updated: 2026-10-30T04:41Z (Track 032: **brekkylab/backlot #1124 →
+PR #1153 opened**, `github: the /agents routes read no API version and
+ask for a credential on any path of their two families`. Backlot's
+trunk had advanced past the issue's `80e1f7a` base through nine merges
+(its tip `81f33e4` verified current at publication), so the workspace
+tree was fetched file-by-file from the tip with per-blob SHA
+verification and the patch re-applied there; the two silent divergences
+carried by the issue (a maintainer's 2026-10-28 live-call table) were
+confirmed live against both trees by a 48-request before/after probe:
+the version's 400 and the echo that a resolving token saw on the four
+published-but-unserved agent operations, and the two agent families
+answering content-free paths as 404-for-every-credential instead of
+asking for a credential. The fix silences the version for the whole
+`/agents` prefix and gates the two families ahead of the version echo
+and the rate-limit headers, deferring published rows to the unserved
+machinery they already get; fail-without-change proven (four new
+`agent_families` tests fail on the base tree), suite 8337 passed 44
+skipped in 547s serially on the published tree (exit 0), ruff and
+`prose_check.py main` clean, and `pr_gate.py:format_problems` reported
+no problems before the PR was opened. Publication used the GitHub Git
+Data API on the fork (blobs SHA-matched locally → tree off the tip's
+tree → commit parented on the tip → ref → PR) because bulk git
+protocol transfer stalls in this environment — one commit, `0a51616`,
+3 files +208/−3; CI gate/lint/scan and the test matrix (3.11)–(3.15)
+all success, bare `test` skipped by the workflow's fork shape; issue
+re-verified unclaimed (open, 0 comments, no assignee) immediately
+before publication. See the New this session block and
+`contributions/backlot/issue-1124.md`.) The previous top note follows,
+unchanged.
+
+Previous — Last updated: 2026-10-24T07:21Z (Track 031: **pandas-dev/pandas #71273 →
 PR #71508 opened 07:12Z**, `to_datetime` parsed strings like
 `"2020-01-02 08:07:13 UTC+0300"` with the offset's opposite sign from the
 `Timestamp` constructor (dateutil applies the POSIX inverted sign to a
@@ -66,22 +96,47 @@ PR #15228); 2026-10-19T13:44Z Track 020 starlette PR #3682.)
 
 ## Portfolio Summary
 
-(as of 2026-10-24T07:21Z, all 33 records resolved against live GitHub by
-`scripts/update_tracker.py` after appending the pandas record;
+(as of 2026-10-30T04:41Z, all 34 records resolved against live GitHub by
+`scripts/update_tracker.py` after appending the backlot #1153 record;
 categories are `status` values in `contributions-state.json`: 13
-pr-opened, 3 ci-running, 1 ready-to-merge, 1 pushed, 1 ci-failed, 11
-merged, 3 closed-unmerged)
+pr-opened, 2 ci-running, 1 pushed, 2 ci-failed, 12 merged, 4
+closed-unmerged. The 2026-10-24 summary's 33 sorted at 13/3/1/1/1/11/3;
+the one visible flip on this live re-check is its lone ready-to-merge,
+uvicorn #3215, closed upstream.)
 
-Active Contributions: 1 (honojs/hono #5569 — branch published as the
-clarification chain; hono restricts PR creation to collaborators)
-Monitoring Contributions: 19 (13 pr-opened, 3 ci-running, 1
-ready-to-merge, 1 pushed, 1 ci-failed — spec-kit #5069 flipped from pr-opened
-because its first-time-fork workflows sit in `action_required`, which
-the sync maps to a failing check; awaiting maintainer approval, not a
-code failure)
-Merged Contributions: 11
-Closed/Superseded Contributions: 2 (markitdown #2699, starlette #3682
-— closed upstream 2026-10-23)
+Active Contributions: 1 (honojs/hono #5569, the one `pushed` record —
+branch published as the clarification chain; hono restricts PR creation
+to collaborators)
+Monitoring Contributions: 17 (13 pr-opened, 2 ci-running, 2 ci-failed —
+spec-kit #5069 and pandas #71508 sit in ci-failed without code
+findings: spec-kit's first-time-fork workflows await maintainer
+approval, which the sync maps to a failing check, and pandas's is the
+dateutil pin mismatch documented in its record)
+Merged Contributions: 12
+Closed/Superseded Contributions: 4 (markitdown #2699, starlette #3682,
+uvicorn #3215, opencode #58479)
+
+**New this session (2026-10-30T04:41Z): brekkylab/backlot #1124 / PR #1153** —
+`github: the /agents routes read no API version and ask for a credential
+on any path of their two families`. On any path of the two agent
+families (a repository's `/agents/repos/{owner}/{repo}/…` and the task
+statuses' `/agents/tasks/{id}/…`, each family's own path included)
+Backlot read the version header and refused for its credential only the
+operations it knows, so an anonymous or bad-credential caller was
+router-404'd where real asks for a credential (401 "Requires
+authentication" / 401 "Bad credentials") and a resolving token got the
+router envelope where real answers the plain-text 404 real's own router
+serves; and on the four published-but-unserved agent operations a token
+that pinned an unknown version was answered the version's 400, with the
+echo on the 404, where real reads no version of any `/agents` caller.
+The fix leaves the whole `/agents` prefix out of the version's reach
+(`honours_api_version`) and registers a gate
+(`refuse_a_credential_on_an_agent_path` under a `runs_on` of the two
+families minus published ops) ahead of the version echo and the
+rate-limit headers. Workspace `backlot-ws` (SHA-verified fetch of the
+`81f33e4` tree); one commit `0a51616` parented on the tip, published
+via the Git Data API; record
+`contributions/backlot/issue-1124.md`.
 
 **New this session (2026-10-24T07:21Z): pandas-dev/pandas #71273 / PR #71508**
 (Track 031) — `BUG: to_datetime interpreting zone-name+offset strings
@@ -2630,3 +2685,101 @@ Two open courtesies, neither blocking:
   appended and tables regenerated via `scripts/update_tracker.py`;
   project notes added (`projects/pandas.md`); coordination lease
   renewal at PR publication; reservation to be released at run end.
+
+## Track 032 — brekkylab/backlot #1124 → PR #1153 (2026-10-30)
+
+- **Repo**: https://github.com/brekkylab/backlot (~263★ at selection
+  2026-10-29, Apache-2.0, Python) — Backlot serves enterprise SaaS APIs
+  (Slack, Gmail, GitHub, Jira, and more) over a supplied corpus with
+  per-document ACLs; fidelity to the live vendors is the measured point
+  of the project (AGENTS.md). The seven earlier tracked backlot
+  contributions (#554, #586, #610, #603, #775, #779, #831) are all
+  merged; this makes the eighth.
+- **Issue**: #1124 "github: the /agents routes ignore the API version
+  for a token and ask for a credential on any path" — filed by
+  `nuriyoo` while measuring #1119, label `fidelity`, OPEN/unassigned/0
+  comments at selection and immediately before publication (re-checked
+  by API). Two silent divergences, pinned to `80e1f7a` but still live on
+  the current tip (probe-verified): (1) a resolving token on the four
+  published-but-unserved `/agents` operations got the version's 400 on
+  a pinned `1999-01-01` and the echo on the 404, where real reads no
+  version of any `/agents` caller; (2) any path of
+  `/agents/repos/{owner}/{repo}/…` and `/agents/tasks/{id}/…` (family's
+  own paths included) asks for a credential — none → 401 "Requires
+  authentication", bad → 401 "Bad credentials", resolving token →
+  plain-text `404 page not found` — where Backlot router-404'd every
+  caller.
+- **Root cause**: `honours_api_version` exempted only code search and a
+  credentialless `/rate_limit`, so every `/agents` request was
+  version-checked and echoed by `backlot.main`'s echo middleware; and
+  the credential refusals lived only in the unserved machinery, whose
+  membership is the baseline's published-`missing` operations plus the
+  two routed-unpublished `/agents/automations/…` shapes — outside the
+  two families' path space — so any other family path was an ordinary
+  unrouted path.
+- **Fix**: `honours_api_version` leaves the whole `/agents` prefix out
+  (`_an_agent_path`), silencing the version's 400 and the echo there
+  for every caller; new `under_an_agent_family` (families minus
+  published ops via `runs_on`) and
+  `refuse_a_credential_on_an_agent_path` — no header or credentialless
+  header is the 401 "Requires authentication" (counted GET/POST,
+  uncounted PATCH/PUT/DELETE through the state
+  `refused_an_unserved_operation` reads, which the sharing docstrings
+  note), a non-resolving credential is "Bad credentials", a `Basic`
+  value naming no token is `_require`'s 401, a resolving caller is
+  `PlainTextResponse("404 page not found", 404)` with none of the five
+  — registered ahead of the version echo and the rate-limit headers,
+  deferring the paths an operation of the baseline publishes to the
+  unserved refusals they already get.
+- **Tests added**: an `/agents` branch in the `_UNSERVED_ROWS`
+  refusal loop (no echo, pinned unknown version no longer a 400, same
+  statuses) plus four new tests — three parametrized over the measured
+  gate paths (each credential state, each with and without the version
+  pinned) and one for the families' own paths (`GET
+  /agents/repos/{o}/{r}`; `GET /agents/tasks/{}` is a published
+  `missing` op and stays on the unserved rows). Red/green proven: all
+  four fail with the sources checked out to the base tree, all pass
+  with the fix.
+- **Verification**: full suite on the exact published tree
+  `8337 passed, 44 skipped in 547s` serially (`-o addopts=""`, exit 0;
+  `-p no:xdist` is a usage error here — the pyproject addopts force
+  xdist flags, so the addopts override is the way to get a serial
+  line), green under xdist too; `-rs` census says all 44 skips are
+  missing-optional-import skips (botocore/slack_sdk/mcp/
+  llama_index/fastmcp/mirage/gdrive_fsspec), none on the changed
+  files; `ruff check .` and `ruff format --check .` clean (194 files);
+  `scripts/prose_check.py main` exit 0; `format_problems(title, body,
+  {"github"})` no problems and `closed_issues(body) == [1124]` offline
+  before opening the PR.
+- **Measurement honesty**: this session cannot reach api.github.com
+  (no token in the environment); the acceptance measurement is the
+  maintainer's 2026-10-28 live-call table carried in the issue plus
+  the maintainer's negative rows quoted in
+  `_ROUTED_UNPUBLISHED`'s note. The PR body's Before column is the
+  run's own 48-request probe run against the base tree and the fix
+  tree, labeled as local evidence.
+- **Publication**: upstream `main` advanced `80e1f7a` → `81f33e4`
+  through nine merges during the run; the workspace tree was
+  re-fetched with per-file git-blob SHA verification (316/316 matched;
+  an earlier mixed-pin fetch had produced 195 phantom test failures
+  that the hash audit exposed) and the patch re-applied onto the tip.
+  Because bulk git protocol transfer stalls in this environment, the
+  commit went through the GitHub Git Data API on the fork — three
+  blobs whose API-returned SHAs equal the locally computed
+  `git hash-object` values, tree `b8c0f1ab…` (base_tree = the tip's
+  `ec45f766…`), commit `0a51616cb6d91b2b0fd2b8903d8715e37eda1438`
+  (one parent `81f33e4…`), ref
+  `refs/heads/contrib/issue-1124-agents-version-token-977388f8`, then
+  `POST /repos/brekkylab/backlot/pulls`. Post-open check: 3 changed
+  files, 1 commit, base sha `81f33e4`.
+- **CI at 2026-10-30**: gate success · lint success · scan success ·
+  test (3.11) success · (3.12) success · (3.13) success · (3.14)
+  success · (3.15) success · bare `test` skipped (fork-head shape, as
+  #851 recorded). No gate-bot comment on the PR.
+- **Coordination**: registry flips to `PR_PUBLISHED` under CAS on
+  `automation-coordination` (`1973b78..6d2e2cb`) with the lease
+  renewed (expired 2026-10-30T01:23:27Z during the work gap; remote tip
+  was still this run's `1973b78` with the slot unclaimed, so the
+  renewal notes it was claimed-after-expiry rather than held).
+- **Status**: open, not merged, awaiting first human review
+  (`nuriyoo` is the reviewer of record for the prior seven).

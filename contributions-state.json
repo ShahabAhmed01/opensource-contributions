@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-03T23:05:30Z",
+  "updatedAt": "2026-11-05T20:43:28Z",
   "contributions": [
     {
       "repo": "langgenius/dify",
@@ -8,19 +8,19 @@
       "issueNumber": 44664,
       "issueTitle": "Bug: detect_file_encodings raises misleading error when charset_normalizer returns encoding=None",
       "issueUrl": "https://github.com/langgenius/dify/issues/44664",
-      "issueState": "OPEN",
+      "issueState": "CLOSED",
       "prNumber": 44663,
       "prUrl": "https://github.com/langgenius/dify/pull/44663",
-      "prState": "open",
+      "prState": "closed",
       "prTitle": "fix(rag): correct encoding detection logic to filter None encodings first",
       "branch": "contrib/fix-encoding-detection-logic",
       "baseBranch": "main",
       "fork": "ShahabAhmed01/dify",
       "forkUrl": "https://github.com/ShahabAhmed01/dify",
-      "status": "pr-opened",
+      "status": "closed-unmerged",
       "openedAt": "2026-10-23T15:40:07Z",
       "prCreatedAt": "2026-10-23T15:40:07Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "2b35144b",
       "commits": [
         {
@@ -42,7 +42,7 @@
       "mergeCommit": null,
       "description": "Fixes a bug in detect_file_encodings() where charset_normalizer could return a result with encoding=None, causing a misleading Could not detect encoding error. The fix filters out None encodings first, then checks if any valid encodings remain. Affects CSV, Text, and Markdown extractors which all use detect_file_encodings for autodetect_encoding.",
       "notes": "Self-discovered bug in a cold, low-traffic module (helpers.py). Created issue #44664 and PR #44663 simultaneously per Dify's CONTRIBUTING.md guidance. PR links to issue via \"Fixes #44664\". CI labeler checks passed; Main CI Pipeline and autofix.ci show action_required (likely waiting for maintainer).",
-      "issueUpdatedAt": "2026-10-23T15:35:51Z"
+      "issueUpdatedAt": "2026-11-05T20:04:11Z"
     },
     {
       "repo": "anomalyco/opencode",
@@ -63,7 +63,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-23T15:15:52Z",
       "prCreatedAt": "2026-10-23T15:15:52Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "24b5ed8bcc60aa9a20cf4e3edf1444470e0e6464",
       "commits": [
         {
@@ -105,7 +105,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -168,7 +168,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -211,7 +211,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -254,7 +254,7 @@
       "status": "merged",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -320,7 +320,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -363,7 +363,7 @@
       "status": "ci-failed",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -429,7 +429,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": null,
       "commits": [
         {
@@ -472,7 +472,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -515,7 +515,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -582,7 +582,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -645,7 +645,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -699,7 +699,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -761,7 +761,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -821,7 +821,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -876,7 +876,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -917,7 +917,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -959,7 +959,7 @@
       "status": "merged",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -1031,7 +1031,7 @@
       "status": "merged",
       "openedAt": "2026-10-17T18:19:47Z",
       "prCreatedAt": "2026-10-17T18:19:47Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -1088,7 +1088,7 @@
       "status": "merged",
       "openedAt": "2026-10-19T12:01:53Z",
       "prCreatedAt": "2026-10-19T12:01:53Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "ff92bdd01c423b833a96c0ece823265c47d0e6be",
       "commits": [
         {
@@ -1145,7 +1145,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-19T13:17:51Z",
       "prCreatedAt": "2026-10-19T13:17:51Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "dc20b216f065af3a487722141da9a29dcac388d1",
       "commits": [
         {
@@ -1208,7 +1208,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-19T17:24:52Z",
       "prCreatedAt": "2026-10-19T17:24:52Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "cc6fea5b40ad559f7ca358a24b1a521451232281",
       "commits": [
         {
@@ -1303,7 +1303,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-20T16:12:03Z",
       "prCreatedAt": "2026-10-20T16:12:03Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "49ea4d08714f9ae519b86ee17b6b50c1dd080f32",
       "commits": [
         {
@@ -1379,7 +1379,7 @@
       "status": "pushed",
       "openedAt": "2026-10-20T16:42:08Z",
       "prCreatedAt": null,
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "5ca49b0720755c585c9a9835f0a479ceea36fb52",
       "commits": [
         {
@@ -1413,7 +1413,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-21T19:19:00Z",
       "prCreatedAt": "2026-10-21T19:19:00Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "e80c920278f15973001d1a33414b0a7cafdc5ed2",
       "commits": [
         {
@@ -1457,7 +1457,7 @@
       "status": "merged",
       "openedAt": "2026-10-21T19:35:20Z",
       "prCreatedAt": "2026-10-21T19:35:20Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "commits": [
         {
           "sha": "fb0c3ceb20299ebc09d706cccc2f07f76ff67fbc",
@@ -1526,7 +1526,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-21T20:53:14Z",
       "prCreatedAt": "2026-10-21T20:53:14Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "c9bf1edf9e0d388f3e7bebc88576e608ffbc40a4",
       "commits": [
         {
@@ -1606,7 +1606,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-22T19:35:42Z",
       "prCreatedAt": "2026-10-22T19:35:42Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "1a82e6d01f395b43275c77acd289af1eb7090bb9",
       "commits": [
         {
@@ -1674,7 +1674,7 @@
       "status": "ci-failed",
       "openedAt": "2026-10-23T11:59:34Z",
       "prCreatedAt": "2026-10-23T11:59:34Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "1190eeb39527e1ed81f9b35c931af66f31d05186",
       "commits": [
         {
@@ -1816,7 +1816,7 @@
       "status": "ci-failed",
       "openedAt": "2026-10-23T13:37:57Z",
       "prCreatedAt": "2026-10-23T13:37:57Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "27d14e20c187c1f2916540ea201ecbdc9f8ed588",
       "commits": [
         {
@@ -1896,7 +1896,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-23T14:42:23Z",
       "prCreatedAt": "2026-10-23T14:42:23Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "2100c630ba4bd67bb48802c3e7da893a4fdaa1a0",
       "commits": [
         {
@@ -1938,10 +1938,10 @@
       "baseBranch": "main",
       "fork": "ShahabAhmed01/pandas",
       "forkUrl": "https://github.com/ShahabAhmed01/pandas",
-      "status": "ci-failed",
+      "status": "ci-running",
       "openedAt": "2026-10-24T07:12:09Z",
       "prCreatedAt": "2026-10-24T07:12:09Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "c4d25081f431b35d075f9ec2dfce3a848c9dbc26",
       "commits": [
         {
@@ -1954,59 +1954,58 @@
         }
       ],
       "checks": {
-        "ubuntu-24.04 py311": "fail",
-        "Install Extras - ${{ matrix.extra }}": "skipped",
         "Build sdist": "skipped",
         "Doctests": "pass",
         "Doc Build and Upload (ubuntu-24.04)": "pass",
         "zizmor": "pass",
-        "ubuntu-24.04 py312": "fail",
+        "ubuntu-24.04 py311": "pass",
         "Doc Build and Upload (windows-2025)": "pass",
-        "ubuntu-24.04 py313": "fail",
-        "ubuntu-24.04 py314": "fail",
-        "ubuntu-24.04-arm py311": "fail",
-        "ubuntu-24.04-arm py312": "fail",
-        "ubuntu-24.04-arm py313": "fail",
-        "ubuntu-24.04-arm py314": "fail",
+        "ubuntu-24.04 py312": "pass",
+        "ubuntu-24.04 py313": "pass",
+        "ubuntu-24.04 py314": "pass",
+        "ubuntu-24.04-arm py311": "pass",
+        "ubuntu-24.04-arm py312": "pass",
+        "ubuntu-24.04-arm py313": "pass",
+        "ubuntu-24.04-arm py314": "pass",
         "Downstream Compat": "pass",
-        "Minimum Versions": "fail",
-        "Freethreading": "fail",
-        "Without PyArrow": "fail",
-        "Locale: it_IT": "fail",
-        "Locale: zh_CN": "fail",
-        "Future configs legacy values": "fail",
-        "Future configs upcoming values": "fail",
-        "Numpy Nightly": "fail",
-        "Pyarrow Nightly": "fail",
-        "macos-15-intel py311": "fail",
+        "Minimum Versions": "pass",
+        "Freethreading": "pass",
+        "Without PyArrow": "pass",
+        "Locale: it_IT": "pass",
+        "Locale: zh_CN": "pass",
+        "Future configs legacy values": "pass",
+        "Future configs upcoming values": "pass",
+        "Numpy Nightly": "pass",
+        "Pyarrow Nightly": "pass",
         "Build wheel for ${{ matrix.python }}-${{ matrix.buildplat[1] }}": "skipped",
         "Type Checking": "pass",
-        "macos-15-intel py312": "fail",
-        "macos-15-intel py313": "fail",
-        "macos-15-intel py314": "fail",
-        "macos-15 py311": "fail",
-        "macos-15 py312": "fail",
-        "macos-15 py313": "fail",
-        "macos-15 py314": "fail",
-        "windows-2025 py311": "fail",
-        "windows-2025 py312": "fail",
-        "windows-2025 py313": "fail",
-        "windows-2025 py314": "fail",
-        "Linux-32-bit": "fail",
+        "macos-15-intel py311": "pass",
+        "macos-15-intel py312": "pending",
+        "macos-15-intel py313": "pending",
+        "macos-15-intel py314": "pass",
+        "macos-15 py311": "pass",
+        "macos-15 py312": "pass",
+        "macos-15 py313": "pass",
+        "macos-15 py314": "pass",
+        "windows-2025 py311": "pass",
+        "windows-2025 py312": "pass",
+        "windows-2025 py313": "pass",
+        "windows-2025 py314": "pass",
         "Upload nightly packages to Anaconda": "skipped",
         "ASV Benchmarks": "pass",
-        "Linux-Musl": "fail",
+        "Linux-32-bit": "pass",
         "pandas-stubs tests against pandas nightly": "skipped",
-        "Test install requirements-dev.txt": "pass",
+        "Linux-Musl": "pass",
         "publish": "skipped",
         "Windows-MinGW": "pass",
-        "Clang (ASAN/UBSAN)": "fail",
         "Report nightly build failures": "skipped",
-        "python-dev (ubuntu-24.04)": "fail",
+        "Clang (ASAN/UBSAN)": "pass",
         "create_release": "skipped",
-        "python-dev (macos-15-intel)": "fail",
-        "python-dev (macos-15)": "fail",
-        "python-dev (windows-2025)": "fail",
+        "Clang (ASAN/LSAN)": "pass",
+        "python-dev (ubuntu-24.04)": "pass",
+        "python-dev (macos-15-intel)": "pass",
+        "python-dev (macos-15)": "pass",
+        "python-dev (windows-2025)": "pass",
         "Pyodide build": "pass",
         "pre-commit.ci - pr": "pass"
       },
@@ -2044,7 +2043,7 @@
       "status": "merged",
       "openedAt": "2026-10-30T04:28:35Z",
       "prCreatedAt": "2026-10-30T04:28:35Z",
-      "lastVerified": "2026-11-03T23:05:30Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
       "baseCommit": "81f33e465a47bfc745be75d2d97bdbf69123beed",
       "commits": [
         {
@@ -2081,6 +2080,53 @@
       ],
       "mergedAt": "2026-10-31T15:29:05Z",
       "mergeCommit": "56d22373d5b9aacdff2411b0cd22cbfc4f7fc69a"
+    },
+    {
+      "repo": "jupyter/jupyter_client",
+      "project": "jupyter_client",
+      "issueNumber": 1147,
+      "issueTitle": "Windows: launch_kernel leaks two handles per kernel (interrupt event and parent-handle duplicate)",
+      "issueUrl": "https://github.com/jupyter/jupyter_client/issues/1147",
+      "issueState": "OPEN",
+      "issueUpdatedAt": "2026-10-21T20:31:18Z",
+      "prNumber": 1155,
+      "prUrl": "https://github.com/jupyter/jupyter_client/pull/1155",
+      "prState": "open",
+      "prTitle": "Fix Windows kernel handle leaks in launch_kernel and LocalProvisioner",
+      "branch": "fix/windows-kernel-handle-leak",
+      "baseBranch": "main",
+      "fork": "ShahabAhmed01/jupyter_client",
+      "forkUrl": "https://github.com/ShahabAhmed01/jupyter_client",
+      "status": "pr-opened",
+      "openedAt": "2026-11-05T20:38:07Z",
+      "prCreatedAt": "2026-11-05T20:38:07Z",
+      "lastVerified": "2026-11-05T20:43:28Z",
+      "baseCommit": "978361b3785dcd9cba6c733f4555e833e88fc0df",
+      "commits": [
+        {
+          "sha": "991fa2d8a9c83090f27d305f4ad5a1f8c247d01a",
+          "subject": "Fix Windows kernel handle leaks 🤖🤖"
+        }
+      ],
+      "checks": {
+        "docs/readthedocs.org:jupyter-client": "pass",
+        "pre-commit.ci - pr": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "On Windows every kernel launched through LocalProvisioner leaked two handles per kernel — the inheritable duplicate of the parent process handle passed as JPY_PARENT_PID and the JPY_INTERRUPT_EVENT created for signals — so long-lived hosts that start and stop many kernels grew without bound. launch_kernel now closes its unused parent-handle copy immediately after Popen returns (and both handles if Popen fails), and LocalProvisioner closes the interrupt event exactly once in wait(), with a cleanup() fallback for paths that never reach wait(). Handle count over 30 kernels: 175→225→245→266 before, 174→204→204→205 after.",
+      "notes": [
+        "Selection (2026-11-05, coordination run ossrun-20261105T184918Z-a2a369ea): jupyter/jupyter_client reserved in the shared automation-coordination registry (remote CAS push a5f8b26). Issue #1147 live at selection: OPEN, unassigned, zero comments, no linked or closing PR, no cross-references; 16 days old. The reporter @MichengLiang offered to open a PR if the direction looked right, but no maintainer replied and no PR existed, so this run implemented the proposed direction and credits the reporter in the PR body. Repo: 481 stars, BSD-3-Clause, default branch main, pull_request_creation_policy=all. CONTRIBUTING.md delegates to the IPython contributing guide, which explicitly allows agents and requires two robot emojis in commits and PR text (both present).",
+        "Implementation: launcher.py keeps the DuplicateHandle result, closes it with _winapi.CloseHandle right after Popen succeeds, and on Popen failure closes both the parent handle and the interrupt event before re-raising. win_interrupt.py gains close_interrupt_event(); LocalProvisioner.wait() closes the event when it releases the process and cleanup() closes it as a fallback exactly once. Regression tests: tests/test_launcher.py (2 tests, Win32 branch exercised cross-platform through a fake _winapi) and three tests in tests/test_provisioning.py::TestLocalProvisionerWindowsHandles.",
+        "Verification (Windows 11, Python 3.14.10, jupyter_client 8.10.0 editable, ipykernel 7.4.0, psutil 7.2.2): independent handle-count repro over 30 kernel start/execute/shutdown cycles measured 175→225→245→266 on unmodified upstream versus 174→204→204→205 with the fix (flat after one-time startup handles). Red/green: all 5 new tests fail with the source fix stashed and 18 pass with it. Full suite: 246 passed, 33 skipped, 8 deselected — the deselection is tests/test_kernelmanager.py::TestParallel, whose signalkernel timeout reproduces identically on unmodified upstream. Ruff 0.15.12 check/format clean on the five changed files; mypy 1.20.2 shows no new real error versus the 23-error Windows-local baseline.",
+        "Publication: PR jupyter/jupyter_client#1155 opened 2026-11-05T20:38:07Z, non-draft, base main@978361b3785dcd9cba6c733f4555e833e88fc0df, head 991fa2d8a9c83090f27d305f4ad5a1f8c247d01a, 5 files. At record time: OPEN, MERGEABLE, mergeStateStatus BLOCKED (expected for a fresh fork PR), pre-commit.ci PASS and Read the Docs PASS. No human review, not merged. GitHub Actions workflows have not reported check runs yet (first-time-contributor approval gate)."
+      ]
     }
   ]
 }

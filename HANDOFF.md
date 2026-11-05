@@ -1,6 +1,6 @@
 # Contribution Handoff
 
-Last updated: 2026-10-30T04:41Z (Track 032: **brekkylab/backlot #1124 →
+Last updated: 2026-11-05T20:43Z (Track 033: **jupyter/jupyter_client #1147 → PR #1155 opened 20:38Z**, `Windows: launch_kernel leaks two handles per kernel (interrupt event and parent-handle duplicate)`. The fix closes the unused parent-handle duplicate right after `Popen` returns (and both handles if `Popen` fails), and closes the interrupt event exactly once when `LocalProvisioner` releases the process, with a `cleanup()` fallback. Independent Windows handle repro over 30 kernels: 175→225→245→266 before versus 174→204→204→205 after; red/green proven (5 new tests fail without the fix); full suite 246 passed / 33 skipped / 8 deselected (only the pre-existing `TestParallel` signalkernel timeout, reproduced on unmodified upstream); ruff 0.15.12 clean, mypy no new real error against the 23-error Windows-local baseline. PR #1155 is MERGEABLE with pre-commit.ci and Read the Docs PASS; the three Actions workflows are `action_required` behind the first-time-contributor approval gate; no human review, not merged. Reserved under the shared registry (`a5f8b26`), flipped to `PR_PUBLISHED` and the tracker-writer lease acquired at `0f4e1cb`. See `projects/jupyter_client.md` and `contributions/jupyter_client/issue-1147.md`.) Previous — Last updated: 2026-10-30T04:41Z (Track 032: **brekkylab/backlot #1124 →
 PR #1153 opened**, `github: the /agents routes read no API version and
 ask for a credential on any path of their two families`. Backlot's
 trunk had advanced past the issue's `80e1f7a` base through nine merges
@@ -2845,3 +2845,50 @@ Nothing owed from my side anywhere else:
 Conclusion: every one of the 34 records has been re-verified against live GitHub. From my side there is nothing pending — no unanswered human review or comment, no failing check attributable to any of my diffs, no unresolved conflict, no outstanding request-for-changes. Every record is either merged/closed (final), wait-only behind gates that must not be bypassed, or blocked solely by account-holder acts (CLA signature) or infra. Each and every contribution is 100% updated on GitHub from my side, and every open record is 100% mergeable from my side (mergeable=true, no conflicts) wherever a merge is possible.
 
 Registry: heartbeat renewed (`2026-10-30T07:39:50Z` → expires `2026-10-30T13:39:50Z`); `reservation_state: ACTIVE`, slot held for review response on backlot #1153.
+
+
+## Track 033 - jupyter/jupyter_client #1147 → PR #1155 (2026-11-05)
+
+- **Issue**: #1147 "Windows: launch_kernel leaks two handles per kernel
+  (interrupt event and parent-handle duplicate)" — OPEN, unassigned,
+  0 comments, no linked or closing PR; filed 2026-10-21 by
+  `MichengLiang`. The reporter offered to open a PR if the direction
+  looked right, but no maintainer replied and no PR existed after 16
+  days, so this run implemented that direction and credits the reporter
+  in the PR body.
+- **Selection**: jupyter/jupyter_client — 481 stars / 327 forks,
+  BSD-3-Clause, `pull_request_creation_policy: all`; recent
+  cross-repository merges #1142 (krassowski), #1140 (Yann-P), #1139
+  (MsfPablo), #1136 (aryansk), all August 2026. CONTRIBUTING delegates
+  to the IPython guide, which allows agents and requires 🤖🤖
+  in both the commit message and the PR text.
+- **Fix**: `launcher.py` closes the unused parent-handle duplicate
+  immediately after `Popen` (and both handles on `Popen` failure);
+  `win_interrupt.py` gains `close_interrupt_event()`;
+  `LocalProvisioner.wait()` closes the event and `cleanup()` closes it
+  as an exactly-once fallback. New `tests/test_launcher.py` plus three
+  provisioner lifetime tests.
+- **Verification**: Windows handle repro over 30 kernels
+  175→225→245→266 before versus 174→204→204→205
+  after; red/green proven (5 tests fail with the fix stashed, 18 pass
+  with it); full suite 246 passed / 33 skipped / 8 deselected (only the
+  pre-existing `TestParallel` signalkernel timeout, reproduced on
+  unmodified upstream); ruff 0.15.12 check/format clean on the changed
+  files; mypy 1.20.2 has no new real error against the 23-error
+  Windows-local baseline.
+- **PR**: #1155 opened 2026-11-05T20:38:07Z, head `991fa2d8`, base
+  `main@978361b3`, 5 files, non-draft, MERGEABLE, mergeStateStatus
+  BLOCKED (fresh fork PR). `pre-commit.ci - pr` PASS and
+  `docs/readthedocs.org` PASS. The three Actions workflows are
+  `action_required` behind the first-time-contributor approval gate, so
+  no check runs have reported yet. copilot quota-limited COMMENTED; NO
+  human review; NOT merged.
+- **Coordination**: reserved at registry tip `a5f8b26`; flipped to
+  `PR_PUBLISHED` with the PR URL/head SHA and the tracker-writer lease
+  acquired at `0f4e1cb`. Tracker record appended and tables
+  regenerated with `scripts/update_tracker.py`; project notes and this
+  contribution document added.
+- **Blocked earlier in this run**: `pallets/flask#6182`
+  (collaborator-only PR creation) and `sphinx-doc/sphinx#14817` (AI
+  policy forbids autonomous agent PR submission) — both released
+  without tracker records.

@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-05T19:12:02Z",
+ "updated_at": "2026-11-05T19:21:00Z",
  "runs": [
   {
    "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -287,7 +287,7 @@
   },
   {
    "run_id": "ossrun-20261105T184918Z-a2a369ea",
-   "status": "RESERVED",
+   "status": "BLOCKED",
    "repository": "pallets/flask",
    "issue_url": "https://github.com/pallets/flask/issues/6182",
    "issue_number": 6182,
@@ -296,8 +296,12 @@
    "acquired_at": "2026-11-05T18:58:51Z",
    "heartbeat_at": "2026-11-05T19:12:02Z",
    "expires_at": "2026-11-06T01:12:02Z",
-   "reservation_state": "ACTIVE",
-   "updated_at": "2026-11-05T19:12:02Z"
+   "reservation_state": "RELEASED",
+   "updated_at": "2026-11-05T19:12:02Z",
+   "released_at": "2026-11-05T19:21:00Z",
+   "completed_at": "2026-11-05T19:21:00Z",
+   "head_sha": "99bd35124df43b46d8a321ac476b801cf305a267",
+   "outcome": "pallets/flask#6182 implementation complete and pushed to fork branch fix/appcontext-pushed-signal-cleanup (head 99bd35124df43b46d8a321ac476b801cf305a267); upstream PR creation is impossible because pallets/flask is configured so that only collaborators can create pull requests (GitHub GraphQL CreatePullRequest FORBIDDEN, REST 404, compare page banner 'Only collaborators can create PRs'). No upstream PR was created. Local verification: full pytest suite 496 passed, ruff check/format and mypy clean, red/green regression proof; no tracker record added."
   }
  ],
  "tracker_writer": null,

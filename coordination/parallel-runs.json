@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-05T18:58:51Z",
+ "updated_at": "2026-11-05T19:12:02Z",
  "runs": [
   {
    "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -292,11 +292,12 @@
    "issue_url": "https://github.com/pallets/flask/issues/6182",
    "issue_number": 6182,
    "pr_url": null,
-   "head_branch": null,
+   "head_branch": "fix/appcontext-pushed-signal-cleanup",
    "acquired_at": "2026-11-05T18:58:51Z",
-   "heartbeat_at": "2026-11-05T18:58:51Z",
-   "expires_at": "2026-11-06T00:58:51Z",
-   "reservation_state": "ACTIVE"
+   "heartbeat_at": "2026-11-05T19:12:02Z",
+   "expires_at": "2026-11-06T01:12:02Z",
+   "reservation_state": "ACTIVE",
+   "updated_at": "2026-11-05T19:12:02Z"
   }
  ],
  "tracker_writer": null,

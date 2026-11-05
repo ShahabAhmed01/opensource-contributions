@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-05T19:21:54Z",
+ "updated_at": "2026-11-05T19:39:23Z",
  "runs": [
   {
    "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -305,7 +305,7 @@
   },
   {
    "run_id": "ossrun-20261105T184918Z-a2a369ea",
-   "status": "RESERVED",
+   "status": "BLOCKED",
    "repository": "sphinx-doc/sphinx",
    "issue_url": "https://github.com/sphinx-doc/sphinx/issues/14817",
    "issue_number": 14817,
@@ -314,8 +314,12 @@
    "acquired_at": "2026-11-05T19:21:54Z",
    "heartbeat_at": "2026-11-05T19:21:54Z",
    "expires_at": "2026-11-06T01:21:54Z",
-   "reservation_state": "ACTIVE",
-   "updated_at": "2026-11-05T19:21:54Z"
+   "reservation_state": "RELEASED",
+   "updated_at": "2026-11-05T19:21:54Z",
+   "released_at": "2026-11-05T19:39:23Z",
+   "completed_at": "2026-11-05T19:39:23Z",
+   "head_sha": "a175de031ae520c74dfef4d2f819dcf83a69f657",
+   "outcome": "sphinx-doc/sphinx#14817 implementation complete and pushed to fork branch fix/14817-image-name-case-insensitive (head a175de031ae520c74dfef4d2f819dcf83a69f657); focused and full test suites pass (2395 passed; one unrelated test_cython failure due to missing MSVC build tools), ruff/sphinx-lint/mypy clean, red/green regression test verified on Windows. Upstream PR intentionally NOT created: Sphinx's AI policy (https://www.sphinx-doc.org/en/master/internals/ai-policy.html) states that 'the use of an AI agent that writes code and then submits a pull request autonomously is not permitted' and requires human submission. No tracker record added."
   }
  ],
  "tracker_writer": null,

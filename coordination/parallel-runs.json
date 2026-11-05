@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-05T20:40:44Z",
+ "updated_at": "2026-11-05T20:46:10Z",
  "runs": [
   {
    "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -323,24 +323,27 @@
   },
   {
    "run_id": "ossrun-20261105T184918Z-a2a369ea",
-   "status": "PR_PUBLISHED",
+   "status": "COMPLETED",
    "repository": "jupyter/jupyter_client",
    "issue_url": "https://github.com/jupyter/jupyter_client/issues/1147",
    "issue_number": 1147,
    "pr_url": "https://github.com/jupyter/jupyter_client/pull/1155",
    "head_branch": "fix/windows-kernel-handle-leak",
    "acquired_at": "2026-11-05T20:14:49Z",
-   "heartbeat_at": "2026-11-05T20:40:44Z",
-   "expires_at": "2026-11-06T02:40:44Z",
-   "reservation_state": "ACTIVE",
-   "updated_at": "2026-11-05T20:40:44Z",
+   "heartbeat_at": "2026-11-05T20:46:10Z",
+   "expires_at": null,
+   "reservation_state": "RELEASED",
+   "updated_at": "2026-11-05T20:46:10Z",
    "pr_number": 1155,
    "head_sha": "991fa2d8a9c83090f27d305f4ad5a1f8c247d01a",
-   "notes": "PR jupyter/jupyter_client#1155 published 2026-11-05T20:38:07Z (head 991fa2d8a9c83090f27d305f4ad5a1f8c247d01a, base main@978361b3, non-draft, 5 files: launcher.py, local_provisioner.py, win_interrupt.py, tests/test_launcher.py, tests/test_provisioning.py). Local validation: 246 passed / 33 skipped with only the pre-existing Windows signalkernel TestParallel timeout deselected (reproduces on unmodified upstream); red/green proven (5 targeted tests fail without the fix); ruff 0.15.12 check/format clean on changed files; mypy has no new real error vs baseline; handle repro 175->225->245->266 before vs 174->204->204->205 after. Awaiting CI/human review. Next: tracker update under tracker-writer lease."
+   "notes": "PR jupyter/jupyter_client#1155 published 2026-11-05T20:38:07Z (head 991fa2d8a9c83090f27d305f4ad5a1f8c247d01a, base main@978361b3, non-draft, 5 files: launcher.py, local_provisioner.py, win_interrupt.py, tests/test_launcher.py, tests/test_provisioning.py). Local validation: 246 passed / 33 skipped with only the pre-existing Windows signalkernel TestParallel timeout deselected (reproduces on unmodified upstream); red/green proven (5 targeted tests fail without the fix); ruff 0.15.12 check/format clean on changed files; mypy has no new real error vs baseline; handle repro 175->225->245->266 before vs 174->204->204->205 after. Awaiting CI/human review. Next: tracker update under tracker-writer lease.",
+   "released_at": "2026-11-05T20:46:10Z",
+   "completed_at": "2026-11-05T20:46:10Z",
+   "outcome": "jupyter/jupyter_client#1147 fixed; PR https://github.com/jupyter/jupyter_client/pull/1155 published 2026-11-05T20:38:07Z (head 991fa2d8a9c83090f27d305f4ad5a1f8c247d01a, base main@978361b3785dcd9cba6c733f4555e833e88fc0df, non-draft, 5 files: launcher.py, win_interrupt.py, provisioning/local_provisioner.py, tests/test_launcher.py, tests/test_provisioning.py). Verified remote state at completion: OPEN, MERGEABLE, mergeStateStatus BLOCKED (fresh fork PR), pre-commit.ci - pr PASS, docs/readthedocs.org PASS; the three Actions workflows (CI, Test downstream projects, Enforce PR label) are action_required behind the first-time-contributor approval gate, so no check runs have reported; copilot-pull-request-reviewer COMMENTED (quota-limited), NO human review, NOT merged. Local verification: independent Windows handle-count repro over 30 kernels 175-225-245-266 on unmodified upstream vs 174-204-204-205 with the fix; red/green proven (5 new tests fail without the fix, 18 targeted tests pass with it); full suite 246 passed / 33 skipped / 8 deselected, the deselection being only the pre-existing Windows TestParallel signalkernel timeout reproduced on unmodified upstream; ruff 0.15.12 check/format clean on changed files; mypy 1.20.2 has no new real error against the 23-error Windows-local baseline. Tracker record pushed to main (commit 9abb3f6c990b31283430616d55d5446243858720: state entry #35, regenerated README/CONTRIBUTIONS tables, projects/jupyter_client.md, contributions/jupyter_client/issue-1147.md, Track 033 handoff section). Tracker-writer lease released and project reservation RELEASED at completion. Earlier candidates in this run were released without tracker records: pallets/flask#6182 (collaborator-only PR creation) and sphinx-doc/sphinx#14817 (AI policy forbids autonomous agent PR submission)."
   }
  ],
- "tracker_writer": "ossrun-20261105T184918Z-a2a369ea",
- "tracker_writer_expires_at": "2026-11-05T21:40:44Z",
- "tracker_writer_lease_expires": "2026-11-05T21:40:44Z",
- "tracker_writer_released_at": null
+ "tracker_writer": null,
+ "tracker_writer_expires_at": null,
+ "tracker_writer_lease_expires": null,
+ "tracker_writer_released_at": "2026-11-05T20:46:10Z"
 }

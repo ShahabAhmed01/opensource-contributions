@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-10-30T04:29:48Z",
+ "updated_at": "2026-11-05T18:58:51Z",
  "runs": [
   {
    "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -284,6 +284,19 @@
     "2026-10-30T04:29Z: lease had expired 2026-10-30T01:23:27Z during the work gap; remote tip was still this run's 1973b78 with the slot unclaimed (no other run registered backlot); renewed unclaimed after publishing PR 1153."
    ],
    "updated_at": "2026-10-30T07:39:50Z"
+  },
+  {
+   "run_id": "ossrun-20261105T184918Z-a2a369ea",
+   "status": "RESERVED",
+   "repository": "pallets/flask",
+   "issue_url": "https://github.com/pallets/flask/issues/6182",
+   "issue_number": 6182,
+   "pr_url": null,
+   "head_branch": null,
+   "acquired_at": "2026-11-05T18:58:51Z",
+   "heartbeat_at": "2026-11-05T18:58:51Z",
+   "expires_at": "2026-11-06T00:58:51Z",
+   "reservation_state": "ACTIVE"
   }
  ],
  "tracker_writer": null,

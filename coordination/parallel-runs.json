@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-05T19:39:23Z",
+ "updated_at": "2026-11-05T20:14:49Z",
  "runs": [
   {
    "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -320,6 +320,20 @@
    "completed_at": "2026-11-05T19:39:23Z",
    "head_sha": "a175de031ae520c74dfef4d2f819dcf83a69f657",
    "outcome": "sphinx-doc/sphinx#14817 implementation complete and pushed to fork branch fix/14817-image-name-case-insensitive (head a175de031ae520c74dfef4d2f819dcf83a69f657); focused and full test suites pass (2395 passed; one unrelated test_cython failure due to missing MSVC build tools), ruff/sphinx-lint/mypy clean, red/green regression test verified on Windows. Upstream PR intentionally NOT created: Sphinx's AI policy (https://www.sphinx-doc.org/en/master/internals/ai-policy.html) states that 'the use of an AI agent that writes code and then submits a pull request autonomously is not permitted' and requires human submission. No tracker record added."
+  },
+  {
+   "run_id": "ossrun-20261105T184918Z-a2a369ea",
+   "status": "RESERVED",
+   "repository": "jupyter/jupyter_client",
+   "issue_url": "https://github.com/jupyter/jupyter_client/issues/1147",
+   "issue_number": 1147,
+   "pr_url": null,
+   "head_branch": "fix/windows-kernel-handle-leak",
+   "acquired_at": "2026-11-05T20:14:49Z",
+   "heartbeat_at": "2026-11-05T20:14:49Z",
+   "expires_at": "2026-11-06T02:14:49Z",
+   "reservation_state": "ACTIVE",
+   "updated_at": "2026-11-05T20:14:49Z"
   }
  ],
  "tracker_writer": null,

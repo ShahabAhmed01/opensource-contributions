@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-06T10:35:20Z",
+ "updated_at": "2026-11-06T11:45:00Z",
  "runs": [
   {
    "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -385,7 +385,7 @@
   },
   {
    "run_id": "ossrun-20261106T103520-b3e2f76a",
-   "status": "RESERVED",
+   "status": "COMPLETED",
    "repository": "odysseus-dev/odysseus",
    "issue_url": "https://github.com/odysseus-dev/odysseus/issues/2740",
    "issue_number": 2740,
@@ -394,13 +394,16 @@
    "head_branch": "fix/sqlalchemy-declarative-import-2740",
    "acquired_at": "2026-11-06T10:35:20Z",
    "heartbeat_at": "2026-11-06T10:35:20Z",
-   "expires_at": "2026-11-06T22:35:20Z",
-   "reservation_state": "ACTIVE",
-   "notes": "Rework re-run for the maintainer review on the open PR (rebuilt on the current dev tip, body/comment refresh). Slot reserved so another automation lane does not target the same PR concurrently."
+   "reservation_state": "RELEASED",
+   "notes": "Rework re-run for the maintainer review on the open PR (rebuilt on the current dev tip, body/comment refresh). Slot reserved so another automation lane does not target the same PR concurrently.",
+   "completed_at": "2026-11-06T10:50:53Z",
+   "released_at": "2026-11-06T10:50:53Z",
+   "updated_at": "2026-11-06T10:50:53Z",
+   "outcome": "odysseus-dev/odysseus#2740 fixed again under review; PR https://github.com/odysseus-dev/odysseus/pull/6453 rebuilt on the current dev tip e4cc8efa and force-pushed as the single squashed commit 1cc104c7 (lease pinned to the pre-push remote head 35c1b23b) at 2026-11-06T~10:46Z; verified remote MERGEABLE (mergeable_state clean); local odysseus suite green (182 passed); PR body updated with a revision note and one comment posted (https://github.com/odysseus-dev/odysseus/pull/6453#issuecomment-6683117287 at 2026-11-06T10:50:53Z); no human review yet, not merged; tracker notes updated with this record"
   },
   {
    "run_id": "ossrun-20261106T103520-b3e2f76a",
-   "status": "RESERVED",
+   "status": "COMPLETED",
    "repository": "microsoft/pyright",
    "issue_url": "https://github.com/microsoft/pyright/issues/11879",
    "issue_number": 11879,
@@ -409,9 +412,12 @@
    "head_branch": "contrib/issue-11879-partial-typevartuple",
    "acquired_at": "2026-11-06T10:35:20Z",
    "heartbeat_at": "2026-11-06T10:35:20Z",
-   "expires_at": "2026-11-06T22:35:20Z",
-   "reservation_state": "ACTIVE",
-   "notes": "Rework re-run: rebuild on the current main tip and republish (the PR had gone CONFLICTING while the base moved)."
+   "reservation_state": "RELEASED",
+   "notes": "Rework re-run: rebuild on the current main tip and republish (the PR had gone CONFLICTING while the base moved).",
+   "completed_at": "2026-11-06T11:34:16Z",
+   "released_at": "2026-11-06T11:34:16Z",
+   "updated_at": "2026-11-06T11:34:16Z",
+   "outcome": "microsoft/pyright#11879 fix republished; PR https://github.com/microsoft/pyright/pull/11904 rebuilt on the current main tip 3afce1fa and squashed to the single commit 2bc4e8c33 (subject unchanged; the only rebase conflict was the import union in constructorTransform.ts, resolved keeping both isTupleClass and specializeTupleClass); pushed with a lease pinned to the pre-push remote head; verified remote MERGEABLE again (the base had moved, PR was CONFLICTING before); local verification: pnpm run typecheck clean, jest typeEvaluator1-8 1418/1418 (245 s), all remaining jest suites pass after building the LSP test-server bundle (webpack:testserver, rspack exit 0; languageServer.test.ts 37/37 on rerun after the earlier missing-bundle assertion), prettier + eslint clean on the touched files; PR body revision note added and one comment posted (https://github.com/microsoft/pyright/pull/11904#issuecomment-6683869660 at 2026-11-06T11:34:16Z); the Azure checks (mypy_primer, Type checker benchmark) remain behind the maintainer first-time-contributor approval gate, not bypassed"
   }
  ],
  "tracker_writer": null,

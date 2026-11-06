@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-06T05:59:27Z",
+  "updatedAt": "2026-11-06T09:43:54Z",
   "contributions": [
     {
       "repo": "langgenius/dify",
@@ -20,7 +20,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-23T15:40:07Z",
       "prCreatedAt": "2026-10-23T15:40:07Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "2b35144b",
       "commits": [
         {
@@ -63,7 +63,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-23T15:15:52Z",
       "prCreatedAt": "2026-10-23T15:15:52Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "24b5ed8bcc60aa9a20cf4e3edf1444470e0e6464",
       "commits": [
         {
@@ -105,7 +105,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T08:37:42Z",
       "prCreatedAt": "2026-10-11T08:37:42Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "0c879173b",
       "commits": [
         {
@@ -168,7 +168,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-02T19:27:23Z",
       "prCreatedAt": "2026-10-02T19:41:55Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -211,7 +211,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -254,7 +254,7 @@
       "status": "merged",
       "openedAt": "2026-10-03T18:24:30Z",
       "prCreatedAt": "2026-10-03T18:24:30Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -320,7 +320,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-03T18:50:24Z",
       "prCreatedAt": "2026-10-03T18:50:24Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
       "commits": [
         {
@@ -360,26 +360,26 @@
       "baseBranch": "dev",
       "fork": "ShahabAhmed01/odysseus",
       "forkUrl": "https://github.com/ShahabAhmed01/odysseus",
-      "status": "ci-failed",
+      "status": "ci-running",
       "openedAt": "2026-10-03T19:07:12Z",
       "prCreatedAt": "2026-10-03T19:07:12Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
-      "baseCommit": "2992bf6d368a11472323e47d3bfed91e79cefc6b",
+      "lastVerified": "2026-11-06T09:43:54Z",
+      "baseCommit": "e4cc8efa196cf0246ab8121f889d1b1cd71e3cb2",
       "commits": [
         {
-          "sha": "a3cce1b0c0998b909747b8978b33343a52544614",
-          "subject": "fix(agent): sanitize tool message predecessors to prevent provider errors (fixes #6314)"
+          "sha": "609bcf6427b0257665ac70d3dfa0d7d5678fc88d",
+          "subject": "fix(agent): normalize tool-call message order without dropping history"
         }
       ],
       "mergedAt": null,
       "mergeCommit": null,
       "description": "Strip tool_calls from assistant messages whose predecessor is not a user or tool turn so strict providers reject neither the payload",
-      "notes": "Track 005. Overlapping PR #6506 (Katsoragi, opened 2026-10-05) targets the same issue with a broader root-cause fix (context-window mapping + trim ordering + synthetic user turn) and is currently CONFLICTING; scopes recorded so the maintainer can sequence them. Runtime validation performed 2026-10-09 (app booted on branch, changed path exercised); ready-for-review label applied.",
+      "notes": "Track 005. Overlapping PR #6506 (Katsoragi, opened 2026-10-05) targets the same issue with a broader root-cause fix (context-window mapping + trim ordering + synthetic user turn) and is currently CONFLICTING; scopes recorded so the maintainer can sequence them. Runtime validation performed 2026-10-09 (app booted on branch, changed path exercised); ready-for-review label applied.\n\nTrack 034 repair (run ossrun-20261105T213846Z-61850b7d, published 2026-11-06): PR rebuilt on current dev tip e4cc8efa after the maintainer review, as commit 609bcf64 (diff limited to src/context_compactor.py +91/-12 and tests/test_context_compactor.py +206; unrelated dev functionality restored). The sanitizer now iterates one normalization pass to a fixpoint so it validates each batch against its own effective output, and assistant text directly before a completed call batch is merged into the call message instead of being dropped; 11 regression tests in TestSanitizeToolMessagesPredecessor, 115 passed for test_context_compactor + test_agent_loop, provider-wire evidence from the real _stream_llm_inner with httpx.MockTransport retained both executed batches where the old head lost them, and the app booted healthy (GET /api/health). PR body updated and one reply comment posted (#issuecomment-6681844142); force-pushed over bc817f6d with a lease pinned to it. Local Windows check of test_bundled_extension_update_delivery-style suites is not applicable here; this repo has no AI-disclosure policy and the PR body includes one anyway.",
       "issueUpdatedAt": "2026-10-05T20:48:57Z",
       "checks": {
+        "Trivy (image scan, advisory)": "pending",
         "Focused test guidance (report-only)": "pass",
         "Analyze (actions)": "pass",
-        "Trivy (image scan, advisory)": "pass",
         "hadolint (Dockerfile lint)": "pass",
         "dependency-review (PR gate)": "pass",
         "gitleaks": "pass",
@@ -392,12 +392,13 @@
         "pip-audit (advisory)": "pass",
         "zizmor (Actions SAST)": "pass",
         "Check PR title (Conventional Commits)": "pass",
-        "JS syntax (node --check)": "pass",
         "Flag unmergeable PRs": "pass",
-        "Python tests (pytest 1/4)": "fail",
-        "Python tests (pytest 2/4)": "fail",
-        "Python tests (pytest 3/4)": "fail",
-        "Python tests (pytest 4/4)": "fail",
+        "JS syntax (node --check)": "pass",
+        "Python tests (pytest 1/4)": "pending",
+        "Python tests (pytest 2/4)": "pending",
+        "Python tests (pytest 3/4)": "pending",
+        "Python tests (pytest 4/4)": "pending",
+        "Benchmark GFM rendering security": "pass",
         "CodeQL": "pass"
       },
       "reviews": [
@@ -429,7 +430,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T10:12:00Z",
       "prCreatedAt": "2026-10-09T10:13:01Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": null,
       "commits": [
         {
@@ -472,7 +473,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-09T12:40:19Z",
       "prCreatedAt": "2026-10-09T12:40:19Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "a8c147b238db01dbd00b57774ed8b453f1e43971",
       "commits": [
         {
@@ -515,7 +516,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T18:42:00Z",
       "prCreatedAt": "2026-10-09T18:42:00Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "12ce3450e858df3dd3139ca133706ed6a1027e17",
       "commits": [
         {
@@ -582,7 +583,7 @@
       "status": "merged",
       "openedAt": "2026-10-09T19:38:18Z",
       "prCreatedAt": "2026-10-09T20:50:15Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "aad0c73abad2c123d89189d839b614cdf9b00c7e",
       "commits": [
         {
@@ -645,7 +646,7 @@
       "status": "merged",
       "openedAt": "2026-10-10T16:55:51Z",
       "prCreatedAt": "2026-10-10T16:55:51Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "b010215",
       "commits": [
         {
@@ -699,7 +700,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T16:45:32Z",
       "prCreatedAt": "2026-10-11T16:45:32Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "c641b0797d032bc24e6fb508f672609c29a6f83f",
       "commits": [
         {
@@ -761,7 +762,7 @@
       "status": "merged",
       "openedAt": "2026-10-11T18:58:36Z",
       "prCreatedAt": "2026-10-11T18:58:36Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "909b97b1617be7d5c1b550759a35f5a8068dc058",
       "commits": [
         {
@@ -821,7 +822,7 @@
       "status": "merged",
       "openedAt": "2026-10-12T09:23:04Z",
       "prCreatedAt": "2026-10-12T09:23:04Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "94e79a07bf",
       "commits": [
         {
@@ -876,7 +877,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-14T15:27:51Z",
       "prCreatedAt": "2026-10-14T15:25:04Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -917,7 +918,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-14T17:53:21Z",
       "prCreatedAt": "2026-10-14T17:53:21Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "4cc9fa17653d695d64fb9eee5b33d4de55ff84e8",
       "commits": [
         {
@@ -959,7 +960,7 @@
       "status": "merged",
       "openedAt": "2026-10-16T20:48:05Z",
       "prCreatedAt": "2026-10-16T20:48:05Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -1031,7 +1032,7 @@
       "status": "merged",
       "openedAt": "2026-10-17T18:19:47Z",
       "prCreatedAt": "2026-10-17T18:19:47Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "e9b9d723869e6afb01f67f92184897ce59a11827",
       "commits": [
         {
@@ -1088,7 +1089,7 @@
       "status": "merged",
       "openedAt": "2026-10-19T12:01:53Z",
       "prCreatedAt": "2026-10-19T12:01:53Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "ff92bdd01c423b833a96c0ece823265c47d0e6be",
       "commits": [
         {
@@ -1145,7 +1146,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-19T13:17:51Z",
       "prCreatedAt": "2026-10-19T13:17:51Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "dc20b216f065af3a487722141da9a29dcac388d1",
       "commits": [
         {
@@ -1208,7 +1209,7 @@
       "status": "closed-unmerged",
       "openedAt": "2026-10-19T17:24:52Z",
       "prCreatedAt": "2026-10-19T17:24:52Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "cc6fea5b40ad559f7ca358a24b1a521451232281",
       "commits": [
         {
@@ -1303,7 +1304,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-20T16:12:03Z",
       "prCreatedAt": "2026-10-20T16:12:03Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "49ea4d08714f9ae519b86ee17b6b50c1dd080f32",
       "commits": [
         {
@@ -1379,7 +1380,7 @@
       "status": "pushed",
       "openedAt": "2026-10-20T16:42:08Z",
       "prCreatedAt": null,
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "5ca49b0720755c585c9a9835f0a479ceea36fb52",
       "commits": [
         {
@@ -1413,7 +1414,7 @@
       "status": "ci-running",
       "openedAt": "2026-10-21T19:19:00Z",
       "prCreatedAt": "2026-10-21T19:19:00Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "e80c920278f15973001d1a33414b0a7cafdc5ed2",
       "commits": [
         {
@@ -1457,7 +1458,7 @@
       "status": "merged",
       "openedAt": "2026-10-21T19:35:20Z",
       "prCreatedAt": "2026-10-21T19:35:20Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "commits": [
         {
           "sha": "fb0c3ceb20299ebc09d706cccc2f07f76ff67fbc",
@@ -1526,7 +1527,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-21T20:53:14Z",
       "prCreatedAt": "2026-10-21T20:53:14Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "c9bf1edf9e0d388f3e7bebc88576e608ffbc40a4",
       "commits": [
         {
@@ -1606,7 +1607,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-22T19:35:42Z",
       "prCreatedAt": "2026-10-22T19:35:42Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "1a82e6d01f395b43275c77acd289af1eb7090bb9",
       "commits": [
         {
@@ -1674,7 +1675,7 @@
       "status": "ci-failed",
       "openedAt": "2026-10-23T11:59:34Z",
       "prCreatedAt": "2026-10-23T11:59:34Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "1190eeb39527e1ed81f9b35c931af66f31d05186",
       "commits": [
         {
@@ -1813,33 +1814,18 @@
       "baseBranch": "main",
       "fork": "ShahabAhmed01/spec-kit",
       "forkUrl": "https://github.com/ShahabAhmed01/spec-kit",
-      "status": "ci-failed",
+      "status": "pr-opened",
       "openedAt": "2026-10-23T13:37:57Z",
       "prCreatedAt": "2026-10-23T13:37:57Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
-      "baseCommit": "27d14e20c187c1f2916540ea201ecbdc9f8ed588",
+      "lastVerified": "2026-11-06T09:43:54Z",
+      "baseCommit": "3ca735b846afcbcf3304d571f296ec542464e08c",
       "commits": [
         {
-          "sha": "45e3404d8fc4c57cd57da41e5cdfc6e37c21809e",
-          "subject": "fix(bug): document installed command names and stale re-assessment flow"
+          "sha": "acb0dc0c602e936cfb6e4f401b9f6a0fe7534731",
+          "subject": "fix(bug): align README skills syntax and warn before overwriting assessments"
         }
       ],
       "checks": {
-        "version-bump": "fail",
-        "markdownlint": "fail",
-        "Analyze (actions)": "pass",
-        "Dependency audit": "pass",
-        "ruff": "pass",
-        "Analyze (python)": "pass",
-        "Dependency audit scheduled (${{ matrix.os }}, Python ${{ matrix.python-version }})": "skipped",
-        "shellcheck": "pass",
-        "pytest (ubuntu-latest, 3.13)": "pass",
-        "pytest (ubuntu-latest, 3.14)": "pass",
-        "pytest (windows-latest, 3.13)": "pass",
-        "pytest (windows-latest, 3.14)": "pass",
-        "pytest (macos-latest, 3.13)": "pass",
-        "pytest (macos-latest, 3.14)": "pass",
-        "CodeQL": "pass",
         "License compliance check": "pass"
       },
       "reviews": [
@@ -1875,7 +1861,7 @@
       "mergedAt": null,
       "mergeCommit": null,
       "description": "Documents the hyphenated installed skill names and per-agent invocation prefixes for the bundled bug extension (fixes #5036 part 1), and closes the re-assessment staleness gap (part 2): after a confirmed assessment overwrite the assess step offers to rename the older fix/test reports to *.stale.md instead of leaving them current, and the validation step refuses a fix.md older than the current assessment.md (header-date comparison with mtime fallback, interactive-confirm/automated-refuse).",
-      "notes": "Issue self-validating (reporter ran the repo's own bug-assessment bot; labels triage-must-have, severity-medium, bug-assess) with no human claim and no competing PR (PR search + issue timeline verified twice: at selection and immediately before gh pr create). Two-part patch to extensions/bug/README.md, commands/speckit.bug.assess.md, commands/speckit.bug.test.md plus 7 static regression tests in tests/extensions/bug/test_bug_extension.py; prompt-template change only, no Python runtime code and no .lock.yml regeneration needed (lock files import the markdown at runtime). Red/green evidence: separate git worktree of origin/main @ 27d14e2 with the same test file fails exactly the 7 new tests (7 failed/27 passed), full suite 12,735 passed/461 skipped/0 failed on the final tree vs 12,728 baseline (Python 3.14.8, uv) and 34/34 on tests/extensions/bug; git diff --check clean; ruff not part of the repo toolchain. README wording cross-checked against docs/integrations/cli.md#command-invocation, src/specify_cli/_invocation_style.py and the root README's hyphenated examples. AI policy followed exactly (CONTRIBUTING 'AI contributions in Spec Kit'): PR-body disclosure naming agent/model/mode/extent, Assisted-by trailer on the commit, filer cap 0 open PRs at filing (cap 3). CI at open: License compliance check success; Lint/Security Audit/Test & Lint Python/Extension Version Guard/CodeQL all action_required (first-time-fork workflow approval by a maintainer required). Registry mechanics: registry.py writes per-run fields only; the top-level tracker_writer lease must go through its --state-json path (top-level merge)."
+      "notes": "Issue self-validating (reporter ran the repo's own bug-assessment bot; labels triage-must-have, severity-medium, bug-assess) with no human claim and no competing PR (PR search + issue timeline verified twice: at selection and immediately before gh pr create). Two-part patch to extensions/bug/README.md, commands/speckit.bug.assess.md, commands/speckit.bug.test.md plus 7 static regression tests in tests/extensions/bug/test_bug_extension.py; prompt-template change only, no Python runtime code and no .lock.yml regeneration needed (lock files import the markdown at runtime). Red/green evidence: separate git worktree of origin/main @ 27d14e2 with the same test file fails exactly the 7 new tests (7 failed/27 passed), full suite 12,735 passed/461 skipped/0 failed on the final tree vs 12,728 baseline (Python 3.14.8, uv) and 34/34 on tests/extensions/bug; git diff --check clean; ruff not part of the repo toolchain. README wording cross-checked against docs/integrations/cli.md#command-invocation, src/specify_cli/_invocation_style.py and the root README's hyphenated examples. AI policy followed exactly (CONTRIBUTING 'AI contributions in Spec Kit'): PR-body disclosure naming agent/model/mode/extent, Assisted-by trailer on the commit, filer cap 0 open PRs at filing (cap 3). CI at open: License compliance check success; Lint/Security Audit/Test & Lint Python/Extension Version Guard/CodeQL all action_required (first-time-fork workflow approval by a maintainer required). Registry mechanics: registry.py writes per-run fields only; the top-level tracker_writer lease must go through its --state-json path (top-level merge).\n\nTrack 034 repair (run ossrun-20261105T213846Z-61850b7d, published 2026-11-06): PR rebuilt on current main 3ca735b8 as commit acb0dc0c and scoped to exactly the two changes the maintainer listed on 2026-10-30: README uses /speckit-bug-assess|fix|test consistently with the agent's-chat note and one bottom Command-invocation link (no per-agent table), and the assessment overwrite confirmation now warns that confirming also deletes existing fix.md/test.md (source untouched, fix and test stages rerun), deleting both after explicit confirmation; declining leaves all reports; automated mode unchanged; archive/rename, stale flags and timestamp logic removed. Version bumped 1.0.2 -> 1.0.3 (extension.yml + catalog.json + bugfix bundle pin) as required by the extension version guard. Behavioral evidence from four real-agent runs on isolated fixtures: pre-patch overwrite left fix.md/test.md stale; post-patch confirmed deleted both (source untouched); declined left all four files byte-identical; fresh slug created a new assessment and touched nothing else. 55 passed focused tests; version guard: all invariants hold; git diff --check clean. PR body updated and one round comment posted with the full AI disclosure per repo policy (#issuecomment-6681840566); force-pushed over 7028766c with a lease pinned to it. The four Windows failures in tests/contract/test_bundled_extension_update_delivery.py (WinError 206) are pre-existing and unrelated."
     },
     {
       "repo": "ohmyzsh/ohmyzsh",
@@ -1896,7 +1882,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-23T14:42:23Z",
       "prCreatedAt": "2026-10-23T14:42:23Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "2100c630ba4bd67bb48802c3e7da893a4fdaa1a0",
       "commits": [
         {
@@ -1941,7 +1927,7 @@
       "status": "pr-opened",
       "openedAt": "2026-10-24T07:12:09Z",
       "prCreatedAt": "2026-10-24T07:12:09Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "c4d25081f431b35d075f9ec2dfce3a848c9dbc26",
       "commits": [
         {
@@ -2043,7 +2029,7 @@
       "status": "merged",
       "openedAt": "2026-10-30T04:28:35Z",
       "prCreatedAt": "2026-10-30T04:28:35Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "81f33e465a47bfc745be75d2d97bdbf69123beed",
       "commits": [
         {
@@ -2100,7 +2086,7 @@
       "status": "pr-opened",
       "openedAt": "2026-11-05T20:38:07Z",
       "prCreatedAt": "2026-11-05T20:38:07Z",
-      "lastVerified": "2026-11-06T05:59:27Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
       "baseCommit": "978361b3785dcd9cba6c733f4555e833e88fc0df",
       "commits": [
         {
@@ -2126,6 +2112,53 @@
         "Implementation: launcher.py keeps the DuplicateHandle result, closes it with _winapi.CloseHandle right after Popen succeeds, and on Popen failure closes both the parent handle and the interrupt event before re-raising. win_interrupt.py gains close_interrupt_event(); LocalProvisioner.wait() closes the event when it releases the process and cleanup() closes it as a fallback exactly once. Regression tests: tests/test_launcher.py (2 tests, Win32 branch exercised cross-platform through a fake _winapi) and three tests in tests/test_provisioning.py::TestLocalProvisionerWindowsHandles.",
         "Verification (Windows 11, Python 3.14.10, jupyter_client 8.10.0 editable, ipykernel 7.4.0, psutil 7.2.2): independent handle-count repro over 30 kernel start/execute/shutdown cycles measured 175→225→245→266 on unmodified upstream versus 174→204→204→205 with the fix (flat after one-time startup handles). Red/green: all 5 new tests fail with the source fix stashed and 18 pass with it. Full suite: 246 passed, 33 skipped, 8 deselected — the deselection is tests/test_kernelmanager.py::TestParallel, whose signalkernel timeout reproduces identically on unmodified upstream. Ruff 0.15.12 check/format clean on the five changed files; mypy 1.20.2 shows no new real error versus the 23-error Windows-local baseline.",
         "Publication: PR jupyter/jupyter_client#1155 opened 2026-11-05T20:38:07Z, non-draft, base main@978361b3785dcd9cba6c733f4555e833e88fc0df, head 991fa2d8a9c83090f27d305f4ad5a1f8c247d01a, 5 files. At record time: OPEN, MERGEABLE, mergeStateStatus BLOCKED (expected for a fresh fork PR), pre-commit.ci PASS and Read the Docs PASS. No human review, not merged. GitHub Actions workflows have not reported check runs yet (first-time-contributor approval gate)."
+      ]
+    },
+    {
+      "repo": "hukkin/mdformat",
+      "project": "mdformat",
+      "issueNumber": 572,
+      "issueTitle": "Formatting over HTML comments crates newline between each comment",
+      "issueUrl": "https://github.com/hukkin/mdformat/issues/572",
+      "issueState": "OPEN",
+      "issueUpdatedAt": "2026-03-21T16:46:11Z",
+      "prNumber": 602,
+      "prUrl": "https://github.com/hukkin/mdformat/pull/602",
+      "prState": "open",
+      "prTitle": "fix: keep HTML comments attached to the following block",
+      "branch": "fix/572-html-comment-spacing",
+      "baseBranch": "master",
+      "fork": "ShahabAhmed01/mdformat",
+      "forkUrl": "https://github.com/ShahabAhmed01/mdformat",
+      "status": "ci-failed",
+      "openedAt": "2026-11-06T09:33:32Z",
+      "prCreatedAt": "2026-11-06T09:33:32Z",
+      "lastVerified": "2026-11-06T09:43:54Z",
+      "baseCommit": "56b24ef0c6cfdab501844925971204f858185547",
+      "commits": [
+        {
+          "sha": "9cceeea9fb2bdd626ddfe8c1af420dd2bd4eda5b",
+          "subject": "fix: keep HTML comments attached to the following block"
+        }
+      ],
+      "checks": {
+        "pre-commit.ci - pr": "fail",
+        "docs/readthedocs.org:mdformat": "pass"
+      },
+      "reviews": [
+        {
+          "author": "copilot-pull-request-reviewer",
+          "state": "COMMENTED"
+        }
+      ],
+      "mergedAt": null,
+      "mergeCommit": null,
+      "description": "mdformat inserted a blank line after every HTML block, which detached HTML comments from the block they modify: Confluence metadata comments spread out one blank line per comment (the reported case) and markdownlint-disable-next-line ended up not applying to the line it guards (the follow-up case). Renderer children are now joined with a single newline after an HTML comment at the document root and in block quotes; list items keep the blank line conservatively because it can decide tight vs. loose.",
+      "notes": [
+        "Selection (2026-11-06, run ossrun-20261105T213846Z-61850b7d): mdformat #572 reserved in the shared automation-coordination registry. Selected from a breadth-first sweep of 100 filtered candidates across 33 repos; open PRs already covered the other finalists (AnyIO #1452, python-dateutil #1653, coveragepy #2358) and several repos were excluded by their agent/AI policies (sphinx-doc, pandas, Pallets, networkx, Textual, rich, jsonschema). Upstream `executablebooks/mdformat` redirects to `hukkin/mdformat` (repository moved back to the author's account); tracked under the canonical slug. Issue at selection and at publication: OPEN, unassigned, 1 comment, no linked PR; no CONTRIBUTING.md at the root, no CLA/DCO, no AI policy.",
+        "Implementation: one functional commit 9cceeea on master@56b24ef, 4 files +91/-11. src/mdformat/renderer/_context.py gains _is_html_comment() and make_render_children(separator, *, attach_html_comments=True) which joins an HTML comment to the following block with a single newline; list_item conservatively passes attach_html_comments=False because a blank line inside a list item can decide tight vs. loose and the CLI's is_md_equal safety check would reject the tightened list. Four regression cases added to tests/data/default_style.md (root comments + markdownlint directive; block quote; non-comment HTML block; loose list item), rule documented in docs/users/style.md, and README.md reformatted because test_for_profiler requires the repo's own docs to be mdformat-formatted.",
+        "Verification (Windows 11, Python 3.14.10, editable install): red/green against the new cases — baseline 56b24ef fails the root and block-quote cases, patched passes all four. Issue repro printf -- '<!-- test -->\\n<!-- test2 -->' | mdformat - and the markdownlint-directive case produce the expected output; mdformat --check README.md fails on baseline and passes patched. Focused suites: 28 passed (+1 pre-existing Windows symlink failure) and test_for_profiler 1 passed. Full suite 4 failed, 4281 passed, 2 skipped — the same four pre-existing Windows failures as the unpatched baseline (3 symlink WinError 1314 + test_check__multi_fail). black/flake8/mypy clean on the changed file; git diff --check clean. 2,184 generated block combinations checked for idempotency and is_md_equal: 0 failures. No changelog entry: the changelog documents API/CLI breaking changes only and carries no style-stability guarantee.",
+        "Publication: fork ShahabAhmed01/mdformat created 2026-11-06, branch fix/572-html-comment-spacing pushed, PR #602 opened 09:33:32Z (base master, MERGEABLE). At publication docs/readthedocs.org:mdformat PASS; pre-commit.ci - pr ERROR before any hook ran — pre-commit.ci failed to build the third-party hukkin/docformatter hook environment under Python 3.14 (AttributeError: 'Constant' object has no attribute 's' from docformatter setup.py), twice, on the merged ref 2e0469f; unrelated to the diff. copilot-pull-request-reviewer COMMENTED (quota-limited), no human review, not merged. Voluntary AI disclosure included in the PR body (OpenCode, DeepSeek V4.1 Flash Free, autonomous, run ossrun-20261105T213846Z-61850b7d)."
       ]
     }
   ]

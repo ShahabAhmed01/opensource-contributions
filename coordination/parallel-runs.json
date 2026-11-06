@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-06T10:22:00Z",
+ "updated_at": "2026-11-06T10:35:20Z",
  "runs": [
   {
    "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -111,7 +111,7 @@
    "pr_number": 5592,
    "tracker_writer": null,
    "completed_at": "2026-10-23T12:24:34Z",
-   "outcome": "psf/black#2893 fixed; PR https://github.com/psf/black/pull/5592 published 2026-10-23T11:59:34Z (head 7c38420b, MERGEABLE, not draft, based on main@1190eeb3, 5 files +161/−0); the fix wraps unsplittable keyword-argument values in (invisible) parentheses mirroring assignment RHS handling, gated behind the new Preview flag parenthesize_unsplittable_keyword_arguments so stable-mode output stays byte-for-byte unchanged per Black's stability policy; local verification: full pytest suite 659 passed / 2 skipped / 17 subtests (baseline 658 + 1 new regression case), red/green proof on the new data case, black --check src tests/test_*.py clean, git diff --check clean, independent fuzz review (~3000 synthetic inputs + 400 stdlib files) with no invalid/non-idempotent/crashing output; CI docs/readthedocs.org:black SUCCESS + pre-commit.ci - pr SUCCESS, copilot COMMENTED, no human review, not merged; tracker record pushed to main (commit 1cfef47) and tracker-writer lease released"
+   "outcome": "psf/black#2893 fixed; PR https://github.com/psf/black/pull/5592 published 2026-10-23T11:59:34Z (head 7c38420b, MERGEABLE, not draft, based on main@1190eeb3, 5 files +161/\u22120); the fix wraps unsplittable keyword-argument values in (invisible) parentheses mirroring assignment RHS handling, gated behind the new Preview flag parenthesize_unsplittable_keyword_arguments so stable-mode output stays byte-for-byte unchanged per Black's stability policy; local verification: full pytest suite 659 passed / 2 skipped / 17 subtests (baseline 658 + 1 new regression case), red/green proof on the new data case, black --check src tests/test_*.py clean, git diff --check clean, independent fuzz review (~3000 synthetic inputs + 400 stdlib files) with no invalid/non-idempotent/crashing output; CI docs/readthedocs.org:black SUCCESS + pre-commit.ci - pr SUCCESS, copilot COMMENTED, no human review, not merged; tracker record pushed to main (commit 1cfef47) and tracker-writer lease released"
   },
   {
    "run_id": "ossrun-20261023T123818Z-0f9d84c3",
@@ -141,7 +141,7 @@
    "heartbeat_at": "2026-10-23T18:25:00Z",
    "expires_at": "2026-10-23T20:28:00Z",
    "reservation_state": "RELEASED",
-   "notes": "Implementation complete and locally validated. Branch: contrib/issue-71273-offset-sign-54272c49 on ShahabAhmed01/pandas. Fix: guess_datetime_format declines guess for zone+offset strings to align array path with dateutil POSIX semantics. Tests: 4 in test_parsing.py + 1 parametrised in test_to_datetime.py (7 cases). Whatsnew: 2 entries under Bug fixes → Timezones. All targeted test suites pass. AGENTS.md requires user to push branch and open PR with AI disclosure (OpenCode + GLM-5.3-Flash-Free).",
+   "notes": "Implementation complete and locally validated. Branch: contrib/issue-71273-offset-sign-54272c49 on ShahabAhmed01/pandas. Fix: guess_datetime_format declines guess for zone+offset strings to align array path with dateutil POSIX semantics. Tests: 4 in test_parsing.py + 1 parametrised in test_to_datetime.py (7 cases). Whatsnew: 2 entries under Bug fixes \u2192 Timezones. All targeted test suites pass. AGENTS.md requires user to push branch and open PR with AI disclosure (OpenCode + GLM-5.3-Flash-Free).",
    "released_at": "2026-11-06T10:22:00Z",
    "completed_at": "2026-11-06T10:22:00Z",
    "outcome": "Bookkeeping release (run ossrun-20261105T213846Z-61850b7d): session ended at PR_READY (lease expired 2026-10-23T20:28:00Z). Its PR is tracked and live: pandas-dev/pandas #71273 -> PR #71508 OPEN, status pr-opened, mergeable/CLEAN (tracker record #33, verified live 2026-11-06). Awaiting upstream review; stale lease cleared."
@@ -194,7 +194,7 @@
    "expires_at": null,
    "reservation_state": "RELEASED",
    "released_at": "2026-10-23T13:50:45Z",
-   "phase": "done — PR open awaiting human review; project reservation + tracker-writer lease released",
+   "phase": "done \u2014 PR open awaiting human review; project reservation + tracker-writer lease released",
    "pr_number": 14199,
    "tracker_writer": null,
    "tracker_writer_obtained_at": "2026-10-23T14:45:57.678Z",
@@ -300,7 +300,7 @@
    "reservation_state": "RELEASED",
    "note": "tracker documents maintainer-authorized 3-open-PR cap for backlot with zero currently open; candidate #1124: 0 comments, no assignee; verified no linked PRs in search + git grep before selection",
    "release_note": [
-    "2026-10-29T17:49Z: released browser-use — candidate issue #6135 had THREE open/claim-PR duplicates (#6136 by ?, #6139 by ?, #6229 by ?) found after reservation; no external actions taken.",
+    "2026-10-29T17:49Z: released browser-use \u2014 candidate issue #6135 had THREE open/claim-PR duplicates (#6136 by ?, #6139 by ?, #6229 by ?) found after reservation; no external actions taken.",
     "2026-10-30T04:29Z: lease had expired 2026-10-30T01:23:27Z during the work gap; remote tip was still this run's 1973b78 with the slot unclaimed (no other run registered backlot); renewed unclaimed after publishing PR 1153."
    ],
    "updated_at": "2026-10-30T07:39:50Z",
@@ -382,6 +382,36 @@
    "released_at": "2026-11-06T10:01:00Z",
    "completed_at": "2026-11-06T10:01:00Z",
    "outcome": "hukkin/mdformat#572 fixed; PR https://github.com/hukkin/mdformat/pull/602 published 2026-11-06T09:33:32Z (head 9cceeea9fb2bdd626ddfe8c1af420dd2bd4eda5b, base master@56b24ef0c6cfdab501844925971204f858185547, one functional commit, branch fix/572-html-comment-spacing on ShahabAhmed01/mdformat, 4 files +91/-11: renderer attach-html-comment rule, 4 default_style cases, style guide, README reformat). Upstream executablebooks/mdformat redirects to hukkin/mdformat; recorded under the canonical slug. Verified remote at completion: OPEN, MERGEABLE, docs/readthedocs.org:mdformat PASS; pre-commit.ci - pr ERROR before any hook ran (its third-party hukkin/docformatter hook environment fails to build under Python 3.14, AttributeError: 'Constant' object has no attribute 's' during pip install; infrastructure, unrelated to the diff); copilot-pull-request-reviewer COMMENTED (quota-limited), NO human review, NOT merged. Local verification: red/green proven (baseline 56b24ef fails the 2 new root/blockquote cases, patched passes all 4 new cases); issue repro and markdownlint directive produce the expected output; full suite 4 failed / 4281 passed / 2 skipped with the same four pre-existing Windows failures as the unpatched baseline (3 symlink WinError 1314 + test_check__multi_fail); focused 28 passed + test_for_profiler 1 passed; black/flake8/mypy clean on the changed file; 2,184 generated block combinations idempotent and is_md_equal: 0 failures. No changelog entry (API/CLI breaking changes only). Same run published two repairs of tracked PRs (no new PRs): odysseus-dev/odysseus #6476 forced bc817f6d -> 609bcf64 on dev e4cc8efa per the maintainer review (sanitizer now iterates one pass to a provider-contract fixpoint and preserves completed tool-call evidence; 115 passed; provider-wire evidence captured at the HTTP boundary via MockTransport; app booted healthy; body + reply comment 6681844142) and github/spec-kit #5069 forced 7028766c -> acb0dc0c on main 3ca735b8 scoped to the maintainer's two changes (README /speckit-bug-* syntax; overwrite confirmation that deletes fix.md/test.md after explicit confirmation, with declining leaving all reports; 1.0.2 -> 1.0.3 version bump required by the extension version guard; four real-agent behavioral runs on isolated fixtures; 55 passed; Assisted-by trailer per repo AI policy; body + round comment 6681840566). Both repair force-pushes required the gh CLI workflow scope (push ranges carry upstream workflow changes), granted via device-code approval mid-run. Tracker record pushed to main (commit 5e0c0780f559af001bf646d7f85f4659382cfefa: state entry #36, regenerated README/CONTRIBUTIONS tables, projects/mdformat.md, contributions/mdformat/issue-572.md, Track 034 handoff section; records 7 and 30 refreshed to the published revisions). Tracker-writer lease released and project reservation RELEASED at completion. No candidates were released without records in this run; the Black #5592 repair was deferred before implementation as too large for this run (reviewer asks for substantive algorithmic rework plus a merge conflict)."
+  },
+  {
+   "run_id": "ossrun-20261106T103520-b3e2f76a",
+   "status": "RESERVED",
+   "repository": "odysseus-dev/odysseus",
+   "issue_url": "https://github.com/odysseus-dev/odysseus/issues/2740",
+   "issue_number": 2740,
+   "pr_url": "https://github.com/odysseus-dev/odysseus/pull/6453",
+   "pr_number": 6453,
+   "head_branch": "fix/sqlalchemy-declarative-import-2740",
+   "acquired_at": "2026-11-06T10:35:20Z",
+   "heartbeat_at": "2026-11-06T10:35:20Z",
+   "expires_at": "2026-11-06T22:35:20Z",
+   "reservation_state": "ACTIVE",
+   "notes": "Rework re-run for the maintainer review on the open PR (rebuilt on the current dev tip, body/comment refresh). Slot reserved so another automation lane does not target the same PR concurrently."
+  },
+  {
+   "run_id": "ossrun-20261106T103520-b3e2f76a",
+   "status": "RESERVED",
+   "repository": "microsoft/pyright",
+   "issue_url": "https://github.com/microsoft/pyright/issues/11879",
+   "issue_number": 11879,
+   "pr_url": "https://github.com/microsoft/pyright/pull/11904",
+   "pr_number": 11904,
+   "head_branch": "contrib/issue-11879-partial-typevartuple",
+   "acquired_at": "2026-11-06T10:35:20Z",
+   "heartbeat_at": "2026-11-06T10:35:20Z",
+   "expires_at": "2026-11-06T22:35:20Z",
+   "reservation_state": "ACTIVE",
+   "notes": "Rework re-run: rebuild on the current main tip and republish (the PR had gone CONFLICTING while the base moved)."
   }
  ],
  "tracker_writer": null,

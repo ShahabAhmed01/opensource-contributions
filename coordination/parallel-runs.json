@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-06T09:47:23Z",
+ "updated_at": "2026-11-06T10:01:00Z",
  "runs": [
   {
    "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -343,7 +343,7 @@
   },
   {
    "run_id": "ossrun-20261105T213846Z-61850b7d",
-   "status": "PR_PUBLISHED",
+   "status": "COMPLETED",
    "repository": "hukkin/mdformat",
    "issue_url": "https://github.com/hukkin/mdformat/issues/572",
    "issue_number": 572,
@@ -352,17 +352,17 @@
    "acquired_at": "2026-11-06T07:24:13Z",
    "heartbeat_at": "2026-11-06T09:47:23Z",
    "expires_at": "2026-11-06T19:24:13Z",
-   "reservation_state": "ACTIVE",
+   "reservation_state": "RELEASED",
    "base_commit": "56b24ef0c6cfdab501844925971204f858185547",
    "head_sha": "9cceeea9fb2bdd626ddfe8c1af420dd2bd4eda5b",
    "notes": "hukkin/mdformat#572 -> PR hukkin/mdformat#602 published 2026-11-06T09:33:32Z (head 9cceeea9fb2bdd626ddfe8c1af420dd2bd4eda5b, base master@56b24ef, one functional commit, branch fix/572-html-comment-spacing on ShahabAhmed01/mdformat, 4 files +91/-11). Approved via the single GO gate; pre-commit.ci errored before any hook ran (third-party hukkin/docformatter hook build under Python 3.14; infrastructure, not the diff), Read the Docs PASS, copilot-pull-request-reviewer COMMENTED, no human review, not merged. Same run also published repairs on two tracked PRs: odysseus-dev/odysseus#6476 forced bc817f6d -> 609bcf64 and github/spec-kit#5069 forced 7028766c -> acb0dc0c (both bodies updated, one reply comment each; needed the gh CLI workflow scope, granted via device flow). Next: tracker main update under the tracker-writer lease.",
-   "released_at": null,
-   "completed_at": null,
-   "outcome": null
+   "released_at": "2026-11-06T10:01:00Z",
+   "completed_at": "2026-11-06T10:01:00Z",
+   "outcome": "hukkin/mdformat#572 fixed; PR https://github.com/hukkin/mdformat/pull/602 published 2026-11-06T09:33:32Z (head 9cceeea9fb2bdd626ddfe8c1af420dd2bd4eda5b, base master@56b24ef0c6cfdab501844925971204f858185547, one functional commit, branch fix/572-html-comment-spacing on ShahabAhmed01/mdformat, 4 files +91/-11: renderer attach-html-comment rule, 4 default_style cases, style guide, README reformat). Upstream executablebooks/mdformat redirects to hukkin/mdformat; recorded under the canonical slug. Verified remote at completion: OPEN, MERGEABLE, docs/readthedocs.org:mdformat PASS; pre-commit.ci - pr ERROR before any hook ran (its third-party hukkin/docformatter hook environment fails to build under Python 3.14, AttributeError: 'Constant' object has no attribute 's' during pip install; infrastructure, unrelated to the diff); copilot-pull-request-reviewer COMMENTED (quota-limited), NO human review, NOT merged. Local verification: red/green proven (baseline 56b24ef fails the 2 new root/blockquote cases, patched passes all 4 new cases); issue repro and markdownlint directive produce the expected output; full suite 4 failed / 4281 passed / 2 skipped with the same four pre-existing Windows failures as the unpatched baseline (3 symlink WinError 1314 + test_check__multi_fail); focused 28 passed + test_for_profiler 1 passed; black/flake8/mypy clean on the changed file; 2,184 generated block combinations idempotent and is_md_equal: 0 failures. No changelog entry (API/CLI breaking changes only). Same run published two repairs of tracked PRs (no new PRs): odysseus-dev/odysseus #6476 forced bc817f6d -> 609bcf64 on dev e4cc8efa per the maintainer review (sanitizer now iterates one pass to a provider-contract fixpoint and preserves completed tool-call evidence; 115 passed; provider-wire evidence captured at the HTTP boundary via MockTransport; app booted healthy; body + reply comment 6681844142) and github/spec-kit #5069 forced 7028766c -> acb0dc0c on main 3ca735b8 scoped to the maintainer's two changes (README /speckit-bug-* syntax; overwrite confirmation that deletes fix.md/test.md after explicit confirmation, with declining leaving all reports; 1.0.2 -> 1.0.3 version bump required by the extension version guard; four real-agent behavioral runs on isolated fixtures; 55 passed; Assisted-by trailer per repo AI policy; body + round comment 6681840566). Both repair force-pushes required the gh CLI workflow scope (push ranges carry upstream workflow changes), granted via device-code approval mid-run. Tracker record pushed to main (commit 5e0c0780f559af001bf646d7f85f4659382cfefa: state entry #36, regenerated README/CONTRIBUTIONS tables, projects/mdformat.md, contributions/mdformat/issue-572.md, Track 034 handoff section; records 7 and 30 refreshed to the published revisions). Tracker-writer lease released and project reservation RELEASED at completion. No candidates were released without records in this run; the Black #5592 repair was deferred before implementation as too large for this run (reviewer asks for substantive algorithmic rework plus a merge conflict)."
   }
  ],
- "tracker_writer": "ossrun-20261105T213846Z-61850b7d",
- "tracker_writer_expires_at": "2026-11-06T11:47:23Z",
- "tracker_writer_lease_expires": "2026-11-06T11:47:23Z",
- "tracker_writer_released_at": "2026-11-05T20:46:10Z"
+ "tracker_writer": null,
+ "tracker_writer_expires_at": null,
+ "tracker_writer_lease_expires": null,
+ "tracker_writer_released_at": "2026-11-06T10:01:00Z"
 }

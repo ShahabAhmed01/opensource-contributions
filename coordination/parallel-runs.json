@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "updated_at": "2026-11-06T10:01:00Z",
+ "updated_at": "2026-11-06T10:22:00Z",
  "runs": [
   {
    "run_id": "ossrun-20261020T143633Z-2eff4030",
@@ -13,7 +13,10 @@
    "acquired_at": "2026-10-21T19:24:25Z",
    "heartbeat_at": "2026-10-21T19:54:32Z",
    "expires_at": "2026-10-22T07:54:32Z",
-   "reservation_state": "ACTIVE"
+   "reservation_state": "RELEASED",
+   "released_at": "2026-11-06T10:22:00Z",
+   "completed_at": "2026-11-06T10:22:00Z",
+   "outcome": "Bookkeeping release (run ossrun-20261105T213846Z-61850b7d): the coordinating run's session ended while the reservation was ACTIVE (lease expired 2026-10-22T07:54:32Z). Its work is recorded and succeeded: pypa/pipx #2176 -> PR #2177 MERGED upstream 2026-10-28T02:54:13Z with status 'merged' (tracker record #27, verified live 2026-11-06). Stale lease cleared; no pending work."
   },
   {
    "run_id": "ossrun-20261020T143705Z-bd8fbd7f",
@@ -26,7 +29,10 @@
    "acquired_at": "2026-10-21T20:11:42Z",
    "heartbeat_at": "2026-10-21T21:09:28Z",
    "expires_at": "2026-10-22T03:09:28Z",
-   "reservation_state": "ACTIVE"
+   "reservation_state": "RELEASED",
+   "released_at": "2026-11-06T10:22:00Z",
+   "completed_at": "2026-11-06T10:22:00Z",
+   "outcome": "Bookkeeping release (run ossrun-20261105T213846Z-61850b7d): session ended with the entry at PR_PUBLISHED (lease expired 2026-10-22T03:09:28Z). Its PR is tracked and live: pytest-dev/pytest #3649 -> PR #15239 OPEN, status pr-opened ('In review'), MERGEABLE (tracker record #28, verified live 2026-11-06). Awaiting upstream review; stale lease cleared."
   },
   {
    "run_id": "ossrun-20261020T143844Z-c775ddc9",
@@ -39,7 +45,10 @@
    "acquired_at": "2026-10-20T14:38:44.062741+00:00",
    "heartbeat_at": "2026-10-20T14:38:44.062760+00:00",
    "expires_at": null,
-   "reservation_state": "ACTIVE"
+   "reservation_state": "RELEASED",
+   "released_at": "2026-11-06T10:22:00Z",
+   "completed_at": "2026-11-06T10:22:00Z",
+   "outcome": "Bookkeeping release (run ossrun-20261105T213846Z-61850b7d): placeholder reservation with no repository on file; the coordinating run's session-lease expired 2026-10-22 and its run directory no longer exists. No work was executed under it. Stale lease cleared."
   },
   {
    "run_id": "ossrun-20261020T143539Z-b6ebdc41",
@@ -131,8 +140,11 @@
    "acquired_at": "2026-10-23T14:28:00Z",
    "heartbeat_at": "2026-10-23T18:25:00Z",
    "expires_at": "2026-10-23T20:28:00Z",
-   "reservation_state": "ACTIVE",
-   "notes": "Implementation complete and locally validated. Branch: contrib/issue-71273-offset-sign-54272c49 on ShahabAhmed01/pandas. Fix: guess_datetime_format declines guess for zone+offset strings to align array path with dateutil POSIX semantics. Tests: 4 in test_parsing.py + 1 parametrised in test_to_datetime.py (7 cases). Whatsnew: 2 entries under Bug fixes → Timezones. All targeted test suites pass. AGENTS.md requires user to push branch and open PR with AI disclosure (OpenCode + GLM-5.3-Flash-Free)."
+   "reservation_state": "RELEASED",
+   "notes": "Implementation complete and locally validated. Branch: contrib/issue-71273-offset-sign-54272c49 on ShahabAhmed01/pandas. Fix: guess_datetime_format declines guess for zone+offset strings to align array path with dateutil POSIX semantics. Tests: 4 in test_parsing.py + 1 parametrised in test_to_datetime.py (7 cases). Whatsnew: 2 entries under Bug fixes → Timezones. All targeted test suites pass. AGENTS.md requires user to push branch and open PR with AI disclosure (OpenCode + GLM-5.3-Flash-Free).",
+   "released_at": "2026-11-06T10:22:00Z",
+   "completed_at": "2026-11-06T10:22:00Z",
+   "outcome": "Bookkeeping release (run ossrun-20261105T213846Z-61850b7d): session ended at PR_READY (lease expired 2026-10-23T20:28:00Z). Its PR is tracked and live: pandas-dev/pandas #71273 -> PR #71508 OPEN, status pr-opened, mergeable/CLEAN (tracker record #33, verified live 2026-11-06). Awaiting upstream review; stale lease cleared."
   },
   {
    "run_id": "ossrun-20261023T133923Z-eb733394",
@@ -163,9 +175,11 @@
    "acquired_at": "2026-10-23T14:52:00Z",
    "heartbeat_at": "2026-10-23T15:17:00Z",
    "expires_at": "2026-10-23T19:15:00Z",
-   "reservation_state": "ACTIVE",
-   "outcome": "reserved openclaw/openclaw 14:22-14:40Z; released without contribution work - queueable-fix lanes robot-raced to PRs within minutes; no issue/branch/PR was opened by this run",
-   "project_updated_at": "2026-10-23T15:17:00Z"
+   "reservation_state": "RELEASED",
+   "outcome": "reserved openclaw/openclaw 14:22-14:40Z; released without contribution work - queueable-fix lanes robot-raced to PRs within minutes; no issue/branch/PR was opened by this run Bookkeeping release (run ossrun-20261105T213846Z-61850b7d): reservation for python/mypy #22280 never published a PR and has no tracker record; the lease expired 2026-10-23T19:15:00Z and the run directory no longer exists. Released as a dead reservation: nothing was published or merged under it.",
+   "project_updated_at": "2026-10-23T15:17:00Z",
+   "released_at": "2026-11-06T10:22:00Z",
+   "completed_at": "2026-11-06T10:22:00Z"
   },
   {
    "run_id": "ossrun-20261023T133906Z-406ada2a",
@@ -216,7 +230,10 @@
    "acquired_at": null,
    "heartbeat_at": "2026-10-23T14:14:33Z",
    "expires_at": null,
-   "reservation_state": null
+   "reservation_state": "RELEASED",
+   "released_at": "2026-11-06T10:22:00Z",
+   "completed_at": "2026-11-06T10:22:00Z",
+   "outcome": "Bookkeeping release (run ossrun-20261105T213846Z-61850b7d): DISCOVERING placeholder with no repository on file; the coordinating run's session no longer exists and no lease was ever refreshed this far past its expiry. Stale lease cleared; no work was executed under it."
   },
   {
    "run_id": "ossrun-20261023T143639Z-33bd71a1",
@@ -263,8 +280,11 @@
    "acquired_at": null,
    "heartbeat_at": "2026-10-29T17:19:50Z",
    "expires_at": null,
-   "reservation_state": null,
-   "notes": "outcome=RESEARCH-ONLY per fallback rules: exhaustive screening of 22 repos/~75 candidate issues across 5 lanes (fresh-issue race lane, recent unassigned queue, pre-fleet window May-Sep 2026, maintainer-invited labels, closed-unmerged-attempt lane) found ZERO unclaimed actionable tasks passing all gates: every actionable item had an open competing PR, an in-thread claim/soft-claim, a design-agreement gate, an environment-blocked repro (JIT-CPython-3.15 / Rust toolchain), or was already fixed upstream. No contribution published; no reservation ever acquired."
+   "reservation_state": "RELEASED",
+   "notes": "outcome=RESEARCH-ONLY per fallback rules: exhaustive screening of 22 repos/~75 candidate issues across 5 lanes (fresh-issue race lane, recent unassigned queue, pre-fleet window May-Sep 2026, maintainer-invited labels, closed-unmerged-attempt lane) found ZERO unclaimed actionable tasks passing all gates: every actionable item had an open competing PR, an in-thread claim/soft-claim, a design-agreement gate, an environment-blocked repro (JIT-CPython-3.15 / Rust toolchain), or was already fixed upstream. No contribution published; no reservation ever acquired.",
+   "released_at": "2026-11-06T10:22:00Z",
+   "completed_at": "2026-11-06T10:22:00Z",
+   "outcome": "Bookkeeping release (run ossrun-20261105T213846Z-61850b7d): entry was left COMPLETED with its reservation still ACTIVE and no recorded outcome, and the run directory no longer exists. Nothing is tracked under this run_id in the contribution tracker. Stale lease cleared."
   },
   {
    "run_id": "ossrun-20261029T172141Z-977388f8",
@@ -277,13 +297,16 @@
    "acquired_at": "2026-10-29T17:53:41Z",
    "heartbeat_at": "2026-10-30T07:39:50Z",
    "expires_at": "2026-10-30T13:39:50Z",
-   "reservation_state": "ACTIVE",
+   "reservation_state": "RELEASED",
    "note": "tracker documents maintainer-authorized 3-open-PR cap for backlot with zero currently open; candidate #1124: 0 comments, no assignee; verified no linked PRs in search + git grep before selection",
    "release_note": [
     "2026-10-29T17:49Z: released browser-use — candidate issue #6135 had THREE open/claim-PR duplicates (#6136 by ?, #6139 by ?, #6229 by ?) found after reservation; no external actions taken.",
     "2026-10-30T04:29Z: lease had expired 2026-10-30T01:23:27Z during the work gap; remote tip was still this run's 1973b78 with the slot unclaimed (no other run registered backlot); renewed unclaimed after publishing PR 1153."
    ],
-   "updated_at": "2026-10-30T07:39:50Z"
+   "updated_at": "2026-10-30T07:39:50Z",
+   "released_at": "2026-11-06T10:22:00Z",
+   "completed_at": "2026-11-06T10:22:00Z",
+   "outcome": "Bookkeeping release (run ossrun-20261105T213846Z-61850b7d): session ended at PR_PUBLISHED (lease expired 2026-10-30T13:39:50Z). Its work is recorded and succeeded: brekkylab/backlot #1124 -> PR #1153 MERGED upstream 2026-10-31T15:29:05Z with status 'merged' (tracker record #34, verified live 2026-11-06). Stale lease cleared; no pending work."
   },
   {
    "run_id": "ossrun-20261105T184918Z-a2a369ea",
